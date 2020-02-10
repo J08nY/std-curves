@@ -1,0 +1,61 @@
+{
+  "name": "std-curves-app",
+  "private": true,
+  "description": "A database of standard elliptic curves and their characteristics.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.3.0",
+    "@material-ui/core": "^4.9.0",
+    "@mdx-js/mdx": "^1.5.5",
+    "@mdx-js/react": "^1.5.5",
+    "@mdx-js/runtime": "^1.5.5",
+    "@theme-ui/color": "^0.2.53",
+    "@theme-ui/prism": "^0.2.50",
+    "acorn": "^6.4.0",
+    "fs": "0.0.1-security",
+    "gatsby": "^2.18.12",
+    "gatsby-plugin-manifest": "^2.2.37",
+    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-theme-ui": "^0.2.53",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-csv": "^2.1.24",
+    "gatsby-transformer-json": "^2.2.25",
+    "gatsby-transformer-xml": "^2.1.23",
+    "gatsby-transformer-yaml": "^2.2.23",
+    "prismjs": "^1.19.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-katex": "^2.0.2",
+    "remark-emoji": "^2.0.2",
+    "remark-slug": "^5.1.2",
+    "theme-ui": "^0.2.52",
+    "typeface-roboto": "0.0.75",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/J08nY/std-curves"
+  }
+}

@@ -1,0 +1,4 @@
+[submodule "src/curves"]
+	path = src/curves
+	url = ./
+	branch = data
