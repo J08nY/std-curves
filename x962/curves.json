@@ -1,0 +1,347 @@
+{
+  "name": "ANSI x9.62",
+  "desc": "ANSI X9.62 example curves.",
+  "curves": [
+    {
+      "name": "prime192v1",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.1",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffeffffffffffffffff",
+        "bits": 192
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0xfffffffffffffffffffffffffffffffefffffffffffffffc",
+        "b": "0x64210519e59c80e70fa7e9ab72243049feb8deecc146b9b1"
+      },
+      "generator": {
+        "x": "0x188da80eb03090f67cbf20eb43a18800f4ff0afd82ff1012",
+        "y": "0x07192b95ffc8da78631011ed6b24cdd573f977a11e794811"
+      },
+      "order": "0xffffffffffffffffffffffff99def836146bc9b1b4d22831",
+      "cofactor": "0x1",
+      "aliases": [
+        "secg/secp192r1",
+        "nist/P-192"
+      ],
+      "characteristics": {
+        "discriminant": "5525402385154848923235289274741921730185152131202286251655",
+        "j_invariant": "6234286251230310114240839169629130138801351179850969208331",
+        "trace_of_frobenius": "31607402316713927207482677199",
+        "embedding_degree": "627710173538668076383578942317605901376719477318284228408",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "25108406941546723055343157692799058262018920874353817167917",
+        "conductor": "1",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 5,
+            "least": 4,
+            "full": 20
+          },
+          {
+            "r": 7,
+            "least": 48,
+            "full": 48
+          },
+          {
+            "r": 11,
+            "least": 5,
+            "full": 55
+          },
+          {
+            "r": 13,
+            "least": 4,
+            "full": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "prime192v2",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.2",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffeffffffffffffffff",
+        "bits": 192
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0xfffffffffffffffffffffffffffffffefffffffffffffffc",
+        "b": "0xcc22d6dfb95c6b25e49c0d6364a4e5980c393aa21668d953"
+      },
+      "generator": {
+        "x": "0xeea2bae7e1497842f2de7769cfe9c989c072ad696f48034a",
+        "y": "0x6574d11d69b6ec7a672bb82a083df2f2b0847de970b2de15"
+      },
+      "order": "0xfffffffffffffffffffffffe5fb1a724dc80418648d8dd31",
+      "cofactor": "0x1",
+      "characteristics": {
+        "discriminant": "3136318742261921876063208570368096687049382158828912127687",
+        "j_invariant": "2188073006583539552141688552564683396860111048461359479401",
+        "trace_of_frobenius": "128840479891808162805939905231",
+        "embedding_degree": "1569275433846670190958947355769706484048025134396096264012",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "25108406941546723055343157692701825184443826638755359939885",
+        "conductor": "1",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 5,
+            "least": 4,
+            "full": 20
+          },
+          {
+            "r": 7,
+            "least": 2,
+            "full": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "prime192v3",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.3",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffeffffffffffffffff",
+        "bits": 192
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0xfffffffffffffffffffffffffffffffefffffffffffffffc",
+        "b": "0x22123dc2395a05caa7423daeccc94760a7d462256bd56916"
+      },
+      "generator": {
+        "x": "0x7d29778100c65a1da1783716588dce2b8b4aee8e228f1896",
+        "y": "0x38a90f22637337334b49dcb66a6dc8f9978aca7648a943b0"
+      },
+      "order": "0xffffffffffffffffffffffff7a62d031c83f4294f640ec13",
+      "cofactor": "0x1",
+      "characteristics": {
+        "discriminant": "3779502969702448100548644654746965771458990594820505358394",
+        "j_invariant": "4949518941300124932197833942361144997943533558142111060080",
+        "trace_of_frobenius": "41351533396743040039645025261",
+        "embedding_degree": "1046183622564446793972631570527719147114527610058446656003",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "25108406941546723055343157692789314130938891761521654819855",
+        "conductor": "1",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 5,
+            "least": 4,
+            "full": 20
+          },
+          {
+            "r": 7,
+            "least": 48,
+            "full": 48
+          }
+        ]
+      }
+    },
+    {
+      "name": "prime239v1",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.4",
+      "field": {
+        "type": "Prime",
+        "p": "0x7fffffffffffffffffffffff7fffffffffff8000000000007fffffffffff",
+        "bits": 239
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x7fffffffffffffffffffffff7fffffffffff8000000000007ffffffffffc",
+        "b": "0x6b016c3bdcf18941d0d654921475ca71a9db2fb27d1d37796185c2942c0a"
+      },
+      "generator": {
+        "x": "0x0ffa963cdca8816ccc33b8642bedf905c3d358573d3f27fbbd3b3cb9aaaf",
+        "y": "0x7debe8e4e90a5dae6e4054ca530ba04654b36818ce226b39fccb7b02f1ae"
+      },
+      "order": "0x7fffffffffffffffffffffff7fffff9e5e9a9f5d9071fbd1522688909d0b",
+      "cofactor": "0x1",
+      "characteristics": {
+        "discriminant": "304850035712828017768890753913370930082366291391142991141919368057646026",
+        "j_invariant": "535250236995642411828071436390811255989556058215461384191615097928272770",
+        "trace_of_frobenius": "506926255561332610517105435906892533",
+        "embedding_degree": "441711766194596082395824375180154442403775170845813876137672712351403653",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "3533694129556768659166595001441235540750980133450508840652698006531906823",
+        "conductor": "1",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 5,
+            "least": 12,
+            "full": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "prime239v2",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.5",
+      "field": {
+        "type": "Prime",
+        "p": "0x7fffffffffffffffffffffff7fffffffffff8000000000007fffffffffff",
+        "bits": 239
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x7fffffffffffffffffffffff7fffffffffff8000000000007ffffffffffc",
+        "b": "0x617fab6832576cbbfed50d99f0249c3fee58b94ba0038c7ae84c8c832f2c"
+      },
+      "generator": {
+        "x": "0x38af09d98727705120c921bb5e9e26296a3cdcf2f35757a0eafd87b830e7",
+        "y": "0x5b0125e4dbea0ec7206da0fc01d9b081329fb555de6ef460237dff8be4ba"
+      },
+      "order": "0x7fffffffffffffffffffffff800000cfa7e8594377d414c03821bc582063",
+      "cofactor": "0x1",
+      "characteristics": {
+        "discriminant": "369528448271621828801750954737572264864367402255299013074552698823670735",
+        "j_invariant": "845456799438304440285632276028937020105084947748076550483955832603378212",
+        "trace_of_frobenius": "-1078211060294033492355314871841595491",
+        "embedding_degree": "21033893628314099161705922627626402056968753751118901313042041248840365",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "3533694129556768659166595001441235542336117449305874943525118314280394847"
+      }
+    },
+    {
+      "name": "prime239v3",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.6",
+      "field": {
+        "type": "Prime",
+        "p": "0x7fffffffffffffffffffffff7fffffffffff8000000000007fffffffffff",
+        "bits": 239
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x7fffffffffffffffffffffff7fffffffffff8000000000007ffffffffffc",
+        "b": "0x255705fa2a306654b1f4cb03d6a750a30c250102d4988717d9ba15ab6d3e"
+      },
+      "generator": {
+        "x": "0x6768ae8e18bb92cfcf005c949aa2c6d94853d0e660bbf854b1c9505fe95a",
+        "y": "0x1607e6898f390c06bc1d552bad226f3b6fcfe48b6e818499af18e3ed6cf3"
+      },
+      "order": "0x7fffffffffffffffffffffff7fffff975deb41b3a6057c3c432146526551",
+      "cofactor": "0x1",
+      "characteristics": {
+        "discriminant": "882873045738548432559077267776614981148556437256582152685457545366799895",
+        "j_invariant": "753745430086077892322271754405460844839460634669491132164952757184512889",
+        "trace_of_frobenius": "543286227487037812274483689551665839"
+      }
+    },
+    {
+      "name": "prime256v1",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.1.1.7",
+      "field": {
+        "type": "Prime",
+        "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
+        "bits": 256
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0xffffffff00000001000000000000000000000000fffffffffffffffffffffffc",
+        "b": "0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b"
+      },
+      "generator": {
+        "x": "0x6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296",
+        "y": "0x4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5"
+      },
+      "order": "0xffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551",
+      "cofactor": "0x1",
+      "aliases": [
+        "secg/secp256r1",
+        "nist/P-256"
+      ],
+      "characteristics": {
+        "discriminant": "47064476442213300654454205837611899485069387829947879813735601543372794627813",
+        "j_invariant": "7958909377132088453074743217357398615041065282494610304372115906626967530147",
+        "trace_of_frobenius": "89188191154553853111372247798585809583",
+        "embedding_degree": "38597363070118749587565815649802524509998985074711920114140753020356170681456",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "51463150760158332783421087533070032680028376163334078103224794776407756178469",
+        "conductor": "3",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 2,
+            "full": 6
+          },
+          {
+            "r": 5,
+            "least": 2,
+            "full": 10
+          },
+          {
+            "r": 7,
+            "least": 16,
+            "full": 16
+          }
+        ]
+      }
+    }
+  ]
+}

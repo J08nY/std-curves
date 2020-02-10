@@ -1,0 +1,564 @@
+{
+  "name": "other",
+  "desc": "An assortment of some other curves.",
+  "curves": [
+    {
+      "name": "M-221",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
+        "bits": 221
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x155555555555555555555555555555555555555555555554451FF4F3",
+        "b": "0x1684BDA12F684BDA12F684BDA12F684BDA12F684BDA19B7249700DF7"
+      },
+      "generator": {
+        "x": "0x1555555555555555555555555555555555555555555555555555EDC0",
+        "y": "0x0F7ACDD2A4939571D1CEF14ECA37C228E61DBFF10707DC6C08C5056D"
+      },
+      "order": "0x040000000000000000000000000015A08ED730E8A2F77F005042605B",
+      "cofactor": "0x8",
+      "characteristics": {
+        "discriminant": "219211239936",
+        "j_invariant": "2198635150322943370581460256665771755915443349493942401782889387523",
+        "trace_of_frobenius": "-3509210517603025598879416729141978",
+        "embedding_degree": "210624583337114373395836055367341083963447540990198152472167526445",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "1497774814841702210814834171501090982892121090477320568885392696286",
+        "conductor": "3",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 1,
+            "full": 2
+          },
+          {
+            "r": 3,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 5,
+            "least": 12,
+            "full": 12
+          },
+          {
+            "r": 7,
+            "least": 4,
+            "full": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "M-383",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
+        "bits": 383
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA95FABD1AE6C",
+        "b": "0x04BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F7159AE18A4923F45"
+      },
+      "generator": {
+        "x": "0x5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555FD5E4",
+        "y": "0x1EC7ED04AAF834AF310E304B2DA0F328E7C165F0E8988ABD3992861290F617AA1F1B2E7D0B6E332E969991B62555E77E"
+      },
+      "order": "0x10000000000000000000000000000000000000000000000006C79673AC36BA6E7A32576F7B1B249E46BBC225BE9071D7",
+      "cofactor": "0x08",
+      "characteristics": {
+        "discriminant": "68237512359936",
+        "j_invariant": "19156916258991752630369809725823075910515034309449569468296111834899549609790941110907181451683621363127169102415254",
+        "trace_of_frobenius": "-1329890207450988128841758359484337226464313875646092906354",
+        "embedding_degree": "2462625387274654950767440006258975862817483704404090416746934574041288984234680883008327183083615266784870011007446",
+        "anomalous": false,
+        "supersingular": false
+      }
+    },
+    {
+      "name": "M-511",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
+        "bits": 511
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA94D474F50C",
+        "b": "0x425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED0BEFAE0163491C0"
+      },
+      "generator": {
+        "x": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5D1E",
+        "y": "0x2FBDC0AD8530803D28FDBAD354BB488D32399AC1CF8F6E01EE3F96389B90C809422B9429E8A43DBF49308AC4455940ABE9F1DBCA542093A895E30A64AF056FA5"
+      },
+      "order": "0x100000000000000000000000000000000000000000000000000000000000000017B5FEFF30C7F5677AB2AEEBD13779A2AC125042A6AA10BFA54C15BAB76BAF1B",
+      "cofactor": "0x08",
+      "characteristics": {
+        "discriminant": "4501831549440",
+        "j_invariant": "1222743593625801720547221804319357480411194869774230749481484574517397628109853434488220780823541699740646064698755698105676429176324145032481063622649084",
+        "trace_of_frobenius": "-85798038077085980992356252112544974736566053019478664231724326470621400496530"
+      }
+    },
+    {
+      "name": "E-222",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffff8b",
+        "bits": 222
+      },
+      "form": "Edwards",
+      "params": {
+        "c": "0x01",
+        "d": "0x27166"
+      },
+      "generator": {
+        "x": "0x19b12bb156a389e55c9768c303316d07c23adab3736eb2bc3eb54e51",
+        "y": "0x1c"
+      },
+      "order": "0xffffffffffffffffffffffffffff70cbc95e932f802f31423598cbf",
+      "cofactor": "0x04"
+    },
+    {
+      "name": "Curve25519",
+      "category": "other",
+      "desc": "Curve from https://cr.yp.to/ecdh.html",
+      "field": {
+        "type": "Prime",
+        "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed",
+        "bits": 255
+      },
+      "form": "Montgomery",
+      "params": {
+        "a": "0x76d06",
+        "b": "0x01"
+      },
+      "generator": {
+        "x": "0x09",
+        "y": "0x20ae19a1b8a086b4e01edd2c7748d14c923d4d7e6d7c61b229e9c5a27eced3d9"
+      },
+      "order": "0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed",
+      "cofactor": "0x08",
+      "characteristics": {
+        "discriminant": "3789438435840",
+        "j_invariant": "39240375672115510010799456308813573486606784421612167109713554819120306934551",
+        "trace_of_frobenius": "-221938542218978828286815502327069187962"
+      }
+    },
+    {
+      "name": "Curve22103",
+      "category": "other",
+      "desc": "Curve from https://github.com/relic-toolkit/relic",
+      "field": {
+        "type": "Prime",
+        "p": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
+        "bits": 221
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x155555555555555555555555555555555555555555555552174084FF",
+        "b": "0x1425ED097B425ED097B425ED097B425ED097B425ED0BBA9428427967"
+      },
+      "generator": {
+        "x": "0xCB476FE081B61F56A60B1D1B34FB7207D072EF25DADF377731049B0",
+        "y": "0x36429404D97E1E217BAD2E5601F6551F95D8FE9481BD454D1F3E7B6"
+      },
+      "order": "0x3FFFFFFFFFFFFFFFFFFFFFFFFFFF5CD04695A145C3067CF4AAE2025",
+      "cofactor": "0x08"
+    },
+    {
+      "name": "Curve4417",
+      "category": "other",
+      "desc": "Curve from https://github.com/relic-toolkit/relic",
+      "field": {
+        "type": "Prime",
+        "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffb",
+        "bits": 226
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x4648D10B419379D50F4BA01869D9AE363285E01FE66920878EE075B0",
+        "b": "0x4C4DCEDFAC09383A0311B98EE9637415B9134B4115FDB760C1A3D419"
+      },
+      "generator": {
+        "x": "0xFF9D7EDD97D523012FFAACA32B7C90F1A8E026F21972C789A8484A2B",
+        "y": "0x3E9036ADC1A41FCE2F2CA08E2D1BE4F6D97E30CA7761DB1F3E2F2CE96"
+      },
+      "order": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC4A75594D4923FC93D42713CDAF",
+      "cofactor": "0x04"
+    },
+    {
+      "name": "Curve1174",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/325.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7",
+        "bits": 251
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x486BE25B34C8080922B969257EEB54C404F914A29067A5560BB9AEE0BC67A6D",
+        "b": "0xE347A25BF875DD2F1F12D8A10334D417CC15E77893A99F4BF278CA563072E6"
+      },
+      "generator": {
+        "x": "0x3BE821D63D2CD5AFE0504F452E5CF47A60A10446928CEAECFD5294F89B45051",
+        "y": "0x66FE4E7B8B6FE152F743393029A61BFB839747C8FB00F7B27A6841C07532A0"
+      },
+      "order": "0x1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF77965C4DFD307348944D45FD166C971",
+      "cofactor": "0x04"
+    },
+    {
+      "name": "Curve67254",
+      "category": "other",
+      "desc": "Curve from https://github.com/relic-toolkit/relic",
+      "field": {
+        "type": "Prime",
+        "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff97",
+        "bits": 382
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x2E32419A32377AF8E7F03148A106D112C8C2E26D31A89F46B743DEED322C7ADC3024AFE4B5AFD8DB7180281586549F4A",
+        "b": "0x22F6EF3BE72A67FDC236D7173727CD2AF6D02A195753C44BDF451369B02EA0F963D9A775CAE6DC3AE9CCABB7F183C1AD"
+      },
+      "generator": {
+        "x": "0x141946416199FDDA96EC1F1AC80058AA3F0CE96B1BCD023E97BAE542FE3404B4738DB9B81A13698339387672ECA360C0",
+        "y": "0xD51BF79D968F4A076022E750F821058E2B5073697B639EDD355EBF8AD32352B1EFA9478DE7EB5662EF0D26EF6EEA795"
+      },
+      "order": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5FB21F21E95EEE17C5E69281B102D2773E27E13FD3C9719",
+      "cofactor": "0x04"
+    },
+    {
+      "name": "Ed25519",
+      "category": "other",
+      "desc": "Curve from https://ed25519.cr.yp.to",
+      "field": {
+        "type": "Prime",
+        "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed",
+        "bits": 255
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec",
+        "d": "0x52036cee2b6ffe738cc740797779e89800700a4d4141d8ab75eb4dca135978a3"
+      },
+      "generator": {
+        "x": "0x216936D3CD6E53FEC0A4E231FDD6DC5C692CC7609525A7B2C9562D608F25D51A",
+        "y": "0x6666666666666666666666666666666666666666666666666666666666666658"
+      },
+      "order": "0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed",
+      "cofactor": "0x08",
+      "characteristics": {
+        "discriminant": "604592382411166409359847682163448376412977399592556651652337986082875105857",
+        "j_invariant": "39240375672115510010799456308813573486606784421612167109713554819120306934551",
+        "trace_of_frobenius": "-221938542218978828286815502327069187962"
+      }
+    },
+    {
+      "name": "Ed448",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2015/625.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "bits": 448
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": "0x01",
+        "d": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffff6756"
+      },
+      "generator": {
+        "x": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa955555555555555555555555555555555555555555555555555555555",
+        "y": "0xae05e9634ad7048db359d6205086c2b0036ed7a035884dd7b7e36d728ad8c4b80d6565833a2a3098bbbcb2bed1cda06bdaeafbcdea9386ed"
+      },
+      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffff7cca23e9c44edb49aed63690216cc2728dc58f552378c292ab5844f3",
+      "cofactor": "0x04"
+    },
+    {
+      "name": "Fp254BNa",
+      "category": "other",
+      "desc": "Curve used in: https://eprint.iacr.org/2010/354.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000001",
+        "bits": 254
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x00",
+        "b": "0x05"
+      },
+      "generator": {
+        "x": "0x01",
+        "y": "0xd45589b158faaf6ab0e4ad38d998e9982e7ff63964ee1460342a592677cccb0"
+      },
+      "order": "0x2370fb049d410fbe4e761a9886e502411dc1af70120000017e80600000000001",
+      "cofactor": "0x01",
+      "characteristics": {
+        "discriminant": "16030569034403128277756688287498649515636838101184337499778392980116222236113",
+        "j_invariant": "0",
+        "trace_of_frobenius": "126611883464401272108868536818127077377",
+        "embedding_degree": "12",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "284987893944944502715674458444420435832981068983435327675576459482874497379",
+        "conductor": "15",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 2,
+            "full": 6
+          },
+          {
+            "r": 5,
+            "least": 24,
+            "full": 24
+          },
+          {
+            "r": 7,
+            "least": 6,
+            "full": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fp254BNb",
+      "category": "other",
+      "desc": "Curve used in https://www.iacr.org/archive/eurocrypt2011/66320047/66320047.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x2523648240000001ba344d80000000086121000000000013a700000000000013",
+        "bits": 254
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x00",
+        "b": "0x02"
+      },
+      "generator": {
+        "x": "0x2523648240000001ba344d80000000086121000000000013a700000000000012",
+        "y": "0x01"
+      },
+      "order": "0x2523648240000001ba344d8000000007ff9f800000000010a10000000000000d",
+      "cofactor": "0x01",
+      "characteristics": {
+        "discriminant": "16798108731015832284940804142231733909889187121439069848933715426072753862995",
+        "j_invariant": "0",
+        "trace_of_frobenius": "129607518034317099905336561907183648775",
+        "embedding_degree": "12",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "67192434924063329139763216568926935639427140967721962295829525142383831810117",
+        "conductor": "1",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 2,
+            "full": 2
+          },
+          {
+            "r": 5,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 7,
+            "least": 6,
+            "full": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fp224BN",
+      "category": "other",
+      "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffff107288ec29e602c4520db42180823bb907d1287127833",
+        "bits": 224
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x00",
+        "b": "0x03"
+      },
+      "generator": {
+        "x": "0x01",
+        "y": "0x02"
+      },
+      "order": "0xfffffffffff107288ec29e602c4420db4218082b36c2accff76c58ed",
+      "cofactor": "0x01",
+      "characteristics": {
+        "discriminant": "26959946667149205758383469736921695435015736735261155141423417420035",
+        "j_invariant": "0",
+        "trace_of_frobenius": "5192296858534689624111674181427015",
+        "embedding_degree": "12",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "11982198518732980337059319883076308505307343156261666272668832029853",
+        "conductor": "3",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 2,
+            "full": 6
+          },
+          {
+            "r": 5,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 7,
+            "least": 2,
+            "full": 6
+          },
+          {
+            "r": 11,
+            "least": 10,
+            "full": 10
+          },
+          {
+            "r": 13,
+            "least": 2,
+            "full": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fp256BN",
+      "category": "other",
+      "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffcf0cd46e5f25eee71a49f0cdc65fb12980a82d3292ddbaed33013",
+        "bits": 256
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x00",
+        "b": "0x03"
+      },
+      "generator": {
+        "x": "0x01",
+        "y": "0x02"
+      },
+      "order": "0xfffffffffffcf0cd46e5f25eee71a49e0cdc65fb1299921af62d536cd10b500d",
+      "cofactor": "0x01",
+      "characteristics": {
+        "discriminant": "115792089237314936872688561244471742058375878355761205198700409522629664514275",
+        "j_invariant": "0",
+        "trace_of_frobenius": "340282366920936614211651523200128901127",
+        "embedding_degree": "12",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "2058526030885598877736685533235053192147392138027217263024844384743637907429",
+        "conductor": "15",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 2,
+            "full": 6
+          },
+          {
+            "r": 5,
+            "least": 24,
+            "full": 24
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fp384BN",
+      "category": "other",
+      "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffff2a96823d5920d2a127e3f6fbca024c8fbe29531892c79534f9d306328261550a7cabd7cccd10b",
+        "bits": 384
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x00",
+        "b": "0x03"
+      },
+      "generator": {
+        "x": "0x01",
+        "y": "0x02"
+      },
+      "order": "0xfffffffffffffffffff2a96823d5920d2a127e3f6fbca023c8fbe29531892c795356487d8ac63e4f4db17384341a5775",
+      "cofactor": "0x01",
+      "characteristics": {
+        "discriminant": "39402006196394479212278605372068645601647601647604977711041989197213181721117185302456933847594895764913993728967131",
+        "j_invariant": "0",
+        "trace_of_frobenius": "6277101735386680763835754795021643429033562911502587034007",
+        "embedding_degree": "12",
+        "anomalous": false,
+        "supersingular": false
+      }
+    },
+    {
+      "name": "Fp512BN",
+      "category": "other",
+      "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffff9ec7f01c60ba1d8cb5307c0bbe3c111b0ef455146cf1eacbe98b8e48c65deab236fe1916a55ce5f4c6467b4eb280922adef33",
+        "bits": 512
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0x00",
+        "b": "0x03"
+      },
+      "generator": {
+        "x": "0x01",
+        "y": "0x02"
+      },
+      "order": "0xfffffffffffffffffffffffffff9ec7f01c60ba1d8cb5307c0bbe3c111b0ef445146cf1eacbe98b8e48c65deab2679a34a10313e04f9a2b406a64a5f519a09ed",
+      "cofactor": "0x01",
+      "characteristics": {
+        "discriminant": "13407807929942597099574024998205830437246153344875111580494527427714590099881795845981157516604994291639750834285779043186149750164319950153126044364562435",
+        "j_invariant": "0",
+        "trace_of_frobenius": "115792089237316195423570985008687840101103879741288409693302319863988063823175"
+      }
+    }
+  ]
+}

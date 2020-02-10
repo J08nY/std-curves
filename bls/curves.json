@@ -1,0 +1,111 @@
+{
+	"name": "Barreto-Lynn-Scott",
+	"desc": "BLS curves. A family of pairing friendly curves, with embedding degree = 12 or 24.",
+	"curves": [
+		{
+			"name": "BLS12-381",
+			"category": "bls",
+			"desc": "Curve from https://electriccoin.co/blog/new-snark-curve/. As used in ZCash.",
+			"field": {
+				"type": "Prime",
+				"p": "0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab",
+				"bits": 381
+			},
+			"form": "Weierstrass",
+			"params": {
+				"a": "0x00",
+				"b": "0x04"
+			},
+			"generator": {
+				"x": "0x17F1D3A73197D7942695638C4FA9AC0FC3688C4F9774B905A14E3A3F171BAC586C55E83FF97A1AEFFB3AF00ADB22C6BB",
+				"y": "0x08B3F481E3AAA0F1A09E30ED741D8AE4FCF5E095D5D00AF600DB18CB2C04B3EDD03CC744A2888AE40CAA232946C5E7E1"
+			},
+			"order": "0x73EDA753299D7D483339D80809A1D80553BDA402FFFE5BFEFFFFFFFF00000001",
+			"cofactor": "0x396C8C005555E1568C00AAAB0000AAAB"
+		},
+		{
+			"name": "BLS12-446",
+			"category": "bls",
+			"desc": "Curve from https://github.com/relic-toolkit/relic.",
+			"field": {
+				"type": "Prime",
+				"p": "0x3cdee0fb28c5e535200fc34965aad6400095a4b78a02fe320f75a64bbac71602824e6dc3e23acdee56ee4528c573b5cc311c0026aab0aaab",
+				"bits": 446
+			},
+			"form": "Weierstrass",
+			"params": {
+				"a": "0x00",
+				"b": "0x01"
+			},
+			"generator": {
+				"x": "0x297792B2D03DE39D64FACA6D49FCF7A8850144CA24FC5D815C082A3AA87D1A16929E56228C136123BA51421AE89CACD5B4789A38CE39035A",
+				"y": "0x"
+			},
+			"order": "0x511b70539f27995b34995830fa4d04c98ccc4c050bc7bb9b0e8d8ca34610428001400040001",
+			"cofactor": "0xC02082602B0055D560AB0AD5AAAAC0002AAAC"
+		},
+		{
+			"name": "BLS12-455",
+			"desc": "Curve from https://github.com/relic-toolkit/relic.",
+			"category": "bls",
+			"field": {
+				"type": "Prime",
+				"p": "0x55555955557955572aa00e0f95b49203003f665e3a5b1d56234bd93954fcb314b8b3db9994ace86d1ba6c589556b2aa956aaa00001800002ab",
+				"bits": 455
+			},
+			"form": "Weierstrass",
+			"params": {
+				"a": "0x00",
+				"b": "0x0a"
+			},
+			"generator": {
+				"x": "0x03018DF4C2336D178E6EA61540353ABA01923E3890B3295848906DFC90E0C43008E4751FFC913DC1FF3DF33D11DB57BADA7A9297195ACFB2FA",
+				"y": "0x19A8A9C4C3AC2FFB4C6B380D17B8282E029615052EAA6416C16C8F36F251D87C272657F0702CC58C4E072628D7BAD3C0E9B3A8AEBFC6B2357C"
+			},
+			"order": "0x10000080000380002E0000F10004F00025E000750001D1000A00000400001C00007FFFFC00001",
+			"cofactor": "0x555556AAAAB15555B54AAB6A9557FFAABFFAAB"
+		},
+		{
+			"name": "BLS12-638",
+			"category": "bls",
+			"desc": "Curve from https://github.com/relic-toolkit/relic. Also in https://eprint.iacr.org/2012/232.pdf.",
+			"field": {
+				"type": "Prime",
+				"p": "0x3cb868653d300b3fe80015554dd25db0fc01dcde95d4000000631bbd421715013955555555529c005c75d6c2ab00000000000ac79600d2abaaaaaaaaaaaaaa93eaf3ff000aaaaaaaaaaaaaaabeab000b",
+				"bits": 638
+			},
+			"form": "Weierstrass",
+			"params": {
+				"a": "0x00",
+				"b": "0x04"
+			},
+			"generator": {
+				"x": "0x160F63A3A3B297F113075ED79466138E85B025F7FE724B78E32D7AFC4D734BDD54F871092B8D1966D491C0F45A48A8BBA5586095DFFCC1410B7E26ED16BAF98C1117959134C24A17A7BE31E1AFBF844F",
+				"y": "0x2D340B33877480A9785E86ED2EDCAFC170B82568CB21B708B79FC6DA3748461FCD80697E486695F3CAE76FCB1781E784F6812F57BE05DFC850426650DED8B40A464B00A35718228EC8E02B52B59D876E"
+			},
+			"order": "0x50F94035FF4000FFFFFFFFFFF9406BFDC0040000000000000035FB801DFFBFFFFFFFFFFFFFFF401BFF80000000000000000000FFC01",
+			"cofactor": "0xBFF8001555555555555555554D957EAAAAAAAAAAAAAAAAAAAABEB"
+		},
+		{
+			"name": "BLS24-477",
+			"category": "bls",
+			"desc": "Curve from https://github.com/relic-toolkit/relic. Also in https://eprint.iacr.org/2012/232.pdf.",
+			"field": {
+				"type": "Prime",
+				"p": "0x167278fac63bd5b007ebb8f693a2ab3dbd9f92cf437c399d928e94bfe9a04a009fda9e8cf9226901de62aea9dcea48bf1a0ebbf8860a5e7ad000152b",
+				"bits": 477
+			},
+			"form": "Weierstrass",
+			"params": {
+				"a": "0x00",
+				"b": "0x04"
+			},
+			"generator": {
+				"x": "0x15DFD8E4893A408A34B600532B51CC86CAB3AF07103CFCF3EC7B9AF836904CFB60AB0FA8AC91EE6255E5EF6286FA0C24DF9D76EA50599C2E103E40AD",
+				"y": "0x0A683957A59B1B488FA657E11B44815056BDE33C09D6AAD392D299F89C7841B91A683BF01B7E70547E48E0FBE1CA9E991983131470F886BA9B6FCE2E"
+			},
+			"order": "0x57F52EE445CC41781FCD53D13E45F6ACDFE4F9F2A3CD414E71238AFC9FCFC7D38CAEF64F4FF79F90013FFFFFF0000001",
+			"cofactor": "0x41550AAAC04B3FD5000015AB"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "ANSSI",
+  "desc": "Agence nationale de la s\u00e9curit\u00e9 des syst\u00e8mes d'information: Publication d'un param\u00e9trage de courbe elliptique visant des applications de passeport \u00e9lectronique et de l'administration \u00e9lectronique fran\u00e7aise. 21 November 2011",
+  "curves": [
+    {
+      "name": "FRP256v1",
+      "category": "anssi",
+      "desc": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c03",
+        "bits": 256
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c00",
+        "b": "0xee353fca5428a9300d4aba754a44c00fdfec0c9ae4b1a1803075ed967b7bb73f"
+      },
+      "generator": {
+        "x": "0xb6b3d4c356c139eb31183d4749d423958c27d2dcaf98b70164c97a2dd98f5cff",
+        "y": "0x6142e0f7c8b204911f9271f0f3ecef8c2701c307e8e4c9e183115a1554062cfb"
+      },
+      "order": "0xf1fd178c0b3ad58f10126de8ce42435b53dc67e140d2bf941ffdd459c6d655e1",
+      "cofactor": "0x1",
+      "characteristics": {
+        "discriminant": "36852496142108626283186094975130945312915652343771992238361306471587988304996",
+        "j_invariant": "40896549830710972397896969473453290820546317441961689722588313512802554631657",
+        "trace_of_frobenius": "-35197163533674495870879651530057169373",
+        "embedding_degree": "18242428555282879769611787505122521357667424468567068775512033867954346593872",
+        "anomalous": false,
+        "supersingular": false,
+        "cm_disc": "437818285326789114470682900122940512583912595755008627124676173876314146744809",
+        "conductor": "1",
+        "torsion_degrees": [
+          {
+            "r": 2,
+            "least": 3,
+            "full": 3
+          },
+          {
+            "r": 3,
+            "least": 8,
+            "full": 8
+          },
+          {
+            "r": 5,
+            "least": 12,
+            "full": 12
+          },
+          {
+            "r": 7,
+            "least": 2,
+            "full": 6
+          }
+        ]
+      }
+    }
+  ]
+}

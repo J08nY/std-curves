@@ -1,0 +1,174 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"definitions": {
+		"Number": {
+			"type": "string",
+			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)$"
+		},
+		"Weierstrass": {
+			"type": "object",
+			"properties": {
+				"a": {"$ref": "#/definitions/Number"},
+				"b": {"$ref": "#/definitions/Number"}
+			},
+			"required": ["a", "b"]
+		},
+		"Edwards": {
+			"type": "object",
+			"properties": {
+				"c": {"$ref": "#/definitions/Number"},
+				"d": {"$ref": "#/definitions/Number"}
+			},
+			"required": ["c", "d"]
+		},
+		"TwistedEdwards": {
+			"type": "object",
+			"properties": {
+				"a": {"$ref": "#/definitions/Number"},
+				"d": {"$ref": "#/definitions/Number"}
+			},
+			"required": ["a", "d"]
+		},
+		"Montgomery": {
+			"type": "object",
+			"properties": {
+				"a": {"$ref": "#/definitions/Number"},
+				"b": {"$ref": "#/definitions/Number"}
+			},
+			"required": ["a", "b"]
+		},
+		"PrimeField": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "Prime"},
+				"p": {"$ref": "#/definitions/Number"},
+				"bits": {"type": "integer"}
+			},
+			"required": ["p", "bits"]
+		},
+		"Trinomial": {
+			"type": "object",
+			"properties": {
+				"m": {"type": "integer"},
+				"e1": {"type": "integer"}
+			},
+			"required": ["m", "e1"]
+		},
+		"Pentanomial": {
+			"type": "object",
+			"properties": {
+				"m": {"type": "integer"},
+				"e1": {"type": "integer"},
+				"e2": {"type": "integer"},
+				"e3": {"type": "integer"}
+			},
+			"required": ["m", "e1", "e2", "e3"]
+		},
+		"BinaryField": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "Binary"},
+				"poly": {
+					"anyOf": [
+						{"$ref": "#/definitions/Trinomial"},
+						{"$ref": "#/definitions/Pentanomial"}
+					]
+				},
+				"bits": {"type": "integer"}
+			},
+			"required": ["poly", "bits"]
+		},
+		"Point": {
+			"type": "object",
+			"properties": {
+				"x": {"$ref": "#/definitions/Number"},
+				"y": {"$ref": "#/definitions/Number"}
+			},
+			"required": ["x", "y"]
+		},
+		"Curve": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"category": {"type": "string"},
+				"desc": {"type": "string"},
+				"oid": {"type": "string"},
+				"field": {
+					"oneOf": [
+						{"$ref": "#/definitions/PrimeField"},
+						{"$ref": "#/definitions/BinaryField"}
+					]
+				},
+				"form": {
+					"type": "string",
+					"enum": ["Weierstrass", "Edwards", "TwistedEdwards", "Montgomery"]
+				},
+				"generator": {"$ref": "#/definitions/Point"},
+				"order": {"$ref": "#/definitions/Number"},
+				"cofactor": {"$ref": "#/definitions/Number"},
+				"aliases": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"allOf": [
+				{
+					"if": {
+						"properties": {"form": {"const": "Weierstrass"}}
+					},
+					"then": {
+						"properties": {
+							"params": {"$ref": "#/definitions/Weierstrass"}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {"form": {"const": "Edwards"}}
+					},
+					"then": {
+						"properties": {
+							"params": {"$ref": "#/definitions/Edwards"}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {"form": {"const": "TwistedEdwards"}}
+					},
+					"then": {
+						"properties": {
+							"params": {"$ref": "#/definitions/TwistedEdwards"}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {"form": {"const": "Montgomery"}}
+					},
+					"then": {
+						"properties": {
+							"params": {"$ref": "#/definitions/Montgomery"}
+						}
+					}
+				}
+			],
+			"required": ["name", "category", "desc", "field", "form", "generator", "order", "cofactor"]
+		},
+		"Category": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"desc": {"type": "string"},
+				"curves": {"type": "array", "items": {"$ref": "#/definitions/Curve"}}
+			},
+			"required": ["name", "desc", "curves"]
+		}
+	},
+	"oneOf": [
+		{"$ref": "#/definitions/Category"},
+		{"$ref": "#/definitions/Curve"}
+	]
+}
