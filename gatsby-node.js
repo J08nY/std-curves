@@ -182,3 +182,12 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 }
+
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage === 'build-javascript') {
+    // turn off source-maps
+    actions.setWebpackConfig({
+      devtool: false
+    })
+  }
+}
