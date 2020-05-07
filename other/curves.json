@@ -241,6 +241,20 @@
       "order": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5FB21F21E95EEE17C5E69281B102D2773E27E13FD3C9719",
       "cofactor": "0x04"
     },
+    {"category": "other",
+	   "cofactor": "0x8",
+	   "desc": "",
+	   "field": {"bits": 283,
+	             "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45",
+	             "type": "Prime"},
+	   "form": "Montgomery",
+	   "generator": {"x": "0x5",
+	                 "y": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"},
+	   "name": "Curve383187",
+	   "oid": "",
+	   "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
+	   "params": {"a": "0x38251", "b": "0x01"}
+	   },
     {
       "name": "Ed25519",
       "category": "other",
@@ -392,7 +406,8 @@
             "full": 6
           }
         ]
-      }
+      },
+      "aliases": ["bn/bn254"]
     },
     {
       "name": "Fp224BN",
