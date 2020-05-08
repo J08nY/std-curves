@@ -53,7 +53,8 @@
       },
       "aliases": [
         "nist/K-163",
-        "secg/sect163k1"
+        "secg/sect163k1",
+        "x963/ansit163k1"
       ]
     },
     {
@@ -79,7 +80,10 @@
       "params": {
         "a": "0x003088250ca6e7c7fe649ce85820f7",
         "b": "0x00e8bee4d3e2260744188be0e9c723"
-      }
+      },
+      "aliases": [
+        "secg/sect113r1"
+      ]
     },
     {
       "form": "Weierstrass",
@@ -131,7 +135,10 @@
       "params": {
         "a": "0xdb7c2abf62e35e668076bead2088",
         "b": "0x659ef8ba043916eede8911702b22"
-      }
+      },
+      "aliases": [
+        "secg/secp112r1"
+      ]
     },
     {
       "category": "WTLS",
@@ -155,7 +162,8 @@
         "b": "0x1c97befc54bd7a8b65acf89f81d4d4adc565fa45"
       },
       "aliases": [
-        "secg/secp160r1"
+        "secg/secp160r1",
+        "x963/ansip160r1"
       ]
     },
     {
@@ -228,7 +236,8 @@
       },
       "aliases": [
         "secg/sect233k1",
-        "nist/K-233"
+        "nist/K-233",
+        "x963/ansit233k1"
       ]
     },
     {
@@ -257,7 +266,8 @@
       },
       "aliases": [
         "secg/sect233r1",
-        "nist/B-233"
+        "nist/B-233",
+        "x963/ansit233r1"
       ]
     },
     {
@@ -283,7 +293,8 @@
       },
       "aliases": [
         "secg/secp224r1",
-        "nist/P-224"
+        "nist/P-224",
+        "x963/ansip224r1"
       ]
     }
   ],

@@ -91,7 +91,8 @@
       "cofactor": "0x1",
       "aliases": [
         "secg/secp224r1",
-        "wtls/wap-wsg-idm-ecid-wtls12"
+        "wtls/wap-wsg-idm-ecid-wtls12",
+        "x963/ansip224r1"
       ],
       "characteristics": {
         "discriminant": "8133954887115844930654026312464158747844254983800706208418026371607",
@@ -199,7 +200,8 @@
       "order": "0xffffffffffffffffffffffffffffffffffffffffffffffffc7634d81f4372ddf581a0db248b0a77aecec196accc52973",
       "cofactor": "0x1",
       "aliases": [
-        "secg/secp384r1"
+        "secg/secp384r1",
+        "x963/ansip384r1"
       ],
       "characteristics": {
         "discriminant": "38275261264050278989862136034342276004573039492779555073863190029182890449044186682105480613137214197175883602718257",
@@ -228,7 +230,8 @@
       "order": "0x01fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa51868783bf2f966b7fcc0148f709a5d03bb5c9b8899c47aebb6fb71e91386409",
       "cofactor": "0x1",
       "aliases": [
-        "secg/secp521r1"
+        "secg/secp521r1",
+        "x963/ansip521r1"
       ],
       "characteristics": {
         "discriminant": "2687853087729004331535582886185403114835754464152651523509230634031161977750238608042000458607319784141115468556368066113806987449553072575343372028907331922",
@@ -300,7 +303,8 @@
       "order": "0x040000000000000000000292fe77e70c12a4234c33",
       "cofactor": "0x2",
       "aliases": [
-        "secg/sect163r2"
+        "secg/sect163r2",
+        "x963/ansit163r2"
       ],
       "characteristics": {
         "discriminant": "2982236234343851336267446656627785008148015875581",
@@ -337,7 +341,8 @@
       "cofactor": "0x4",
       "aliases": [
         "secg/sect233k1",
-        "wtls/wap-wsg-idm-ecid-wtls10"
+        "wtls/wap-wsg-idm-ecid-wtls10",
+        "x963/ansit233k1"
       ],
       "characteristics": {
         "discriminant": "1",
@@ -373,7 +378,8 @@
       "cofactor": "0x2",
       "aliases": [
         "secg/sect233r1",
-        "wtls/wap-wsg-idm-ecid-wtls11"
+        "wtls/wap-wsg-idm-ecid-wtls11",
+        "x963/ansit233r1"
       ],
       "characteristics": {
         "discriminant": "2760497980029204187078845502377898520307707256259003964398570147123373",
@@ -411,7 +417,8 @@
       "order": "0x1ffffffffffffffffffffffffffffffffffe9ae2ed07577265dff7f94451e061e163c61",
       "cofactor": "0x4",
       "aliases": [
-        "secg/sect283k1"
+        "secg/sect283k1",
+        "x963/ansit283k1"
       ],
       "characteristics": {
         "discriminant": "1",
@@ -449,7 +456,8 @@
       "order": "0x3ffffffffffffffffffffffffffffffffffef90399660fc938a90165b042a7cefadb307",
       "cofactor": "0x2",
       "aliases": [
-        "secg/sect283r1"
+        "secg/sect283r1",
+        "x963/ansit283r1"
       ],
       "characteristics": {
         "discriminant": "4821813576056072374006997780399081180312270030300601270120450341205914644378616963829",
@@ -485,7 +493,8 @@
       "order": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffe5f83b2d4ea20400ec4557d5ed3e3e7ca5b4b5c83b8e01e5fcf",
       "cofactor": "0x4",
       "aliases": [
-        "secg/sect409k1"
+        "secg/sect409k1",
+        "x963/ansit409k1"
       ],
       "characteristics": {
         "discriminant": "1",
@@ -519,7 +528,8 @@
       "order": "0x10000000000000000000000000000000000000000000000000001e2aad6a612f33307be5fa47c3c9e052f838164cd37d9a21173",
       "cofactor": "0x2",
       "aliases": [
-        "secg/sect409r1"
+        "secg/sect409r1",
+        "x963/ansit409r1"
       ],
       "characteristics": {
         "discriminant": "86886261634090707672817770640384425264505829479043641824438658614111870471004564988634410809058207142318571212147935892575",
@@ -555,7 +565,8 @@
       "order": "0x20000000000000000000000000000000000000000000000000000000000000000000000131850e1f19a63e4b391a8db917f4138b630d84be5d639381e91deb45cfe778f637c1001",
       "cofactor": "0x4",
       "aliases": [
-        "secg/sect571k1"
+        "secg/sect571k1",
+        "x963/ansit571k1"
       ],
       "characteristics": {
         "discriminant": "1",
@@ -591,7 +602,8 @@
       "order": "0x3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe661ce18ff55987308059b186823851ec7dd9ca1161de93d5174d66e8382e9bb2fe84e47",
       "cofactor": "0x2",
       "aliases": [
-        "secg/sect571r1"
+        "secg/sect571r1",
+        "x963/ansit571r1"
       ],
       "characteristics": {
         "discriminant": "2853329245261343535560086964181551296889298776106832980891560850944180011701123307905326019642652653533003482753023669016842884108172514870944140611113679225347419720217210",

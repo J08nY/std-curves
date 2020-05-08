@@ -241,20 +241,28 @@
       "order": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5FB21F21E95EEE17C5E69281B102D2773E27E13FD3C9719",
       "cofactor": "0x04"
     },
-    {"category": "other",
-	   "cofactor": "0x8",
-	   "desc": "",
-	   "field": {"bits": 283,
-	             "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45",
-	             "type": "Prime"},
-	   "form": "Montgomery",
-	   "generator": {"x": "0x5",
-	                 "y": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"},
-	   "name": "Curve383187",
-	   "oid": "",
-	   "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
-	   "params": {"a": "0x38251", "b": "0x01"}
-	   },
+    {
+      "category": "other",
+      "cofactor": "0x8",
+      "desc": "",
+      "field": {
+        "bits": 283,
+        "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45",
+        "type": "Prime"
+      },
+      "form": "Montgomery",
+      "generator": {
+        "x": "0x5",
+        "y": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"
+      },
+      "name": "Curve383187",
+      "oid": "",
+      "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
+      "params": {
+        "a": "0x38251",
+        "b": "0x01"
+      }
+    },
     {
       "name": "Ed25519",
       "category": "other",
@@ -407,7 +415,9 @@
           }
         ]
       },
-      "aliases": ["bn/bn254"]
+      "aliases": [
+        "bn/bn254"
+      ]
     },
     {
       "name": "Fp224BN",
@@ -573,6 +583,166 @@
         "discriminant": "13407807929942597099574024998205830437246153344875111580494527427714590099881795845981157516604994291639750834285779043186149750164319950153126044364562435",
         "j_invariant": "0",
         "trace_of_frobenius": "115792089237316195423570985008687840101103879741288409693302319863988063823175"
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-160",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1f",
+        "bits": 160
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1c",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c841"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-192",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc302f41d932a36cda7a3463093d18db78fce476de1a86297",
+        "bits": 192
+      },
+      "params": {
+        "a": "0xc302f41d932a36cda7a3463093d18db78fce476de1a86294",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d36a6"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-224",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedf",
+        "bits": 224
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedc",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13a03"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-256",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c0b",
+        "bits": 256
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c08",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146434e1"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-288",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a098b",
+        "bits": 288
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a0988",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939f36"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-320",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b3",
+        "bits": 320
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b0",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b40a4"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-384",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a437b",
+        "bits": 384
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a4378",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c7791"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "ssc-512",
+      "category": "other",
+      "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ef",
+        "bits": 512
+      },
+      "params": {
+        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ec",
+        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c75d8f681b202aec4617ad3df1ed5d5fd6a8d"
+      },
+      "generator": {
+        "x": "",
+        "y": ""
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
-  "name": "x962",
-  "desc": "x962 example curves.",
+  "name": "ANSI x9.62",
+  "desc": "ANSI x9.62 example curves.",
   "curves": [
     {
       "name": "prime192v1",

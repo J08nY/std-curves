@@ -1,0 +1,138 @@
+{
+	"name": "NUMS",
+	"desc": "Microsoft Nothing Up My Sleeve (NUMS) curves from: <https://eprint.iacr.org/2014/130> and <https://tools.ietf.org/html/draft-black-numscurves-02>",
+	"curves": [
+		{
+			"form": "Weierstrass",
+			"name": "numsp256d1",
+			"category": "nums",
+			"desc": "",
+			"oid": "",
+			"field": {
+				"type": "Prime",
+				"p": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff43",
+				"bits": 256
+			},
+			"params": {
+				"a": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff40",
+				"b": "0x25581"
+			},
+			"order": "0xffffffffffffffffffffffffffffffffe43c8275ea265c6020ab20294751a825",
+			"cofactor": "0x01",
+			"generator": {
+				"x": "0x01",
+				"y": "0x696f1853c1e466d7fc82c96cceeedd6bd02c2f9375894ec10bf46306c2b56c77"
+			}
+		},
+		{
+			"form": "TwistedEdwards",
+			"name": "numsp256t1",
+			"category": "nums",
+			"desc": "",
+			"oid": "",
+			"field": {
+				"type": "Prime",
+				"p": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff43",
+				"bits": 256
+			},
+			"params": {
+				"a": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff42",
+				"d": "0x3bee"
+			},
+			"order": "0x3fffffffffffffffffffffffffffffffbe6aa55ad0a6bc64e5b84e6f1122b4ad",
+			"cofactor": "0x04",
+			"generator": {
+				"x": "0x0d",
+				"y": "0x7d0ab41e2a1276dba3d330b39fa046bfbe2a6d63824d303f707f6fb5331cadba"
+			}
+		},
+		{
+			"form": "Weierstrass",
+			"name": "numsp384d1",
+			"category": "nums",
+			"desc": "",
+			"oid": "",
+			"field": {
+				"type": "Prime",
+				"p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec3",
+				"bits": 384
+			},
+			"params": {
+				"a": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec0",
+				"b": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff77bb"
+			},
+			"order": "0xffffffffffffffffffffffffffffffffffffffffffffffffd61eaf1eeb5d6881beda9d3d4c37e27a604d81f67b0e61b9",
+			"cofactor": "0x01",
+			"generator": {
+				"x": "0x02",
+				"y": "0x3c9f82cb4b87b4dc71e763e0663e5dbd8034ed422f04f82673330dc58d15ffa2b4a3d0bad5d30f865bcbbf503ea66f43"
+			}
+		},
+		{
+			"form": "TwistedEdwards",
+			"name": "numsp384t1",
+			"category": "nums",
+			"desc": "",
+			"oid": "",
+			"field": {
+				"type": "Prime",
+				"p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec3",
+				"bits": 384
+			},
+			"params": {
+				"a": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec2",
+				"d": "0x5158a"
+			},
+			"order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffecd7d11ed5a259a25a13a0458e39f4e451d6d71f70426e25",
+			"cofactor": "0x04",
+			"generator": {
+				"x": "0x08",
+				"y": "0x749cdaba136ce9b65bd4471794aa619daa5c7b4c930bff8ebd798a8ae753c6d72f003860febabad534a4acf5fa7f5bee"
+			}
+		},
+		{
+			"form": "Weierstrass",
+			"name": "numsp512d1",
+			"category": "nums",
+			"desc": "",
+			"oid": "",
+			"field": {
+				"type": "Prime",
+				"p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc7",
+				"bits": 512
+			},
+			"params": {
+				"a": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc4",
+				"b": "0x1d99b"
+			},
+			"order": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5b3ca4fb94e7831b4fc258ed97d0bdc63b568b36607cd243ce153f390433555d",
+			"cofactor": "0x01",
+			"generator": {
+				"x": "0x02",
+				"y": "0x1c282eb23327f9711952c250ea61ad53fcc13031cf6dd336e0b9328433afbdd8cc5a1c1f0c716fdc724dde537c2b0adb00bb3d08dc83755b205cc30d7f83cf28"
+			}
+		},
+		{
+			"form": "TwistedEdwards",
+			"name": "numsp512t1",
+			"category": "nums",
+			"desc": "",
+			"oid": "",
+			"field": {
+				"type": "Prime",
+				"p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc7",
+				"bits": 512
+			},
+			"params": {
+				"a": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc6",
+				"d": "0x9baa8"
+			},
+			"order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa7e50809efdabbb9a624784f449545f0dcea5ff0cb800f894e78d1cb0b5f0189",
+			"cofactor": "0x04",
+			"generator": {
+				"x": "0x20",
+				"y": "0x7d67e841dc4c467b605091d80869212f9ceb124bf726973f9ff048779e1d614e62ae2ece5057b5dad96b7a897c1d72799261134638750f4f0cb91027543b1c5e"
+			}
+		}
+	]
+}
