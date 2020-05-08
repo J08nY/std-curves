@@ -14,7 +14,7 @@ export const query = graphql`
 export default ({ data, location }) => {
   return (
     <Entry data={data} location={location} title={"Search"}>
-		<h3>Search by curve:</h3>
+		<h3>Search by curve name:</h3>
 		<Search searchIndex={data.siteSearchIndex.index} />	
     </Entry>
   )

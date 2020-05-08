@@ -2,45 +2,6 @@ const path = require(`path`)
 
 exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
-  const oldTypeDefs = `
-  type PrimeField {
-    p: String!
-    bits: Int
-  }
-  type Trinomial {
-    m: Int
-    e1: Int
-  }
-  type Pentanomial {
-    m: Int
-    e1: Int
-    e2: Int
-    e3: Int
-  }
-  union Polynomial = Trinomial | Pentanomial
-  type BinaryField {
-    poly: Polynomial
-    bits: Int
-  }
-  union Field = PrimeField | BinaryField
-  type WeierstrassParams {
-    a: String!
-    b: String!
-  }
-  type MontgomeryParams {
-    a: String!
-    b: String!
-  }
-  type EdwardsParams {
-    c: String!
-    d: String!
-  }
-  type TwistedEdwardsParams {
-    a: String!
-    d: String!
-  }
-  union Params = WeierstrassParams | MontgomeryParams | EdwardsParams | TwistedEdwardsParams
-  `
   const typeDefs = `
     type Polynomial {
       m: Int

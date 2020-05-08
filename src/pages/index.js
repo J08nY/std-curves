@@ -18,6 +18,10 @@ export default ({ data, location }) => {
       The curve listing includes its parameters, computed characteristics such as number of points or j-invariant as well 
       as SAGE code which can be used to instantiate the curve and a JSON export of all of the curve data.
       New curves are currently being added, the database is definitely not complete.
+
+      The presence of a certain curve in this database does not mean that the curve is secure, only that it is notable enough or that someone suggested
+      its use in a publication or a standard. We made a best effort attempt to make sure all parameters presented here are correct, however mistakes
+      could have happened on data import (the database now contains more than 180 curves) and thus double-checking with the source document is recommended.
     </Entry>
   )
 }
