@@ -373,6 +373,7 @@
       },
       "order": "0x0100000000000000000001f4c8f927aed3ca752257",
       "cofactor": "0x1",
+      "aliases": ["wtls/wap-wsg-idm-ecid-wtls7"],
       "characteristics": {
         "discriminant": "1027266213310721979572908445837817790068480350785",
         "j_invariant": "1443800352525525475817269232308576710441299733598",
@@ -682,7 +683,8 @@
       "order": "0xffffffffffffffffffffffffffff16a2e0b8f03e13dd29455c5c2a3d",
       "cofactor": "0x1",
       "aliases": [
-        "nist/P-224"
+        "nist/P-224",
+        "wtls/wap-wsg-idm-ecid-wtls12"
       ],
       "characteristics": {
         "discriminant": "8133954887115844930654026312464158747844254983800706208418026371607",
@@ -1002,7 +1004,8 @@
       "order": "0x8000000000000000000000000000069d5bb915bcd46efb1ad5f173abdf",
       "cofactor": "0x4",
       "aliases": [
-        "nist/K-233"
+        "nist/K-233",
+        "wtls/wap-wsg-idm-ecid-wtls10"
       ],
       "characteristics": {
         "discriminant": "1",
@@ -1037,7 +1040,8 @@
       "order": "0x01000000000000000000000000000013e974e72f8a6922031d2603cfe0d7",
       "cofactor": "0x2",
       "aliases": [
-        "nist/B-233"
+        "nist/B-233",
+        "wtls/wap-wsg-idm-ecid-wtls11"
       ],
       "characteristics": {
         "discriminant": "2760497980029204187078845502377898520307707256259003964398570147123373",

@@ -90,7 +90,8 @@
       "order": "0xffffffffffffffffffffffffffff16a2e0b8f03e13dd29455c5c2a3d",
       "cofactor": "0x1",
       "aliases": [
-        "secg/secp224r1"
+        "secg/secp224r1",
+        "wtls/wap-wsg-idm-ecid-wtls12"
       ],
       "characteristics": {
         "discriminant": "8133954887115844930654026312464158747844254983800706208418026371607",
@@ -335,7 +336,8 @@
       "order": "0x8000000000000000000000000000069d5bb915bcd46efb1ad5f173abdf",
       "cofactor": "0x4",
       "aliases": [
-        "secg/sect233k1"
+        "secg/sect233k1",
+        "wtls/wap-wsg-idm-ecid-wtls10"
       ],
       "characteristics": {
         "discriminant": "1",
@@ -370,7 +372,8 @@
       "order": "0x1000000000000000000000000000013e974e72f8a6922031d2603cfe0d7",
       "cofactor": "0x2",
       "aliases": [
-        "secg/sect233r1"
+        "secg/sect233r1",
+        "wtls/wap-wsg-idm-ecid-wtls11"
       ],
       "characteristics": {
         "discriminant": "2760497980029204187078845502377898520307707256259003964398570147123373",
