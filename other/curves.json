@@ -603,7 +603,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c5d89f4f2dd72349ee61f7",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -623,7 +625,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628c5dca19490dd3e6fd7979a7a3",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -643,7 +647,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628b80dd2439be5b2b827a9ffbea7240e5cd",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -663,7 +669,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628b80dc1cd0fbec42e940b37a88d9caeca198a64437",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -683,7 +691,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628b80dc1cd12903ba214366757b7a5240b2a637e2065a850855",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -703,7 +713,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e09489bd44fda941042cccc7286009777663bb29671",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -723,7 +735,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc73b7669162524b60c73ee73e6dfe7059f510370fe7870d8599",
+      "cofactor": "0x01"
     },
     {
       "form": "Weierstrass",
@@ -743,7 +757,9 @@
       "generator": {
         "x": "",
         "y": ""
-      }
+      },
+      "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b235a2359c4afbc9eb7987f1c9ab37e42599188c4b7dc6269b830d80897f57a5f71",
+      "cofactor": "0x01"
     }
   ]
 }
