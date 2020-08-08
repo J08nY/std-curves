@@ -242,16 +242,18 @@
     {
       "name": "K-163",
       "category": "nist",
-      "desc": "",
+      "desc": "Koblitz curve.",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 163,
-          "e1": 7,
-          "e2": 6,
-          "e3": 3
-        },
-        "bits": 163
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 7, "coeff": "0x01"},
+          {"power": 6, "coeff": "0x01"},
+          {"power": 3, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 163,
+        "degree": 163
       },
       "form": "Weierstrass",
       "params": {
@@ -283,13 +285,15 @@
       "desc": "",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 163,
-          "e1": 7,
-          "e2": 6,
-          "e3": 3
-        },
-        "bits": 163
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 7, "coeff": "0x01"},
+          {"power": 6, "coeff": "0x01"},
+          {"power": 3, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 163,
+        "degree": 163
       },
       "form": "Weierstrass",
       "params": {
@@ -319,14 +323,16 @@
     {
       "name": "K-233",
       "category": "nist",
-      "desc": "",
+      "desc": "Koblitz curve.",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 233,
-          "e1": 74
-        },
-        "bits": 233
+        "poly": [
+          {"power": 233, "coeff": "0x01"},
+          {"power": 74, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 233,
+        "degree": 233
       },
       "form": "Weierstrass",
       "params": {
@@ -359,11 +365,13 @@
       "desc": "",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 233,
-          "e1": 74
-        },
-        "bits": 233
+        "poly": [
+          {"power": 233, "coeff": "0x01"},
+          {"power": 74, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 233,
+        "degree": 233
       },
       "form": "Weierstrass",
       "params": {
@@ -394,16 +402,18 @@
     {
       "name": "K-283",
       "category": "nist",
-      "desc": "",
+      "desc": "Koblitz curve.",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 283,
-          "e1": 12,
-          "e2": 7,
-          "e3": 5
-        },
-        "bits": 283
+        "poly": [
+          {"power": 283, "coeff": "0x01"},
+          {"power": 12, "coeff": "0x01"},
+          {"power": 7, "coeff": "0x01"},
+          {"power": 5, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 283,
+        "degree": 283
       },
       "form": "Weierstrass",
       "params": {
@@ -436,13 +446,15 @@
       "desc": "",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 283,
-          "e1": 12,
-          "e2": 7,
-          "e3": 5
-        },
-        "bits": 283
+        "poly": [
+          {"power": 283, "coeff": "0x01"},
+          {"power": 12, "coeff": "0x01"},
+          {"power": 7, "coeff": "0x01"},
+          {"power": 5, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 283,
+        "degree": 283
       },
       "form": "Weierstrass",
       "params": {
@@ -472,14 +484,16 @@
     {
       "name": "K-409",
       "category": "nist",
-      "desc": "",
+      "desc": "Koblitz curve.",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 409,
-          "e1": 87
-        },
-        "bits": 409
+        "poly": [
+          {"power": 409, "coeff": "0x01"},
+          {"power": 87, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 409,
+        "degree": 409
       },
       "form": "Weierstrass",
       "params": {
@@ -510,11 +524,13 @@
       "desc": "",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 409,
-          "e1": 87
-        },
-        "bits": 409
+        "poly": [
+          {"power": 409, "coeff": "0x01"},
+          {"power": 87, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 409,
+        "degree": 409
       },
       "form": "Weierstrass",
       "params": {
@@ -542,16 +558,18 @@
     {
       "name": "K-571",
       "category": "nist",
-      "desc": "",
+      "desc": "Koblitz curve.",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 571,
-          "e1": 10,
-          "e2": 5,
-          "e3": 2
-        },
-        "bits": 571
+        "poly": [
+          {"power": 571, "coeff": "0x01"},
+          {"power": 10, "coeff": "0x01"},
+          {"power": 5, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 571,
+        "degree": 571
       },
       "form": "Weierstrass",
       "params": {
@@ -582,13 +600,15 @@
       "desc": "",
       "field": {
         "type": "Binary",
-        "poly": {
-          "m": 571,
-          "e1": 10,
-          "e2": 5,
-          "e3": 2
-        },
-        "bits": 571
+        "poly": [
+          {"power": 571, "coeff": "0x01"},
+          {"power": 10, "coeff": "0x01"},
+          {"power": 5, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
+        "bits": 571,
+        "degree": 571
       },
       "form": "Weierstrass",
       "params": {

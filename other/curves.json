@@ -364,6 +364,38 @@
       }
     },
     {
+      "name": "Fp254n2BNa",
+      "category": "other",
+      "desc": "Curve used in: https://eprint.iacr.org/2010/354.pdf",
+      "field": {
+        "type": "Extension",
+        "base": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000001",
+        "bits": 508,
+        "degree": 2,
+        "poly": [
+          {"power": 2, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x05"}
+        ]
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": [{"power": 0, "coeff": "0x00"}],
+        "b": [{"power": 1, "coeff": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000000"}]
+      },
+      "generator": {
+        "x": [
+          {"power": 1, "coeff": "0xa1cf585585a61c6e9880b1f2a5c539f7d906fff238fa6341e1de1a2e45c3f72"},
+          {"power": 0, "coeff": "0x19b0bea4afe4c330da93cc3533da38a9f430b471c6f8a536e81962ed967909b5"}
+        ],
+        "y": [
+          {"power": 1, "coeff": "0x0ee97d6de9902a27d00e952232a78700863bc9aa9be960C32f5bf9fd0a32d345"},
+          {"power": 0, "coeff": "0x17abd366ebbd65333e49c711a80a0cf6d24adf1b9b3990eedcc91731384d2627"}
+        ]
+      },
+      "order": "0x2370fb049d410fbe4e761a9886e502411dc1af70120000017e80600000000001",
+      "cofactor": "0x2370fb049d410fbe4e761a9886e50241dc42cf101e0000017e80600000000001"
+    },
+    {
       "name": "Fp254BNb",
       "category": "other",
       "desc": "Curve used in https://www.iacr.org/archive/eurocrypt2011/66320047/66320047.pdf",

@@ -352,12 +352,14 @@
       "field": {
         "type": "Binary",
         "bits": 176,
-        "poly": {
-          "m": 176,
-          "e1": 43,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 176,
+        "poly": [
+          {"power": 176, "coeff": "0x01"},
+          {"power": 43, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0xe4e6db2995065c407d9d39b8d0967b96704ba8e9c90b",
@@ -379,12 +381,14 @@
       "field": {
         "type": "Binary",
         "bits": 163,
-        "poly": {
-          "m": 163,
-          "e1": 8,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 163,
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 8, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x072546b5435234a422e0789675f432c89435de5242",
@@ -406,12 +410,14 @@
       "field": {
         "type": "Binary",
         "bits": 163,
-        "poly": {
-          "m": 163,
-          "e1": 8,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 163,
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 8, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x0108b39e77c4b108bed981ed0e890e117c511cf072",
@@ -433,12 +439,14 @@
       "field": {
         "type": "Binary",
         "bits": 163,
-        "poly": {
-          "m": 163,
-          "e1": 8,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 163,
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 8, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x07a526c63d3e25a256a007699f5447e32ae456b50e",
@@ -460,12 +468,14 @@
       "field": {
         "type": "Binary",
         "bits": 208,
-        "poly": {
-          "m": 208,
-          "e1": 83,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 208,
+        "poly": [
+          {"power": 208, "coeff": "0x01"},
+          {"power": 83, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x0",
@@ -487,10 +497,12 @@
       "field": {
         "type": "Binary",
         "bits": 191,
-        "poly": {
-          "m": 191,
-          "e1": 9
-        }
+        "degree": 191,
+        "poly": [
+          {"power": 191, "coeff": "0x01"},
+          {"power": 9, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x6c01074756099122221056911c77d77e77a777e7e7e77fcb",
@@ -512,10 +524,12 @@
       "field": {
         "type": "Binary",
         "bits": 191,
-        "poly": {
-          "m": 191,
-          "e1": 9
-        }
+        "degree": 191,
+        "poly": [
+          {"power": 191, "coeff": "0x01"},
+          {"power": 9, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x401028774d7777c7b7666d1366ea432071274f89ff01e718",
@@ -537,10 +551,12 @@
       "field": {
         "type": "Binary",
         "bits": 191,
-        "poly": {
-          "m": 191,
-          "e1": 9
-        }
+        "degree": 191,
+        "poly": [
+          {"power": 191, "coeff": "0x01"},
+          {"power": 9, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x2866537b676752636a68f56554e12640276b649ef7526267",
@@ -562,10 +578,12 @@
       "field": {
         "type": "Binary",
         "bits": 239,
-        "poly": {
-          "m": 239,
-          "e1": 36
-        }
+        "degree": 239,
+        "poly": [
+          {"power": 239, "coeff": "0x01"},
+          {"power": 36, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x01238774666a67766d6676f778e676b66999176666e687666d8766c66a9f",
@@ -587,10 +605,12 @@
       "field": {
         "type": "Binary",
         "bits": 239,
-        "poly": {
-          "m": 239,
-          "e1": 36
-        }
+        "degree": 239,
+        "poly": [
+          {"power": 239, "coeff": "0x01"},
+          {"power": 36, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x4230017757a767fae42398569b746325d45313af0766266479b75654e65f",
@@ -612,10 +632,12 @@
       "field": {
         "type": "Binary",
         "bits": 239,
-        "poly": {
-          "m": 239,
-          "e1": 36
-        }
+        "degree": 239,
+        "poly": [
+          {"power": 239, "coeff": "0x01"},
+          {"power": 36, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x32010857077c5431123a46b808906756f543423e8d27877578125778ac76",
@@ -637,12 +659,14 @@
       "field": {
         "type": "Binary",
         "bits": 272,
-        "poly": {
-          "m": 272,
-          "e1": 56,
-          "e2": 3,
-          "e3": 1
-        }
+        "degree": 272,
+        "poly": [
+          {"power": 272, "coeff": "0x01"},
+          {"power": 56, "coeff": "0x01"},
+          {"power": 3, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x91a091f03b5fba4ab2ccf49c4edd220fb028712d42be752b2c40094dbacdb586fb20",
@@ -664,12 +688,14 @@
       "field": {
         "type": "Binary",
         "bits": 304,
-        "poly": {
-          "m": 304,
-          "e1": 11,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 304,
+        "poly": [
+          {"power": 304, "coeff": "0x01"},
+          {"power": 11, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0xfd0d693149a118f651e6dce6802085377e5f882d1b510b44160074c1288078365a0396c8e681",
@@ -691,12 +717,14 @@
       "field": {
         "type": "Binary",
         "bits": 368,
-        "poly": {
-          "m": 368,
-          "e1": 85,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 368,
+        "poly": [
+          {"power": 368, "coeff": "0x01"},
+          {"power": 85, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0xe0d2ee25095206f5e2a4f9ed229f1f256e79a0e2b455970d8d0d865bd94778c576d62f0ab7519ccd2a1a906ae30d",
@@ -718,10 +746,12 @@
       "field": {
         "type": "Binary",
         "bits": 359,
-        "poly": {
-          "m": 359,
-          "e1": 68
-        }
+        "degree": 359,
+        "poly": [
+          {"power": 359, "coeff": "0x01"},
+          {"power": 68, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x5667676a654b20754f356ea92017d946567c46675556f19556a04616b567d223a5e05656fb549016a96656a557",
@@ -743,10 +773,12 @@
       "field": {
         "type": "Binary",
         "bits": 431,
-        "poly": {
-          "m": 431,
-          "e1": 120
-        }
+        "degree": 431,
+        "poly": [
+          {"power": 431, "coeff": "0x01"},
+          {"power": 120, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x1a827ef00dd6fc0e234caf046c6a5d8a85395b236cc4ad2cf32a0cadbdc9ddf620b0eb9906d0957f6c6feacd615468df104de296cd8f",

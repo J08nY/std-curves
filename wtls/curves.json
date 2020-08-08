@@ -6,10 +6,12 @@
       "desc": "",
       "field": {
         "bits": 113,
-        "poly": {
-          "e1": 9,
-          "m": 113
-        },
+        "degree": 113,
+        "poly": [
+          {"power": 113, "coeff": "0x01"},
+          {"power": 9, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
         "type": "Binary"
       },
       "form": "Weierstrass",
@@ -30,14 +32,16 @@
       "cofactor": "0x2",
       "desc": "",
       "field": {
+        "type": "Binary",
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 7, "coeff": "0x01"},
+          {"power": 6, "coeff": "0x01"},
+          {"power": 3, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
         "bits": 163,
-        "poly": {
-          "e1": 7,
-          "e2": 6,
-          "e3": 2,
-          "m": 163
-        },
-        "type": "Binary"
+        "degree": 163
       },
       "form": "Weierstrass",
       "generator": {
@@ -63,10 +67,12 @@
       "desc": "",
       "field": {
         "bits": 113,
-        "poly": {
-          "e1": 9,
-          "m": 113
-        },
+        "degree": 113,
+        "poly": [
+          {"power": 113, "coeff": "0x01"},
+          {"power": 9, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
         "type": "Binary"
       },
       "form": "Weierstrass",
@@ -94,12 +100,14 @@
       "field": {
         "type": "Binary",
         "bits": 163,
-        "poly": {
-          "m": 163,
-          "e1": 8,
-          "e2": 2,
-          "e3": 1
-        }
+        "degree": 163,
+        "poly": [
+          {"power": 163, "coeff": "0x01"},
+          {"power": 8, "coeff": "0x01"},
+          {"power": 2, "coeff": "0x01"},
+          {"power": 1, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ]
       },
       "params": {
         "a": "0x072546b5435234a422e0789675f432c89435de5242",
@@ -126,7 +134,7 @@
       },
       "form": "Weierstrass",
       "generator": {
-        "x": "0x09487239995a5ee76b55f9c2f098,",
+        "x": "0x09487239995a5ee76b55f9c2f098",
         "y": "0xa89ce5af8724c0a23e0e0ff77500"
       },
       "name": "wap-wsg-idm-ecid-wtls6",
@@ -151,7 +159,7 @@
       },
       "form": "Weierstrass",
       "generator": {
-        "x": "0x4a96b5688ef573284664698968c38bb913cbfc82,",
+        "x": "0x4a96b5688ef573284664698968c38bb913cbfc82",
         "y": "0x23a628553168947d59dcc912042351377ac5fb32"
       },
       "name": "wap-wsg-idm-ecid-wtls7",
@@ -215,16 +223,18 @@
       "cofactor": "0x4",
       "desc": "",
       "field": {
+        "type": "Binary",
+        "poly": [
+          {"power": 233, "coeff": "0x01"},
+          {"power": 74, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
         "bits": 233,
-        "poly": {
-          "e1": 74,
-          "m": 233
-        },
-        "type": "Binary"
+        "degree": 233
       },
       "form": "Weierstrass",
       "generator": {
-        "x": "0x017232ba853a7e731af129f22ff4149563a419c26bf50a4c9d6eefad6126,",
+        "x": "0x017232ba853a7e731af129f22ff4149563a419c26bf50a4c9d6eefad6126",
         "y": "0x01db537dece819b7f70f555a67c427a8cd9bf18aeb9b56e0c11056fae6a3"
       },
       "name": "wap-wsg-idm-ecid-wtls10",
@@ -245,12 +255,14 @@
       "cofactor": "0x2",
       "desc": "",
       "field": {
+        "type": "Binary",
+        "poly": [
+          {"power": 233, "coeff": "0x01"},
+          {"power": 74, "coeff": "0x01"},
+          {"power": 0, "coeff": "0x01"}
+        ],
         "bits": 233,
-        "poly": {
-          "e1": 74,
-          "m": 233
-        },
-        "type": "Binary"
+        "degree": 233
       },
       "form": "Weierstrass",
       "generator": {

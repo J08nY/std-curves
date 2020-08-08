@@ -5,35 +5,51 @@
 			"type": "string",
 			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)$"
 		},
+		"Polynomial": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"power": {"type":  "integer"},
+					"coeff": {"$ref":  "#/definitions/Number"}
+				}
+			}
+		},
+		"Element": {
+			"anyOf": [
+				{"$ref":  "#/definitions/Number"},
+				{"$ref":  "#/definitions/Polynomial"}
+			]
+		},
 		"Weierstrass": {
 			"type": "object",
 			"properties": {
-				"a": {"$ref": "#/definitions/Number"},
-				"b": {"$ref": "#/definitions/Number"}
+				"a": {"$ref": "#/definitions/Element"},
+				"b": {"$ref": "#/definitions/Element"}
 			},
 			"required": ["a", "b"]
 		},
 		"Edwards": {
 			"type": "object",
 			"properties": {
-				"c": {"$ref": "#/definitions/Number"},
-				"d": {"$ref": "#/definitions/Number"}
+				"c": {"$ref": "#/definitions/Element"},
+				"d": {"$ref": "#/definitions/Element"}
 			},
 			"required": ["c", "d"]
 		},
 		"TwistedEdwards": {
 			"type": "object",
 			"properties": {
-				"a": {"$ref": "#/definitions/Number"},
-				"d": {"$ref": "#/definitions/Number"}
+				"a": {"$ref": "#/definitions/Element"},
+				"d": {"$ref": "#/definitions/Element"}
 			},
 			"required": ["a", "d"]
 		},
 		"Montgomery": {
 			"type": "object",
 			"properties": {
-				"a": {"$ref": "#/definitions/Number"},
-				"b": {"$ref": "#/definitions/Number"}
+				"a": {"$ref": "#/definitions/Element"},
+				"b": {"$ref": "#/definitions/Element"}
 			},
 			"required": ["a", "b"]
 		},
@@ -46,43 +62,33 @@
 			},
 			"required": ["p", "bits"]
 		},
-		"Trinomial": {
-			"type": "object",
-			"properties": {
-				"m": {"type": "integer"},
-				"e1": {"type": "integer"}
-			},
-			"required": ["m", "e1"]
-		},
-		"Pentanomial": {
-			"type": "object",
-			"properties": {
-				"m": {"type": "integer"},
-				"e1": {"type": "integer"},
-				"e2": {"type": "integer"},
-				"e3": {"type": "integer"}
-			},
-			"required": ["m", "e1", "e2", "e3"]
-		},
 		"BinaryField": {
 			"type": "object",
 			"properties": {
 				"type": {"const": "Binary"},
-				"poly": {
-					"anyOf": [
-						{"$ref": "#/definitions/Trinomial"},
-						{"$ref": "#/definitions/Pentanomial"}
-					]
-				},
+				"base": {"const": "0x02"},
+				"degree": {"type": "integer"},
+				"poly": {"$ref": "#/definitions/Polynomial"},
 				"bits": {"type": "integer"}
 			},
-			"required": ["poly", "bits"]
+			"required": ["degree", "poly", "bits"]
+		},
+		"ExtenstionField": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "Extension"},
+				"base": {"$ref": "#/definitions/Number"},
+				"degree": {"type": "integer"},
+				"poly": {"$ref": "#/definitions/Polynomial"},
+				"bits": {"type": "integer"}
+			},
+			"required": ["base", "degree", "poly", "bits"]
 		},
 		"Point": {
 			"type": "object",
 			"properties": {
-				"x": {"$ref": "#/definitions/Number"},
-				"y": {"$ref": "#/definitions/Number"}
+				"x": {"$ref": "#/definitions/Element"},
+				"y": {"$ref": "#/definitions/Element"}
 			},
 			"required": ["x", "y"]
 		},
@@ -96,7 +102,8 @@
 				"field": {
 					"oneOf": [
 						{"$ref": "#/definitions/PrimeField"},
-						{"$ref": "#/definitions/BinaryField"}
+						{"$ref": "#/definitions/BinaryField"},
+						{"$ref": "#/definitions/ExtenstionField"}
 					]
 				},
 				"form": {

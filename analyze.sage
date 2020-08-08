@@ -110,11 +110,24 @@ def get_curve_group(data):
 		return E, G
 	elif data["field"]["type"] == "Binary":
 		F.<x> = GF(2)[]
-		poly = sum(x^i for i in [data["field"]["poly"]["m"], data["field"]["poly"].get("e1"), data["field"]["poly"].get("e2"), data["field"]["poly"].get("e3"), 0] if i is not None)
-		K = GF(2^data["field"]["poly"]["m"], name="x", modulus=poly)
+		poly = sum(F(int(elem["coeff"], 16)) * x^elem["power"] for elem in data["field"]["poly"])
+		K = GF(2^data["field"]["degree"], name="x", modulus=poly)
 		E = EllipticCurve(K, (1, K.fetch_int(int(data["params"]["a"], 16)), 0, 0, K.fetch_int(int(data["params"]["b"], 16))))
 		E.set_order(int(data["order"], 16) * int(data["cofactor"], 16))
 		G = E(K.fetch_int(int(data["generator"]["x"], 16)), K.fetch_int(int(data["generator"]["y"], 16)))
+		return E, G
+	elif data["field"]["type"] == "Extension":
+		base = int(data["field"]["base"], 16)
+		F.<x> = GF(base)[]
+		poly = sum(F(int(elem["coeff"], 16)) * x^elem["power"] for elem in data["field"]["poly"])
+		K = GF(base^data["field"]["degree"], name="x", modulus=poly)
+		a = K(sum(F(int(elem["coeff"], 16)) * x^elem["power"] for elem in data["params"]["a"]))
+		b = K(sum(F(int(elem["coeff"], 16)) * x^elem["power"] for elem in data["params"]["b"]))
+		E = EllipticCurve(K, (a, b))
+		E.set_order(int(data["order"], 16) * int(data["cofactor"], 16))
+		gx = K(sum(F(int(elem["coeff"], 16)) * x^elem["power"] for elem in data["generator"]["x"]))
+		gy = K(sum(F(int(elem["coeff"], 16)) * x^elem["power"] for elem in data["generator"]["y"]))
+		G = E(gx, gy)
 		return E, G
 	else:
 		raise ValueError()
