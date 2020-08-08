@@ -12,11 +12,13 @@ exports.sourceNodes = ({ actions }) => {
     enum FieldType {
       Prime
       Binary
+      Extension
     }
     type Field {
       type: FieldType
       p: String
       poly: Polynomial
+      base: Int
       bits: Int
     }
     type Point {

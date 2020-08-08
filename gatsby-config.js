@@ -57,7 +57,7 @@ module.exports = {
           Curve: {
             name: node => node.name,
             category: node => node.category,
-            path: node => node.category + "/" + node.name,
+            path: node => "/" + node.category + "/" + node.name,
             type: node => "curve"
           }
         },

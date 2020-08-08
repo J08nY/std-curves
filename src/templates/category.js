@@ -31,7 +31,7 @@ export default ({ data, location, pageContext }) => {
       <h3>{pageContext.name}</h3>
       {data.category.desc}<br/>
       <ul>
-      {data.category.children.map((curve, i) => <li key={i}><Link to={path.join(data.category.parent.parent.relativeDirectory, curve.name)}>{curve.name}</Link></li>)}
+      {data.category.children.map((curve, i) => <li key={i}><Link to={"/" + path.join(data.category.parent.parent.relativeDirectory, curve.name)}>{curve.name}</Link></li>)}
       </ul>
     </Entry>
   )
