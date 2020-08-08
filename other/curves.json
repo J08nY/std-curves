@@ -13,12 +13,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x155555555555555555555555555555555555555555555554451FF4F3",
-        "b": "0x1684BDA12F684BDA12F684BDA12F684BDA12F684BDA19B7249700DF7"
+        "a": {
+          "value": "0x155555555555555555555555555555555555555555555554451FF4F3"
+        },
+        "b": {
+          "value": "0x1684BDA12F684BDA12F684BDA12F684BDA12F684BDA19B7249700DF7"
+        }
       },
       "generator": {
-        "x": "0x1555555555555555555555555555555555555555555555555555EDC0",
-        "y": "0x0F7ACDD2A4939571D1CEF14ECA37C228E61DBFF10707DC6C08C5056D"
+        "x": {
+          "value": "0x1555555555555555555555555555555555555555555555555555EDC0"
+        },
+        "y": {
+          "value": "0x0F7ACDD2A4939571D1CEF14ECA37C228E61DBFF10707DC6C08C5056D"
+        }
       },
       "order": "0x040000000000000000000000000015A08ED730E8A2F77F005042605B",
       "cofactor": "0x8",
@@ -66,12 +74,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA95FABD1AE6C",
-        "b": "0x04BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F7159AE18A4923F45"
+        "a": {
+          "value": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA95FABD1AE6C"
+        },
+        "b": {
+          "value": "0x04BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F7159AE18A4923F45"
+        }
       },
       "generator": {
-        "x": "0x5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555FD5E4",
-        "y": "0x1EC7ED04AAF834AF310E304B2DA0F328E7C165F0E8988ABD3992861290F617AA1F1B2E7D0B6E332E969991B62555E77E"
+        "x": {
+          "value": "0x5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555FD5E4"
+        },
+        "y": {
+          "value": "0x1EC7ED04AAF834AF310E304B2DA0F328E7C165F0E8988ABD3992861290F617AA1F1B2E7D0B6E332E969991B62555E77E"
+        }
       },
       "order": "0x10000000000000000000000000000000000000000000000006C79673AC36BA6E7A32576F7B1B249E46BBC225BE9071D7",
       "cofactor": "0x08",
@@ -95,12 +111,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA94D474F50C",
-        "b": "0x425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED0BEFAE0163491C0"
+        "a": {
+          "value": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA94D474F50C"
+        },
+        "b": {
+          "value": "0x425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED0BEFAE0163491C0"
+        }
       },
       "generator": {
-        "x": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5D1E",
-        "y": "0x2FBDC0AD8530803D28FDBAD354BB488D32399AC1CF8F6E01EE3F96389B90C809422B9429E8A43DBF49308AC4455940ABE9F1DBCA542093A895E30A64AF056FA5"
+        "x": {
+          "value": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5D1E"
+        },
+        "y": {
+          "value": "0x2FBDC0AD8530803D28FDBAD354BB488D32399AC1CF8F6E01EE3F96389B90C809422B9429E8A43DBF49308AC4455940ABE9F1DBCA542093A895E30A64AF056FA5"
+        }
       },
       "order": "0x100000000000000000000000000000000000000000000000000000000000000017B5FEFF30C7F5677AB2AEEBD13779A2AC125042A6AA10BFA54C15BAB76BAF1B",
       "cofactor": "0x08",
@@ -121,12 +145,20 @@
       },
       "form": "Edwards",
       "params": {
-        "c": "0x01",
-        "d": "0x27166"
+        "c": {
+          "value": "0x01"
+        },
+        "d": {
+          "value": "0x27166"
+        }
       },
       "generator": {
-        "x": "0x19b12bb156a389e55c9768c303316d07c23adab3736eb2bc3eb54e51",
-        "y": "0x1c"
+        "x": {
+          "value": "0x19b12bb156a389e55c9768c303316d07c23adab3736eb2bc3eb54e51"
+        },
+        "y": {
+          "value": "0x1c"
+        }
       },
       "order": "0xffffffffffffffffffffffffffff70cbc95e932f802f31423598cbf",
       "cofactor": "0x04"
@@ -142,12 +174,20 @@
       },
       "form": "Montgomery",
       "params": {
-        "a": "0x76d06",
-        "b": "0x01"
+        "a": {
+          "value": "0x76d06"
+        },
+        "b": {
+          "value": "0x01"
+        }
       },
       "generator": {
-        "x": "0x09",
-        "y": "0x20ae19a1b8a086b4e01edd2c7748d14c923d4d7e6d7c61b229e9c5a27eced3d9"
+        "x": {
+          "value": "0x09"
+        },
+        "y": {
+          "value": "0x20ae19a1b8a086b4e01edd2c7748d14c923d4d7e6d7c61b229e9c5a27eced3d9"
+        }
       },
       "order": "0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed",
       "cofactor": "0x08",
@@ -168,12 +208,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x155555555555555555555555555555555555555555555552174084FF",
-        "b": "0x1425ED097B425ED097B425ED097B425ED097B425ED0BBA9428427967"
+        "a": {
+          "value": "0x155555555555555555555555555555555555555555555552174084FF"
+        },
+        "b": {
+          "value": "0x1425ED097B425ED097B425ED097B425ED097B425ED0BBA9428427967"
+        }
       },
       "generator": {
-        "x": "0xCB476FE081B61F56A60B1D1B34FB7207D072EF25DADF377731049B0",
-        "y": "0x36429404D97E1E217BAD2E5601F6551F95D8FE9481BD454D1F3E7B6"
+        "x": {
+          "value": "0xCB476FE081B61F56A60B1D1B34FB7207D072EF25DADF377731049B0"
+        },
+        "y": {
+          "value": "0x36429404D97E1E217BAD2E5601F6551F95D8FE9481BD454D1F3E7B6"
+        }
       },
       "order": "0x3FFFFFFFFFFFFFFFFFFFFFFFFFFF5CD04695A145C3067CF4AAE2025",
       "cofactor": "0x08"
@@ -189,12 +237,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x4648D10B419379D50F4BA01869D9AE363285E01FE66920878EE075B0",
-        "b": "0x4C4DCEDFAC09383A0311B98EE9637415B9134B4115FDB760C1A3D419"
+        "a": {
+          "value": "0x4648D10B419379D50F4BA01869D9AE363285E01FE66920878EE075B0"
+        },
+        "b": {
+          "value": "0x4C4DCEDFAC09383A0311B98EE9637415B9134B4115FDB760C1A3D419"
+        }
       },
       "generator": {
-        "x": "0xFF9D7EDD97D523012FFAACA32B7C90F1A8E026F21972C789A8484A2B",
-        "y": "0x3E9036ADC1A41FCE2F2CA08E2D1BE4F6D97E30CA7761DB1F3E2F2CE96"
+        "x": {
+          "value": "0xFF9D7EDD97D523012FFAACA32B7C90F1A8E026F21972C789A8484A2B"
+        },
+        "y": {
+          "value": "0x3E9036ADC1A41FCE2F2CA08E2D1BE4F6D97E30CA7761DB1F3E2F2CE96"
+        }
       },
       "order": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC4A75594D4923FC93D42713CDAF",
       "cofactor": "0x04"
@@ -210,12 +266,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x486BE25B34C8080922B969257EEB54C404F914A29067A5560BB9AEE0BC67A6D",
-        "b": "0xE347A25BF875DD2F1F12D8A10334D417CC15E77893A99F4BF278CA563072E6"
+        "a": {
+          "value": "0x486BE25B34C8080922B969257EEB54C404F914A29067A5560BB9AEE0BC67A6D"
+        },
+        "b": {
+          "value": "0xE347A25BF875DD2F1F12D8A10334D417CC15E77893A99F4BF278CA563072E6"
+        }
       },
       "generator": {
-        "x": "0x3BE821D63D2CD5AFE0504F452E5CF47A60A10446928CEAECFD5294F89B45051",
-        "y": "0x66FE4E7B8B6FE152F743393029A61BFB839747C8FB00F7B27A6841C07532A0"
+        "x": {
+          "value": "0x3BE821D63D2CD5AFE0504F452E5CF47A60A10446928CEAECFD5294F89B45051"
+        },
+        "y": {
+          "value": "0x66FE4E7B8B6FE152F743393029A61BFB839747C8FB00F7B27A6841C07532A0"
+        }
       },
       "order": "0x1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF77965C4DFD307348944D45FD166C971",
       "cofactor": "0x04"
@@ -231,12 +295,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x2E32419A32377AF8E7F03148A106D112C8C2E26D31A89F46B743DEED322C7ADC3024AFE4B5AFD8DB7180281586549F4A",
-        "b": "0x22F6EF3BE72A67FDC236D7173727CD2AF6D02A195753C44BDF451369B02EA0F963D9A775CAE6DC3AE9CCABB7F183C1AD"
+        "a": {
+          "value": "0x2E32419A32377AF8E7F03148A106D112C8C2E26D31A89F46B743DEED322C7ADC3024AFE4B5AFD8DB7180281586549F4A"
+        },
+        "b": {
+          "value": "0x22F6EF3BE72A67FDC236D7173727CD2AF6D02A195753C44BDF451369B02EA0F963D9A775CAE6DC3AE9CCABB7F183C1AD"
+        }
       },
       "generator": {
-        "x": "0x141946416199FDDA96EC1F1AC80058AA3F0CE96B1BCD023E97BAE542FE3404B4738DB9B81A13698339387672ECA360C0",
-        "y": "0xD51BF79D968F4A076022E750F821058E2B5073697B639EDD355EBF8AD32352B1EFA9478DE7EB5662EF0D26EF6EEA795"
+        "x": {
+          "value": "0x141946416199FDDA96EC1F1AC80058AA3F0CE96B1BCD023E97BAE542FE3404B4738DB9B81A13698339387672ECA360C0"
+        },
+        "y": {
+          "value": "0xD51BF79D968F4A076022E750F821058E2B5073697B639EDD355EBF8AD32352B1EFA9478DE7EB5662EF0D26EF6EEA795"
+        }
       },
       "order": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5FB21F21E95EEE17C5E69281B102D2773E27E13FD3C9719",
       "cofactor": "0x04"
@@ -252,15 +324,23 @@
       },
       "form": "Montgomery",
       "generator": {
-        "x": "0x5",
-        "y": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"
+        "x": {
+          "value": "0x5"
+        },
+        "y": {
+          "value": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"
+        }
       },
       "name": "Curve383187",
       "oid": "",
       "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
       "params": {
-        "a": "0x38251",
-        "b": "0x01"
+        "a": {
+          "value": "0x38251"
+        },
+        "b": {
+          "value": "0x01"
+        }
       }
     },
     {
@@ -274,12 +354,20 @@
       },
       "form": "TwistedEdwards",
       "params": {
-        "a": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec",
-        "d": "0x52036cee2b6ffe738cc740797779e89800700a4d4141d8ab75eb4dca135978a3"
+        "a": {
+          "value": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec"
+        },
+        "d": {
+          "value": "0x52036cee2b6ffe738cc740797779e89800700a4d4141d8ab75eb4dca135978a3"
+        }
       },
       "generator": {
-        "x": "0x216936D3CD6E53FEC0A4E231FDD6DC5C692CC7609525A7B2C9562D608F25D51A",
-        "y": "0x6666666666666666666666666666666666666666666666666666666666666658"
+        "x": {
+          "value": "0x216936D3CD6E53FEC0A4E231FDD6DC5C692CC7609525A7B2C9562D608F25D51A"
+        },
+        "y": {
+          "value": "0x6666666666666666666666666666666666666666666666666666666666666658"
+        }
       },
       "order": "0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed",
       "cofactor": "0x08",
@@ -300,12 +388,20 @@
       },
       "form": "TwistedEdwards",
       "params": {
-        "a": "0x01",
-        "d": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffff6756"
+        "a": {
+          "value": "0x01"
+        },
+        "d": {
+          "value": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffff6756"
+        }
       },
       "generator": {
-        "x": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa955555555555555555555555555555555555555555555555555555555",
-        "y": "0xae05e9634ad7048db359d6205086c2b0036ed7a035884dd7b7e36d728ad8c4b80d6565833a2a3098bbbcb2bed1cda06bdaeafbcdea9386ed"
+        "x": {
+          "value": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa955555555555555555555555555555555555555555555555555555555"
+        },
+        "y": {
+          "value": "0xae05e9634ad7048db359d6205086c2b0036ed7a035884dd7b7e36d728ad8c4b80d6565833a2a3098bbbcb2bed1cda06bdaeafbcdea9386ed"
+        }
       },
       "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffff7cca23e9c44edb49aed63690216cc2728dc58f552378c292ab5844f3",
       "cofactor": "0x04"
@@ -321,12 +417,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x00",
-        "b": "0x05"
+        "a": {
+          "value": "0x00"
+        },
+        "b": {
+          "value": "0x05"
+        }
       },
       "generator": {
-        "x": "0x01",
-        "y": "0xd45589b158faaf6ab0e4ad38d998e9982e7ff63964ee1460342a592677cccb0"
+        "x": {
+          "value": "0x01"
+        },
+        "y": {
+          "value": "0xd45589b158faaf6ab0e4ad38d998e9982e7ff63964ee1460342a592677cccb0"
+        }
       },
       "order": "0x2370fb049d410fbe4e761a9886e502411dc1af70120000017e80600000000001",
       "cofactor": "0x01",
@@ -373,24 +477,60 @@
         "bits": 508,
         "degree": 2,
         "poly": [
-          {"power": 2, "coeff": "0x01"},
-          {"power": 0, "coeff": "0x05"}
+          {
+            "power": 2,
+            "coeff": "0x01"
+          },
+          {
+            "power": 0,
+            "coeff": "0x05"
+          }
         ]
       },
       "form": "Weierstrass",
       "params": {
-        "a": [{"power": 0, "coeff": "0x00"}],
-        "b": [{"power": 1, "coeff": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000000"}]
+        "a": {
+          "value": [
+            {
+              "power": 0,
+              "coeff": "0x00"
+            }
+          ]
+        },
+        "b": {
+          "value": [
+            {
+              "power": 1,
+              "coeff": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000000"
+            }
+          ]
+        }
       },
       "generator": {
-        "x": [
-          {"power": 1, "coeff": "0xa1cf585585a61c6e9880b1f2a5c539f7d906fff238fa6341e1de1a2e45c3f72"},
-          {"power": 0, "coeff": "0x19b0bea4afe4c330da93cc3533da38a9f430b471c6f8a536e81962ed967909b5"}
-        ],
-        "y": [
-          {"power": 1, "coeff": "0x0ee97d6de9902a27d00e952232a78700863bc9aa9be960C32f5bf9fd0a32d345"},
-          {"power": 0, "coeff": "0x17abd366ebbd65333e49c711a80a0cf6d24adf1b9b3990eedcc91731384d2627"}
-        ]
+        "x": {
+          "value": [
+            {
+              "power": 1,
+              "coeff": "0xa1cf585585a61c6e9880b1f2a5c539f7d906fff238fa6341e1de1a2e45c3f72"
+            },
+            {
+              "power": 0,
+              "coeff": "0x19b0bea4afe4c330da93cc3533da38a9f430b471c6f8a536e81962ed967909b5"
+            }
+          ]
+        },
+        "y": {
+          "value": [
+            {
+              "power": 1,
+              "coeff": "0x0ee97d6de9902a27d00e952232a78700863bc9aa9be960C32f5bf9fd0a32d345"
+            },
+            {
+              "power": 0,
+              "coeff": "0x17abd366ebbd65333e49c711a80a0cf6d24adf1b9b3990eedcc91731384d2627"
+            }
+          ]
+        }
       },
       "order": "0x2370fb049d410fbe4e761a9886e502411dc1af70120000017e80600000000001",
       "cofactor": "0x2370fb049d410fbe4e761a9886e50241dc42cf101e0000017e80600000000001"
@@ -406,12 +546,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x00",
-        "b": "0x02"
+        "a": {
+          "value": "0x00"
+        },
+        "b": {
+          "value": "0x02"
+        }
       },
       "generator": {
-        "x": "0x2523648240000001ba344d80000000086121000000000013a700000000000012",
-        "y": "0x01"
+        "x": {
+          "value": "0x2523648240000001ba344d80000000086121000000000013a700000000000012"
+        },
+        "y": {
+          "value": "0x01"
+        }
       },
       "order": "0x2523648240000001ba344d8000000007ff9f800000000010a10000000000000d",
       "cofactor": "0x01",
@@ -462,12 +610,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x00",
-        "b": "0x03"
+        "a": {
+          "value": "0x00"
+        },
+        "b": {
+          "value": "0x03"
+        }
       },
       "generator": {
-        "x": "0x01",
-        "y": "0x02"
+        "x": {
+          "value": "0x01"
+        },
+        "y": {
+          "value": "0x02"
+        }
       },
       "order": "0xfffffffffff107288ec29e602c4420db4218082b36c2accff76c58ed",
       "cofactor": "0x01",
@@ -525,12 +681,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x00",
-        "b": "0x03"
+        "a": {
+          "value": "0x00"
+        },
+        "b": {
+          "value": "0x03"
+        }
       },
       "generator": {
-        "x": "0x01",
-        "y": "0x02"
+        "x": {
+          "value": "0x01"
+        },
+        "y": {
+          "value": "0x02"
+        }
       },
       "order": "0xfffffffffffcf0cd46e5f25eee71a49e0cdc65fb1299921af62d536cd10b500d",
       "cofactor": "0x01",
@@ -573,12 +737,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x00",
-        "b": "0x03"
+        "a": {
+          "value": "0x00"
+        },
+        "b": {
+          "value": "0x03"
+        }
       },
       "generator": {
-        "x": "0x01",
-        "y": "0x02"
+        "x": {
+          "value": "0x01"
+        },
+        "y": {
+          "value": "0x02"
+        }
       },
       "order": "0xfffffffffffffffffff2a96823d5920d2a127e3f6fbca023c8fbe29531892c795356487d8ac63e4f4db17384341a5775",
       "cofactor": "0x01",
@@ -602,12 +774,20 @@
       },
       "form": "Weierstrass",
       "params": {
-        "a": "0x00",
-        "b": "0x03"
+        "a": {
+          "value": "0x00"
+        },
+        "b": {
+          "value": "0x03"
+        }
       },
       "generator": {
-        "x": "0x01",
-        "y": "0x02"
+        "x": {
+          "value": "0x01"
+        },
+        "y": {
+          "value": "0x02"
+        }
       },
       "order": "0xfffffffffffffffffffffffffff9ec7f01c60ba1d8cb5307c0bbe3c111b0ef445146cf1eacbe98b8e48c65deab2679a34a10313e04f9a2b406a64a5f519a09ed",
       "cofactor": "0x01",
@@ -629,12 +809,20 @@
         "bits": 160
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1c",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c841"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1c"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c841"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c5d89f4f2dd72349ee61f7",
       "cofactor": "0x01"
@@ -651,12 +839,20 @@
         "bits": 192
       },
       "params": {
-        "a": "0xc302f41d932a36cda7a3463093d18db78fce476de1a86294",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d36a6"
+        "a": {
+          "value": "0xc302f41d932a36cda7a3463093d18db78fce476de1a86294"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d36a6"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628c5dca19490dd3e6fd7979a7a3",
       "cofactor": "0x01"
@@ -673,12 +869,20 @@
         "bits": 224
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedc",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13a03"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedc"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13a03"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dd2439be5b2b827a9ffbea7240e5cd",
       "cofactor": "0x01"
@@ -695,12 +899,20 @@
         "bits": 256
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c08",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146434e1"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c08"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146434e1"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd0fbec42e940b37a88d9caeca198a64437",
       "cofactor": "0x01"
@@ -717,12 +929,20 @@
         "bits": 288
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a0988",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939f36"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a0988"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939f36"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd12903ba214366757b7a5240b2a637e2065a850855",
       "cofactor": "0x01"
@@ -739,12 +959,20 @@
         "bits": 320
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b0",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b40a4"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b0"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b40a4"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e09489bd44fda941042cccc7286009777663bb29671",
       "cofactor": "0x01"
@@ -761,12 +989,20 @@
         "bits": 384
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a4378",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c7791"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a4378"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c7791"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc73b7669162524b60c73ee73e6dfe7059f510370fe7870d8599",
       "cofactor": "0x01"
@@ -783,12 +1019,20 @@
         "bits": 512
       },
       "params": {
-        "a": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ec",
-        "b": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c75d8f681b202aec4617ad3df1ed5d5fd6a8d"
+        "a": {
+          "value": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ec"
+        },
+        "b": {
+          "value": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c75d8f681b202aec4617ad3df1ed5d5fd6a8d"
+        }
       },
       "generator": {
-        "x": "",
-        "y": ""
+        "x": {
+          "value": ""
+        },
+        "y": {
+          "value": ""
+        }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b235a2359c4afbc9eb7987f1c9ab37e42599188c4b7dc6269b830d80897f57a5f71",
       "cofactor": "0x01"

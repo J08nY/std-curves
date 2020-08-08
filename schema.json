@@ -3,7 +3,7 @@
 	"definitions": {
 		"Number": {
 			"type": "string",
-			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)$"
+			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)?$"
 		},
 		"Polynomial": {
 			"type": "array",
@@ -16,10 +16,15 @@
 			}
 		},
 		"Element": {
-			"anyOf": [
-				{"$ref":  "#/definitions/Number"},
-				{"$ref":  "#/definitions/Polynomial"}
-			]
+			"type": "object",
+			"properties": {
+				"value": {
+					"anyOf": [
+						{"$ref":  "#/definitions/Number"},
+						{"$ref":  "#/definitions/Polynomial"}
+					]
+				}
+			}
 		},
 		"Weierstrass": {
 			"type": "object",
