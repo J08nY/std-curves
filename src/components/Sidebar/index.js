@@ -53,6 +53,7 @@ function Sidebar({ children, sidebar, open = true, location }) {
       id="__sidebar"
       key="sidebar"
       ref={sidebar}
+      aria-expanded={open}
       tabIndex="-1"
       className={open ? 'active' : ''}
       sx={{ variant: 'layout.sidebar', zIndex: 99 }}

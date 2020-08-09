@@ -3,11 +3,13 @@ const path = require(`path`)
 exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type Polynomial {
-      m: Int
-      e1: Int
-      e2: Int
-      e3: Int
+    type Term {
+      power: Int!
+      coeff: String!
+    }
+    type Element {
+      raw: String
+      poly: [Term]
     }
     enum FieldType {
       Prime
@@ -17,13 +19,14 @@ exports.sourceNodes = ({ actions }) => {
     type Field {
       type: FieldType
       p: String
-      poly: Polynomial
-      base: Int
+      poly: [Term]
+      base: String
+      degree: Int
       bits: Int
     }
     type Point {
-      x: String!
-      y: String!
+      x: Element
+      y: Element
     }
     enum Form {
       Weierstrass
@@ -31,11 +34,11 @@ exports.sourceNodes = ({ actions }) => {
       Edwards
       TwistedEdwards
     }
-    type Params {
-      a: String
-      b: String
-      c: String
-      d: String
+    type Params @dontInfer {
+      a: Element
+      b: Element
+      c: Element
+      d: Element
     }
     type Curve implements Node {
       name: String!

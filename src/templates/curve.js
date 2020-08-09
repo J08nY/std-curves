@@ -26,22 +26,58 @@ export const query = graphql`
         type
         p
         bits
+        degree
+        base
         poly {
-          m
-          e1
-          e2
-          e3
+          coeff
+          power
         }
       }
       params {
-        a
-        b
-        c
-        d
+        a {
+          raw
+          poly {
+            coeff
+            power
+          }
+        }
+        b {
+          raw
+          poly {
+            coeff
+            power
+          }
+        }
+        c {
+          raw
+          poly {
+            coeff
+            power
+          }
+        }
+        d {
+          raw
+          poly {
+            coeff
+            power
+          }
+        }
       }
       generator {
-        x
-        y
+        x {
+          raw
+          poly {
+            coeff
+            power
+          }
+        }
+        y {
+          raw
+          poly {
+            coeff
+            power
+          }
+        }
       }
       order
       cofactor
@@ -110,43 +146,64 @@ function CurveTable(paramNames, paramTitles, params) {
   )
 }
 
-function getPoly(curve) {
-  return [curve.field.poly.m, curve.field.poly.e1, curve.field.poly.e2, curve.field.poly.e3].filter(val => {return val !== null}).map(val => {return "x^" + val}).join(" + ") + " + 1"
-} 
+function formatPoly(poly, mult= false) {
+  return poly.map(term => {
+
+    if (term["power"] === 0) {
+      if (term["coeff"] === "0x01") {
+        return "1";
+      }
+      return term["coeff"];
+    } else {
+      return `${(term["coeff"] === "0x01") ? "" : term["coeff"] + (mult ? " *" : "")} x^${term["power"]}`;
+    }
+  }).join(" + ");
+}
+
+function formatElement(element) {
+  if (element["raw"] !== null) {
+    return element["raw"];
+  } else if (element["poly"] !== null) {
+    return formatPoly(element["poly"], true);
+  } else {
+    return "";
+  }
+}
 
 function Parameters(curve) {
   function getParams(params) {
-    var names = Object.keys(params).filter((key) => {return params[key] !== null});
-    var titles = names.map((name) => {return name + " coefficient"});
-    var values = names.map((name) => {return params[name]});
+    let names = Object.keys(params).filter((key) => {return params[key] !== null});
+    let titles = names.map((name) => {return name + " coefficient"});
+    let values = names.map((name) => {return formatElement(params[name])});
     return {
       names,
       titles,
       values
     }
   }
-  var params;
-  var paramNames;
-  var paramTitles;
-  var paramValues;
+  let params;
+  let paramNames;
+  let paramTitles;
+  let paramValues;
+  console.log(curve.field);
 
   if (curve.field.type === "Prime") {
     params = getParams(curve.params);
     paramNames = ["p"].concat(params.names, ["G", "n", "h"]);
     paramTitles = ["field"].concat(params.titles, ["generator", "generator order", "cofactor"]);
-    paramValues = [curve.field.p].concat(params.values, [`(${curve.generator.x}, ${curve.generator.y})`, curve.order, curve.cofactor]);
+    paramValues = [curve.field.p].concat(params.values, [`(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})`, curve.order, curve.cofactor]);
   } else {
     params = getParams(curve.params);
     paramNames = ["m", "f(x)"].concat(params.names, ["G", "n", "h"]);
     paramTitles = ["field degree", "field generator polynomial"].concat(params.titles, ["generator", "generator order", "cofactor"]);
-    paramValues = [curve.field.poly.m, getPoly(curve)].concat(params.values, [`(${curve.generator.x}, ${curve.generator.y})`, curve.order, curve.cofactor]);
+    paramValues = [curve.field.degree, formatPoly(curve.field.poly)].concat(params.values, [`(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})`, curve.order, curve.cofactor]);
   }
   return CurveTable(paramNames, paramTitles, paramValues);
 }
 
 function Characteristics(curve) {
-  var anyChars = !is_nullundef(curve.characteristics);
-  var anyValues = curve.oid !== null || anyChars;
+  let anyChars = !is_nullundef(curve.characteristics);
+  let anyValues = curve.oid !== null || anyChars;
   
   if (anyValues) {
     return (
@@ -197,7 +254,7 @@ function Aliases(curve) {
 }
 
 function Equation(curve) {
-  var math = null;
+  let math = null;
   if (curve.field.type === "Prime") {
     if (curve.form === "Weierstrass") {
       math = <BlockMath>y^2 \equiv x^3 + ax + b</BlockMath>
@@ -220,35 +277,35 @@ function Equation(curve) {
   }
 }
 
-function SageCode(curve) {
-  var sageCode = "";
+function SageCode(curve) {
+  let sageCode = "";
   if (curve.field.type === "Prime") {
     sageCode += `p = ${curve.field.p}\n`
     sageCode += `K = GF(p)\n`
     if (curve.form === "Weierstrass") {
-      sageCode += `a = K(${curve.params.a})\n`
-      sageCode += `b = K(${curve.params.b})\n`
+      sageCode += `a = K(${formatElement(curve.params.a)})\n`
+      sageCode += `b = K(${formatElement(curve.params.b)})\n`
       sageCode += `E = EllipticCurve(K, (a, b))\n`
-      sageCode += `G = E(${curve.generator.x}, ${curve.generator.y})\n`
+      sageCode += `G = E(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})\n`
     } else if (curve.form === "Edwards") {
-      if (parseInt(curve.params.c, 16) === 1) {
-        sageCode += `d = K(${curve.params.d})\n`
+      if (parseInt(curve.params.c.raw, 16) === 1) {
+        sageCode += `d = K(${formatElement(curve.params.d)})\n`
         sageCode += `E = EllipticCurve(K, (0, K(2 * (1 + d)/(1 - d)^2), 0, K(1/(1 - d)^2), 0))\n`
       } else {
         sageCode += `# Edwards curves are currently unsupported\n`
       }
     } else if (curve.form === "Montgomery") {
-      sageCode += `A = K(${curve.params.a})\n`
-      sageCode += `B = K(${curve.params.b})\n`
+      sageCode += `A = K(${formatElement(curve.params.a)})\n`
+      sageCode += `B = K(${formatElement(curve.params.b)})\n`
       sageCode += `E = EllipticCurve(K, ((3 - A^2)/(3 * B^2), (2 * A^3 - 9 * A)/(27 * B^3)))\n`
       sageCode += `def to_weierstrass(A, B, x, y):\n`
       sageCode += `\treturn (x/B + A/(3*B), y/B)\n`
       sageCode += `def to_montgomery(A, B, u, v):\n`
       sageCode += `\treturn (B * (u - A/(3*B)), B*v)\n`
-      sageCode += `G = E(*to_weierstrass(A, B, K(${curve.generator.x}), K(${curve.generator.y})))\n`
+      sageCode += `G = E(*to_weierstrass(A, B, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`
     } else if (curve.form === "TwistedEdwards") {
-      sageCode += `a = K(${curve.params.a})\n`
-      sageCode += `d = K(${curve.params.d})\n`
+      sageCode += `a = K(${formatElement(curve.params.a)})\n`
+      sageCode += `d = K(${formatElement(curve.params.d)})\n`
       sageCode += `E = EllipticCurve(K, (K(-1/48) * (a^2 + 14*a*d + d^2),K(1/864) * (a + d) * (-a^2 + 34*a*d - d^2)))\n`
       sageCode += `def to_weierstrass(a, d, x, y):\n`
       sageCode += `\treturn ((5*a + a*y - 5*d*y - d)/(12 - 12*y), (a + a*y - d*y -d)/(4*x - 4*x*y))\n`
@@ -256,7 +313,7 @@ function SageCode(curve) {
       sageCode += `\ty = (5*a - 12*u - d)/(-12*u - a + 5*d)\n`
       sageCode += `\tx = (a + a*y - d*y -d)/(4*v - 4*v*y)\n`
       sageCode += `\treturn (x, y)\n`
-      sageCode += `G = E(*to_weierstrass(a, d, K(${curve.generator.x}), K(${curve.generator.y})))\n`
+      sageCode += `G = E(*to_weierstrass(a, d, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`
     }
     sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
     
@@ -264,13 +321,25 @@ function SageCode(curve) {
       sageCode += `# This curve is a Weierstrass curve (SAGE does not support ${curve.form} curves) birationally equivalent to the intended curve.\n`
       sageCode += `# You can use the to_weierstrass and to_${curve.form.toLowerCase()} functions to convert the points.`
     }
-  } else {
+  } else if (curve.field.type === "Binary") {
     if (curve.form === "Weierstrass") {
       sageCode += `F.<x> = GF(2)[]\n`
-      sageCode += `K = GF(2^${curve.field.poly.m}, name="x", modulus=${getPoly(curve)})\n`
-      sageCode += `E = EllipticCurve(K, (1, K.fetch_int(${curve.params.a}), 0, 0, K.fetch_int(${curve.params.b})))\n`
+      sageCode += `K = GF(2^${curve.field.degree}, name="x", modulus=${formatPoly(curve.field.poly, true)})\n`
+      sageCode += `E = EllipticCurve(K, (1, K.fetch_int(${formatElement(curve.params.a)}), 0, 0, K.fetch_int(${formatElement(curve.params.b)})))\n`
       sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
-      sageCode += `G = E(K.fetch_int(${curve.generator.x}), K.fetch_int(${curve.generator.y}))`
+      sageCode += `G = E(K.fetch_int(${formatElement(curve.generator.x)}), K.fetch_int(${formatElement(curve.generator.y)}))`
+    } else {
+      sageCode = null;
+    }
+  } else if (curve.field.type === "Extension") {
+    if (curve.form === "Weierstrass") {
+      sageCode += `F.<x> = GF(${curve.field.base})[]\n`
+      sageCode += `K = GF(${curve.field.base}^${curve.field.degree}, name="x", modulus=${formatPoly(curve.field.poly, true)})\n`
+      sageCode += `a = K(${formatElement(curve.params.a)})\n`
+      sageCode += `b = K(${formatElement(curve.params.b)})\n`
+      sageCode += `E = EllipticCurve(K, (a, b))\n`
+      sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
+      sageCode += `G = E(K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)}))`
     } else {
       sageCode = null;
     }
@@ -279,7 +348,7 @@ function SageCode(curve) {
 }
 
 function SageBox(curve) {
-  var sageCode = SageCode(curve);
+  let sageCode = SageCode(curve);
   return (
     <div>
       <h3>SAGE</h3>
@@ -304,7 +373,7 @@ function SageBox(curve) {
 }
 
 function JsonBox(curve) {
-  var json = JSON.stringify(clean_dict(curve), null, 2);
+  let json = JSON.stringify(clean_dict(curve), null, 2);
   return (
     <div>
       <h3>JSON</h3>
@@ -329,12 +398,12 @@ function JsonBox(curve) {
 }
 
 export default ({ data, location, pageContext }) => {
-  var dataTable = Parameters(data.curve);
-  var chars = Characteristics(data.curve);
-  var equation = Equation(data.curve);
-  var aliases = Aliases(data.curve);
-  var sage = SageBox(data.curve);
-  var json = JsonBox(data.curve);
+  let dataTable = Parameters(data.curve);
+  let chars = Characteristics(data.curve);
+  let equation = Equation(data.curve);
+  let aliases = Aliases(data.curve);
+  let sage = SageBox(data.curve);
+  let json = JsonBox(data.curve);
   return (
     <Entry location={location} title={pageContext.name}>
       <h2>{pageContext.name}</h2>
