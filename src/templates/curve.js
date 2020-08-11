@@ -185,7 +185,6 @@ function Parameters(curve) {
   let paramNames;
   let paramTitles;
   let paramValues;
-  console.log(curve.field);
 
   if (curve.field.type === "Prime") {
     params = getParams(curve.params);
@@ -265,15 +264,19 @@ function Equation(curve) {
     } else if (curve.form === "TwistedEdwards") {
       math = <BlockMath>ax^2 + y^2 \equiv 1 + dx^2y^2</BlockMath>
     }
-  } else {
+  } else if (curve.field.type === "Binary") {
     if (curve.form === "Weierstrass") {
       math = <BlockMath>y^2 + xy \equiv x^3 + ax^2 + b</BlockMath>
+    }
+  } else if (curve.field.type === "Extension"){
+    if (curve.form === "Weierstrass") {
+      math = <BlockMath>y^2 \equiv x^3 + ax + b</BlockMath>
     }
   }
   if (math !== null) {
     return <div sx={{".katex":{color:dracula.color, backgroundColor: dracula.backgroundColor, borderRadius: "0.5rem", padding: "10px", boxShadow: "0px 0px 10px -3px rgba(0,0,0,0.5)"}}}>{math}</div>
   } else {
-    return <div></div>
+    return <div/>
   }
 }
 

@@ -44,9 +44,11 @@ export default ({data, location}) => {
   let uniqueCurves = names.length;
   return (
     <Entry data={data} location={location} title={"Home"}>
-      This page contains a list of standardised elliptic curves, collected from many standards by the team
-      at <Link to="https://crocs.fi.muni.cz/">Centre for Research on Cryptography and Security</Link>. For our
-      other ECC related projects see:
+      <p>
+        This page contains a list of standardised elliptic curves, collected from many standards by the team
+        at <Link to="https://crocs.fi.muni.cz/">Centre for Research on Cryptography and Security</Link>. For our
+        other ECC related projects see:
+      </p>
       <ul>
         <li><Link to="https://github.com/crocs-muni/ECTester">ECTester</Link>: A tool for testing black-box ECC
           implementations

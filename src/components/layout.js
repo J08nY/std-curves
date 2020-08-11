@@ -49,7 +49,7 @@ function Layout({ children, location }) {
           id="__content"
           sx={{
             variant: 'layout.container',
-            '& > :first-child': { pt: '0.75rem' }
+            '& > p:first-of-type': { pt: '0.75rem' }
           }}
         >
           {children}

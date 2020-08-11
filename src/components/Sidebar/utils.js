@@ -52,7 +52,8 @@ export const getItems = children => {
 }
 
 const isItemActive = (item, location) => {
-  const linkMatchesPathname = item.link === location.pathname
+  //const linkMatchesPathname = item.link === location.pathname
+  const linkMatchesPathname = (item.link === location.pathname) || (location.pathname.startsWith(item.link) && item.link !== "/")
 
   if (linkMatchesPathname) {
     return item
@@ -63,17 +64,17 @@ const isItemActive = (item, location) => {
 
 export const getActiveItem = (items, location) => {
   for (const item of items) {
-    if (item.link) {
-      if (isItemActive(item, location)) {
-        return item
-      }
-    }
-
     if (item.items) {
       const activeSubItem = getActiveItem(item.items, location)
 
       if (activeSubItem) {
         return activeSubItem
+      }
+    }
+
+    if (item.link) {
+      if (isItemActive(item, location)) {
+        return item
       }
     }
   }
