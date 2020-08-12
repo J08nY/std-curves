@@ -240,7 +240,7 @@ function Characteristics(curve) {
       </div>
     )
   } else {
-    return <div></div>
+    return <div/>
   }
 }
 
@@ -248,7 +248,7 @@ function Aliases(curve) {
   if (curve.aliases !== null && curve.aliases.length > 0) {
     return <span>Also known as: {curve.aliases.map((alias) => {return <Link to={"/" + alias} sx={{marginRight: "5px"}}>{alias.split("/")[1]}</Link>})}</span>
   } else {
-    return <span></span>
+    return <span/>
   }
 }
 
