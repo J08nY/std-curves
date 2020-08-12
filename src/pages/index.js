@@ -69,6 +69,11 @@ export default ({data, location}) => {
         are correct, however mistakes could have happened on data import and thus double-checking
         with the source document is recommended. The database currently contains <b>{allCurves}</b> curves, out of which <b>{uniqueCurves}</b> are unique.
       </p>
+      <h4>Authors</h4>
+      <ul>
+      	<li>Ján Jančár</li>
+      	<li>Vladimír Sedláček</li>
+      </ul>
       <p>
         Thanks to Jan Dušátko for providing some of the curve data.
       </p>

@@ -4,6 +4,7 @@ import Link from '../components/Link'
 import Entry from '../components/entry'
 import LinkButton from '../components/LinkButton'
 import CopyButton from '../components/CopyButton'
+import ReactMarkdown from "react-markdown"
 import { clean_dict, is_nullundef } from '../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faCopy, faSquare } from '@fortawesome/free-solid-svg-icons'
@@ -411,7 +412,7 @@ export default ({ data, location, pageContext }) => {
     <Entry location={location} title={pageContext.name}>
       <h2>{pageContext.name}</h2>
       {data.curve.field.bits}-bit {data.curve.field.type.toLowerCase()} field {data.curve.form} curve.<br/>
-      {is_nullundef(data.curve.desc) || data.curve.desc === "" ? null : <div>{data.curve.desc}<br/></div>}
+      {is_nullundef(data.curve.desc) || data.curve.desc === "" ? null : <div><ReactMarkdown source={data.curve.desc} renderers={{link: Link}}/><br/></div>}
       {aliases}
       {equation}
       {dataTable}
