@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from "react-markdown"
 import { graphql } from "gatsby"
 import Entry from '../components/entry'
 import Link from '../components/Link'
@@ -34,7 +35,7 @@ export default ({ data, location, pageContext }) => {
   return (
     <Entry location={location} title={pageContext.name}>
       <h3>{pageContext.name}</h3>
-      {data.category.desc}<br/>
+      <ReactMarkdown source={data.category.desc} renderers={{link: Link}}/>
       <ul>
       {data.category.children.map((curve, i) => <li key={i}><Link to={"/" + path.join(dir, curve.name)}>{curve.name}</Link></li>)}
       </ul>
