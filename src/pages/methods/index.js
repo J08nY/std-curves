@@ -24,6 +24,7 @@ export default ({data, location}) => {
           <li><Link to={"/methods/bn"}>BN</Link></li>
           <li><Link to={"/methods/bls"}>BLS</Link></li>
           <li><Link to={"/methods/mnt"}>MNT</Link></li>
+          <li><Link to={"/methods/kss"}>KSS</Link></li>
         </ul>
         <li>Complex multiplication</li>
       </ul>
