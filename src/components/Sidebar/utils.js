@@ -1,14 +1,19 @@
 import { Children } from 'react'
 
-const simplifyChildren = (children, depth = 0) => {
+const simplifyChildren = (children, prefix, depth = 0) => {
   return Children.toArray(children).reduce((items, item) => {
+
     if (!item.props || !item.props.children) {
       return items
     }
 
     if (item.props.mdxType === 'a') {
+      let href = item.props.href;
+      if (href.startsWith(prefix)) {
+      	href = href.slice(prefix.length)
+      }
       return items.concat({
-        link: item.props.href,
+        link: href,
         title: item.props.children
       })
     }
@@ -18,13 +23,13 @@ const simplifyChildren = (children, depth = 0) => {
 
       items[items.length - 1] = {
         ...last,
-        items: simplifyChildren(item.props.children)
+        items: simplifyChildren(item.props.children, prefix)
       }
 
       return items
     }
 
-    return items.concat(simplifyChildren(item.props.children, depth + 1))
+    return items.concat(simplifyChildren(item.props.children, prefix, depth + 1))
   }, [])
 }
 
@@ -39,8 +44,8 @@ const extendItem = item => {
   }
 }
 
-export const getItems = children => {
-  const items = simplifyChildren(children)
+export const getItems = (children, prefix) => {
+  const items = simplifyChildren(children, prefix)
 
   for (const item of items) {
     item.level = 0

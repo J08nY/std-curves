@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { useCallback, useMemo, useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { jsx } from 'theme-ui'
 import SidebarContent from '../../sidebar.mdx'
 import Branding from './Branding'
@@ -20,7 +21,15 @@ const setOpenItems = (state, items) => {
 }
 
 function Sidebar({ children, sidebar, open = true, location }) {
-  const items = useMemo(() => getItems(children), [children])
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        pathPrefix
+      }
+    }
+  `)
+
+  const items = useMemo(() => getItems(children, site.pathPrefix), [children, site.pathPrefix])
 
   const [{ openItems, activeItem, activeItemParentLinks }, setState] = useState(
     () => {
