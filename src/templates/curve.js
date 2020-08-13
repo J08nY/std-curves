@@ -4,6 +4,7 @@ import Link from '../components/Link'
 import Entry from '../components/entry'
 import LinkButton from '../components/LinkButton'
 import CopyButton from '../components/CopyButton'
+import CodeBlock from '../components/CodeBlock'
 import ReactMarkdown from "react-markdown"
 import { clean_dict, is_nullundef } from '../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -356,7 +357,7 @@ function SageBox(curve) {
   return (
     <div>
       <h3>SAGE</h3>
-      <Styled.pre className="language-python"><code className="language-python">{sageCode}</code></Styled.pre>
+      <CodeBlock code={sageCode} language="python"/>
       <div sx={{display: "flex"}}>
         <Tooltip title="Copy SAGE code" placement="bottom" arrow>
           <CopyButton value={sageCode} sx={{margin: "20px"}}>
@@ -381,7 +382,7 @@ function JsonBox(curve) {
   return (
     <div>
       <h3>JSON</h3>
-    <Styled.pre className="language-json"><code className="language-json">{json}</code></Styled.pre>
+      <CodeBlock code={json} language="json"/>
     <div sx={{display: "flex"}}>
       <Tooltip title="Copy JSON" placement="bottom" arrow>
       <CopyButton value={json} sx={{margin: "20px"}}>

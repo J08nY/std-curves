@@ -1,7 +1,6 @@
-/** @jsx jsx */
+import React from "react"
 import { graphql } from 'gatsby'
 import Entry from '../components/entry'
-import { jsx } from 'theme-ui'
 import Network from '../components/Network'
 import { navigate } from "gatsby"
 

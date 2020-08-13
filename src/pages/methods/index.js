@@ -1,16 +1,17 @@
 import React from 'react'
 import Entry from '../../components/entry'
 import Link from '../../components/Link'
+import { Styled } from "theme-ui"
 
 export default ({data, location}) => {
 
   return (
     <Entry data={data} location={location} title={"Methods"}>
-      <p>
+      <Styled.p>
         The standard curves present in this database were mostly generated using several
         publicly known algorithms or were selected in an unspecified way. The generation
         algorithms used can be roughly categorized as:
-      </p>
+      </Styled.p>
       <ul>
         <li>Verifiably random algorithms</li>
         <ul>

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Entry from '../components/entry'
 import Search from '../components/Search'
+import { Styled } from "theme-ui"
 
 export const query = graphql`
 	query SearchIndexQuery {
@@ -14,7 +15,7 @@ export const query = graphql`
 export default ({ data, location }) => {
   return (
     <Entry data={data} location={location} title={"Search"}>
-		<h3>Search by curve name:</h3>
+		<Styled.h3>Search by curve name:</Styled.h3>
 		<Search searchIndex={data.siteSearchIndex.index} />	
     </Entry>
   )

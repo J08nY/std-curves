@@ -4,7 +4,7 @@
  * @see https://theme-ui.com/gatsby-plugin/
  */
 
-import dracula from '@theme-ui/prism/presets/dracula.json'
+//import vsDark from '@theme-ui/prism/presets/vs-dark.json'
 import { alpha } from '@theme-ui/color'
 
 export default {
@@ -28,14 +28,14 @@ export default {
   },
   fonts: {
     body:
-      '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    heading: 'inherit',
-    monospace: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace'
+      '"Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    heading: '"Noto Sans Black", "Roboto Black", sans-serif',
+    monospace: '"IBM Plex Mono", SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace'
   },
   fontSizes: [12, 14, 16, 18, 24, 32, 40, 48, 56, 64],
   fontWeights: {
     body: 400,
-    heading: 700,
+    heading: 900,
     bold: 700
   },
   lineHeights: {
@@ -76,27 +76,27 @@ export default {
     },
     h1: {
       variant: 'textStyles.heading',
-      fontSize: [6, 7]
+      fontSize: [5, 6]
     },
     h2: {
       variant: 'textStyles.heading',
-      fontSize: [5, 6]
+      fontSize: [4, 5]
     },
     h3: {
       variant: 'textStyles.heading',
-      fontSize: [4, 5]
+      fontSize: [3, 4]
     },
     h4: {
       variant: 'textStyles.heading',
-      fontSize: [3, 4]
+      fontSize: [2, 3]
     },
     h5: {
       variant: 'textStyles.heading',
-      fontSize: [2, 3]
+      fontSize: [1, 2]
     },
     h6: {
       variant: 'textStyles.heading',
-      fontSize: [1, 2]
+      fontSize: [0, 1]
     },
     p: {},
     a: {
@@ -116,7 +116,7 @@ export default {
       borderRadius: '0.5rem',
       bg: 'text',
       color: 'background',
-      ...dracula,
+      //...vsDark,
       boxShadow: "0px 0px 10px -3px rgba(0,0,0,0.5)"
     },
     code: {

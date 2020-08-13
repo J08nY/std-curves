@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown"
 import { graphql } from "gatsby"
 import Entry from '../components/entry'
 import Link from '../components/Link'
+import { Styled } from "theme-ui"
 import Tooltip from "@material-ui/core/Tooltip";
 import LinkButton from "../components/LinkButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -34,7 +35,7 @@ export default ({ data, location, pageContext }) => {
   let dir = data.category.parent.parent.relativeDirectory;
   return (
     <Entry location={location} title={pageContext.name}>
-      <h3>{pageContext.name}</h3>
+      <Styled.h3>{pageContext.name}</Styled.h3>
       <ReactMarkdown source={data.category.desc} renderers={{link: Link}}/>
       <ul>
       {data.category.children.map((curve, i) => <li key={i}><Link to={"/" + path.join(dir, curve.name)}>{curve.name}</Link></li>)}

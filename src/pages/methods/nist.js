@@ -1,14 +1,14 @@
 import React from 'react'
 import Entry from '../../components/entry'
-import Link from '../../components/Link'
+import { Styled } from "theme-ui"
 
 export default ({data, location}) => {
 
   return (
     <Entry data={data} location={location} title={"NIST"}>
-      <p>
+      <Styled.p>
 
-      </p>
+      </Styled.p>
     </Entry>
   )
 }
