@@ -898,10 +898,10 @@
       },
       "params": {
         "a": {
-          "raw": "0x03"
+          "raw": "0xfffffffffffffffffffffffffffffffefffffffffffffffffffffffe"
         },
         "b": {
-          "raw": "0xb4050a850c04b3abf54132565044b0b7d7bfd8ba270b3943"
+          "raw": "0xb4050a850c04b3abf54132565044b0b7d7bfd8ba270b39432355ffb4"
         }
       },
       "order": "0xffffffffffffffffffffffffffff16a2e0b8f03e13dd29455c5c2a3d",

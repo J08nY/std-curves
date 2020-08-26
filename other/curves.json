@@ -835,7 +835,7 @@
       "oid": "",
       "field": {
         "type": "Prime",
-        "p": "0xc302f41d932a36cda7a3463093d18db78fce476de1a86297",
+        "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cd13",
         "bits": 192
       },
       "params": {
