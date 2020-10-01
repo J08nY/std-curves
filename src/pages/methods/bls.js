@@ -1,6 +1,5 @@
 import React from 'react'
 import Entry from '../../components/entry'
-import Equation from '../../components/Equation'
 import Link from '../../components/Link'
 import CodeBlock from '../../components/CodeBlock'
 import { Styled } from "theme-ui";
@@ -62,33 +61,34 @@ class BLS24(BLS):
         Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BLS curve with embedding degree <InlineMath>12</InlineMath> can 
         be constructed over a prime field <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points <InlineMath>r</InlineMath> and 
         a trace of Frobenius <InlineMath>t</InlineMath>.
-        <BlockMath>
-          {`\\begin{aligned}
+      </Styled.p>
+      <BlockMath>
+        {`\\begin{aligned}
           p(z) &= (z - 1)^2 (z^4 - z^2 + 1)/3 + z\\\\
           r(z) &= z^4 - z^2 + 1\\\\
           t(z) &= z + 1
           \\end{aligned}`}
-        </BlockMath>
-      </Styled.p>
+      </BlockMath>
       <Styled.h3>BLS24</Styled.h3>
       <Styled.p>
         Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BLS curve with embedding degree <InlineMath>24</InlineMath> can 
         be constructed over a prime field <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points <InlineMath>r</InlineMath> and 
         a trace of Frobenius <InlineMath>t</InlineMath>.
-        <BlockMath>
-          {`\\begin{aligned}
+      </Styled.p>
+      <BlockMath>
+        {`\\begin{aligned}
           p(z) &= (z - 1)^2 (z^8 - z^4 + 1)/3 + z\\\\
           r(z) &= z^8 - z^4 + 1\\\\
           t(z) &= z + 1
           \\end{aligned}`}
-        </BlockMath>
-
-      </Styled.p>
+      </BlockMath>
       <Styled.p>
         The class of curves has the Short-Weierstrass form:
-        <Equation>
+      </Styled.p>
+        <BlockMath>
           y^2 \equiv x^3 + b
-        </Equation>
+        </BlockMath>
+      <Styled.p>
         where given <InlineMath>z</InlineMath> such that <InlineMath>p(z)</InlineMath> is prime, a curve with 
         a prime order subgroup of <InlineMath>r(z)</InlineMath> points can be found either via complex multiplication
         or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found.

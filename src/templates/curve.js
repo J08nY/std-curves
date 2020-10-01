@@ -9,8 +9,7 @@ import ReactMarkdown from "react-markdown"
 import { clean_dict, is_nullundef } from '../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faCopy, faSquare } from '@fortawesome/free-solid-svg-icons'
-import { jsx } from 'theme-ui'
-import { Styled } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { alpha } from '@theme-ui/color'
 import dracula from '@theme-ui/prism/presets/dracula.json'
 import Tooltip from '@material-ui/core/Tooltip';

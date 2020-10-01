@@ -1,0 +1,10 @@
+.ps-algorithmic, .ps-algorithmic .ps-line, .ps-algorithm, .ps-root {
+    line-height: 0
+}
+.ps-algorithm > .ps-line:nth-child(1) {
+    line-height: 1em
+}
+
+.ps-algorithmic .ps-block {
+    line-height: 0.4
+}
