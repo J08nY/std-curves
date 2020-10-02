@@ -63,7 +63,8 @@ export default ({data, location}) => {
       <Styled.p>
         The curve listing includes its parameters, computed characteristics such as number of points or j-invariant as
         well as SAGE code which can be used to instantiate the curve and a JSON export of all of the curve data.
-        New curves are currently being added, the database is definitely not complete.
+        New curves are currently being added, the database is definitely not complete. This site also
+        contains <Link to={"/methods"}>documentation</Link> of the several methods of generating elliptic curves which are in the database.
       </Styled.p>
       <Styled.p>
         The presence of a certain curve in this database does not mean that the curve is secure, only that it is notable

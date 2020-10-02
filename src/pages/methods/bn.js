@@ -1,6 +1,5 @@
 import React from 'react'
 import Entry from '../../components/entry'
-import Equation from '../../components/Equation'
 import Link from '../../components/Link'
 import { BlockMath, InlineMath } from 'react-katex'
 import CodeBlock from "../../components/CodeBlock"
@@ -56,9 +55,11 @@ export default ({data, location}) => {
       </Styled.p>
       <Styled.p>
         The class of curves has the Short-Weierstrass form:
-        <Equation>
+      </Styled.p>
+        <BlockMath>
           y^2 \equiv x^3 + b
-        </Equation>
+        </BlockMath>
+      <Styled.p>
         where given <InlineMath>z</InlineMath> such that <InlineMath>p(z)</InlineMath> is prime, a curve with 
         a prime order subgroup of <InlineMath>r(z)</InlineMath> points can be found either via complex multiplication
         or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found.
