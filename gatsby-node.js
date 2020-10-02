@@ -149,11 +149,22 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 }
 
-exports.onCreateWebpackConfig = ({ actions, stage }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-javascript') {
     // turn off source-maps
     actions.setWebpackConfig({
       devtool: false
+    })
+  } else if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /pseudocode/,
+            use: loaders.null(),
+          },
+        ],
+      },
     })
   }
 }
