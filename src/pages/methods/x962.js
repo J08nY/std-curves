@@ -10,8 +10,8 @@ export default ({data, location}) => {
   \\begin{algorithm}
   \\caption{ANSI X9.62 Verifiably Random Curves over $\\mathbb{F}_p$}
   \\begin{algorithmic}
-  \\REQUIRE prime field size $p$
-  \\ENSURE bit-string $SEED$ and field elements $a, b \\in \\mathbb{F}_p$ which define an elliptic curve
+  \\INPUT prime field size $p$
+  \\OUTPUT bit-string $SEED$ and field elements $a, b \\in \\mathbb{F}_p$ which define an elliptic curve
   \\PROCEDURE{GenerateCurve}{$p$}
   \\STATE Let $t = \\lfloor \\log_{2} p \\rfloor $; Let $s = \\lfloor (t - 1) / 160 \\rfloor $; Let $h = t - 160 s $
   \\STATE Let $SEED$ be a random bit string of at least 160 bits
@@ -36,8 +36,8 @@ export default ({data, location}) => {
   \\begin{algorithm}
   \\caption{ANSI X9.62 Verifiably Random Curves over $\\mathbb{F}_{2^m}$}
   \\begin{algorithmic}
-  \\REQUIRE field size $q = 2^m$
-  \\ENSURE bit-string $SEED$ and field elements $a, b \\in \\mathbb{F}_{2^m}$ which define an elliptic curve
+  \\INPUT field size $q = 2^m$
+  \\OUTPUT bit-string $SEED$ and field elements $a, b \\in \\mathbb{F}_{2^m}$ which define an elliptic curve
   \\PROCEDURE{GenerateCurve}{$q = 2^m$}
   \\STATE Let $t = m$; Let $s = \\lfloor (t - 1) / 160 \\rfloor $; Let $h = t - 160 s $
   \\STATE Let $SEED$ be a random bit string of at least 160 bits
@@ -61,7 +61,8 @@ export default ({data, location}) => {
       <Styled.h2>ANSI X9.62</Styled.h2>
       <Styled.p>
         The <b>ANSI X9.62</b> <Link to="#ansi-x962">[1]</Link> standard published by the American National Standards Institute provides a way of
-        generating verifiably random elliptic curves in its appendices <i>A.3.3.1</i> and <i>A.3.3.2</i>.
+        generating verifiably random elliptic curves in its appendices <i>A.3.3.1</i> and <i>A.3.3.2</i>. The curves are presented
+        in the <Link to={"/x962"}>ANSI X9.62</Link> category.
       </Styled.p>
       <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves</Styled.h3>
       <pre>

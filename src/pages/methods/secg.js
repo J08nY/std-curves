@@ -9,11 +9,11 @@ export default ({data, location}) => {
   \\begin{algorithm}
   \\caption{SECG Verifiably Random Curves}
   \\begin{algorithmic}
-  \\REQUIRE A "seed" octet string $S$ of length $g/8$ octets
-  \\REQUIRE field size $q$
-  \\REQUIRE hash function $Hash$ of output length $hashlen$ octets
-  \\REQUIRE field element $a \\in \\mathbb{F}_q$
-  \\ENSURE field element $b \\in \\mathbb{F}_q$
+  \\INPUT A "seed" octet string $S$ of length $g/8$ octets
+  \\INPUT field size $q$
+  \\INPUT hash function $Hash$ of output length $hashlen$ octets
+  \\INPUT field element $a \\in \\mathbb{F}_q$
+  \\OUTPUT field element $b \\in \\mathbb{F}_q$
   \\PROCEDURE{GenerateCurve}{$S$, $g$, $q$, $Hash$, $hashlen$, $a$}
   \\STATE Let $m = \\lceil \\log_2 q \\rceil$
   \\STATE Let $t = 8hashlen$
@@ -48,12 +48,12 @@ export default ({data, location}) => {
   \\begin{algorithm}
   \\caption{SECG Verifiably Random Points}
   \\begin{algorithmic}
-  \\REQUIRE A "seed" octet string $S$ of length $g/8$ octets
-  \\REQUIRE field size $q$
-  \\REQUIRE hash function $Hash$ of output length $hashlen$ octets
-  \\REQUIRE elliptic curve parameters $a, b \\in \\mathbb{F}_q$
-  \\REQUIRE elliptic curve cofactor $h$
-  \\ENSURE elliptic curve point $G$
+  \\INPUT A "seed" octet string $S$ of length $g/8$ octets
+  \\INPUT field size $q$
+  \\INPUT hash function $Hash$ of output length $hashlen$ octets
+  \\INPUT elliptic curve parameters $a, b \\in \\mathbb{F}_q$
+  \\INPUT elliptic curve cofactor $h$
+  \\OUTPUT elliptic curve point $G$
   \\PROCEDURE{GeneratePoint}{$S$, $g$, $q$, $Hash$, $hashlen$, $a$, $b$, $h$}
   \\STATE Let $A = 4261736520706F696E74_{16}$ which is the octet string of "Base point" in ASCII
   \\STATE Let $B = 01_{16}$ an octet string of length 1
@@ -80,7 +80,8 @@ export default ({data, location}) => {
       <Styled.h2>SECG</Styled.h2>
       <Styled.p>
         The SECG method for generating verifiably random domain parameters is specified in the <b>SEC 1: Elliptic Curve Cryptography</b> <Link to="#secg-sec1">[1]</Link> standard,
-        specifically in sections <i>3.1.3.1</i> and <i>3.1.3.2</i>. These methods are compatible to those in the <b>ANSI X9.62</b> standard.
+        specifically in sections <i>3.1.3.1</i> and <i>3.1.3.2</i>. These methods are compatible to those in the <b>ANSI X9.62</b> standard. The curves are presented
+        in the <Link to={"/secg"}>SECG</Link> category.
       </Styled.p>
 
       <Styled.h3>Generating curves</Styled.h3>

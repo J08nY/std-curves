@@ -10,8 +10,8 @@ export default ({data, location}) => {
   \\begin{algorithm}
   \\caption{NIST Verifiably Random Curves over $\\mathbb{F}_p$}
   \\begin{algorithmic}
-  \\REQUIRE prime field size $p$ of bit-length $l$
-  \\ENSURE bit-string seed $s$ and field elements $a, b \\in \\mathbb{F}_p$ which define an elliptic curve
+  \\INPUT prime field size $p$ of bit-length $l$
+  \\OUTPUT bit-string seed $s$ and field elements $a, b \\in \\mathbb{F}_p$ which define an elliptic curve
   \\PROCEDURE{GenerateCurve}{$p$}
   \\STATE Let $v = \\lfloor \\ (l - 1) / 160 \\rfloor $; Let $w = l - 160v - 1 $
   \\STATE Let $s$ be a random bit string of 160 bits
@@ -37,8 +37,8 @@ export default ({data, location}) => {
   \\begin{algorithm}
   \\caption{NIST Verifiably Random Curves over $\\mathbb{F}_{2^m}$}
   \\begin{algorithmic}
-  \\REQUIRE binary field size $2^m$
-  \\ENSURE bit-string seed $s$ and field elements $a, b \\in \\mathbb{F}_{2^m}$ which define an elliptic curve
+  \\INPUT binary field size $2^m$
+  \\OUTPUT bit-string seed $s$ and field elements $a, b \\in \\mathbb{F}_{2^m}$ which define an elliptic curve
   \\PROCEDURE{GenerateCurve}{$p$}
   \\STATE Let $v = \\lfloor \\ (m - 1) / 160 \\rfloor $; Let $w = m - 160v $
   \\STATE Let $s$ be a random bit string of 160 bits
@@ -62,7 +62,8 @@ export default ({data, location}) => {
       <Styled.h2>NIST</Styled.h2>
       <Styled.p>
         The NIST <b>FIPS 186-4</b> <Link to="#fips-186-4">[1]</Link> standard defines recommended curves for use in ECDSA
-        and a verifiably random method for generating them in appendices <i>D.5</i> and <i>D.7</i>.
+        and a verifiably random method for generating them in appendices <i>D.5</i> and <i>D.7</i>. The curves are presented
+        in the <Link to={"/nist"}>NIST</Link> category.
       </Styled.p>
       <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves</Styled.h3>
       <pre>

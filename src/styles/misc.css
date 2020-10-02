@@ -2,7 +2,7 @@
     line-height: 0
 }
 .ps-algorithm > .ps-line:nth-child(1) {
-    line-height: 1em
+    margin-top: -0.9em;
 }
 
 .ps-algorithmic .ps-block {
