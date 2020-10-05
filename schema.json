@@ -12,19 +12,27 @@
 				"properties": {
 					"power": {"type":  "integer"},
 					"coeff": {"$ref":  "#/definitions/Number"}
-				}
+				},
+				"required": ["power", "coeff"]
 			}
 		},
 		"Element": {
-			"type": "object",
-			"properties": {
-				"value": {
-					"anyOf": [
-						{"$ref":  "#/definitions/Number"},
-						{"$ref":  "#/definitions/Polynomial"}
-					]
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"raw": {"$ref": "#/definitions/Number"}
+					},
+					"required": ["raw"]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"poly": {"$ref": "#/definitions/Polynomial"}
+					},
+					"required": ["poly"]
 				}
-			}
+			]
 		},
 		"Weierstrass": {
 			"type": "object",
