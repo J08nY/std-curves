@@ -78,7 +78,7 @@ export default ({data, location}) => {
       	<li>Vladimír Sedláček</li>
       </ul>
       <Styled.p>
-        Thanks to Jan Dušátko for providing some of the curve data.
+        Thanks to Jan Dušátko and Jan Kubeša for providing some of the curve data.
       </Styled.p>
     </Entry>
   )
