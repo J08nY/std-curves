@@ -40,33 +40,25 @@
         "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
         "bits": 383
       },
-      "form": "Weierstrass",
+      "form": "Montgomery",
       "params": {
         "a": {
-          "raw": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA95FABD1AE6C"
+          "raw": "0x1f82fe"
         },
         "b": {
-          "raw": "0x04BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F684BDA12F7159AE18A4923F45"
+          "raw": "0x01"
         }
       },
       "generator": {
         "x": {
-          "raw": "0x5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555FD5E4"
+          "raw": "0x0c"
         },
         "y": {
-          "raw": "0x1EC7ED04AAF834AF310E304B2DA0F328E7C165F0E8988ABD3992861290F617AA1F1B2E7D0B6E332E969991B62555E77E"
+          "raw": "0x11b9b5ac"
         }
       },
       "order": "0x10000000000000000000000000000000000000000000000006C79673AC36BA6E7A32576F7B1B249E46BBC225BE9071D7",
-      "cofactor": "0x08",
-      "characteristics": {
-        "discriminant": "68237512359936",
-        "j_invariant": "19156916258991752630369809725823075910515034309449569468296111834899549609790941110907181451683621363127169102415254",
-        "trace_of_frobenius": "-1329890207450988128841758359484337226464313875646092906354",
-        "embedding_degree": "2462625387274654950767440006258975862817483704404090416746934574041288984234680883008327183083615266784870011007446",
-        "anomalous": false,
-        "supersingular": false
-      }
+      "cofactor": "0x08"
     },
     {
       "name": "M-511",
@@ -77,30 +69,25 @@
         "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
         "bits": 511
       },
-      "form": "Weierstrass",
+      "form": "Montgomery",
       "params": {
         "a": {
-          "raw": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA94D474F50C"
+          "raw": "0x081806"
         },
         "b": {
-          "raw": "0x425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED097B425ED0BEFAE0163491C0"
+          "raw": "0x01"
         }
       },
       "generator": {
         "x": {
-          "raw": "0x2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD5D1E"
+          "raw": "0x05"
         },
         "y": {
-          "raw": "0x2FBDC0AD8530803D28FDBAD354BB488D32399AC1CF8F6E01EE3F96389B90C809422B9429E8A43DBF49308AC4455940ABE9F1DBCA542093A895E30A64AF056FA5"
+          "raw": "0xca5918"
         }
       },
       "order": "0x100000000000000000000000000000000000000000000000000000000000000017B5FEFF30C7F5677AB2AEEBD13779A2AC125042A6AA10BFA54C15BAB76BAF1B",
-      "cofactor": "0x08",
-      "characteristics": {
-        "discriminant": "4501831549440",
-        "j_invariant": "1222743593625801720547221804319357480411194869774230749481484574517397628109853434488220780823541699740646064698755698105676429176324145032481063622649084",
-        "trace_of_frobenius": "-85798038077085980992356252112544974736566053019478664231724326470621400496530"
-      }
+      "cofactor": "0x08"
     },
     {
       "name": "E-222",
@@ -142,11 +129,11 @@
       },
       "form": "Edwards",
       "params": {
-        "a": {
-          "raw": "0x3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef8e1"
-        },
-        "b": {
+        "c": {
           "raw": "0x01"
+        },
+        "d": {
+          "raw": "0x3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef8e1"
         }
       },
       "generator": {
@@ -171,7 +158,7 @@
       },
       "form": "Edwards",
       "params": {
-		"a": {
+		"c": {
           "raw": "0x01"
         },
         "d": {
