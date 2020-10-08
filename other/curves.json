@@ -11,57 +11,25 @@
         "p": "0x1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
         "bits": 221
       },
-      "form": "Weierstrass",
+      "form": "Montgomery",
       "params": {
         "a": {
-          "raw": "0x155555555555555555555555555555555555555555555554451FF4F3"
+          "raw": "0x01c93a"
         },
         "b": {
-          "raw": "0x1684BDA12F684BDA12F684BDA12F684BDA12F684BDA19B7249700DF7"
+          "raw": "0x01"
         }
       },
       "generator": {
         "x": {
-          "raw": "0x1555555555555555555555555555555555555555555555555555EDC0"
+          "raw": "0x04"
         },
         "y": {
-          "raw": "0x0F7ACDD2A4939571D1CEF14ECA37C228E61DBFF10707DC6C08C5056D"
+          "raw": "0x0f7acdd2a4939571d1cef14eca37c228e61dbff10707dc6c08c5056d"
         }
       },
       "order": "0x040000000000000000000000000015A08ED730E8A2F77F005042605B",
-      "cofactor": "0x8",
-      "characteristics": {
-        "discriminant": "219211239936",
-        "j_invariant": "2198635150322943370581460256665771755915443349493942401782889387523",
-        "trace_of_frobenius": "-3509210517603025598879416729141978",
-        "embedding_degree": "210624583337114373395836055367341083963447540990198152472167526445",
-        "anomalous": false,
-        "supersingular": false,
-        "cm_disc": "1497774814841702210814834171501090982892121090477320568885392696286",
-        "conductor": "3",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 1,
-            "full": 2
-          },
-          {
-            "r": 3,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 5,
-            "least": 12,
-            "full": 12
-          },
-          {
-            "r": 7,
-            "least": 4,
-            "full": 4
-          }
-        ]
-      }
+      "cofactor": "0x8"
     },
     {
       "name": "M-383",
@@ -161,6 +129,64 @@
         }
       },
       "order": "0xffffffffffffffffffffffffffff70cbc95e932f802f31423598cbf",
+      "cofactor": "0x04"
+    },
+	{
+      "name": "E-382",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff97",
+        "bits": 382
+      },
+      "form": "Edwards",
+      "params": {
+        "a": {
+          "raw": "0x3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef8e1"
+        },
+        "b": {
+          "raw": "0x01"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x196f8dd0eab20391e5f05be96e8d20ae68f840032b0b64352923bab85364841193517dbce8105398ebc0cc9470f79603"
+        },
+        "y": {
+          "raw": "0x11"
+        }
+      },
+      "order": "0xfffffffffffffffffffffffffffffffffffffffffffffffd5fb21f21e95eee17c5e69281b102d2773e27e13fd3c9719",
+      "cofactor": "0x04"
+    },
+	{
+      "name": "E-521",
+      "category": "other",
+      "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "bits": 521
+      },
+      "form": "Edwards",
+      "params": {
+		"a": {
+          "raw": "0x01"
+        },
+        "d": {
+          "raw": "0x1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa4331"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x752cb45c48648b189df90cb2296b2878a3bfd9f42fc6c818ec8bf3c9c0c6203913f6ecc5ccc72434b1ae949d568fc99c6059d0fb13364838aa302a940a2f19ba6c"
+        },
+        "y": {
+          "raw": "0x0c"
+        }
+      },
+      "order": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd15b6c64746fc85f736b8af5e7ec53f04fbd8c4569a8f1f4540ea2435f5180d6b",
       "cofactor": "0x04"
     },
     {
