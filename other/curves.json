@@ -420,6 +420,35 @@
       "cofactor": "0x04"
     },
     {
+      "name": "Curve41417",
+      "category": "other",
+      "desc": "Curve from https://cr.yp.to/talks/2013.09.16/slides-djb-20130916-a4.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef",
+        "bits": 414
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": {
+          "raw": "0x01"
+        },
+        "d": {
+          "raw": "0xe21"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x1a334905141443300218c0631c326e5fcd46369f44c03ec7f57ff35498a4ab4d6d6ba111301a73faa8537c64c4fd3812f3cbc595"
+        },
+        "y": {
+          "raw": "0x22"
+        }
+      },
+      "order": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffeb3cc92414cf706022b36f1c0338ad63cf181b0e71a5e106af79",
+      "cofactor": "0x08",
+    },
+    {
       "name": "Fp254BNa",
       "category": "other",
       "desc": "Curve used in: https://eprint.iacr.org/2010/354.pdf",
