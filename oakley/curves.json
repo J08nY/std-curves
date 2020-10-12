@@ -87,7 +87,7 @@
           "raw": ""
         }
       },
-      "order": "0X01ffffffffffffffffffffffdbf2f889b73e484175f94ebc",
+      "order": "0x01ffffffffffffffffffffffdbf2f889b73e484175f94ebc",
       "cofactor": "0x01"
     },
     {
@@ -190,7 +190,7 @@
           "raw": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFC"
         },
         "b": {
-          "raw": "B3312FA7E23EE7E4988E056BE3F82D19181D9C6EFE8141120314088F5013875AC656398D8A2ED19D2A85C8EDD3EC2AEF"
+          "raw": "0xB3312FA7E23EE7E4988E056BE3F82D19181D9C6EFE8141120314088F5013875AC656398D8A2ED19D2A85C8EDD3EC2AEF"
         }
       },
       "generator": {
@@ -234,3 +234,4 @@
       "cofactor": "0x01"
     } 
   ]
+}

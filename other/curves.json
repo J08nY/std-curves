@@ -446,7 +446,7 @@
         }
       },
       "order": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffeb3cc92414cf706022b36f1c0338ad63cf181b0e71a5e106af79",
-      "cofactor": "0x08",
+      "cofactor": "0x08"
     },
     {
       "name": "Fp254BNa",
