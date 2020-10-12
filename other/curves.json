@@ -118,7 +118,7 @@
       "order": "0xffffffffffffffffffffffffffff70cbc95e932f802f31423598cbf",
       "cofactor": "0x04"
     },
-	{
+    {
       "name": "E-382",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
@@ -147,7 +147,7 @@
       "order": "0xfffffffffffffffffffffffffffffffffffffffffffffffd5fb21f21e95eee17c5e69281b102d2773e27e13fd3c9719",
       "cofactor": "0x04"
     },
-	{
+    {
       "name": "E-521",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
@@ -158,7 +158,7 @@
       },
       "form": "Edwards",
       "params": {
-		"c": {
+        "c": {
           "raw": "0x01"
         },
         "d": {

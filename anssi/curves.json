@@ -1,6 +1,6 @@
 {
   "name": "ANSSI",
-  "desc": "Agence nationale de la s\u00e9curit\u00e9 des syst\u00e8mes d'information: Publication d'un param\u00e9trage de courbe elliptique visant des applications de passeport \u00e9lectronique et de l'administration \u00e9lectronique fran\u00e7aise. 21 November 2011",
+  "desc": "Agence nationale de la sécurité des systèmes d'information: Publication d'un paramétrage de courbe elliptique visant des applications de passeport électronique et de l'administration électronique française. 21 November 2011",
   "curves": [
     {
       "name": "FRP256v1",
