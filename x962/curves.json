@@ -1171,10 +1171,10 @@
       }
     },
     {
-      "name": "c2onb191v5",
+      "name": "c2onb191v4",
       "category": "x962",
       "desc": "",
-      "oid": "1.2.840.10045.3.0.9",
+      "oid": "1.2.840.10045.3.0.8",
       "field": {
         "type": "Binary",
         "bits": 191,
@@ -1182,35 +1182,31 @@
         "poly": [
           {
             "coeff": "0x01",
-            "power": 192
-          },
-          {
-            "coeff": "0x01",
             "power": 191
           },
           {
             "coeff": "0x01",
-            "power": 189
+            "power": 190
           },
           {
             "coeff": "0x01",
-            "power": 185
+            "power": 188
           },
           {
             "coeff": "0x01",
-            "power": 177
+            "power": 184
           },
           {
             "coeff": "0x01",
-            "power": 161
+            "power": 176
           },
           {
             "coeff": "0x01",
-            "power": 129
+            "power": 160
           },
           {
             "coeff": "0x01",
-            "power": 65
+            "power": 128
           },
           {
             "coeff": "0x01",
@@ -1222,23 +1218,120 @@
           },
           {
             "coeff": "0x01",
-            "power": 61
+            "power": 62
           },
           {
             "coeff": "0x01",
-            "power": 57
+            "power": 60
           },
           {
             "coeff": "0x01",
-            "power": 49
+            "power": 56
           },
           {
             "coeff": "0x01",
-            "power": 33
+            "power": 48
           },
           {
             "coeff": "0x01",
-            "power": 1
+            "power": 32
+          },
+          {
+            "coeff": "0x01",
+            "power": 0
+          }
+        ]
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": {
+          "raw": "0x65903E04E1E4924253E26A3C9AC28C758BD8184A3FB680E8"
+        },
+        "b": {
+          "raw": "0x54678621B190CFCE282ADE219D5B3A065E3F4B3FFDEBB29B"
+        }
+      },
+      "order": "0x4000000000000000000000009CF2D6E3901DAC4C32EEC65D",
+      "cofactor": "0x2",
+      "generator": {
+        "x": {
+        "raw": "0x025A2C69A32E8638E51CCEFAAD05350A978457CB5FB6DF994A"
+        },
+        "y": {
+          "raw": ""
+        }
+      },
+      "seed": "0xA399387EAE54D696E6768756151750E58B416D57"
+    },
+    {
+      "name": "c2onb191v5",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.0.9",
+      "field": {
+        "type": "Binary",
+        "bits": 191,
+        "degree": 191,
+        "poly": [
+          {
+            "coeff": "0x01",
+            "power": 191
+          },
+          {
+            "coeff": "0x01",
+            "power": 190
+          },
+          {
+            "coeff": "0x01",
+            "power": 188
+          },
+          {
+            "coeff": "0x01",
+            "power": 184
+          },
+          {
+            "coeff": "0x01",
+            "power": 176
+          },
+          {
+            "coeff": "0x01",
+            "power": 160
+          },
+          {
+            "coeff": "0x01",
+            "power": 128
+          },
+          {
+            "coeff": "0x01",
+            "power": 64
+          },
+          {
+            "coeff": "0x01",
+            "power": 63
+          },
+          {
+            "coeff": "0x01",
+            "power": 62
+          },
+          {
+            "coeff": "0x01",
+            "power": 60
+          },
+          {
+            "coeff": "0x01",
+            "power": 56
+          },
+          {
+            "coeff": "0x01",
+            "power": 48
+          },
+          {
+            "coeff": "0x01",
+            "power": 32
+          },
+          {
+            "coeff": "0x01",
+            "power": 0
           }
         ]
       },
@@ -1264,131 +1357,6 @@
       "seed": "0x2D88F7BC545794D696E676875615175973391555"
     },
     {
-      "name": "c2onb239v5",
-      "category": "x962",
-      "desc": "",
-      "oid": "1.2.840.10045.3.0.15",
-      "field": {
-        "type": "Binary",
-        "bits": 239,
-        "degree": 239,
-        "poly": [
-          {
-            "coeff": "0x01",
-            "power": 240
-          },
-          {
-            "coeff": "0x01",
-            "power": 239
-          },
-          {
-            "coeff": "0x01",
-            "power": 237
-          },
-          {
-            "coeff": "0x01",
-            "power": 233
-          },
-          {
-            "coeff": "0x01",
-            "power": 225
-          },
-          {
-            "coeff": "0x01",
-            "power": 209
-          },
-          {
-            "coeff": "0x01",
-            "power": 208
-          },
-          {
-            "coeff": "0x01",
-            "power": 207
-          },
-          {
-            "coeff": "0x01",
-            "power": 205
-          },
-          {
-            "coeff": "0x01",
-            "power": 201
-          },
-          {
-            "coeff": "0x01",
-            "power": 193
-          },
-          {
-            "coeff": "0x01",
-            "power": 145
-          },
-          {
-            "coeff": "0x01",
-            "power": 144
-          },
-          {
-            "coeff": "0x01",
-            "power": 143
-          },
-          {
-            "coeff": "0x01",
-            "power": 141
-          },
-          {
-            "coeff": "0x01",
-            "power": 137
-          },
-          {
-            "coeff": "0x01",
-            "power": 129
-          },
-          {
-            "coeff": "0x01",
-            "power": 17
-          },
-          {
-            "coeff": "0x01",
-            "power": 16
-          },
-          {
-            "coeff": "0x01",
-            "power": 15
-          },
-          {
-            "coeff": "0x01",
-            "power": 13
-          },
-          {
-            "coeff": "0x01",
-            "power": 9
-          },
-          {
-            "coeff": "0x01",
-            "power": 1
-          },
-        ]
-      },
-      "form": "Weierstrass",
-      "params": {
-        "a": {
-          "raw": "0x1ECF1B9D28D8017505E17475D3DF2982E243CA5CB5E9F94A3F36124A486E"
-        },
-        "b": {
-          "raw": "0x3EE257250D1A2E66CEF23AA0F25B12388DE8A10FF9554F90AFBAA9A08B6D"
-        }
-      },
-      "order": "0x1555555555555555555555555555558CF77A5D0589D2A9340D963B7AD703",
-      "cofactor": "0x6",
-      "generator": {
-        "x": {
-        "raw": "0x02193279FC543E9F5F7119189785B9C60B249BE4820BAF6C24BDFA2813F8B8"
-        },
-        "y": {
-          "raw": ""
-        }
-      },
-      "seed": "0x2C04F44D696E676875615175C586B41F6CA150C9"
-    },  
-    {
       "name": "c2onb239v4",
       "category": "x962",
       "desc": "",
@@ -1400,27 +1368,23 @@
         "poly": [
           {
             "coeff": "0x01",
-            "power": 240
-          },
-          {
-            "coeff": "0x01",
             "power": 239
           },
           {
             "coeff": "0x01",
-            "power": 237
+            "power": 238
           },
           {
             "coeff": "0x01",
-            "power": 233
+            "power": 236
           },
           {
             "coeff": "0x01",
-            "power": 225
+            "power": 232
           },
           {
             "coeff": "0x01",
-            "power": 209
+            "power": 224
           },
           {
             "coeff": "0x01",
@@ -1432,19 +1396,19 @@
           },
           {
             "coeff": "0x01",
-            "power": 205
+            "power": 206
           },
           {
             "coeff": "0x01",
-            "power": 201
+            "power": 204
           },
           {
             "coeff": "0x01",
-            "power": 193
+            "power": 200
           },
           {
             "coeff": "0x01",
-            "power": 145
+            "power": 192
           },
           {
             "coeff": "0x01",
@@ -1456,19 +1420,19 @@
           },
           {
             "coeff": "0x01",
-            "power": 141
+            "power": 142
           },
           {
             "coeff": "0x01",
-            "power": 137
+            "power": 140
           },
           {
             "coeff": "0x01",
-            "power": 129
+            "power": 136
           },
           {
             "coeff": "0x01",
-            "power": 17
+            "power": 128
           },
           {
             "coeff": "0x01",
@@ -1480,16 +1444,20 @@
           },
           {
             "coeff": "0x01",
-            "power": 13
+            "power": 14
           },
           {
             "coeff": "0x01",
-            "power": 9
+            "power": 12
           },
           {
             "coeff": "0x01",
-            "power": 1
+            "power": 8
           },
+          {
+            "coeff": "0x01",
+            "power": 0
+          }
         ]
       },
       "form": "Weierstrass",
@@ -1512,6 +1480,131 @@
         }
       },
       "seed": "0xF851638CFA4D696E67687561517556513841BFAC"
+    },
+    {
+      "name": "c2onb239v5",
+      "category": "x962",
+      "desc": "",
+      "oid": "1.2.840.10045.3.0.15",
+      "field": {
+        "type": "Binary",
+        "bits": 239,
+        "degree": 239,
+        "poly": [
+          {
+            "coeff": "0x01",
+            "power": 239
+          },
+          {
+            "coeff": "0x01",
+            "power": 238
+          },
+          {
+            "coeff": "0x01",
+            "power": 236
+          },
+          {
+            "coeff": "0x01",
+            "power": 232
+          },
+          {
+            "coeff": "0x01",
+            "power": 224
+          },
+          {
+            "coeff": "0x01",
+            "power": 208
+          },
+          {
+            "coeff": "0x01",
+            "power": 207
+          },
+          {
+            "coeff": "0x01",
+            "power": 206
+          },
+          {
+            "coeff": "0x01",
+            "power": 204
+          },
+          {
+            "coeff": "0x01",
+            "power": 200
+          },
+          {
+            "coeff": "0x01",
+            "power": 192
+          },
+          {
+            "coeff": "0x01",
+            "power": 144
+          },
+          {
+            "coeff": "0x01",
+            "power": 143
+          },
+          {
+            "coeff": "0x01",
+            "power": 142
+          },
+          {
+            "coeff": "0x01",
+            "power": 140
+          },
+          {
+            "coeff": "0x01",
+            "power": 136
+          },
+          {
+            "coeff": "0x01",
+            "power": 128
+          },
+          {
+            "coeff": "0x01",
+            "power": 16
+          },
+          {
+            "coeff": "0x01",
+            "power": 15
+          },
+          {
+            "coeff": "0x01",
+            "power": 14
+          },
+          {
+            "coeff": "0x01",
+            "power": 12
+          },
+          {
+            "coeff": "0x01",
+            "power": 8
+          },
+          {
+            "coeff": "0x01",
+            "power": 0
+          }
+        ]
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": {
+          "raw": "0x1ECF1B9D28D8017505E17475D3DF2982E243CA5CB5E9F94A3F36124A486E"
+        },
+        "b": {
+          "raw": "0x3EE257250D1A2E66CEF23AA0F25B12388DE8A10FF9554F90AFBAA9A08B6D"
+        }
+      },
+      "order": "0x1555555555555555555555555555558CF77A5D0589D2A9340D963B7AD703",
+      "cofactor": "0x6",
+      "generator": {
+        "x": {
+        "raw": "0x02193279FC543E9F5F7119189785B9C60B249BE4820BAF6C24BDFA2813F8B8"
+        },
+        "y": {
+          "raw": ""
+        }
+      },
+      "seed": "0x2C04F44D696E676875615175C586B41F6CA150C9"
     }  
   ]
 }
