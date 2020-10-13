@@ -1,4 +1,6 @@
 import { Children } from 'react'
+import { withPrefix } from 'gatsby'
+
 
 const simplifyChildren = (children, prefix, depth = 0) => {
   return Children.toArray(children).reduce((items, item) => {
@@ -57,8 +59,7 @@ export const getItems = (children, prefix) => {
 }
 
 const isItemActive = (item, location) => {
-  //const linkMatchesPathname = item.link === location.pathname
-  const linkMatchesPathname = (item.link === location.pathname) || (location.pathname.startsWith(item.link) && item.link !== "/")
+  const linkMatchesPathname = withPrefix(item.link) === location.pathname
 
   if (linkMatchesPathname) {
     return item

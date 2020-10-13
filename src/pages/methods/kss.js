@@ -81,7 +81,6 @@ class KSS40(KSS):
         a trace of Frobenius <InlineMath>t</InlineMath> as follows:
       </Styled.p>
       <Styled.h3><InlineMath>k = 16</InlineMath></Styled.h3>
-      <Styled.p>
         <BlockMath>
           {`\\begin{aligned}
           p(z) &= (z^{10} + 2 z^9 + 5 z^8 + 48 z^6 + 152 z^5 + 240 z^4 + 625 z^2 + 2398 z + 3125)/9801\\\\
@@ -89,9 +88,7 @@ class KSS40(KSS):
           t(z) &= (2 z^5 + 41 z + 35)/35
           \\end{aligned}`}
         </BlockMath>
-      </Styled.p>
       <Styled.h3><InlineMath>k = 18</InlineMath></Styled.h3>
-      <Styled.p>
         <BlockMath>
           {`\\begin{aligned}
           p(z) &= (z^8 + 5 z^7 + 7 z^6 + 37 z^5 + 188 z^4 + 259 z^3 + 343 z^2 + 1763 z + 2401)/21\\\\
@@ -99,9 +96,7 @@ class KSS40(KSS):
           t(z) &= (z^4 + 16 z + 7)/7
           \\end{aligned}`}
         </BlockMath>
-      </Styled.p>
       <Styled.h3><InlineMath>k = 36</InlineMath></Styled.h3>
-      <Styled.p>
         <BlockMath>
           {`\\begin{aligned}
           p(z) &= (z^{14} - 4 z^{13} + 7 z^{12} + 683 z^8 - 2510 z^7 + 4781 z^6 + 117649 z^2 - 386569 z + 823543)/28749\\\\
@@ -109,9 +104,7 @@ class KSS40(KSS):
           t(z) &= (2 z^7 + 757 z + 259)/259
           \\end{aligned}`}
         </BlockMath>
-      </Styled.p>
       <Styled.h3><InlineMath>k = 40</InlineMath></Styled.h3>
-      <Styled.p>
         <BlockMath>
           {`\\begin{aligned}
           p(z) &= (z^{22} - 2 z^{21} + 5 z^{20} + 6232 z^{12} - 10568 z^{11} + 31160 z^{10} + 9765625 z^2 - 13398638 z + 48828125)/1123380\\\\
@@ -119,7 +112,6 @@ class KSS40(KSS):
           t(z) &= (2 z^{11} + 6469 z + 1185)/1185
           \\end{aligned}`}
         </BlockMath>
-      </Styled.p>
       <Styled.p>
         The class of curves has the Short-Weierstrass form:
       </Styled.p>

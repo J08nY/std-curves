@@ -15,21 +15,21 @@ export default ({data, location}) => {
       <ul>
         <li>Verifiably random algorithms</li>
         <ul>
-          <li><Link to={"/methods/x962"}>ANSI X9.62</Link></li>
-          <li><Link to={"/methods/secg"}>SECG</Link></li>
-          <li><Link to={"/methods/nist"}>NIST</Link></li>
-          <li><Link to={"/methods/brainpool"}>Brainpool</Link></li>
+          <li><Link to={"/methods/x962/"}>ANSI X9.62</Link></li>
+          <li><Link to={"/methods/secg/"}>SECG</Link></li>
+          <li><Link to={"/methods/nist/"}>NIST</Link></li>
+          <li><Link to={"/methods/brainpool/"}>Brainpool</Link></li>
         </ul>
         <li>Pairing-friendly curves</li>
         <ul>
-          <li><Link to={"/methods/bn"}>BN</Link></li>
-          <li><Link to={"/methods/bls"}>BLS</Link></li>
-          <li><Link to={"/methods/mnt"}>MNT</Link></li>
-          <li><Link to={"/methods/kss"}>KSS</Link></li>
+          <li><Link to={"/methods/bn/"}>BN</Link></li>
+          <li><Link to={"/methods/bls/"}>BLS</Link></li>
+          <li><Link to={"/methods/mnt/"}>MNT</Link></li>
+          <li><Link to={"/methods/kss/"}>KSS</Link></li>
         </ul>
         <li>Other</li>
         <ul>
-          <li><Link to={"/methods/cm"}>Complex multiplication</Link></li>
+          <li><Link to={"/methods/cm/"}>Complex multiplication</Link></li>
         </ul>
       </ul>
     </Entry>
