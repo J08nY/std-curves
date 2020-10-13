@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useCallback, useMemo, useState } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, withPrefix } from 'gatsby'
 import { jsx } from 'theme-ui'
 import SidebarContent from '../../sidebar.mdx'
 import Branding from './Branding'
@@ -11,9 +11,10 @@ import { getActiveItem, getActiveItemParentLinks, getItems } from './utils'
 const setOpenItems = (state, items) => {
   for (const item of items) {
     if (item.items) {
+
       state.openItems[item.link] =
         isItemActive(state.activeItemParentLinks, item) ||
-        state.activeItem.link === item.link
+        withPrefix(state.activeItem.link) === item.link
 
       setOpenItems(state, item.items)
     }
