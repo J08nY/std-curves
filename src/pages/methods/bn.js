@@ -43,8 +43,8 @@ export default ({data, location}) => {
       <Styled.p>
         A class of pairing-friendly curves with embedding degree <InlineMath>k = 12</InlineMath>.
         Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BN curve with embedding degree <InlineMath>12</InlineMath> can 
-        be constructed over a prime field <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points <InlineMath>r</InlineMath>
-        and a trace of Frobenius <InlineMath>t</InlineMath>.
+        be constructed over a prime field <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points <InlineMath>r</InlineMath> and
+        a trace of Frobenius <InlineMath>t</InlineMath>.
         <BlockMath>
           {`\\begin{aligned}
           p(z) &= 36 z^4 + 36 z^3 + 24 z^2 + 6 z + 1\\\\
@@ -62,7 +62,8 @@ export default ({data, location}) => {
       <Styled.p>
         where given <InlineMath>z</InlineMath> such that <InlineMath>p(z)</InlineMath> is prime, a curve with 
         a prime order subgroup of <InlineMath>r(z)</InlineMath> points can be found either via complex multiplication
-        or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found.
+        or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found. Some generated
+        curves can be found in the <Link to={"/bn/"}>BN</Link> category.
       </Styled.p>
       <Styled.p>
         The following SageMath code generates BN curves with embedding degree <InlineMath>12</InlineMath>.

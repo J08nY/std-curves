@@ -30,7 +30,7 @@ export default ({data, location}) => {
   \\IF{$2^{L-1} \\le p \\le 2^L - 1$}
     \\RETURN $p$
   \\ENDIF
-  \\STATE Let $s = UpdateSeed(s)$ and go to Step 2
+  \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$) and \\textbf{goto} $2$
   \\ENDPROCEDURE
   \\PROCEDURE{FindInteger}{$s$}
   \\STATE Let $v = \\lfloor (L-1) / 160 \\rfloor$ and $w = L - 160v$
@@ -61,16 +61,16 @@ export default ({data, location}) => {
   \\STATE Let $h = $ \\CALL{FindInteger2}{$s$}
   \\STATE Convert $h$ to an integer $A$
   \\IF{$-3 \\equiv A*Z^4 \\mod p$ is not solvable}
-    \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$} and go to Step 2
+    \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$} and \\textbf{goto} $2$
   \\ENDIF
   \\STATE Compute one solution $Z$ of $-3 \\equiv A*Z^4 \\mod p$
   \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$}
   \\STATE Let $B = $ \\CALL{FindInteger2}{$s$}
   \\IF{$B$ is a square $\\mod p$}
-    \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$} and go to Step 8
+    \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$} and \\textbf{goto} $8$
   \\ENDIF
   \\IF{$4*A^3 + 27*B^2 \\equiv 0 \\mod p$}
-    \\STATE Let $s = $ \\CALL{UpdateSeed}{s} and go to Step 2
+    \\STATE Let $s = $ \\CALL{UpdateSeed}{s} and \\textbf{goto} $2$
   \\ENDIF
   \\STATE Check that the elliptic curve $\\mathcal{E}$ over $\\mathbb{F}_p$ given by $y^2 = x^3 + A x + B$ fulfills all security and functional requirements
   \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$}
@@ -120,7 +120,7 @@ export default ({data, location}) => {
       <Styled.h3>Original method</Styled.h3>
       Brainpool published their method of generating verifiably random curves in the <b>ECC Brainpool Standard Curves and Curve Generation</b> <Link to="#brainpool-std">[1]</Link> document,
       along with generated domain parameters claimed to be generated using the presented method and seeds.
-      However, the presented <Link to={"/brainpool"}>curves</Link> were (with the exception of the 512-bit curves) <b>not</b> generated
+      However, the presented <Link to={"/brainpool/"}>curves</Link> were (with the exception of the 512-bit curves) <b>not</b> generated
       using the presented method, as they have properties that can not result from the presented method of generating curves.
       See the <b>BADA55 paper</b> <Link to="bada55-brainpool">[3]</Link> for more information.
 

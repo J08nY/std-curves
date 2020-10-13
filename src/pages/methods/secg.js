@@ -67,7 +67,7 @@ export default ({data, location}) => {
   \\STATE Recover a y-coordinate from the compressed point information $(x, z)$ as appropriate to the elliptic curve
   \\IF{no valid $y$ exists}
   \\STATE Increment $c$
-  \\STATE Goto step $4$
+  \\STATE \\textbf{goto} $5$
   \\ENDIF
   \\STATE Let $R = (x, y)$
   \\RETURN $G = [h]R$
@@ -81,7 +81,7 @@ export default ({data, location}) => {
       <Styled.p>
         The SECG method for generating verifiably random domain parameters is specified in the <b>SEC 1: Elliptic Curve Cryptography</b> <Link to="#secg-sec1">[1]</Link> standard,
         specifically in sections <i>3.1.3.1</i> and <i>3.1.3.2</i>. These methods are compatible to those in the <b>ANSI X9.62</b> standard. The curves are presented
-        in the <Link to={"/secg"}>SECG</Link> category.
+        in the <Link to={"/secg/"}>SECG</Link> category.
       </Styled.p>
 
       <Styled.h3>Generating curves</Styled.h3>

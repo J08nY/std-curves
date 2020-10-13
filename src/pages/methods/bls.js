@@ -91,7 +91,8 @@ class BLS24(BLS):
       <Styled.p>
         where given <InlineMath>z</InlineMath> such that <InlineMath>p(z)</InlineMath> is prime, a curve with 
         a prime order subgroup of <InlineMath>r(z)</InlineMath> points can be found either via complex multiplication
-        or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found.
+        or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found. Some
+        generate curves can be found in the <Link to={"/bls/"}>BLS</Link> category.
       </Styled.p>
       <Styled.p>
         The following SageMath code generates BLS curves with embedding degree <InlineMath>12</InlineMath> and <InlineMath>24</InlineMath>.
