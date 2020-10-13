@@ -62,7 +62,7 @@ export default ({data, location}) => {
       <Styled.p>
         The <b>ANSI X9.62</b> <Link to="#ansi-x962">[1]</Link> standard published by the American National Standards Institute provides a way of
         generating verifiably random elliptic curves in its appendices <i>A.3.3.1</i> and <i>A.3.3.2</i>. The curves are presented
-        in the <Link to={"/x962"}>ANSI X9.62</Link> category.
+        in the <Link to={"/x962/"}>ANSI X9.62</Link> category.
       </Styled.p>
       <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves</Styled.h3>
       <pre>

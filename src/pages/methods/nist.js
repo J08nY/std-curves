@@ -63,7 +63,7 @@ export default ({data, location}) => {
       <Styled.p>
         The NIST <b>FIPS 186-4</b> <Link to="#fips-186-4">[1]</Link> standard defines recommended curves for use in ECDSA
         and a verifiably random method for generating them in appendices <i>D.5</i> and <i>D.7</i>. The curves are presented
-        in the <Link to={"/nist"}>NIST</Link> category.
+        in the <Link to={"/nist/"}>NIST</Link> category.
       </Styled.p>
       <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves</Styled.h3>
       <pre>
