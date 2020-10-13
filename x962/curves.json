@@ -31,7 +31,7 @@
       },
       "order": "0xffffffffffffffffffffffff99def836146bc9b1b4d22831",
       "cofactor": "0x1",
-      "seed": "0x3045AE6FC8422F64ED579528D38120EAE12196D5",
+      "seed": "3045AE6FC8422F64ED579528D38120EAE12196D5",
       "aliases": [
         "secg/secp192r1",
         "nist/P-192"
@@ -108,7 +108,7 @@
       },
       "order": "0xfffffffffffffffffffffffe5fb1a724dc80418648d8dd31",
       "cofactor": "0x1",
-      "seed": "0x31A92EE2029FD10D901B113E990710F0D21AC6B6",
+      "seed": "31A92EE2029FD10D901B113E990710F0D21AC6B6",
       "characteristics": {
         "discriminant": "3136318742261921876063208570368096687049382158828912127687",
         "j_invariant": "2188073006583539552141688552564683396860111048461359479401",
@@ -171,7 +171,7 @@
       },
       "order": "0xffffffffffffffffffffffff7a62d031c83f4294f640ec13",
       "cofactor": "0x1",
-      "seed": "0xC469684435DEB378C4B65CA9591E2A5763059A2E",
+      "seed": "C469684435DEB378C4B65CA9591E2A5763059A2E",
       "characteristics": {
         "discriminant": "3779502969702448100548644654746965771458990594820505358394",
         "j_invariant": "4949518941300124932197833942361144997943533558142111060080",
@@ -234,7 +234,7 @@
       },
       "order": "0x7fffffffffffffffffffffff7fffff9e5e9a9f5d9071fbd1522688909d0b",
       "cofactor": "0x1",
-      "seed": "0xE43BB460F0B80CC0C0B075798E948060F8321B7D",
+      "seed": "E43BB460F0B80CC0C0B075798E948060F8321B7D",
       "characteristics": {
         "discriminant": "304850035712828017768890753913370930082366291391142991141919368057646026",
         "j_invariant": "535250236995642411828071436390811255989556058215461384191615097928272770",
@@ -332,7 +332,7 @@
       },
       "order": "0x7fffffffffffffffffffffff7fffff975deb41b3a6057c3c432146526551",
       "cofactor": "0x1",
-      "seed": "0x7D7374168FFE3471B60A857686A19475D3BFA2FF",
+      "seed": "7D7374168FFE3471B60A857686A19475D3BFA2FF",
       "characteristics": {
         "discriminant": "882873045738548432559077267776614981148556437256582152685457545366799895",
         "j_invariant": "753745430086077892322271754405460844839460634669491132164952757184512889",
@@ -368,7 +368,7 @@
       },
       "order": "0xffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551",
       "cofactor": "0x1",
-      "seed": "0xC49D360886E704936A6678E1139D26B7819F7E90",
+      "seed": "C49D360886E704936A6678E1139D26B7819F7E90",
       "aliases": [
         "secg/secp256r1",
         "nist/P-256"
@@ -501,7 +501,7 @@
       },
       "order": "0x0400000000000000000001e60fc8821cc74daeafc1",
       "cofactor": "0x2",
-      "seed": "0xD2C0FB15760860DEF1EEF4D696E6768756151754",
+      "seed": "D2C0FB15760860DEF1EEF4D696E6768756151754",
       "generator": {
         "x": {
           "raw": "0x07af69989546103d79329fcc3d74880f33bbe803cb"
@@ -557,7 +557,7 @@
       },
       "order": "0x03fffffffffffffffffffdf64de1151adbb78f10a7",
       "cofactor": "0x2",
-      "seed": "0x53814C050D44D696E67687561517580CA4E29FFD",
+      "seed": "53814C050D44D696E67687561517580CA4E29FFD",
       "generator": {
         "x": {
           "raw": "0x0024266e4eb5106d0a964d92c4860e2671db9b6cc5"
@@ -707,7 +707,7 @@
       },
       "order": "0x155555555555555555555555610c0b196812bfb6288a3ea3",
       "cofactor": "0x6",
-      "seed": "0xE053512DC684D696E676875615175067AE786D1F",
+      "seed": "E053512DC684D696E676875615175067AE786D1F",
       "generator": {
         "x": {
           "raw": "0x375d4ce24fde434489de8746e71786015009e66e38a926dd"
@@ -752,7 +752,7 @@
       },
       "order": "0x20000000000000000000000050508cb89f652824e06b8173",
       "cofactor": "0x4",
-      "seed": "0x0871EF2FEF24D696E6768756151758BEE0D95C15",
+      "seed": "0871EF2FEF24D696E6768756151758BEE0D95C15",
       "generator": {
         "x": {
           "raw": "0x3809b2b7cc1b28cc5a87926aad83fd28789e81e2c9e3bf10"
@@ -805,7 +805,7 @@
           "raw": "0x765be73433b3f95e332932e70ea245ca2418ea0ef98018fb"
         }
       },
-      "seed": "0x4E13CA542744D696E67687561517552F279A8C84"
+      "seed": "4E13CA542744D696E67687561517552F279A8C84"
     },
     {
       "form": "Weierstrass",
@@ -842,7 +842,7 @@
       },
       "order": "0x0cccccccccccccccccccccccccccccac4912d2d9df903ef9888b8a0e4cff",
       "cofactor": "0xa",
-      "seed": "0x9E076F4D696E676875615175E11E9FDD",
+      "seed": "9E076F4D696E676875615175E11E9FDD",
       "generator": {
         "x": {
           "raw": "0x70f6e9d04d289c4e89913ce3530bfde903977d42b146d539bf1bde4e9c92"
@@ -887,7 +887,7 @@
       },
       "order": "0x1555555555555555555555555555553c6f2885259c31e3fcdf154624522d",
       "cofactor": "0x6",
-      "seed": "0x2AA6982FDFA4D696E676875615175D266727277D",
+      "seed": "2AA6982FDFA4D696E676875615175D266727277D",
       "generator": {
         "x": {
           "raw": "0x28f9d04e900069c8dc47a08534fe76d2b900b7d7ef31f5709f200c4ca205"
@@ -940,7 +940,7 @@
           "raw": "0x61d8ee5077c33fecf6f1a16b268de469c3c7744ea9a971649fc7a9616305"
         }
       },
-      "seed": "0xD34B9A4D696E676875615175CA71B920BFEFB05D"
+      "seed": "D34B9A4D696E676875615175CA71B920BFEFB05D"
     },
     {
       "form": "Weierstrass",
@@ -1133,7 +1133,7 @@
       },
       "order": "0x01af286bca1af286bca1af286bca1af286bca1af286bc9fb8f6b85c556892c20a7eb964fe7719e74f490758d3b",
       "cofactor": "0x4c",
-      "seed": "0x2B354920B724D696E67687561517585BA1332DC6",
+      "seed": "2B354920B724D696E67687561517585BA1332DC6",
       "generator": {
         "x": {
           "raw": "0x3c258ef3047767e7ede0f1fdaa79daee3841366a132e163aced4ed2401df9c6bdcde98e8e707c07a2239b1b097"
@@ -1278,7 +1278,7 @@
           "raw": ""
         }
       },
-      "seed": "0xA399387EAE54D696E6768756151750E58B416D57"
+      "seed": "A399387EAE54D696E6768756151750E58B416D57"
     },
     {
       "name": "c2onb191v5",
@@ -1371,7 +1371,7 @@
           "raw": ""
         }
       },
-      "seed": "0x2D88F7BC545794D696E676875615175973391555"
+      "seed": "2D88F7BC545794D696E676875615175973391555"
     },
     {
       "name": "c2onb239v4",
@@ -1496,7 +1496,7 @@
           "raw": ""
         }
       },
-      "seed": "0xF851638CFA4D696E67687561517556513841BFAC"
+      "seed": "F851638CFA4D696E67687561517556513841BFAC"
     },
     {
       "name": "c2onb239v5",
@@ -1621,7 +1621,7 @@
           "raw": ""
         }
       },
-      "seed": "0x2C04F44D696E676875615175C586B41F6CA150C9"
+      "seed": "2C04F44D696E676875615175C586B41F6CA150C9"
     }  
   ]
 }
