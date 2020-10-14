@@ -1078,6 +1078,96 @@
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b235a2359c4afbc9eb7987f1c9ab37e42599188c4b7dc6269b830d80897f57a5f71",
       "cofactor": "0x01"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Tweedledum",
+      "category": "other",
+      "desc": "Tweedledum pairing friendly curve from <https://github.com/daira/tweedle>.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0x40000000000000000000000000000000038aa1276c3f59b9a14064e200000001",
+        "bits": 255
+      },
+      "params": {
+        "a": {
+          "raw": "0x00"
+        },
+        "b": {
+          "raw": "0x05"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": ""
+        },
+        "y": {
+          "raw": ""
+        }
+      },
+      "order": "0x40000000000000000000000000000000038aa127696286c9842cafd400000001",
+      "cofactor": "0x01"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Tweedledee",
+      "category": "other",
+      "desc": "Tweedledee pairing friendly curve from <https://github.com/daira/tweedle>.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0x40000000000000000000000000000000038aa127696286c9842cafd400000001",
+        "bits": 255
+      },
+      "params": {
+        "a": {
+          "raw": "0x00"
+        },
+        "b": {
+          "raw": "0x05"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": ""
+        },
+        "y": {
+          "raw": ""
+        }
+      },
+      "order": "0x40000000000000000000000000000000038aa1276c3f59b9a14064e200000001",
+      "cofactor": "0x01"
+    },
+    {
+      "form": "TwistedEdwards",
+      "name": "JubJub",
+      "category": "other",
+      "desc": "JubJub curve from <https://z.cash/technology/jubjub/>.",
+      "oid": "",
+      "field": {
+        "type": "Prime",
+        "p": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
+        "bits": 255
+      },
+      "params": {
+        "a": {
+          "raw": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000000"
+        },
+        "d": {
+          "raw": "0x2a9318e74bfa2b48f5fd9207e6bd7fd4292d7f6d37579d2601065fd6d6343eb1"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": ""
+        },
+        "y": {
+          "raw": ""
+        }
+      },
+      "order": "0xe7db4ea6533afa906673b0101343b00a6682093ccc81082d0970e5ed6f72cb7",
+      "cofactor": "0x01"
     }
   ]
 }
