@@ -5,7 +5,7 @@
     {
       "name": "secp112r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.6",
       "field": {
         "type": "Prime",
@@ -30,11 +30,12 @@
         }
       },
       "order": "0xdb7c2abf62e35e7628dfac6561c5",
-      "cofactor": "0x1",
+      "cofactor": "0x01",
       "aliases": [
         "wtls/wap-wsg-idm-ecid-wtls6"
       ],
       "characteristics": {
+        "seed": "00F50B028E4D696E676875615175290472783FB1",
         "discriminant": "431641039663814096123514803737201",
         "j_invariant": "3522606870331875081851146801233610",
         "trace_of_frobenius": "-4407293269000505",
@@ -90,7 +91,7 @@
     {
       "name": "secp112r2",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.7",
       "field": {
         "type": "Prime",
@@ -115,8 +116,9 @@
         }
       },
       "order": "0x36df0aafd8b8d7597ca10520d04b",
-      "cofactor": "0x4",
+      "cofactor": "0x04",
       "characteristics": {
+        "seed": "002757A1114D696E6768756151755316C05E0BD4",
         "discriminant": "3350974381310990100142288157262754",
         "j_invariant": "1815128745141690948653052996943564",
         "trace_of_frobenius": "72213667414400864",
@@ -172,7 +174,7 @@
     {
       "name": "secp128r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.28",
       "field": {
         "type": "Prime",
@@ -197,8 +199,9 @@
         }
       },
       "order": "0xfffffffe0000000075a30d1b9038a115",
-      "cofactor": "0x1",
+      "cofactor": "0x01",
       "characteristics": {
+        "seed": "000E0D4D696E6768756151750CC03A4473D03679",
         "discriminant": "92269531472977194927251796133478512919",
         "j_invariant": "142488586153168470548238628993886102905",
         "trace_of_frobenius": "-8476633335676313877",
@@ -254,7 +257,7 @@
     {
       "name": "secp128r2",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.29",
       "field": {
         "type": "Prime",
@@ -279,8 +282,9 @@
         }
       },
       "order": "0x3fffffff7fffffffbe0024720613b5a3",
-      "cofactor": "0x4",
+      "cofactor": "0x04",
       "characteristics": {
+        "seed": "004D696E67687561517512D8F03431FCE63B88F4",
         "discriminant": "296974453756101405409198998476964181399",
         "j_invariant": "194900232209907094972416409296981867603",
         "trace_of_frobenius": "19023044537425668468",
@@ -326,7 +330,7 @@
     {
       "name": "secp160k1",
       "category": "secg",
-      "desc": "",
+      "desc": "A Koblitz curve.",
       "oid": "1.3.132.0.9",
       "field": {
         "type": "Prime",
@@ -401,7 +405,7 @@
     {
       "name": "secp160r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.8",
       "field": {
         "type": "Prime",
@@ -426,12 +430,13 @@
         }
       },
       "order": "0x0100000000000000000001f4c8f927aed3ca752257",
-      "cofactor": "0x1",
+      "cofactor": "0x01",
       "aliases": [
         "wtls/wap-wsg-idm-ecid-wtls7",
         "x963/ansip160r1"
       ],
       "characteristics": {
+        "seed": "1053CDE42C14D696E67687561517533BF3F83345",
         "discriminant": "1027266213310721979572908445837817790068480350785",
         "j_invariant": "1443800352525525475817269232308576710441299733598",
         "trace_of_frobenius": "-2364890543760230858433111",
@@ -477,7 +482,7 @@
     {
       "name": "secp160r2",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.30",
       "field": {
         "type": "Prime",
@@ -502,11 +507,12 @@
         }
       },
       "order": "0x0100000000000000000000351ee786a818f3a1a16b",
-      "cofactor": "0x1",
+      "cofactor": "0x01",
       "aliases": [
         "x963/ansip160r2"
       ],
       "characteristics": {
+        "seed": "B99B99B099B323E02709A4D696E6768756151751",
         "discriminant": "1237703873357928705511536972446330043119280998656",
         "j_invariant": "1027058635636405814575941827615445452503699747171",
         "trace_of_frobenius": "-250855509121001538581751",
@@ -547,7 +553,7 @@
     {
       "name": "secp192k1",
       "category": "secg",
-      "desc": "",
+      "desc": "A Koblitz curve.",
       "oid": "1.3.132.0.31",
       "field": {
         "type": "Prime",
@@ -622,7 +628,7 @@
     {
       "name": "secp192r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.2.840.10045.3.1.1",
       "field": {
         "type": "Prime",
@@ -653,6 +659,7 @@
         "x962/prime192v1"
       ],
       "characteristics": {
+        "seed": "3045AE6FC8422F64ED579528D38120EAE12196D5",
         "discriminant": "5525402385154848923235289274741921730185152131202286251655",
         "j_invariant": "6234286251230310114240839169629130138801351179850969208331",
         "trace_of_frobenius": "31607402316713927207482677199",
@@ -698,7 +705,7 @@
     {
       "name": "secp224k1",
       "category": "secg",
-      "desc": "",
+      "desc": "A Koblitz curve.",
       "oid": "1.3.132.0.32",
       "field": {
         "type": "Prime",
@@ -763,7 +770,7 @@
     {
       "name": "secp224r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "oid": "1.3.132.0.33",
       "field": {
         "type": "Prime",
@@ -795,6 +802,7 @@
         "x963/ansip224r1"
       ],
       "characteristics": {
+        "seed": "BD71344799D5C7FCDC45B59FA3B9AB8F6A948BC5",
         "discriminant": "8133954887115844930654026312464158747844254983800706208418026371607",
         "j_invariant": "20781977079628996477063007379734849057519732242287194936686605794677",
         "trace_of_frobenius": "4733100108545601916421827343930821",
@@ -825,7 +833,7 @@
     {
       "name": "secp256k1",
       "category": "secg",
-      "desc": "",
+      "desc": "A Koblitz curve.",
       "oid": "1.3.132.0.10",
       "field": {
         "type": "Prime",
@@ -875,7 +883,7 @@
     {
       "name": "secp256r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
       "field": {
         "type": "Prime",
         "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
@@ -905,6 +913,7 @@
         "x962/prime256v1"
       ],
       "characteristics": {
+        "seed": "C49D360886E704936A6678E1139D26B7819F7E90",
         "discriminant": "47064476442213300654454205837611899485069387829947879813735601543372794627813",
         "j_invariant": "7958909377132088453074743217357398615041065282494610304372115906626967530147",
         "trace_of_frobenius": "89188191154553853111372247798585809583",
@@ -966,6 +975,7 @@
         "x963/ansip384r1"
       ],
       "characteristics": {
+        "seed": "A335926AA319A27A1D00896A6773A4827ACDAC73",
         "discriminant": "38275261264050278989862136034342276004573039492779555073863190029182890449044186682105480613137214197175883602718257",
         "j_invariant": "12550029517991417762405079599420518784762671286028430215113399824456742172589190955698027499893480133182923443701083",
         "trace_of_frobenius": "1388124618062372383606759648309780106643088307173319169677"
@@ -1005,6 +1015,7 @@
         "x963/ansip521r1"
       ],
       "characteristics": {
+        "seed": "D09E8800291CB85396CC6717393284AAA0DA64BA",
         "discriminant": "2687853087729004331535582886185403114835754464152651523509230634031161977750238608042000458607319784141115468556368066113806987449553072575343372028907331922",
         "j_invariant": "3619090631887053412807272747807643016060282478111249168973675223587770705025281286979867546071268566958111997954788345609183745222693618155278831649044785613",
         "trace_of_frobenius": "657877501894328237357444332315020117536923257219387276263472201219398408051703"
@@ -1279,7 +1290,7 @@
     {
       "name": "sect163r1",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve, using the SECG/X9.62 method. 'However for historical reasons the method used to generate E from S differs slightly from the method described in ANSI X9.62 [X9.62]. Specifically the coefficient b produced from S is the reverse of the coefficient that would have been produced by the method described in ANSI X9.62.'",
       "oid": "1.3.132.0.2",
       "field": {
         "type": "Binary",
@@ -1332,6 +1343,7 @@
         "x963/ansit163r1"
       ],
       "characteristics": {
+        "seed": "24B7B137C8A14D696E6768756151756FD0DA2E5C",
         "discriminant": "10341149448350347985759700389662805134872097107929",
         "j_invariant": "6799963281606188757260601154353010573009354190197",
         "trace_of_frobenius": "1731532666194638619521227",
@@ -1344,7 +1356,7 @@
     {
       "name": "sect163r2",
       "category": "secg",
-      "desc": "",
+      "desc": "A randomly generated curve. 'E was selected from S as specified in ANSI X9.62 [X9.62] in normal basis representation and converted into polynomial basis representation.'",
       "oid": "1.3.132.0.15",
       "field": {
         "type": "Binary",
@@ -1398,6 +1410,7 @@
         "x963/ansit163r2"
       ],
       "characteristics": {
+        "seed": "85E25BFE5C86226CDB12016F7553F9D0E693A268",
         "discriminant": "2982236234343851336267446656627785008148015875581",
         "j_invariant": "924715273381456531451948543458511393546700947074",
         "trace_of_frobenius": "-6224022517221266226059365",
