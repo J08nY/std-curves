@@ -308,7 +308,8 @@
           }
         ],
         "bits": 163,
-        "degree": 163
+        "degree": 163,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -371,7 +372,8 @@
           }
         ],
         "bits": 163,
-        "degree": 163
+        "degree": 163,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -427,7 +429,8 @@
           }
         ],
         "bits": 233,
-        "degree": 233
+        "degree": 233,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -483,7 +486,8 @@
           }
         ],
         "bits": 233,
-        "degree": 233
+        "degree": 233,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -548,7 +552,8 @@
           }
         ],
         "bits": 283,
-        "degree": 283
+        "degree": 283,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -612,7 +617,8 @@
           }
         ],
         "bits": 283,
-        "degree": 283
+        "degree": 283,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -668,7 +674,8 @@
           }
         ],
         "bits": 409,
-        "degree": 409
+        "degree": 409,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -722,7 +729,8 @@
           }
         ],
         "bits": 409,
-        "degree": 409
+        "degree": 409,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -784,7 +792,8 @@
           }
         ],
         "bits": 571,
-        "degree": 571
+        "degree": 571,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -846,7 +855,8 @@
           }
         ],
         "bits": 571,
-        "degree": 571
+        "degree": 571,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {

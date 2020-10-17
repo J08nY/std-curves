@@ -430,7 +430,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -482,7 +483,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -537,7 +539,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -589,7 +592,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -641,7 +645,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -685,7 +690,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -729,7 +735,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -773,7 +780,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -817,7 +825,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -861,7 +870,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -905,7 +915,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -957,7 +968,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -1009,7 +1021,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -1061,7 +1074,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -1105,7 +1119,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {
@@ -1149,7 +1164,8 @@
             "power": 0,
             "coeff": "0x01"
           }
-        ]
+        ],
+        "basis": "poly"
       },
       "params": {
         "a": {

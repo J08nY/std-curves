@@ -82,9 +82,15 @@
 				"base": {"const": "0x02"},
 				"degree": {"type": "integer"},
 				"poly": {"$ref": "#/definitions/Polynomial"},
-				"bits": {"type": "integer"}
+				"bits": {"type": "integer"},
+				"basis": {
+					"anyOf": [
+						{"const": "poly"},
+						{"const": "normal"}
+					]
+				}
 			},
-			"required": ["degree", "poly", "bits"]
+			"required": ["degree", "poly", "bits", "basis"]
 		},
 		"ExtenstionField": {
 			"type": "object",

@@ -24,7 +24,8 @@
           }
         ],
         "bits": 155,
-        "degree": 155
+        "degree": 155,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
@@ -68,7 +69,8 @@
           }
         ],
         "bits": 185,
-        "degree": 185
+        "degree": 185,
+        "basis": "poly"
       },
       "form": "Weierstrass",
       "params": {
