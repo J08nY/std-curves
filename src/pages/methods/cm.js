@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react'
 import Entry from '../../components/entry'
 import Link from '../../components/Link'
 import { BlockMath, InlineMath } from 'react-katex'

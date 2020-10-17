@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import React from 'react'
 import Entry from '../components/entry'
 import Link from '../components/Link'
-import {graphql} from "gatsby";
+import { graphql } from "gatsby";
 import { jsx, Styled } from "theme-ui"
 
 export const query = graphql`

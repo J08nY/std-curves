@@ -33,6 +33,7 @@ export const query = graphql`
           coeff
           power
         }
+        basis
       }
       params {
         a {
@@ -84,6 +85,7 @@ export const query = graphql`
       cofactor
       aliases
       characteristics {
+        seed
         j_invariant
         anomalous
         cm_disc
@@ -210,8 +212,11 @@ function Characteristics(curve) {
       <div>
         <h3>Characteristics</h3>
         <ul>
-          {curve.oid !== null &&
+          {curve.oid !== null && curve.oid !== "" &&
             <li><b>OID</b>:<br/><Styled.a href={`http://oid-info.com/get/${curve.oid}`} target="_blank">{curve.oid}</Styled.a></li>
+          }
+          {anyChars && curve.characteristics.seed !== null &&
+            <li><b>Seed</b>:<br/><span sx={{variant: "textStyles.mono", overflowWrap: "break-word"}}>{curve.characteristics.seed}</span></li>
           }
           {anyChars && curve.characteristics.j_invariant !== null &&
             <li><b>j-invariant</b>:<br/><span sx={{variant: "textStyles.mono", overflowWrap: "break-word"}}>{curve.characteristics.j_invariant}</span></li>
@@ -327,11 +332,21 @@ function SageCode(curve) {
     }
   } else if (curve.field.type === "Binary") {
     if (curve.form === "Weierstrass") {
-      sageCode += `F.<x> = GF(2)[]\n`
-      sageCode += `K = GF(2^${curve.field.degree}, name="x", modulus=${formatPoly(curve.field.poly, true)})\n`
-      sageCode += `E = EllipticCurve(K, (1, K.fetch_int(${formatElement(curve.params.a)}), 0, 0, K.fetch_int(${formatElement(curve.params.b)})))\n`
-      sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
-      sageCode += `G = E(K.fetch_int(${formatElement(curve.generator.x)}), K.fetch_int(${formatElement(curve.generator.y)}))`
+      if (curve.field.basis === "poly") {
+        sageCode += `F.<x> = GF(2)[]\n`
+        sageCode += `K = GF(2^${curve.field.degree}, name="x", modulus=${formatPoly(curve.field.poly, true)})\n`
+        sageCode += `E = EllipticCurve(K, (1, K.fetch_int(${formatElement(curve.params.a)}), 0, 0, K.fetch_int(${formatElement(curve.params.b)})))\n`
+        sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
+        sageCode += `G = E(K.fetch_int(${formatElement(curve.generator.x)}), K.fetch_int(${formatElement(curve.generator.y)}))`
+      } else if (curve.field.basis === "normal") {
+        sageCode += `F.<x> = GF(2)[]\n`
+        sageCode += `K.<z> = GF(2^${curve.field.degree}, name="z", modulus=${formatPoly(curve.field.poly, true)})\n`
+        sageCode += `def fetch_int(K, h):\n`
+        sageCode += `\treturn sum(map(lambda ix: K(Integer(ix[1]) * z^(2^ix[0])), enumerate(h.binary())), K(0))\n`
+        sageCode += `E = EllipticCurve(K, (1, fetch_int(K, ${formatElement(curve.params.a)}), 0, 0, fetch_int(K, ${formatElement(curve.params.b)})))\n`
+        sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
+        sageCode += `G = E(fetch_int(K, ${formatElement(curve.generator.x)}), fetch_int(K, ${formatElement(curve.generator.y)}))`
+      }
     } else {
       sageCode = null;
     }
