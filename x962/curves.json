@@ -1212,6 +1212,7 @@
         "type": "Binary",
         "bits": 191,
         "degree": 191,
+        "basis": "normal",
         "poly": [
           {
             "coeff": "0x01",
@@ -1305,6 +1306,7 @@
         "type": "Binary",
         "bits": 191,
         "degree": 191,
+        "basis": "normal",
         "poly": [
           {
             "coeff": "0x01",
@@ -1398,6 +1400,7 @@
         "type": "Binary",
         "bits": 239,
         "degree": 239,
+        "basis": "normal",
         "poly": [
           {
             "coeff": "0x01",
@@ -1523,6 +1526,7 @@
         "type": "Binary",
         "bits": 239,
         "degree": 239,
+        "basis": "normal",
         "poly": [
           {
             "coeff": "0x01",
