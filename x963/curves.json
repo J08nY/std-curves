@@ -7,7 +7,6 @@
       "name": "ansit163k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -59,7 +58,6 @@
       "name": "ansit163r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -116,7 +114,6 @@
       "name": "ansit163r2",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -173,7 +170,6 @@
       "name": "ansit193r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "bits": 193,
@@ -221,7 +217,6 @@
       "name": "ansit193r2",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "bits": 193,
@@ -269,7 +264,6 @@
       "name": "ansit233k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -319,7 +313,6 @@
       "name": "ansit233r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -369,7 +362,6 @@
       "name": "ansit239k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "bits": 239,
@@ -417,7 +409,6 @@
       "name": "ansit283k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "bits": 283,
@@ -474,7 +465,6 @@
       "name": "ansit283r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "bits": 283,
@@ -531,7 +521,6 @@
       "name": "ansit409k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -580,7 +569,6 @@
       "name": "ansit409r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -629,7 +617,6 @@
       "name": "ansit571k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -686,7 +673,6 @@
       "name": "ansit571r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -743,7 +729,6 @@
       "name": "ansip160k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffeffffac73",
@@ -776,7 +761,6 @@
       "name": "ansip160r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xffffffffffffffffffffffffffffffff7fffffff",
@@ -810,7 +794,6 @@
       "name": "ansip160r2",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffeffffac73",
@@ -843,7 +826,6 @@
       "name": "ansip192k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffeffffee37",
@@ -876,7 +858,6 @@
       "name": "ansip224k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffeffffe56d",
@@ -909,7 +890,6 @@
       "name": "ansip224r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
@@ -944,7 +924,6 @@
       "name": "ansip256k1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f",
@@ -977,7 +956,6 @@
       "name": "ansip384r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff",
@@ -1011,7 +989,6 @@
       "name": "ansip521r1",
       "category": "x963",
       "desc": "",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0x01ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",

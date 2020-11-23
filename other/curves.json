@@ -345,7 +345,6 @@
         }
       },
       "name": "Curve383187",
-      "oid": "",
       "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
       "params": {
         "a": {
@@ -844,7 +843,6 @@
       "name": "ssc-160",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1f",
@@ -874,7 +872,6 @@
       "name": "ssc-192",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cd13",
@@ -904,7 +901,6 @@
       "name": "ssc-224",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedf",
@@ -934,7 +930,6 @@
       "name": "ssc-256",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c0b",
@@ -964,7 +959,6 @@
       "name": "ssc-288",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a098b",
@@ -994,7 +988,6 @@
       "name": "ssc-320",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b3",
@@ -1024,7 +1017,6 @@
       "name": "ssc-384",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a437b",
@@ -1054,7 +1046,6 @@
       "name": "ssc-512",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ef",
@@ -1084,7 +1075,6 @@
       "name": "Tweedledum",
       "category": "other",
       "desc": "Tweedledum pairing friendly curve from <https://github.com/daira/tweedle>.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0x40000000000000000000000000000000038aa1276c3f59b9a14064e200000001",
@@ -1114,7 +1104,6 @@
       "name": "Tweedledee",
       "category": "other",
       "desc": "Tweedledee pairing friendly curve from <https://github.com/daira/tweedle>.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0x40000000000000000000000000000000038aa127696286c9842cafd400000001",
@@ -1144,7 +1133,6 @@
       "name": "JubJub",
       "category": "other",
       "desc": "JubJub curve from <https://z.cash/technology/jubjub/>.",
-      "oid": "",
       "field": {
         "type": "Prime",
         "p": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",

@@ -6,7 +6,6 @@
       "name": "Oakley Group 3",
       "category": "oakley",
       "desc": "Defined in IETF in RFC2409",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
@@ -51,7 +50,6 @@
       "name": "Oakley Group 4",
       "category": "oakley",
       "desc": "Defined in IETF in RFC2409",
-      "oid": "",
       "field": {
         "type": "Binary",
         "poly": [
