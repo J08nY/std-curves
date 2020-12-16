@@ -1156,6 +1156,64 @@
       },
       "order": "0xe7db4ea6533afa906673b0101343b00a6682093ccc81082d0970e5ed6f72cb7",
       "cofactor": "0x08"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Pallas",
+      "category": "other",
+      "desc": "Pallas curve from the [Pasta curves](https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/).",
+      "field": {
+        "type": "Prime",
+        "p": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
+        "bits": 255
+      },
+      "params": {
+        "a": {
+          "raw": "0x00"
+        },
+        "b": {
+          "raw": "0x05"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000000"
+        },
+        "y": {
+          "raw": "0x02"
+        }
+      },
+      "order": "0x40000000000000000000000000000000224698fc0994a8dd8c46eb2100000001",
+      "cofactor": "0x01"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Vesta",
+      "category": "other",
+      "desc": "Vesta curve from the [Pasta curves](https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/).",
+      "field": {
+        "type": "Prime",
+        "p": "0x40000000000000000000000000000000224698fc0994a8dd8c46eb2100000001",
+        "bits": 255
+      },
+      "params": {
+        "a": {
+          "raw": "0x00"
+        },
+        "b": {
+          "raw": "0x05"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000000"
+        },
+        "y": {
+          "raw": "0x02"
+        }
+      },
+      "order": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
+      "cofactor": "0x01"
     }
   ]
 }
