@@ -391,6 +391,53 @@ function SageBox(curve) {
   )
 }
 
+function PariCode(curve) {
+  let pariCode = "";
+  if (curve.field.type === "Prime") {
+    pariCode += `p = ${curve.field.p}\n`;
+    if (curve.form === "Weierstrass") {
+      pariCode += `a = Mod(${formatElement(curve.params.a)}, p)\n`;
+      pariCode += `b = Mod(${formatElement(curve.params.b)}, p)\n`;
+      pariCode += `E = ellinit([a, b])\n`;
+      pariCode += `E[16][1] = ${curve.order} * ${curve.cofactor}\n`;
+      pariCode += `G = [Mod(${formatElement(curve.generator.x)}, p), Mod(${formatElement(curve.generator.y)}, p)]\n`;
+    } else {
+      pariCode = null;
+    }
+  } else {
+    pariCode = null;
+  }
+  return pariCode;
+}
+
+function PariBox(curve) {
+  let pariCode = PariCode(curve);
+  if (pariCode === null) {
+    return null;
+  }
+  return (
+    <div>
+      <h3>PARI/GP</h3>
+      <CodeBlock code={pariCode} language="python"/>
+      <div sx={{display: "flex"}}>
+        <Tooltip title="Copy PARI/GP code" placement="bottom" arrow>
+          <CopyButton value={pariCode} sx={{margin: "20px"}}>
+            <FontAwesomeIcon icon={faCopy} fixedWidth /> PARI/GP
+          </CopyButton>
+        </Tooltip>
+
+        <Tooltip title="Download PARI/GP code" placement="bottom" arrow>
+          <div>
+          <LinkButton href={"data:text/plain," + pariCode} download={curve.name + ".gp"} sx={{margin: "20px"}}>
+            <FontAwesomeIcon icon={faDownload} fixedWidth /> PARI/GP
+          </LinkButton>
+          </div>
+        </Tooltip>
+      </div>
+    </div>
+  )
+}
+
 function JsonBox(curve) {
   let json = JSON.stringify(clean_dict(curve), null, 2);
   return (
@@ -422,6 +469,7 @@ export default ({ data, location, pageContext }) => {
   let equation = Equation(data.curve);
   let aliases = Aliases(data.curve);
   let sage = SageBox(data.curve);
+  let pari = PariBox(data.curve);
   let json = JsonBox(data.curve);
   return (
     <Entry location={location} title={pageContext.name}>
@@ -435,6 +483,8 @@ export default ({ data, location, pageContext }) => {
       {chars}
       <br/>
       {sage}
+      <br/>
+      {pari}
       <br/>
       {json}
     </Entry>
