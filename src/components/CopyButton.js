@@ -29,7 +29,7 @@ function CopyButton({ children, title, value, duration=3000, forwardedRef, ...pr
 	return (
 		<div ref={forwardedRef}>
 			<LinkButton onClick={handleClick} title={title} href="javascript:;" {...props}>
-				<textarea type="text" sx={{ position: "absolute", left: "-1000px", right: "-1000px" }} readOnly value={value} />
+				<textarea type="text" sx={{ position: "absolute", left: "-1000px" }} readOnly value={value} />
 				{children}
 			</LinkButton>
 			<Snackbar open={open} autoHideDuration={duration} onClose={handleClose} message="Copied!" 

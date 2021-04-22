@@ -135,7 +135,7 @@ function CurveTable(paramNames, paramTitles, params) {
             <td sx={{borderBottom: "1px solid", borderColor: alpha('text', 0.25)}}>
               {name}
               <Styled.a href="#" title="Copy value" onClick={copyChild} sx={{float: "right"}}>
-                <textarea type="text" sx={{position: "absolute", left: "-1000px", right: "-1000px"}} readOnly value={params[i]}/>
+                <textarea type="text" sx={{position: "absolute", left: "-1000px"}} readOnly value={params[i]}/>
                 <span className="fa-layers fa-fw">
                   <FontAwesomeIcon icon={faSquare} color="text" />
                   <FontAwesomeIcon icon={faCopy} inverse transform="shrink-6" />
@@ -324,10 +324,10 @@ function SageCode(curve) {
       sageCode += `\treturn (x, y)\n`
       sageCode += `G = E(*to_weierstrass(a, d, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`
     }
-    sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
+    sageCode += `E.set_order(${curve.order} * ${curve.cofactor})`
     
     if (curve.form === "Edwards" || curve.form === "Montgomery" || curve.form === "TwistedEdwards") {
-      sageCode += `# This curve is a Weierstrass curve (SAGE does not support ${curve.form} curves) birationally equivalent to the intended curve.\n`
+      sageCode += `\n# This curve is a Weierstrass curve (SAGE does not support ${curve.form} curves) birationally equivalent to the intended curve.\n`
       sageCode += `# You can use the to_weierstrass and to_${curve.form.toLowerCase()} functions to convert the points.`
     }
   } else if (curve.field.type === "Binary") {
@@ -400,7 +400,7 @@ function PariCode(curve) {
       pariCode += `b = Mod(${formatElement(curve.params.b)}, p)\n`;
       pariCode += `E = ellinit([a, b])\n`;
       pariCode += `E[16][1] = ${curve.order} * ${curve.cofactor}\n`;
-      pariCode += `G = [Mod(${formatElement(curve.generator.x)}, p), Mod(${formatElement(curve.generator.y)}, p)]\n`;
+      pariCode += `G = [Mod(${formatElement(curve.generator.x)}, p), Mod(${formatElement(curve.generator.y)}, p)]`;
     } else {
       pariCode = null;
     }
