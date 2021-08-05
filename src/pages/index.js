@@ -54,6 +54,9 @@ export default ({data, location}) => {
         <li><Link to="https://github.com/crocs-muni/ECTester">ECTester</Link>: A tool for testing black-box ECC
           implementations
         </li>
+        <li><Link to="https://github.com/crocs-muni/dissect">DiSSECT</Link>: A tool for analysis of standard elliptic curves
+        using traits.
+        </li>
         <li><Link to="https://github.com/J08nY/pyecsca">pyecsca</Link>: A Python Elliptic Curve Side-Channel Analysis
           toolkit, focusing on reverse-engineering ECC implementations
         </li>
@@ -73,11 +76,11 @@ export default ({data, location}) => {
       </Styled.p>
       <Styled.h4>Authors</Styled.h4>
       <ul>
-      	<li>Ján Jančár</li>
-      	<li>Vladimír Sedláček</li>
+        <li>Jan Jancar</li>
+        <li>Vladimir Sedlacek</li>
       </ul>
       <Styled.p>
-        Thanks to Anh Minh Tran, Jan Dušátko and Jan Kubeša for providing some of the curve data.
+        Thanks to Anh Minh Tran, Jan Dusatko, Jan Kubesa and Vojtech Suchanek for providing some of the curve data.
       </Styled.p>
     </Entry>
   )
