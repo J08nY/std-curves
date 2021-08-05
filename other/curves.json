@@ -1214,6 +1214,176 @@
       },
       "order": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
       "cofactor": "0x01"
+    },
+    {
+      "name": "MDC201601",
+      "category": "other",
+      "desc": "The Million Dollar Curve",
+      "field": {
+        "type": "Prime",
+        "p": "0xf13b68b9d456afb4532f92fdd7a5fd4f086a9037ef07af9ec13710405779ec13",
+        "bits": 256
+      },
+      "form": "Edwards",
+      "params": {
+        "c": {
+          "raw": "0x01"
+        },
+        "d": {
+          "raw": "0x571304521965b68a7cdfbfccfb0cb9625f1270f63f21f041ee9309250300cf89"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0xb681886a7f903b83d85b421e03cbcf6350d72abb8d2713e2232c25bfee68363b"
+        },
+        "y": {
+          "raw": "0xca6734e1b59c0b0359814dcf6563da421da8bc3d81a93a3a7e73c355bd2864b5"
+        }
+      },
+      "order": "0x3c4eda2e7515abed14cbe4bf75e97f534fb38975faf974bb588552f421b0f7fb",
+      "cofactor": "0x04",
+      "properties": {
+        "j_invariant": "0x2089683f289cb2a9798ce7341bfedb9079106ce1d8d6810a06d07e572576e62f",
+        "trace": "0x1c99c6a600321dcb15f21c46fd0b60c28",
+        "embedding_degree": "0x3c4eda2e7515abed14cbe4bf75e97f534fb38975faf974bb588552f421b0f7fa",
+        "cm_discriminant": "-0x24bb73e2ad3d18402aae6500a8bc42e34e3b02843c2db6b231fa0846c51cfa83"
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "BADA55-R-256",
+      "category": "other",
+      "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c03",
+        "bits": 256
+      },
+      "params": {
+        "a": {
+          "raw": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c00"
+        },
+        "b": {
+          "raw": "0xbada55bada55bada55bada55bada55bada55bada55bada55bada55bada55bd48"
+        }
+      },
+      "order": "0xf1fd178c0b3ad58f10126de8ce42435a1a8e3837861aa0efa0e52aec7379c967",
+      "cofactor": "0x01"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "BADA55-VR-224",
+      "category": "other",
+      "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
+        "bits": 224
+      },
+      "params": {
+        "a": {
+          "raw": "0xfffffffffffffffffffffffffffffffefffffffffffffffffffffffe"
+        },
+        "b": {
+          "raw": "0xbada55ecfd9ca54c0738b8a6fb8cf4ccf84e916d83d6da1b78b622351e11ab4e"
+        }
+      },
+      "order": "0xffffffffffffffffffffffffffff0d44ef1096b2b67b7a3dcee7b079",
+      "cofactor": "0x01",
+      "characteristics": {
+        "seed": "0x3cc520e9434349df680a8f4bcadda648d693b2907b216ee55cb4853db68f9165"
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "BADA55-VR-256",
+      "category": "other",
+      "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
+        "bits": 256
+      },
+      "params": {
+        "a": {
+          "raw": "0xffffffff00000001000000000000000000000000fffffffffffffffffffffffc"
+        },
+        "b": {
+          "raw": "0xbada55ecd8bbead3add6c534f92197deb47fceb9be7e0e702a8d1dd56b5d0b0c"
+        }
+      },
+      "order": "0xffffffff00000000fffffffffffffffebedc2797003336661a49d76a903bdb91",
+      "cofactor": "0x01",
+      "characteristics": {
+        "seed": "0x3adcc48e36f1d1926701417f101a75f000118a739d4686e77278325a825aa3c6"
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "BADA55-VR-384",
+      "category": "other",
+      "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff",
+        "bits": 384
+      },
+      "params": {
+        "a": {
+          "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000fffffffc"
+        },
+        "b": {
+          "raw": "0xbada55ec3be2ad1f9eeea5881ecf95bbf3ac392526f01d4cd13e684c63a17cc4d5f271642ad83899113817a61006413d"
+        }
+      },
+      "order": "0xfffffffffffffffffffffffffffffffffffffffffffffffeefe1169b82ff7e5032c683f766fae57359cfc5fc25ffce37",
+      "cofactor": "0x01",
+      "characteristics": {
+        "seed": "0xca9ebd338a9ee0e6862fd329062abc06a793575a1c744f0ec24503a525f5d06e"
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "BADA55-VPR-224",
+      "category": "other",
+      "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
+        "bits": 224
+      },
+      "params": {
+        "a": {
+          "raw": "0x7144ba12ce8a0c3befa053edbada555a42391fc64f052376e041c7d4af23195ebd8d83625321d452e8a0c3bb0a048a26115704e45dceb346a9f4bd9741d14d49"
+        },
+        "b": {
+          "raw": "0x5c32ec7fc48ce1802d9b70dbc3fa574eaf015fce4e99b43ebe3468d6efb2276ba3669aff6ffc0f4c6ae4ae2e5d74c3c0af97dce17147688dda89e734b56944a2"
+        }
+      },
+      "order": "0xffffffffffffffffffffffffffff473fa5d3e9bf40a95a8d3f014add",
+      "cofactor": "0x01"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "BADA55-VPR2-224",
+      "category": "other",
+      "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
+        "bits": 224
+      },
+      "params": {
+        "a": {
+          "raw": "0x8f0ff20e1e3cf4905d492e04110683948bfc236790bbb59e6e6b33f24f348ed2e16c64ee79f9fd27e9a367ff6415b41189e4fb6bada555455dc44c4f87011eef"
+        },
+        "b": {
+          "raw": "0xe85067a95547e30661c854a43ed80f36289043ffc73da78a97e37fb96a2717009088656b948865a660ff3959330d8a1ca1e4de31b7b7d496a4cde555e57d05c"
+        }
+      },
+      "order": "0xffffffffffffffffffffffffffffdf5c0319f61dc6ccebe902bc220f",
+      "cofactor": "0x01"
     }
   ]
 }

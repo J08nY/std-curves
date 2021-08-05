@@ -146,6 +146,31 @@
       },
       "order": "0x57F52EE445CC41781FCD53D13E45F6ACDFE4F9F2A3CD414E71238AFC9FCFC7D38CAEF64F4FF79F90013FFFFFF0000001",
       "cofactor": "0x41550AAAC04B3FD5000015AB"
+    },
+    {
+      "name": "Bandersnatch",
+      "category": "bls",
+      "desc": "Curve from https://ethresear.ch/t/introducing-bandersnatch-a-fast-elliptic-curve-built-over-the-bls12-381-scalar-field/9957",
+      "field": {
+        "type": "Prime",
+        "p": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
+        "bits": 255
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": {
+          "raw": "-0x05"
+        },
+        "d": {
+          "raw": "0x6389c12633c267cbc66e3bf86be3b6d8cb66677177e54f92b369f2f5188d58e7"
+        }
+      },
+      "order": "0x1cfb69d4ca675f520cce760202687600ff8f87007419047174fd06b52876e7e1",
+      "cofactor": "0x04",
+      "characteristics": {
+        "discriminant": "-0x08",
+        "j_invariant": "0x1f40"
+      }
     }
   ]
 }

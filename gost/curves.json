@@ -188,6 +188,151 @@
         "supersingular": false,
         "embedding_degree": "1117317327495216424964502083183820510623280485049366114810296786976813669172820430903308958031730602510485157957234261251691399803452850047142812962686538"
       }
+    },
+    {
+      "name": "id-GostR3410-2001-CryptoPro-A-ParamSet",
+      "category": "gost",
+      "desc": "RFC4357",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd97",
+        "bits": 256
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": {
+          "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd94"
+        },
+        "b": {
+          "raw": "0xa6"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x01"
+        },
+        "y": {
+          "raw": "0x8d91e471e0989cda27df505a453f2b7635294f2ddf23e3b122acc99c9e9f1e14"
+        }
+      },
+      "order": "0xffffffffffffffffffffffffffffffff6c611070995ad10045841b09b761b893",
+      "cofactor": "0x1"
+    },
+    {
+      "name": "id-GostR3410-2001-CryptoPro-B-ParamSet",
+      "category": "gost",
+      "desc": "RFC4357",
+      "field": {
+        "type": "Prime",
+        "p": "0x8000000000000000000000000000000000000000000000000000000000000c99",
+        "bits": 256
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": {
+          "raw": "0x8000000000000000000000000000000000000000000000000000000000000c96"
+        },
+        "b": {
+          "raw": "0x3e1af419a269a5f866a7d3c25c3df80ae979259373ff2b182f49d4ce7e1bbc8b"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x01"
+        },
+        "y": {
+          "raw": "0x3fa8124359f96680b83d1c3eb2c070e5c545c9858d03ecfb744bf8d717717efc"
+        }
+      },
+      "order": "0x800000000000000000000000000000015f700cfff1a624e5e497161bcc8a198f",
+      "cofactor": "0x1"
+    },
+    {
+      "name": "id-GostR3410-2001-CryptoPro-C-ParamSet",
+      "category": "gost",
+      "desc": "RFC4357",
+      "field": {
+        "type": "Prime",
+        "p": "0x9b9f605f5a858107ab1ec85e6b41c8aacf846e86789051d37998f7b9022d759b",
+        "bits": 256
+      },
+      "form": "Weierstrass",
+      "params": {
+        "a": {
+          "raw": "0x9b9f605f5a858107ab1ec85e6b41c8aacf846e86789051d37998f7b9022d7598"
+        },
+        "b": {
+          "raw": "0x805a"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x00"
+        },
+        "y": {
+          "raw": "0x41ece55743711a8c3cbf3783cd08c0ee4d4dc440d4641a8f366e550dfdb3bb67"
+        }
+      },
+      "order": "0x9b9f605f5a858107ab1ec85e6b41c8aa582ca3511eddfb74f02f3a6598980bb9",
+      "cofactor": "0x1"
+    },
+    {
+      "name": "id-tc26-gost-3410-2012-256-paramSetA",
+      "category": "gost",
+      "desc": "RFC5832",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd97",
+        "bits": 256
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": {
+          "raw": "0x01"
+        },
+        "d": {
+          "raw": "0x605f6b7c183fa81578bc39cfad518132b9df62897009af7e522c32d6dc7bffb"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x0d"
+        },
+        "y": {
+          "raw": "0x60ca1e32aa475b348488c38fab07649ce7ef8dbe87f22e81f92b2592dba300e7"
+        }
+      },
+      "order": "0x400000000000000000000000000000000fd8cddfc87b6635c115af556c360c67",
+      "cofactor": "0x4"
+    },
+    {
+      "name": "id-tc26-gost-3410-2012-512-paramSetC",
+      "category": "gost",
+      "desc": "RFC5832",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc7",
+        "bits": 512
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": {
+          "raw": "0x01"
+        },
+        "d": {
+          "raw": "0x9e4f5d8c017d8d9f13a5cf3cdf5bfe4dab402d54198e31ebde28a0621050439ca6b39e0a515c06b304e2ce43e79e369e91a0cfc2bc2a22b4ca302dbb33ee7550"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x12"
+        },
+        "y": {
+          "raw": "0x469af79d1fb1f5e16b99592b77a01e2a0fdfb0d01794368d9a56117f7b38669522dd4b650cf789eebf068c5d139732f0905622c04b2baae7600303ee73001a3d"
+        }
+      },
+      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc98cdba46506ab004c33a9ff5147502cc8eda9e7a769a12694623cef47f023ed",
+      "cofactor": "0x4"
     }
   ]
 }
