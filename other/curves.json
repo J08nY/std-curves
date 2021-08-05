@@ -856,14 +856,6 @@
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c841"
         }
       },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
-        }
-      },
       "order": "0xc90fdaa22168c234c4c5d89f4f2dd72349ee61f7",
       "cofactor": "0x01"
     },
@@ -883,14 +875,6 @@
         },
         "b": {
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d36a6"
-        }
-      },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
         }
       },
       "order": "0xc90fdaa22168c234c4c6628c5dca19490dd3e6fd7979a7a3",
@@ -914,14 +898,6 @@
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13a03"
         }
       },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
-        }
-      },
       "order": "0xc90fdaa22168c234c4c6628b80dd2439be5b2b827a9ffbea7240e5cd",
       "cofactor": "0x01"
     },
@@ -941,14 +917,6 @@
         },
         "b": {
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146434e1"
-        }
-      },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
         }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd0fbec42e940b37a88d9caeca198a64437",
@@ -972,14 +940,6 @@
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939f36"
         }
       },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
-        }
-      },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd12903ba214366757b7a5240b2a637e2065a850855",
       "cofactor": "0x01"
     },
@@ -999,14 +959,6 @@
         },
         "b": {
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b40a4"
-        }
-      },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
         }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e09489bd44fda941042cccc7286009777663bb29671",
@@ -1030,14 +982,6 @@
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c7791"
         }
       },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
-        }
-      },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc73b7669162524b60c73ee73e6dfe7059f510370fe7870d8599",
       "cofactor": "0x01"
     },
@@ -1057,14 +1001,6 @@
         },
         "b": {
           "raw": "0xadf85458a2bb4a9aafdc5620273d3cf1d8b9c583ce2d3695a9e13641146433fbcc939dce249b3ef97d2fe363630c75d8f681b202aec4617ad3df1ed5d5fd6a8d"
-        }
-      },
-      "generator": {
-        "x": {
-          "raw": ""
-        },
-        "y": {
-          "raw": ""
         }
       },
       "order": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b235a2359c4afbc9eb7987f1c9ab37e42599188c4b7dc6269b830d80897f57a5f71",

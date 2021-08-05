@@ -179,8 +179,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-256-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0xffa7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -200,8 +200,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-254-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x3f80ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -221,8 +221,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-255-mers",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd03",
@@ -242,8 +242,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-384-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0xb0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -263,8 +263,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-382-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x3ffaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -284,8 +284,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-383-mers",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5b",
@@ -305,8 +305,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-512-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0xfe14ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -326,8 +326,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-510-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x3eddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -347,8 +347,8 @@
     {
       "form": "TwistedEdwards",
       "name": "ed-511-mers",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1f",
@@ -368,8 +368,8 @@
     {
       "form": "Weierstrass",
       "name": "w-256-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0xffa7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -389,8 +389,8 @@
     {
       "form": "Weierstrass",
       "name": "w-254-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x3f80ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -410,8 +410,8 @@
     {
       "form": "Weierstrass",
       "name": "w-255-mers",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd03",
@@ -431,8 +431,8 @@
     {
       "form": "Weierstrass",
       "name": "w-384-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0xb0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -452,8 +452,8 @@
     {
       "form": "Weierstrass",
       "name": "w-382-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x3ffaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -473,8 +473,8 @@
     {
       "form": "Weierstrass",
       "name": "w-383-mers",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5b",
@@ -494,8 +494,8 @@
     {
       "form": "Weierstrass",
       "name": "w-512-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0xfe14ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -515,8 +515,8 @@
     {
       "form": "Weierstrass",
       "name": "w-510-mont",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x3eddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -536,8 +536,8 @@
     {
       "form": "Weierstrass",
       "name": "w-511-mers",
-      "category": "nums-original",
-      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf",
+      "category": "nums",
+      "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
       "field": {
         "type": "Prime",
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1f",
