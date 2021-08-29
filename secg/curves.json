@@ -884,6 +884,7 @@
       "name": "secp256r1",
       "category": "secg",
       "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "oid": "1.2.840.10045.3.1.7",
       "field": {
         "type": "Prime",
         "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
