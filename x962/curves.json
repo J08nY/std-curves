@@ -411,6 +411,7 @@
       "name": "c2pnb176w1",
       "category": "x962",
       "desc": "",
+      "oid": "1.2.840.10045.3.0.4",
       "field": {
         "type": "Binary",
         "bits": 176,
@@ -1028,6 +1029,7 @@
       "name": "c2pnb304w1",
       "category": "x962",
       "desc": "",
+      "oid": "1.2.840.10045.3.0.17",
       "field": {
         "type": "Binary",
         "bits": 304,
