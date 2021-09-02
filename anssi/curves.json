@@ -6,6 +6,7 @@
       "name": "FRP256v1",
       "category": "anssi",
       "desc": "",
+      "oid": "1.2.250.1.223.101.256.1",
       "field": {
         "type": "Prime",
         "p": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c03",
