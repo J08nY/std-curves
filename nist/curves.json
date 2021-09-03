@@ -6,6 +6,7 @@
       "name": "P-192",
       "category": "nist",
       "desc": "",
+      "oid": "1.2.840.10045.3.1.1",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffeffffffffffffffff",
@@ -82,6 +83,7 @@
       "name": "P-224",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.33",
       "field": {
         "type": "Prime",
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
@@ -144,6 +146,7 @@
       "name": "P-256",
       "category": "nist",
       "desc": "",
+      "oid": "1.2.840.10045.3.1.7",
       "field": {
         "type": "Prime",
         "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
@@ -210,6 +213,7 @@
       "name": "P-384",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.34",
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff",
@@ -249,6 +253,7 @@
       "name": "P-521",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.35",
       "field": {
         "type": "Prime",
         "p": "0x01ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -288,6 +293,7 @@
       "name": "K-163",
       "category": "nist",
       "desc": "Koblitz curve.",
+      "oid": "1.3.132.0.1",
       "field": {
         "type": "Binary",
         "poly": [
@@ -352,6 +358,7 @@
       "name": "B-163",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.15",
       "field": {
         "type": "Binary",
         "poly": [
@@ -418,6 +425,7 @@
       "name": "K-233",
       "category": "nist",
       "desc": "Koblitz curve.",
+      "oid": "1.3.132.0.26",
       "field": {
         "type": "Binary",
         "poly": [
@@ -475,6 +483,7 @@
       "name": "B-233",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.27",
       "field": {
         "type": "Binary",
         "poly": [
@@ -534,6 +543,7 @@
       "name": "K-283",
       "category": "nist",
       "desc": "Koblitz curve.",
+      "oid": "1.3.132.0.16",
       "field": {
         "type": "Binary",
         "poly": [
@@ -599,6 +609,7 @@
       "name": "B-283",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.17",
       "field": {
         "type": "Binary",
         "poly": [
@@ -665,6 +676,7 @@
       "name": "K-409",
       "category": "nist",
       "desc": "Koblitz curve.",
+      "oid": "1.3.132.0.36",
       "field": {
         "type": "Binary",
         "poly": [
@@ -720,6 +732,7 @@
       "name": "B-409",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.37",
       "field": {
         "type": "Binary",
         "poly": [
@@ -776,6 +789,7 @@
       "name": "K-571",
       "category": "nist",
       "desc": "Koblitz curve.",
+      "oid": "1.3.132.0.38",
       "field": {
         "type": "Binary",
         "poly": [
@@ -839,6 +853,7 @@
       "name": "B-571",
       "category": "nist",
       "desc": "",
+      "oid": "1.3.132.0.39",
       "field": {
         "type": "Binary",
         "poly": [
