@@ -189,17 +189,27 @@ function Parameters(curve) {
   let paramTitles;
   let paramValues;
 
+  params = getParams(curve.params);
   if (curve.field.type === "Prime") {
-    params = getParams(curve.params);
-    paramNames = ["p"].concat(params.names, ["G", "n", "h"]);
-    paramTitles = ["field"].concat(params.titles, ["generator", "generator order", "cofactor"]);
-    paramValues = [curve.field.p].concat(params.values, [`(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})`, curve.order, curve.cofactor]);
+    paramNames = ["p"];
+    paramTitles = ["field"];
+    paramValues = [curve.field.p];
   } else {
-    params = getParams(curve.params);
-    paramNames = ["m", "f(x)"].concat(params.names, ["G", "n", "h"]);
-    paramTitles = ["field degree", "field generator polynomial"].concat(params.titles, ["generator", "generator order", "cofactor"]);
-    paramValues = [curve.field.degree, formatPoly(curve.field.poly)].concat(params.values, [`(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})`, curve.order, curve.cofactor]);
+    paramNames = ["m", "f(x)"];
+    paramTitles = ["field degree", "field generator polynomial"];
+    paramValues = [curve.field.degree, formatPoly(curve.field.poly)];
   }
+
+  if (curve.generator !== null) {
+  	paramNames = paramNames.concat(params.names, ["G", "n", "h"]);
+  	paramTitles = paramTitles.concat(params.titles, ["generator", "generator order", "cofactor"]);
+  	paramValues = paramValues.concat(params.values, [`(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})`, curve.order, curve.cofactor]);
+  } else {
+  	paramNames = paramNames.concat(params.names, ["n", "h"]);
+  	paramTitles = paramTitles.concat(params.titles, ["generator order", "cofactor"]);
+  	paramValues = paramValues.concat(params.values, [curve.order, curve.cofactor]);
+  }
+  
   return CurveTable(paramNames, paramTitles, paramValues);
 }
 
@@ -295,7 +305,11 @@ function SageCode(curve) {
       sageCode += `a = K(${formatElement(curve.params.a)})\n`
       sageCode += `b = K(${formatElement(curve.params.b)})\n`
       sageCode += `E = EllipticCurve(K, (a, b))\n`
-      sageCode += `G = E(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})\n`
+      if (curve.generator) {
+      	sageCode += `G = E(${formatElement(curve.generator.x)}, ${formatElement(curve.generator.y)})\n`	
+      } else {
+      	sageCode += `# No generator defined\n`
+      }
     } else if (curve.form === "Edwards") {
       if (parseInt(curve.params.c.raw, 16) === 1) {
         sageCode += `d = K(${formatElement(curve.params.d)})\n`
@@ -311,7 +325,11 @@ function SageCode(curve) {
       sageCode += `\treturn (x/B + A/(3*B), y/B)\n`
       sageCode += `def to_montgomery(A, B, u, v):\n`
       sageCode += `\treturn (B * (u - A/(3*B)), B*v)\n`
-      sageCode += `G = E(*to_weierstrass(A, B, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`
+      if (curve.generator) {
+      	sageCode += `G = E(*to_weierstrass(A, B, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`	
+      } else {
+      	sageCode += `# No generator defined\n`
+      }
     } else if (curve.form === "TwistedEdwards") {
       sageCode += `a = K(${formatElement(curve.params.a)})\n`
       sageCode += `d = K(${formatElement(curve.params.d)})\n`
@@ -322,7 +340,11 @@ function SageCode(curve) {
       sageCode += `\ty = (5*a - 12*u - d)/(-12*u - a + 5*d)\n`
       sageCode += `\tx = (a + a*y - d*y -d)/(4*v - 4*v*y)\n`
       sageCode += `\treturn (x, y)\n`
-      sageCode += `G = E(*to_weierstrass(a, d, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`
+      if (curve.generator) {
+      	sageCode += `G = E(*to_weierstrass(a, d, K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)})))\n`
+      } else {
+      	sageCode += `# No generator defined\n`
+      }
     }
     sageCode += `E.set_order(${curve.order} * ${curve.cofactor})`
     
@@ -337,7 +359,11 @@ function SageCode(curve) {
         sageCode += `K = GF(2^${curve.field.degree}, name="x", modulus=${formatPoly(curve.field.poly, true)})\n`
         sageCode += `E = EllipticCurve(K, (1, K.fetch_int(${formatElement(curve.params.a)}), 0, 0, K.fetch_int(${formatElement(curve.params.b)})))\n`
         sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
-        sageCode += `G = E(K.fetch_int(${formatElement(curve.generator.x)}), K.fetch_int(${formatElement(curve.generator.y)}))`
+        if (curve.generator) {
+          sageCode += `G = E(K.fetch_int(${formatElement(curve.generator.x)}), K.fetch_int(${formatElement(curve.generator.y)}))`
+        } else {
+          sageCode += `# No generator defined\n`
+        }
       } else if (curve.field.basis === "normal") {
         sageCode += `F.<x> = GF(2)[]\n`
         sageCode += `K.<z> = GF(2^${curve.field.degree}, name="z", modulus=${formatPoly(curve.field.poly, true)})\n`
@@ -345,7 +371,11 @@ function SageCode(curve) {
         sageCode += `\treturn sum(map(lambda ix: K(Integer(ix[1]) * z^(2^ix[0])), enumerate(h.binary())), K(0))\n`
         sageCode += `E = EllipticCurve(K, (1, fetch_int(K, ${formatElement(curve.params.a)}), 0, 0, fetch_int(K, ${formatElement(curve.params.b)})))\n`
         sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
-        sageCode += `G = E(fetch_int(K, ${formatElement(curve.generator.x)}), fetch_int(K, ${formatElement(curve.generator.y)}))`
+        if (curve.generator) {
+          sageCode += `G = E(fetch_int(K, ${formatElement(curve.generator.x)}), fetch_int(K, ${formatElement(curve.generator.y)}))`
+        } else {
+          sageCode += `# No generator defined\n`
+        }
       }
     } else {
       sageCode = null;
@@ -358,7 +388,11 @@ function SageCode(curve) {
       sageCode += `b = K(${formatElement(curve.params.b)})\n`
       sageCode += `E = EllipticCurve(K, (a, b))\n`
       sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
-      sageCode += `G = E(K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)}))`
+      if (curve.generator) {
+        sageCode += `G = E(K(${formatElement(curve.generator.x)}), K(${formatElement(curve.generator.y)}))`
+      } else {
+        sageCode += `# No generator defined\n`
+      }
     } else {
       sageCode = null;
     }
@@ -400,7 +434,11 @@ function PariCode(curve) {
       pariCode += `b = Mod(${formatElement(curve.params.b)}, p)\n`;
       pariCode += `E = ellinit([a, b])\n`;
       pariCode += `E[16][1] = ${curve.order} * ${curve.cofactor}\n`;
-      pariCode += `G = [Mod(${formatElement(curve.generator.x)}, p), Mod(${formatElement(curve.generator.y)}, p)]`;
+      if (curve.generator) {
+        pariCode += `G = [Mod(${formatElement(curve.generator.x)}, p), Mod(${formatElement(curve.generator.y)}, p)]`;	
+      } else {
+      	pariCode += `\\\\ No generator defined`;
+      }
     } else {
       pariCode = null;
     }
