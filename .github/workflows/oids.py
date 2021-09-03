@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 print(f"Curve {category}/{curve['name']} has empty OID value.")
                 continue
             url = f"http://oid-info.com/get/{oid}"
-            r = requests.get(url)
+            r = requests.get(url, timeout=5)
             if r.status_code != 200:
                 print(f"Curve {category}/{curve['name']} has bad OID, return code {r.status_code}!")
                 result = 1
