@@ -392,6 +392,35 @@
     {
       "name": "Ed448",
       "category": "other",
+      "desc": "Curve from https://datatracker.ietf.org/doc/html/draft-ietf-lwig-curve-representations-23",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "bits": 448
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": {
+          "raw": "0x01"
+        },
+        "d": {
+          "raw": "0xd78b4bdc7f0daf19f24f38c29373a2ccad46157242a50f37809b1da3412a12e79ccc9c81264cfe9ad080997058fb61c4243cc32dbaa156b9"
+        }
+      },
+      "generator": {
+        "x": {
+          "raw": "0x79a70b2b70400553ae7c9df416c792c61128751ac92969240c25a07d728bdc93e21f7787ed6972249de732f38496cd11698713093e9c04fc"
+        },
+        "y": {
+          "raw": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffff80000000000000000000000000000000000000000000000000000001"
+        }
+      },
+      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffff7cca23e9c44edb49aed63690216cc2728dc58f552378c292ab5844f3",
+      "cofactor": "0x04"
+    },
+    {
+      "name": "Ed448-Goldilocks",
+      "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2015/625.pdf",
       "field": {
         "type": "Prime",
