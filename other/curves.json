@@ -1349,6 +1349,52 @@
       },
       "order": "0xffffffffffffffffffffffffffffdf5c0319f61dc6ccebe902bc220f",
       "cofactor": "0x01"
+    },
+    {
+      "name": "FourQ",
+      "category": "other",
+      "desc": "Curve used in https://eprint.iacr.org/2015/565.pdf",
+      "field": {
+        "type": "Extension",
+        "base": "0x7fffffffffffffffffffffffffffffff",
+        "bits": 127,
+        "degree": 2,
+        "poly": [
+          {
+            "power": 2,
+            "coeff": "0x01"
+          },
+          {
+            "power": 0,
+            "coeff": "0x01"
+          }
+        ]
+      },
+      "form": "TwistedEdwards",
+      "params": {
+        "a": {
+          "poly": [
+            {
+              "power": 0,
+              "coeff": "0x00"
+            }
+          ]
+        },
+        "d": {
+          "poly": [
+            {
+              "power": 1,
+              "coeff": "0x5e472f846657e0fcb3821488f1fc0c8d"
+            },
+            {
+              "power": 0,
+              "coeff": "0xe40000000000000142"
+            }
+          ]
+        }
+      },
+      "order": "0x29cbc14e5e0a72f05397829cbc14e5dfbd004dfe0f79992fb2540ec7768ce7",
+      "cofactor": "0x188"
     }
   ]
 }
