@@ -402,6 +402,9 @@ function SageCode(curve) {
 
 function SageBox(curve) {
   let sageCode = SageCode(curve);
+  if (sageCode === null) {
+    return null;
+  }
   return (
     <div>
       <h3>SAGE</h3>
