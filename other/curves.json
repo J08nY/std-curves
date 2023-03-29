@@ -1395,6 +1395,77 @@
       },
       "order": "0x29cbc14e5e0a72f05397829cbc14e5dfbd004dfe0f79992fb2540ec7768ce7",
       "cofactor": "0x188"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Tom-256",
+      "category": "other",
+      "desc": "Tom-256 curve from https://eprint.iacr.org/2021/1183.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xffffffff0000000100000000000000017e72b42b30e7317793135661b1c4b117",
+        "bits": 256
+      },
+      "params": {
+        "a": {
+          "raw": "0xffffffff0000000100000000000000017e72b42b30e7317793135661b1c4b114"
+        },
+        "b": {
+          "raw": "0xb441071b12f4a0366fb552f8e21ed4ac36b06aceeb354224863e60f20219fc56"
+        }
+      },
+      "order": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
+      "cofactor": "0x01",
+      "generator": {
+        "x": {
+          "raw": "0x03"
+        },
+        "y": {
+          "raw": "0x5a6dd32df58708e64e97345cbe66600decd9d538a351bb3c30b4954925b1f02d"
+        }
+      }
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Tom-384",
+      "category": "other",
+      "desc": "Tom-384 curve from https://eprint.iacr.org/2021/1183.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffeaf5f689f8669fb41b08d5f5edffd26599c434bbd978917c5",
+        "bits": 384
+      },
+      "params": {
+        "a": {
+          "raw": "0x821dfdc940e7f074ac481f8b2870c48962cce56abd72dfc42813a944cea15df78dc0a2d97fbf031ed26c9076826940ba"
+        },
+        "b": {
+          "raw": "0x9b5b584b655fdcb087d37f8c4fee893c0499223db5e004c674ea0dee48a4ec0c9e9f684099f2a51c62a2cce400cb1e4b"
+        }
+      },
+      "order": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff",
+      "cofactor": "0x01"
+    },
+    {
+      "form": "Weierstrass",
+      "name": "Tom-521",
+      "category": "other",
+      "desc": "Tom-521 curve from https://eprint.iacr.org/2021/1183.pdf",
+      "field": {
+        "type": "Prime",
+        "p": "0x200000000000000000000000000000000000000000000000000000000000000002c54be78524c33584f734a266748b2063accf5028e6778dc5056476d0690853249",
+        "bits": 521
+      },
+      "params": {
+        "a": {
+          "raw": "0xef6432c21701cc48c63fb9263e14ba76d4a94ba14d173b134e3032b0e2e543180eb6725125992a7d00162a5f57d21918b0766364eeb53c53bb12f405dac1d527e2"
+        },
+        "b": {
+          "raw": "0x3cbc65d1e0245d79703b18e9aaea1ac6d67f87a2cd4bd84b9e6df6a45a979c481825ca5a857270fc890352f9fac7fd6020deaabb28d099718f0f77a4eec222871d"
+        }
+      },
+      "order": "0x01ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "cofactor": "0x01"
     }
   ]
 }
