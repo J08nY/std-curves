@@ -46,6 +46,11 @@
       },
       "order": "0x04000000000000000000020108a2e0cc0d99f8a5ef",
       "cofactor": "0x2",
+      "aliases": [
+        "secg/sect163k1",
+        "nist/k-163",
+        "wtls/wap-wsg-idm-ecid-wtls3"
+      ],
       "generator": {
         "x": {
           "raw": "0x02fe13c0537bbc11acaa07d793de4e6d5e5c94eee8"

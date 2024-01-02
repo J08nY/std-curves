@@ -342,7 +342,9 @@
       "order": "0x04000000000000000000020108a2e0cc0d99f8a5ef",
       "cofactor": "0x2",
       "aliases": [
-        "secg/sect163k1"
+        "secg/sect163k1",
+        "x963/ansit163k1",
+        "wtls/wap-wsg-idm-ecid-wtls3"
       ],
       "characteristics": {
         "discriminant": "1",
