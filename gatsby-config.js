@@ -35,6 +35,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: "neuromancer.sk",
+        customDomain: "plausible.neuromancer.sk"
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Standard curve database",
@@ -65,6 +72,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-theme-ui` 
+    `gatsby-plugin-theme-ui`
   ]
 }
