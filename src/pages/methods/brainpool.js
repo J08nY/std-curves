@@ -30,7 +30,7 @@ export default ({data, location}) => {
   \\IF{$2^{L-1} \\le p \\le 2^L - 1$}
     \\RETURN $p$
   \\ENDIF
-  \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$) and \\textbf{goto} $2$
+  \\STATE Let $s = $ \\CALL{UpdateSeed}{$s$} and \\textbf{goto} $2$
   \\ENDPROCEDURE
   \\PROCEDURE{FindInteger}{$s$}
   \\STATE Let $v = \\lfloor (L-1) / 160 \\rfloor$ and $w = L - 160v$
