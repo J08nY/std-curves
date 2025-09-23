@@ -357,22 +357,22 @@ function SageCode(curve) {
       if (curve.field.basis === "poly") {
         sageCode += `F.<x> = GF(2)[]\n`
         sageCode += `K = GF(2^${curve.field.degree}, name="x", modulus=${formatPoly(curve.field.poly, true)})\n`
-        sageCode += `E = EllipticCurve(K, (1, K.fetch_int(${formatElement(curve.params.a)}), 0, 0, K.fetch_int(${formatElement(curve.params.b)})))\n`
+        sageCode += `E = EllipticCurve(K, (1, K.from_integer(${formatElement(curve.params.a)}), 0, 0, K.from_integer(${formatElement(curve.params.b)})))\n`
         sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
         if (curve.generator) {
-          sageCode += `G = E(K.fetch_int(${formatElement(curve.generator.x)}), K.fetch_int(${formatElement(curve.generator.y)}))`
+          sageCode += `G = E(K.from_integer(${formatElement(curve.generator.x)}), K.from_integer(${formatElement(curve.generator.y)}))`
         } else {
           sageCode += `# No generator defined\n`
         }
       } else if (curve.field.basis === "normal") {
         sageCode += `F.<x> = GF(2)[]\n`
         sageCode += `K.<z> = GF(2^${curve.field.degree}, name="z", modulus=${formatPoly(curve.field.poly, true)})\n`
-        sageCode += `def fetch_int(K, h):\n`
+        sageCode += `def from_integer(K, h):\n`
         sageCode += `\treturn sum(map(lambda ix: K(Integer(ix[1]) * z^(2^ix[0])), enumerate(h.binary())), K(0))\n`
-        sageCode += `E = EllipticCurve(K, (1, fetch_int(K, ${formatElement(curve.params.a)}), 0, 0, fetch_int(K, ${formatElement(curve.params.b)})))\n`
+        sageCode += `E = EllipticCurve(K, (1, from_integer(K, ${formatElement(curve.params.a)}), 0, 0, from_integer(K, ${formatElement(curve.params.b)})))\n`
         sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`
         if (curve.generator) {
-          sageCode += `G = E(fetch_int(K, ${formatElement(curve.generator.x)}), fetch_int(K, ${formatElement(curve.generator.y)}))`
+          sageCode += `G = E(from_integer(K, ${formatElement(curve.generator.x)}), from_integer(K, ${formatElement(curve.generator.y)}))`
         } else {
           sageCode += `# No generator defined\n`
         }
