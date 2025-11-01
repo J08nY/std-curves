@@ -7,7 +7,7 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "/std",
+  pathPrefix: "/",
   siteMetadata: {
   	title: "Standard curve database",
   	description: "A database of standard curves",
