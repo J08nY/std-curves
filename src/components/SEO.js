@@ -1,6 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang = `en`, meta = [], keywords = [], title }) {
   const { site } = useStaticQuery(
@@ -15,9 +15,9 @@ function SEO({ description, lang = `en`, meta = [], keywords = [], title }) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -41,7 +41,7 @@ function SEO({ description, lang = `en`, meta = [], keywords = [], title }) {
         ].filter(Boolean)
       )}
     />
-  )
+  );
 }
 
-export default SEO
+export default SEO;

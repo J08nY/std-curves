@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui";
-import {render as renderCode} from "pseudocode"
+import { jsx } from "theme-ui";
+import { render as renderCode } from "pseudocode";
 
-let cache = {}
+let cache = {};
 
-function Pseudocode({code, options}) {
+function Pseudocode({ code, options }) {
   if (typeof window === `undefined`) {
-    return <div/>;
+    return <div />;
   }
-  let key = JSON.stringify({"code": code, "options": options});
+  let key = JSON.stringify({ code: code, options: options });
   let rendered = null;
   if (key in cache) {
     rendered = cache[key];
@@ -16,7 +16,14 @@ function Pseudocode({code, options}) {
     rendered = renderCode(code, null, options);
     cache[key] = rendered;
   }
-  return <div ref={ref => {if (ref) ref.appendChild(rendered); return ref}}></div>;
+  return (
+    <div
+      ref={ref => {
+        if (ref) ref.appendChild(rendered);
+        return ref;
+      }}
+    ></div>
+  );
 }
 
-export default Pseudocode
+export default Pseudocode;

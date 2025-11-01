@@ -1,11 +1,11 @@
-import React from 'react'
-import Entry from '../../components/entry'
-import Link from '../../components/Link'
-import CodeBlock from '../../components/CodeBlock'
+import React from "react";
+import Entry from "../../components/entry";
+import Link from "../../components/Link";
+import CodeBlock from "../../components/CodeBlock";
 import { Styled } from "theme-ui";
-import {BlockMath, InlineMath} from 'react-katex';
+import { BlockMath, InlineMath } from "react-katex";
 
-export default ({data, location}) => {
+export default ({ data, location }) => {
   let blsCode = `class BLS(object):
     @classmethod
     def generate_prime_order(cls, zbits):
@@ -54,13 +54,19 @@ class BLS24(BLS):
   return (
     <Entry data={data} location={location} title={"BLS"}>
       <Styled.h2>Barreto-Lynn-Scott curves</Styled.h2>
-      <Styled.p>A class of pairing-friendly curves with embedding degree <InlineMath>{`k \\in \\{12, 24\\}`}</InlineMath>.</Styled.p>
+      <Styled.p>
+        A class of pairing-friendly curves with embedding degree{" "}
+        <InlineMath>{`k \\in \\{12, 24\\}`}</InlineMath>.
+      </Styled.p>
       <Styled.h3>BLS12</Styled.h3>
 
       <Styled.p>
-        Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BLS curve with embedding degree <InlineMath>12</InlineMath> can 
-        be constructed over a prime field <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points <InlineMath>r</InlineMath> and 
-        a trace of Frobenius <InlineMath>t</InlineMath>.
+        Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BLS
+        curve with embedding degree <InlineMath>12</InlineMath> can be
+        constructed over a prime field{" "}
+        <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points{" "}
+        <InlineMath>r</InlineMath> and a trace of Frobenius{" "}
+        <InlineMath>t</InlineMath>.
       </Styled.p>
       <BlockMath>
         {`\\begin{aligned}
@@ -71,9 +77,12 @@ class BLS24(BLS):
       </BlockMath>
       <Styled.h3>BLS24</Styled.h3>
       <Styled.p>
-        Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BLS curve with embedding degree <InlineMath>24</InlineMath> can 
-        be constructed over a prime field <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points <InlineMath>r</InlineMath> and 
-        a trace of Frobenius <InlineMath>t</InlineMath>.
+        Given an integer <InlineMath>{`z \\in \\mathbb{N}`}</InlineMath> the BLS
+        curve with embedding degree <InlineMath>24</InlineMath> can be
+        constructed over a prime field{" "}
+        <InlineMath>{`\\mathbb{F}_p`}</InlineMath> with the number of points{" "}
+        <InlineMath>r</InlineMath> and a trace of Frobenius{" "}
+        <InlineMath>t</InlineMath>.
       </Styled.p>
       <BlockMath>
         {`\\begin{aligned}
@@ -82,29 +91,38 @@ class BLS24(BLS):
           t(z) &= z + 1
           \\end{aligned}`}
       </BlockMath>
+      <Styled.p>The class of curves has the Short-Weierstrass form:</Styled.p>
+      <BlockMath>y^2 \equiv x^3 + b</BlockMath>
       <Styled.p>
-        The class of curves has the Short-Weierstrass form:
-      </Styled.p>
-        <BlockMath>
-          y^2 \equiv x^3 + b
-        </BlockMath>
-      <Styled.p>
-        where given <InlineMath>z</InlineMath> such that <InlineMath>p(z)</InlineMath> is prime, a curve with 
-        a prime order subgroup of <InlineMath>r(z)</InlineMath> points can be found either via complex multiplication
-        or by exhaustively trying small coefficients <InlineMath>b</InlineMath> until a curve is found. Some
-        generate curves can be found in the <Link to={"/bls/"}>BLS</Link> category.
+        where given <InlineMath>z</InlineMath> such that{" "}
+        <InlineMath>p(z)</InlineMath> is prime, a curve with a prime order
+        subgroup of <InlineMath>r(z)</InlineMath> points can be found either via
+        complex multiplication or by exhaustively trying small coefficients{" "}
+        <InlineMath>b</InlineMath> until a curve is found. Some generate curves
+        can be found in the <Link to={"/bls/"}>BLS</Link> category.
       </Styled.p>
       <Styled.p>
-        The following SageMath code generates BLS curves with embedding degree <InlineMath>12</InlineMath> and <InlineMath>24</InlineMath>.
+        The following SageMath code generates BLS curves with embedding degree{" "}
+        <InlineMath>12</InlineMath> and <InlineMath>24</InlineMath>.
       </Styled.p>
-	    <CodeBlock code={blsCode} language="python"/>
-	  
-  	  <Styled.h4>References</Styled.h4>
-	  <ul>
-	  	<li>Paulo S. L. M. Barreto, Ben Lynn, Michael Scott: <Link to="https://eprint.iacr.org/2002/088.pdf">Constructing Elliptic Curves with Prescribed Embedding Degrees</Link></li>
-	  	<li>Diego F. Aranha, Laura Fuentes-Castaneda, Edward Knapp, Alfred Menezes, Francisco Rodríguez-Henríquez: <Link to="https://eprint.iacr.org/2012/232.pdf">Implementing Pairings at the 192-bit Security Level</Link></li>
-	  </ul>
+      <CodeBlock code={blsCode} language="python" />
 
+      <Styled.h4>References</Styled.h4>
+      <ul>
+        <li>
+          Paulo S. L. M. Barreto, Ben Lynn, Michael Scott:{" "}
+          <Link to="https://eprint.iacr.org/2002/088.pdf">
+            Constructing Elliptic Curves with Prescribed Embedding Degrees
+          </Link>
+        </li>
+        <li>
+          Diego F. Aranha, Laura Fuentes-Castaneda, Edward Knapp, Alfred
+          Menezes, Francisco Rodríguez-Henríquez:{" "}
+          <Link to="https://eprint.iacr.org/2012/232.pdf">
+            Implementing Pairings at the 192-bit Security Level
+          </Link>
+        </li>
+      </ul>
     </Entry>
-  )
-}
+  );
+};

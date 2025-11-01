@@ -1,7 +1,7 @@
-const path = require(`path`)
+const path = require(`path`);
 
 exports.sourceNodes = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
   const typeDefs = `
     type Term {
       power: Int!
@@ -57,12 +57,18 @@ exports.sourceNodes = ({ actions }) => {
       name: String!
       desc: String
     }
-  `
+  `;
 
-  createTypes(typeDefs)
-}
+  createTypes(typeDefs);
+};
 
-exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
+exports.onCreateNode = ({
+  node,
+  actions,
+  getNode,
+  createNodeId,
+  createContentDigest
+}) => {
   const { createNode, createParentChildLink } = actions;
   if (node.internal.type !== `CurvesJson`) {
     return;
@@ -88,8 +94,10 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   });
   createParentChildLink({ parent: fileNode, child: node });
 
-  node.curves.forEach((curve) => {
-    const curveId = createNodeId(`${node.id} >>> ${node.name} >>> ${curve.name}`);
+  node.curves.forEach(curve => {
+    const curveId = createNodeId(
+      `${node.id} >>> ${node.name} >>> ${curve.name}`
+    );
     const curveContentDigest = createContentDigest(curve);
     createNode({
       ...curve,
@@ -102,9 +110,9 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         description: `Curve`
       }
     });
-    createParentChildLink({parent: getNode(catId), child: getNode(curveId)});
+    createParentChildLink({ parent: getNode(catId), child: getNode(curveId) });
   });
-}
+};
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -128,8 +136,8 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
-  result.data.allCategory.nodes.forEach((category) => {
+  `);
+  result.data.allCategory.nodes.forEach(category => {
     createPage({
       path: category.parent.parent.relativeDirectory,
       component: path.resolve(`./src/templates/category.js`),
@@ -137,7 +145,7 @@ exports.createPages = async ({ graphql, actions }) => {
         name: category.name
       }
     });
-    category.children.forEach((curve) => {
+    category.children.forEach(curve => {
       createPage({
         path: path.join(category.parent.parent.relativeDirectory, curve.name),
         component: path.resolve(`./src/templates/curve.js`),
@@ -147,24 +155,24 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     });
   });
-}
+};
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === 'build-javascript') {
+  if (stage === "build-javascript") {
     // turn off source-maps
     actions.setWebpackConfig({
       devtool: false
-    })
+    });
   } else if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /pseudocode/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
+            use: loaders.null()
+          }
+        ]
+      }
+    });
   }
-}
+};

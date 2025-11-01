@@ -1,63 +1,63 @@
 /** @jsx jsx */
-import { alpha } from '@theme-ui/color'
-import { jsx } from 'theme-ui'
-import Link from '../Link'
-import Chevron from './Chevron'
+import { alpha } from "@theme-ui/color";
+import { jsx } from "theme-ui";
+import Link from "../Link";
+import Chevron from "./Chevron";
 
 const ChevronIcon = ({ isExpanded }) => (
   <Chevron
     sx={{
       transform: `rotate(${isExpanded ? 180 : 270}deg)`,
-      transition: 'transform 100ms cubic-bezier(0.4,0,0.2,1)'
+      transition: "transform 100ms cubic-bezier(0.4,0,0.2,1)"
     }}
   />
-)
+);
 
 const styles = {
   Root: {
-    display: 'block',
-    position: 'relative',
-    width: '100%',
+    display: "block",
+    position: "relative",
+    width: "100%",
     p: 0,
     m: 0,
     border: 0,
-    background: 'transparent',
-    color: 'text',
-    fontFamily: 'inherit',
-    fontSize: 'inherit',
-    textAlign: 'left'
+    background: "transparent",
+    color: "text",
+    fontFamily: "inherit",
+    fontSize: "inherit",
+    textAlign: "left"
   },
   Button: {
-    position: 'absolute',
+    position: "absolute",
     right: 0,
     top: 0,
     bottom: 0,
-    width: '2.5rem',
-    background: 'transparent',
-    color: 'inherit',
+    width: "2.5rem",
+    background: "transparent",
+    color: "inherit",
     border: 0,
-    textAlign: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   },
   Title: {
-    variant: 'linkStyles.nav',
-    display: 'block',
-    pr: '2.5rem',
-    ':hover': {
-      variant: 'linkStyles.nav.:hover',
-      bg: alpha('primary', 0.05)
+    variant: "linkStyles.nav",
+    display: "block",
+    pr: "2.5rem",
+    ":hover": {
+      variant: "linkStyles.nav.:hover",
+      bg: alpha("primary", 0.05)
     }
   }
-}
+};
 
 function ToggleableItemTitle({ id, item, isActive, isExpanded, toggleItem }) {
   return item.link ? (
     <span sx={styles.Root}>
       <Link
         to={item.link}
-        className={isActive ? 'active' : ''}
+        className={isActive ? "active" : ""}
         sx={styles.Title}
       >
         {item.title}
@@ -81,7 +81,7 @@ function ToggleableItemTitle({ id, item, isActive, isExpanded, toggleItem }) {
       onClick={() => toggleItem(item)}
       sx={styles.Root}
     >
-      <span className={isActive ? 'active' : ''} sx={styles.Title}>
+      <span className={isActive ? "active" : ""} sx={styles.Title}>
         {item.title}
       </span>
 
@@ -89,7 +89,7 @@ function ToggleableItemTitle({ id, item, isActive, isExpanded, toggleItem }) {
         <ChevronIcon isExpanded={isExpanded} />
       </span>
     </button>
-  )
+  );
 }
 
 function ItemTitle({ id, item, isActive, isExpanded, toggleItem }) {
@@ -105,13 +105,13 @@ function ItemTitle({ id, item, isActive, isExpanded, toggleItem }) {
     <span>
       <Link
         to={item.link}
-        className={isActive ? 'active' : ''}
+        className={isActive ? "active" : ""}
         sx={styles.Title}
       >
         {item.title}
       </Link>
     </span>
-  )
+  );
 }
 
-export default ItemTitle
+export default ItemTitle;

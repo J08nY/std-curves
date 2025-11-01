@@ -4,28 +4,27 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-
 module.exports = {
   /* Your site config here */
   pathPrefix: "/",
   siteMetadata: {
-  	title: "Standard curve database",
-  	description: "A database of standard curves",
-  	author: "CRoCS"
+    title: "Standard curve database",
+    description: "A database of standard curves",
+    author: "CRoCS"
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `curves`,
-        path: `${__dirname}/src/curves/`,
-      },
+        path: `${__dirname}/src/curves/`
+      }
     },
     {
       resolve: `gatsby-transformer-json`,
       options: {
         typeName: `CurvesJson`
-      },
+      }
     },
     `gatsby-transformer-yaml`,
     {
@@ -74,4 +73,4 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`
   ]
-}
+};

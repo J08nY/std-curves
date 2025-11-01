@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from "theme-ui";
 
 const Chevron = ({ size = 10, ...props }) => (
   <svg
@@ -26,6 +26,6 @@ const Chevron = ({ size = 10, ...props }) => (
       />
     </g>
   </svg>
-)
+);
 
-export default Chevron
+export default Chevron;

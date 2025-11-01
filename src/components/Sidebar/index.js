@@ -1,25 +1,24 @@
 /** @jsx jsx */
-import { useCallback, useMemo, useState } from 'react'
-import { useStaticQuery, graphql, withPrefix } from 'gatsby'
-import { jsx } from 'theme-ui'
-import SidebarContent from '../../sidebar.mdx'
-import Branding from './Branding'
-import Link from '../Link'
-import Item, { isItemActive } from './Item'
-import { getActiveItem, getActiveItemParentLinks, getItems } from './utils'
+import { useCallback, useMemo, useState } from "react";
+import { useStaticQuery, graphql, withPrefix } from "gatsby";
+import { jsx } from "theme-ui";
+import SidebarContent from "../../sidebar.mdx";
+import Branding from "./Branding";
+import Link from "../Link";
+import Item, { isItemActive } from "./Item";
+import { getActiveItem, getActiveItemParentLinks, getItems } from "./utils";
 
 const setOpenItems = (state, items) => {
   for (const item of items) {
     if (item.items) {
-
       state.openItems[item.link] =
         isItemActive(state.activeItemParentLinks, item) ||
-        withPrefix(state.activeItem.link) === item.link
+        withPrefix(state.activeItem.link) === item.link;
 
-      setOpenItems(state, item.items)
+      setOpenItems(state, item.items);
     }
   }
-}
+};
 
 function Sidebar({ children, sidebar, open = true, location }) {
   const { site } = useStaticQuery(graphql`
@@ -28,25 +27,28 @@ function Sidebar({ children, sidebar, open = true, location }) {
         pathPrefix
       }
     }
-  `)
+  `);
 
-  const items = useMemo(() => getItems(children, site.pathPrefix), [children, site.pathPrefix])
+  const items = useMemo(() => getItems(children, site.pathPrefix), [
+    children,
+    site.pathPrefix
+  ]);
 
   const [{ openItems, activeItem, activeItemParentLinks }, setState] = useState(
     () => {
-      const activeItem = getActiveItem(items, location)
+      const activeItem = getActiveItem(items, location);
 
       const state = {
         openItems: {},
         activeItem,
         activeItemParentLinks: getActiveItemParentLinks(items, activeItem, [])
-      }
+      };
 
-      setOpenItems(state, items)
+      setOpenItems(state, items);
 
-      return state
+      return state;
     }
-  )
+  );
 
   const toggleItem = useCallback(item => {
     setState(state => ({
@@ -55,8 +57,8 @@ function Sidebar({ children, sidebar, open = true, location }) {
         ...state.openItems,
         [item.link]: !state.openItems[item.link]
       }
-    }))
-  }, [])
+    }));
+  }, []);
 
   return (
     <section
@@ -64,20 +66,20 @@ function Sidebar({ children, sidebar, open = true, location }) {
       key="sidebar"
       ref={sidebar}
       tabIndex="-1"
-      className={open ? 'active' : ''}
-      sx={{ variant: 'layout.sidebar', zIndex: 99 }}
+      className={open ? "active" : ""}
+      sx={{ variant: "layout.sidebar", zIndex: 99 }}
     >
       <Branding />
 
       <nav
         aria-label="Navigation Menu"
         sx={{
-          variant: 'layout.container',
+          variant: "layout.container",
           px: 0,
-          ul: { listStyle: 'none', m: 0, p: 0 }
+          ul: { listStyle: "none", m: 0, p: 0 }
         }}
       >
-        <ul sx={{ ul: { pl: '1.5em' } }}>
+        <ul sx={{ ul: { pl: "1.5em" } }}>
           {items.map(item => (
             <Item
               key={item.link}
@@ -91,10 +93,12 @@ function Sidebar({ children, sidebar, open = true, location }) {
           ))}
         </ul>
       </nav>
-      
-      <Link to="/search/" sx={{ pl: '1em', variant: 'linkStyles.nav'}}>Search</Link>
+
+      <Link to="/search/" sx={{ pl: "1em", variant: "linkStyles.nav" }}>
+        Search
+      </Link>
     </section>
-  )
+  );
 }
 
 export default props => (
@@ -104,4 +108,4 @@ export default props => (
       wrapper: Sidebar
     }}
   />
-)
+);

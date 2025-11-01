@@ -1,6 +1,6 @@
-import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/SEO";
 
 function Entry({ children, location, title, description }) {
   //const headingTitle = doc.headings[0] && doc.headings[0].value
@@ -12,7 +12,7 @@ function Entry({ children, location, title, description }) {
       <SEO title={title} description={description} />
       {children}
     </Layout>
-  )
+  );
 }
 
-export default Entry
+export default Entry;

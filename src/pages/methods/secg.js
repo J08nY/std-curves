@@ -1,10 +1,10 @@
-import React from 'react'
-import Entry from '../../components/entry'
-import Link from '../../components/Link'
-import Pseudocode from '../../components/Pseudocode'
-import { Styled } from "theme-ui"
+import React from "react";
+import Entry from "../../components/entry";
+import Link from "../../components/Link";
+import Pseudocode from "../../components/Pseudocode";
+import { Styled } from "theme-ui";
 
-export default ({data, location}) => {
+export default ({ data, location }) => {
   let curveCode = `
   \\begin{algorithm}
   \\caption{SECG Verifiably Random Curves}
@@ -79,25 +79,39 @@ export default ({data, location}) => {
     <Entry data={data} location={location} title={"SECG"}>
       <Styled.h2>SECG</Styled.h2>
       <Styled.p>
-        The SECG method for generating verifiably random domain parameters is specified in the <b>SEC 1: Elliptic Curve Cryptography</b> <Link to="#secg-sec1">[1]</Link> standard,
-        specifically in sections <i>3.1.3.1</i> and <i>3.1.3.2</i>. These methods are compatible to those in the <b>ANSI X9.62</b> standard. The curves are presented
-        in the <Link to={"/secg/"}>SECG</Link> category.
+        The SECG method for generating verifiably random domain parameters is
+        specified in the <b>SEC 1: Elliptic Curve Cryptography</b>{" "}
+        <Link to="#secg-sec1">[1]</Link> standard, specifically in sections{" "}
+        <i>3.1.3.1</i> and <i>3.1.3.2</i>. These methods are compatible to those
+        in the <b>ANSI X9.62</b> standard. The curves are presented in the{" "}
+        <Link to={"/secg/"}>SECG</Link> category.
       </Styled.p>
 
       <Styled.h3>Generating curves</Styled.h3>
       <pre>
-        <Pseudocode code={curveCode} options={{lineNumber: true, noEnd: true, captionCount: 0}}/>
+        <Pseudocode
+          code={curveCode}
+          options={{ lineNumber: true, noEnd: true, captionCount: 0 }}
+        />
       </pre>
 
       <Styled.h3>Generating base points</Styled.h3>
       <pre>
-        <Pseudocode code={pointCode} options={{lineNumber: true, noEnd: true, captionCount: 1}}/>
+        <Pseudocode
+          code={pointCode}
+          options={{ lineNumber: true, noEnd: true, captionCount: 1 }}
+        />
       </pre>
 
       <Styled.h4>References</Styled.h4>
       <ol>
-        <li id="secg-sec1">Standards for Efficient Cryptography Group: <Link to="https://www.secg.org/sec1-v2.pdf">SEC 1: Elliptic Curve Cryptography</Link></li>
+        <li id="secg-sec1">
+          Standards for Efficient Cryptography Group:{" "}
+          <Link to="https://www.secg.org/sec1-v2.pdf">
+            SEC 1: Elliptic Curve Cryptography
+          </Link>
+        </li>
       </ol>
     </Entry>
-  )
-}
+  );
+};

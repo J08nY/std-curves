@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from 'theme-ui'
-import Tooltip from '@material-ui/core/Tooltip';
-import ScreenReader from './ScreenReader'
-import { useCallback } from 'react'
+import { jsx, useColorMode } from "theme-ui";
+import Tooltip from "@material-ui/core/Tooltip";
+import ScreenReader from "./ScreenReader";
+import { useCallback } from "react";
 
 // SVGs from https://github.com/feathericons/feather
 
@@ -20,7 +20,7 @@ const SVG = ({ children }) => (
   >
     {children}
   </svg>
-)
+);
 
 const Sun = () => (
   <SVG>
@@ -34,41 +34,44 @@ const Sun = () => (
     <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
   </SVG>
-)
+);
 
 const Moon = () => (
   <SVG>
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
   </SVG>
-)
+);
 
 const colorModeIcon = {
   dark: Moon(),
   light: Sun()
-}
+};
 
 function ColorModeButton() {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode, setColorMode] = useColorMode();
 
   const toggleColorMode = useCallback(() => {
-    setColorMode(colorMode => (colorMode === 'light' ? 'dark' : 'light'))
-  }, [setColorMode])
+    setColorMode(colorMode => (colorMode === "light" ? "dark" : "light"));
+  }, [setColorMode]);
 
   return (
     <Tooltip title="Change the theme" placement="bottom" arrow>
-    <button
-      onClick={toggleColorMode}
-      sx={{ bg: 'transparent', color: 'inherit', border: 0, p: '1em' }}
-    >
-      <span aria-hidden sx={{ display: 'block', width: '1em', height: '1em' }}>
-        {colorModeIcon[colorMode]}
-      </span>
-      <ScreenReader>
-        {`Toggle ${colorMode === 'dark' ? 'Light' : 'Dark'} Mode`}
-      </ScreenReader>
-    </button>
+      <button
+        onClick={toggleColorMode}
+        sx={{ bg: "transparent", color: "inherit", border: 0, p: "1em" }}
+      >
+        <span
+          aria-hidden
+          sx={{ display: "block", width: "1em", height: "1em" }}
+        >
+          {colorModeIcon[colorMode]}
+        </span>
+        <ScreenReader>
+          {`Toggle ${colorMode === "dark" ? "Light" : "Dark"} Mode`}
+        </ScreenReader>
+      </button>
     </Tooltip>
-  )
+  );
 }
 
-export default ColorModeButton
+export default ColorModeButton;

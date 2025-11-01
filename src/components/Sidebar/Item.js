@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { useRef } from 'react'
-import { jsx } from 'theme-ui'
-import ItemTitle from './ItemTitle'
+import { useRef } from "react";
+import { jsx } from "theme-ui";
+import ItemTitle from "./ItemTitle";
 
 export const isItemActive = (activeItemParentLinks, item) => {
   if (activeItemParentLinks) {
     for (const parentLink of activeItemParentLinks) {
       if (parentLink === item.link) {
-        return true
+        return true;
       }
     }
   }
 
-  return false
-}
+  return false;
+};
 
 function Item({
   item,
@@ -23,12 +23,12 @@ function Item({
   activeItemParentLinks,
   toggleItem
 }) {
-  const isParentOfActiveItem = isItemActive(activeItemParentLinks, item)
-  const isActive = item.link === location.pathname || isParentOfActiveItem
+  const isParentOfActiveItem = isItemActive(activeItemParentLinks, item);
+  const isActive = item.link === location.pathname || isParentOfActiveItem;
 
-  const isExpanded = openItems[item.link]
+  const isExpanded = openItems[item.link];
 
-  const id = useRef(item.link.replace(/\W+/g, '')).current
+  const id = useRef(item.link.replace(/\W+/g, "")).current;
 
   return (
     <li>
@@ -41,10 +41,7 @@ function Item({
       />
 
       {item.items && (
-        <ul
-          id={id}
-          sx={{ display: isExpanded ? 'block' : 'none' }}
-        >
+        <ul id={id} sx={{ display: isExpanded ? "block" : "none" }}>
           {item.items.map(subitem => (
             <Item
               key={subitem.link}
@@ -59,7 +56,7 @@ function Item({
         </ul>
       )}
     </li>
-  )
+  );
 }
 
-export default Item
+export default Item;

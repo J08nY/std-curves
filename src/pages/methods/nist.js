@@ -1,11 +1,11 @@
-import React from 'react'
-import Entry from '../../components/entry'
-import { Styled } from "theme-ui"
+import React from "react";
+import Entry from "../../components/entry";
+import { Styled } from "theme-ui";
 import Link from "../../components/Link";
-import {InlineMath} from "react-katex";
+import { InlineMath } from "react-katex";
 import Pseudocode from "../../components/Pseudocode";
 
-export default ({data, location}) => {
+export default ({ data, location }) => {
   let fpCode = `
   \\begin{algorithm}
   \\caption{NIST Verifiably Random Curves over $\\mathbb{F}_p$}
@@ -61,22 +61,38 @@ export default ({data, location}) => {
     <Entry data={data} location={location} title={"NIST"}>
       <Styled.h2>NIST</Styled.h2>
       <Styled.p>
-        The NIST <b>FIPS 186-4</b> <Link to="#fips-186-4">[1]</Link> standard defines recommended curves for use in ECDSA
-        and a verifiably random method for generating them in appendices <i>D.5</i> and <i>D.7</i>. The curves are presented
-        in the <Link to={"/nist/"}>NIST</Link> category.
+        The NIST <b>FIPS 186-4</b> <Link to="#fips-186-4">[1]</Link> standard
+        defines recommended curves for use in ECDSA and a verifiably random
+        method for generating them in appendices <i>D.5</i> and <i>D.7</i>. The
+        curves are presented in the <Link to={"/nist/"}>NIST</Link> category.
       </Styled.p>
-      <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves</Styled.h3>
+      <Styled.h3>
+        Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves
+      </Styled.h3>
       <pre>
-        <Pseudocode code={fpCode} options={{lineNumber: true, noEnd: true, captionCount: 0}}/>
+        <Pseudocode
+          code={fpCode}
+          options={{ lineNumber: true, noEnd: true, captionCount: 0 }}
+        />
       </pre>
-      <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_{2^m}`}</InlineMath> curves</Styled.h3>
+      <Styled.h3>
+        Generating <InlineMath>{`\\mathbb{F}_{2^m}`}</InlineMath> curves
+      </Styled.h3>
       <pre>
-        <Pseudocode code={f2mCode} options={{lineNumber: true, noEnd: true, captionCount: 1}}/>
+        <Pseudocode
+          code={f2mCode}
+          options={{ lineNumber: true, noEnd: true, captionCount: 1 }}
+        />
       </pre>
       <Styled.h4>References</Styled.h4>
       <ol>
-        <li id="fips-186-4">National Institute of Standards and Technology: <Link to="https://csrc.nist.gov/publications/detail/fips/186/4/final">FIPS 186-4 - Digital Signature Standard (DSS)</Link></li>
+        <li id="fips-186-4">
+          National Institute of Standards and Technology:{" "}
+          <Link to="https://csrc.nist.gov/publications/detail/fips/186/4/final">
+            FIPS 186-4 - Digital Signature Standard (DSS)
+          </Link>
+        </li>
       </ol>
     </Entry>
-  )
-}
+  );
+};

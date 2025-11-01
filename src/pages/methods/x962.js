@@ -1,11 +1,11 @@
-import React from 'react'
-import Entry from '../../components/entry'
-import Pseudocode from '../../components/Pseudocode'
-import { Styled } from "theme-ui"
+import React from "react";
+import Entry from "../../components/entry";
+import Pseudocode from "../../components/Pseudocode";
+import { Styled } from "theme-ui";
 import { InlineMath } from "react-katex";
 import Link from "../../components/Link";
 
-export default ({data, location}) => {
+export default ({ data, location }) => {
   let fpCode = `
   \\begin{algorithm}
   \\caption{ANSI X9.62 Verifiably Random Curves over $\\mathbb{F}_p$}
@@ -60,22 +60,40 @@ export default ({data, location}) => {
     <Entry data={data} location={location} title={"X962"}>
       <Styled.h2>ANSI X9.62</Styled.h2>
       <Styled.p>
-        The <b>ANSI X9.62</b> <Link to="#ansi-x962">[1]</Link> standard published by the American National Standards Institute provides a way of
-        generating verifiably random elliptic curves in its appendices <i>A.3.3.1</i> and <i>A.3.3.2</i>. The curves are presented
-        in the <Link to={"/x962/"}>ANSI X9.62</Link> category.
+        The <b>ANSI X9.62</b> <Link to="#ansi-x962">[1]</Link> standard
+        published by the American National Standards Institute provides a way of
+        generating verifiably random elliptic curves in its appendices{" "}
+        <i>A.3.3.1</i> and <i>A.3.3.2</i>. The curves are presented in the{" "}
+        <Link to={"/x962/"}>ANSI X9.62</Link> category.
       </Styled.p>
-      <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves</Styled.h3>
+      <Styled.h3>
+        Generating <InlineMath>{`\\mathbb{F}_p`}</InlineMath> curves
+      </Styled.h3>
       <pre>
-        <Pseudocode code={fpCode} options={{lineNumber: true, noEnd: true, captionCount: 0}}/>
+        <Pseudocode
+          code={fpCode}
+          options={{ lineNumber: true, noEnd: true, captionCount: 0 }}
+        />
       </pre>
-      <Styled.h3>Generating <InlineMath>{`\\mathbb{F}_{2^m}`}</InlineMath> curves</Styled.h3>
+      <Styled.h3>
+        Generating <InlineMath>{`\\mathbb{F}_{2^m}`}</InlineMath> curves
+      </Styled.h3>
       <pre>
-        <Pseudocode code={f2mCode} options={{lineNumber: true, noEnd: true, captionCount: 1}}/>
+        <Pseudocode
+          code={f2mCode}
+          options={{ lineNumber: true, noEnd: true, captionCount: 1 }}
+        />
       </pre>
       <Styled.h4>References</Styled.h4>
       <ol>
-        <li id="ansi-x962">Accredited Standards Committee X9 : <Link to="https://webstore.ansi.org/standards/ascx9/ansix9621998">Public Key Cryptography For The Financial Services Industry : The Elliptic Curve Digital Signature Algorithm (ECDSA)</Link></li>
+        <li id="ansi-x962">
+          Accredited Standards Committee X9 :{" "}
+          <Link to="https://webstore.ansi.org/standards/ascx9/ansix9621998">
+            Public Key Cryptography For The Financial Services Industry : The
+            Elliptic Curve Digital Signature Algorithm (ECDSA)
+          </Link>
+        </li>
       </ol>
     </Entry>
-  )
-}
+  );
+};
