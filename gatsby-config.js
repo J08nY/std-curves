@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
-        domain: "neuromancer.sk",
+        domain: "std.neuromancer.sk",
         customDomain: "plausible.neuromancer.sk"
       }
     },
