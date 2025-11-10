@@ -38,6 +38,7 @@
     "gatsby-plugin-offline": "^3.2.22",
     "gatsby-plugin-plausible": "^0.0.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-plugin-theme-ui": "^0.2.53",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-csv": "^2.3.10",

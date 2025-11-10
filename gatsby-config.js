@@ -10,7 +10,8 @@ module.exports = {
   siteMetadata: {
     title: "Standard curve database",
     description: "A database of standard curves",
-    author: "CRoCS"
+    author: "CRoCS",
+    siteUrl: "https://std.neuromancer.sk",
   },
   plugins: [
     {
@@ -71,6 +72,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-theme-ui`
+    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-sitemap`
   ]
 };
