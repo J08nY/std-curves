@@ -46,7 +46,7 @@ module.exports = {
       options: {
         name: "Standard curve database",
         short_name: "std",
-        start_url: "/std/",
+        start_url: "/",
         background_color: "#FDFFFC",
         theme_color: "#E71D36",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
