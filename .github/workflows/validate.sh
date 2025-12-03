@@ -61,6 +61,7 @@ for directory in $(ls -d */); do
 		echo "Checking $directory$name"
 
 		bits=$(echo "$curve" | jq -r ".field.bits")
+		
 		a=$(echo "$curve" | jq -r ".params.a.raw")
 		b=$(echo "$curve" | jq -r ".params.b.raw")
 		n=$(echo "$curve" | jq -r ".order")
@@ -76,6 +77,10 @@ for directory in $(ls -d */); do
 			a_reduced=$(echo "ibase=16;obase=10; $(to_bc $a) % $(to_bc $p)" | bc | from_bc)
 			b_reduced=$(echo "ibase=16;obase=10; $(to_bc $b) % $(to_bc $p)" | bc | from_bc)
 			computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp $bits 2>/dev/null)
+			if [ "$?" -ne 0 ]; then
+				bits=$((bits+1))
+				computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp $bits 2>/dev/null)
+			fi
 			;;
 
 			Binary)
@@ -106,6 +111,6 @@ for directory in $(ls -d */); do
 	done
 done
 
-if [ $errors -ne 0 ]; then
-	exit 1
+if [ "$errors" != 0 ]; then
+    exit 1
 fi
