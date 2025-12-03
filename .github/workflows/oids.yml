@@ -7,10 +7,8 @@ on:
     branches: [ data ]
 
 jobs:
-  build:
-
+  check:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v6
     - name: Set up Python
