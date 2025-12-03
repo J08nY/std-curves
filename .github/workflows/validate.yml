@@ -1,4 +1,4 @@
-name: OID check
+name: Order check
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
         wget "https://github.com/J08nY/ecgen/releases/latest/download/ecgen-static"
         chmod +x ./ecgen-static
     - name: Check the curves
-      run: ./validate.sh
+      run: ./.github/workflows/validate.sh
         
