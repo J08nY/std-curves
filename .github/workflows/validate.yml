@@ -1,0 +1,20 @@
+name: OID check
+
+on:
+  push:
+    branches: [ data ]
+  pull_request:
+    branches: [ data ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: Get ecgen
+      run: |
+        wget "https://github.com/J08nY/ecgen/releases/latest/download/ecgen-static"
+        chmod +x ./ecgen-static
+    - name: Check the curves
+      run: ./validate.sh
+        

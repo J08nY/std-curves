@@ -1,0 +1,111 @@
+#!/bin/bash
+
+
+to_bc() {
+	local input
+
+	if [ $# -ge 1 ]; then
+	  input="$1"
+	else
+	  input=$(cat)
+	fi
+
+	echo "$input" | cut -d"x" -f2 | tr '[:lower:]' '[:upper:]'
+}
+
+trim_bc() {
+	local input
+
+	if [ $# -ge 1 ]; then
+	  input="$1"
+	else
+	  input=$(cat)
+	fi
+
+	echo "$input" | tr -d " \n\\\\"
+}
+
+from_bc() {
+	local input
+
+	if [ $# -ge 1 ]; then
+	  input="$1"
+	else
+	  input=$(cat)
+	fi
+
+	echo "0x$input" | tr -d " \n\\\\" | tr '[:upper:]' '[:lower:]'
+}
+
+errors=0
+for directory in $(ls -d */); do
+	curves="${directory}curves.json"
+	if [ ! -e "$curves" ]; then
+		continue
+	fi
+	total=$(cat "$curves" | jq ".curves | length")
+	num=$(echo $total - 1 | bc)
+	for i in $(seq 0 $num); do
+		curve=$(cat "$curves" | jq ".curves[$i]")
+		name=$(echo "$curve" | jq -r ".name")
+		form=$(echo "$curve" | jq -r ".form")
+
+
+		if [ -n "$1" ] && [ "$directory$name" != "$1" ]; then
+			continue
+		fi
+		if [ "$form" != "Weierstrass" ]; then
+			echo "Skipping $directory$name: Not Weierstrass"
+			continue
+		fi
+		echo "Checking $directory$name"
+
+		bits=$(echo "$curve" | jq -r ".field.bits")
+		a=$(echo "$curve" | jq -r ".params.a.raw")
+		b=$(echo "$curve" | jq -r ".params.b.raw")
+		n=$(echo "$curve" | jq -r ".order")
+		h=$(echo "$curve" | jq -r ".cofactor")
+		full_order=$(echo "ibase=16;obase=10; $(to_bc $n) * $(to_bc $h)" | bc | trim_bc)
+
+		field_type=$(echo "$curve" | jq -r ".field.type")
+		case "$field_type" in
+
+			Prime)
+			p=$(echo "$curve" | jq -r ".field.p")
+			# Reduce coefficients, some curves come not-reduced (BADA55...)
+			a_reduced=$(echo "ibase=16;obase=10; $(to_bc $a) % $(to_bc $p)" | bc | from_bc)
+			b_reduced=$(echo "ibase=16;obase=10; $(to_bc $b) % $(to_bc $p)" | bc | from_bc)
+			computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp $bits 2>/dev/null)
+			;;
+
+			Binary)
+			degree=$(echo "$curve" | jq -r ".field.degree")
+			num_exps=$(echo "$curve" | jq -r ".field.poly | length")
+			if [ $num_exps -ne 3 ]; then
+				echo "Skipping, unsupported polynomial"
+				continue
+			fi
+			e1=$(echo "$curve" | jq -r ".field.poly[0].power")
+			e2=$(echo "$curve" | jq -r ".field.poly[1].power")
+			e3=$(echo "$curve" | jq -r ".field.poly[2].power")
+			computed_curve=$(echo -e "$degree\n$e1\n$e2\n$e3\n$a\n$b\n" | ./ecgen-static --f2m $bits 2>/dev/null)
+			;;
+
+			*)
+			echo "Unknown curve field: $field_type"
+			continue
+			;;
+		esac
+
+		computed_full_order=$(echo "$computed_curve" | jq -r ".[0].order" | to_bc)
+		res=$(echo "ibase=16;obase=10; $full_order == $computed_full_order" | bc -q)
+		if [ "$res" != "1" ]; then
+			echo "Wrong curve order! $full_order vs $computed_full_order" >&2
+			errors=$((errors++))
+		fi
+	done
+done
+
+if [ $errors -ne 0 ]; then
+	exit 1
+fi
