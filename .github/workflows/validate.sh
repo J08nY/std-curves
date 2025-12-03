@@ -10,7 +10,7 @@ to_bc() {
 	  input=$(cat)
 	fi
 
-	echo "$input" | cut -d"x" -f2 | tr '[:lower:]' '[:upper:]'
+	echo "$input" | sed -e "s/0x//" | tr '[:lower:]' '[:upper:]'
 }
 
 trim_bc() {
@@ -34,7 +34,11 @@ from_bc() {
 	  input=$(cat)
 	fi
 
-	echo "0x$input" | tr -d " \n\\\\" | tr '[:upper:]' '[:lower:]'
+	if [[ "$input" == "-"* ]]; then
+		echo "$input" | sed -e "s/-/-0x/" 
+	else
+		echo "0x$input"
+	fi | tr -d " \n\\\\" | tr '[:upper:]' '[:lower:]'
 }
 
 errors=0
@@ -54,12 +58,12 @@ for directory in $(ls -d */); do
 		if [ -n "$1" ] && [ "$directory$name" != "$1" ]; then
 			continue
 		fi
-		if [ "$form" != "Weierstrass" ]; then
-			echo "Skipping $directory$name: Not Weierstrass"
-			continue
-		fi
 		echo "Checking $directory$name"
 
+		if [ "$form" != "Weierstrass" ]; then
+			echo " -> Skipping, not Weierstrass"
+			continue
+		fi
 		bits=$(echo "$curve" | jq -r ".field.bits")
 		
 		a=$(echo "$curve" | jq -r ".params.a.raw")
@@ -87,7 +91,7 @@ for directory in $(ls -d */); do
 			degree=$(echo "$curve" | jq -r ".field.degree")
 			num_exps=$(echo "$curve" | jq -r ".field.poly | length")
 			if [ $num_exps -ne 3 ]; then
-				echo "Skipping, unsupported polynomial"
+				echo " -> Skipping, unsupported polynomial"
 				continue
 			fi
 			e1=$(echo "$curve" | jq -r ".field.poly[0].power")
@@ -97,7 +101,7 @@ for directory in $(ls -d */); do
 			;;
 
 			*)
-			echo "Unknown curve field: $field_type"
+			echo " ?? Unknown curve field: $field_type"
 			continue
 			;;
 		esac
@@ -106,11 +110,15 @@ for directory in $(ls -d */); do
 		res=$(echo "ibase=16;obase=10; $full_order == $computed_full_order" | bc -q)
 		if [ "$res" != "1" ]; then
 			echo "Wrong curve order! $full_order vs $computed_full_order" >&2
-			errors=$((errors++))
+			errors=$((errors+1))
 		fi
 	done
 done
 
+echo "-----"
 if [ "$errors" != 0 ]; then
+	echo "Failing due to $errors failing tests"
     exit 1
+else
+	echo "All OK"
 fi
