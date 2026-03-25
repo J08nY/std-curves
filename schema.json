@@ -3,7 +3,9 @@
 	"definitions": {
 		"Number": {
 			"type": "string",
-			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)?$"
+			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)?$",
+			"title": "A number.",
+			"description": "A hexadecimal (0x prefix) or decimal number."
 		},
 		"Polynomial": {
 			"type": "array",
@@ -13,7 +15,9 @@
 					"power": {"type":  "integer"},
 					"coeff": {"$ref":  "#/definitions/Number"}
 				},
-				"required": ["power", "coeff"]
+				"required": ["power", "coeff"],
+				"title": "A polynomial.",
+				"description": "A polynomial over integers. Zeros are implicit and do not need to be specified."
 			}
 		},
 		"Element": {
@@ -32,7 +36,9 @@
 					},
 					"required": ["poly"]
 				}
-			]
+			],
+			"title": "A field element.",
+			"description": "A field element is either a raw number or a polynomial."
 		},
 		"Weierstrass": {
 			"type": "object",
@@ -40,7 +46,9 @@
 				"a": {"$ref": "#/definitions/Element"},
 				"b": {"$ref": "#/definitions/Element"}
 			},
-			"required": ["a", "b"]
+			"required": ["a", "b"],
+			"title": "The short-Weierstrass curve model.",
+			"description": "The short-Weierstrass curve model, requires the a and b coefficients. See https://www.hyperelliptic.org/EFD/g1p/auto-shortw.html."
 		},
 		"Edwards": {
 			"type": "object",
@@ -48,7 +56,9 @@
 				"c": {"$ref": "#/definitions/Element"},
 				"d": {"$ref": "#/definitions/Element"}
 			},
-			"required": ["c", "d"]
+			"required": ["c", "d"],
+			"title": "The Edwards curve model.",
+			"description": "The Edwards curve model, requires the c and d coefficients. See https://www.hyperelliptic.org/EFD/g1p/auto-edwards.html."
 		},
 		"TwistedEdwards": {
 			"type": "object",
@@ -56,7 +66,9 @@
 				"a": {"$ref": "#/definitions/Element"},
 				"d": {"$ref": "#/definitions/Element"}
 			},
-			"required": ["a", "d"]
+			"required": ["a", "d"],
+			"title": "The twisted-Edwards curve model.",
+			"description": "The twisted-Edwards curve model, requires the a and d coefficients. See https://www.hyperelliptic.org/EFD/g1p/auto-twisted.html."
 		},
 		"Montgomery": {
 			"type": "object",
@@ -64,7 +76,9 @@
 				"a": {"$ref": "#/definitions/Element"},
 				"b": {"$ref": "#/definitions/Element"}
 			},
-			"required": ["a", "b"]
+			"required": ["a", "b"],
+			"title": "The Montgomery curve model.",
+			"description": "The Montgomery curve model, requires the a and b coefficients. See https://www.hyperelliptic.org/EFD/g1p/auto-montgom.html."
 		},
 		"PrimeField": {
 			"type": "object",
@@ -73,7 +87,9 @@
 				"p": {"$ref": "#/definitions/Number"},
 				"bits": {"type": "integer"}
 			},
-			"required": ["p", "bits"]
+			"required": ["p", "bits"],
+			"title": "A prime field.",
+			"description": "A prime field of large characteristic. The prime `p` should have `bits` bits."
 		},
 		"BinaryField": {
 			"type": "object",
@@ -90,7 +106,9 @@
 					]
 				}
 			},
-			"required": ["degree", "poly", "bits", "basis"]
+			"required": ["degree", "poly", "bits", "basis"],
+			"title": "A binary extension field.",
+			"description": "A binary extension field (characteristic 2). The `poly` polynomial should have `degree` degree (which should be equal to `bits`). It can either specify a polynomial basis (`basis` = `poly`) or normal basis (`basis` = `normal`)."
 		},
 		"ExtenstionField": {
 			"type": "object",
@@ -101,7 +119,9 @@
 				"poly": {"$ref": "#/definitions/Polynomial"},
 				"bits": {"type": "integer"}
 			},
-			"required": ["base", "degree", "poly", "bits"]
+			"required": ["base", "degree", "poly", "bits"],
+			"title": "A general extension field.",
+			"description": "A general extension field (of characteristic not equal to 2). The `poly` polynomial should have `degree` degree. The `bits` should specify in how many bits the field representation fits (generally `degree` * number of bits of the base field). The `base` is the characteristic of the field."
 		},
 		"Point": {
 			"type": "object",
@@ -109,7 +129,9 @@
 				"x": {"$ref": "#/definitions/Element"},
 				"y": {"$ref": "#/definitions/Element"}
 			},
-			"required": ["x", "y"]
+			"required": ["x", "y"],
+			"title": "An affine point.",
+			"description": "An affine point with `x` and `y` coordinates."
 		},
 		"Curve": {
 			"type": "object",
@@ -181,7 +203,9 @@
 					}
 				}
 			],
-			"required": ["name", "category", "desc", "field", "form", "generator", "order", "cofactor"]
+			"required": ["name", "category", "desc", "field", "form", "generator", "order", "cofactor"],
+			"title": "An elliptic curve.",
+			"description": "An elliptic curve in one of the four allowed forms, specified over some field."
 		},
 		"Category": {
 			"type": "object",
@@ -190,7 +214,9 @@
 				"desc": {"type": "string"},
 				"curves": {"type": "array", "items": {"$ref": "#/definitions/Curve"}}
 			},
-			"required": ["name", "desc", "curves"]
+			"required": ["name", "desc", "curves"],
+			"title": "A category of curves.",
+			"description": "A category containing some curves."
 		}
 	},
 	"oneOf": [
