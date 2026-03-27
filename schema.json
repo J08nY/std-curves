@@ -20,6 +20,10 @@
 				"description": "A polynomial over integers. Zeros are implicit and do not need to be specified."
 			}
 		},
+		"Vector": {
+			"type": "array",
+			"items": {"$ref": "#/definitions/Number"}
+		},
 		"Element": {
 			"anyOf": [
 				{
@@ -35,10 +39,17 @@
 						"poly": {"$ref": "#/definitions/Polynomial"}
 					},
 					"required": ["poly"]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"coeffs": {"$ref": "#/definitions/Vector"}
+					},
+					"required": ["coeffs"]
 				}
 			],
 			"title": "A field element.",
-			"description": "A field element is either a raw number or a polynomial."
+			"description": "A field element is either a raw number, Vector of Numbers, or a polynomial."
 		},
 		"Weierstrass": {
 			"type": "object",
@@ -123,6 +134,21 @@
 			"title": "A general extension field.",
 			"description": "A general extension field (of characteristic not equal to 2). The `poly` polynomial should have `degree` degree. The `bits` should specify in how many bits the field representation fits (generally `degree` * number of bits of the base field). The `base` is the characteristic of the field."
 		},
+		"TowerField": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "Tower"},
+				"base": {"oneOf": [
+					{"$ref": "#/definitions/PrimeField"},
+					{"$ref": "#/definitions/TowerField"}
+				]},
+				"degree": {"type": "integer"},
+				"monic": {"$ref": "#/definitions/Vector"}
+			},
+			"required": ["base", "degree", "monic"],
+			"title": "A Tower field.",
+			"description": "A tower field with monic irreducible polynomials. `monic` encodes the coefficients of a monic irreducible polynomial f(x) over the base field, excluding the leading coefficient, which is implicitly 1. The length of `monic` must match `degree`, so that f(x) = x^degree + monic[degree-1] * x^{degree-1} + ... + monic[0]. The `base` field is the subfield being extended by this tower step."
+		},
 		"Point": {
 			"type": "object",
 			"properties": {
@@ -144,7 +170,8 @@
 					"oneOf": [
 						{"$ref": "#/definitions/PrimeField"},
 						{"$ref": "#/definitions/BinaryField"},
-						{"$ref": "#/definitions/ExtenstionField"}
+						{"$ref": "#/definitions/ExtenstionField"},
+						{"$ref": "#/definitions/TowerField"}
 					]
 				},
 				"form": {
