@@ -3,52 +3,22 @@ const path = require(`path`);
 exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
-    type Term {
-      power: Int!
-      coeff: String!
-    }
-    type Element {
-      raw: String
-      poly: [Term]
-    }
-    enum FieldType {
-      Prime
-      Binary
-      Extension
-    }
-    type Field {
-      type: FieldType
-      p: String
-      poly: [Term]
-      base: String
-      degree: Int
-      bits: Int
-    }
-    type Point {
-      x: Element
-      y: Element
-    }
     enum Form {
       Weierstrass
       Montgomery
       Edwards
       TwistedEdwards
     }
-    type Params @dontInfer {
-      a: Element
-      b: Element
-      c: Element
-      d: Element
-    }
     type Curve implements Node {
       name: String!
       category: String!
       desc: String
       oid: String
-      field: Field
+      field: JSON
       form: Form
-      params: Params
-      generator: Point
+      params: JSON
+      generator: JSON
+      characteristics: JSON
       order: String!
       cofactor: String!
       aliases: [String]
