@@ -234,6 +234,7 @@
       "name": "BLS48-581-G2",
       "category": "bls",
       "desc": "Curve (G2) from https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/ in section 4.3 and https://doi.org/10.1007/978-3-319-61204-1_4",
+      "field": {
         "type": "Tower",
         "degree": 2,
         "monic": ["0x00", "0x00", "0x01", "0x00"],
