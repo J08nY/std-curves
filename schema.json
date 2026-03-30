@@ -13,16 +13,15 @@
 				"type": "object",
 				"properties": {
 					"power": {"type":  "integer"},
-					"coeff": {"$ref":  "#/definitions/Number"}
+					"coeff": {"oneOf": [
+						{"$ref":  "#/definitions/Number"},
+						{"$ref":  "#/definitions/Polynomial"}
+					]}
 				},
 				"required": ["power", "coeff"],
 				"title": "A polynomial.",
-				"description": "A polynomial over integers. Zeros are implicit and do not need to be specified."
+				"description": "A polynomial over coefficients. The coefficients are either numbers or polynomials. Zeros are implicit and do not need to be specified."
 			}
-		},
-		"Vector": {
-			"type": "array",
-			"items": {"$ref": "#/definitions/Number"}
 		},
 		"Element": {
 			"anyOf": [
@@ -39,13 +38,6 @@
 						"poly": {"$ref": "#/definitions/Polynomial"}
 					},
 					"required": ["poly"]
-				},
-				{
-					"type": "object",
-					"properties": {
-						"coeffs": {"$ref": "#/definitions/Vector"}
-					},
-					"required": ["coeffs"]
 				}
 			],
 			"title": "A field element.",
@@ -143,11 +135,11 @@
 					{"$ref": "#/definitions/TowerField"}
 				]},
 				"degree": {"type": "integer"},
-				"monic": {"$ref": "#/definitions/Vector"}
+				"poly": {"$ref": "#/definitions/Polynomial"}
 			},
-			"required": ["base", "degree", "monic"],
-			"title": "A Tower field.",
-			"description": "A tower field with monic irreducible polynomials. `monic` encodes the coefficients of a monic irreducible polynomial f(x) over the base field, excluding the leading coefficient, which is implicitly 1. The length of `monic` must match `degree`, so that f(x) = x^degree + monic[degree-1] * x^{degree-1} + ... + monic[0]. The `base` field is the subfield being extended by this tower step."
+			"required": ["base", "degree", "poly"],
+			"title": "A field tower.",
+			"description": "A field tower is a nested sequence of field extensions. Each level extends its base field using an irreducible polynomial whose highest power is equal to the extension degree. The root base of the tower is always a PrimeField. Elements of a field tower are represented as (nested) polynomials whose power values range from 0 to degree-1."
 		},
 		"Point": {
 			"type": "object",
