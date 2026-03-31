@@ -9,7 +9,7 @@ exports.sourceNodes = ({ actions }) => {
       Edwards
       TwistedEdwards
     }
-    type Curve implements Node {
+    type Curve implements Node @dontInfer {
       name: String!
       category: String!
       desc: String
@@ -23,7 +23,12 @@ exports.sourceNodes = ({ actions }) => {
       cofactor: String!
       aliases: [String]
     }
-    type Category implements Node {
+    type CurvesJson implements Node @dontInfer {
+      name: String!
+      desc: String
+      curves: [JSON]
+    }
+    type Category implements Node @dontInfer {
       name: String!
       desc: String
     }

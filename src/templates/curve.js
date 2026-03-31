@@ -26,83 +26,13 @@ export const query = graphql`
       desc
       oid
       form
-      field {
-        type
-        p
-        bits
-        degree
-        base
-        poly {
-          coeff
-          power
-        }
-        basis
-      }
-      params {
-        a {
-          raw
-          poly {
-            coeff
-            power
-          }
-        }
-        b {
-          raw
-          poly {
-            coeff
-            power
-          }
-        }
-        c {
-          raw
-          poly {
-            coeff
-            power
-          }
-        }
-        d {
-          raw
-          poly {
-            coeff
-            power
-          }
-        }
-      }
-      generator {
-        x {
-          raw
-          poly {
-            coeff
-            power
-          }
-        }
-        y {
-          raw
-          poly {
-            coeff
-            power
-          }
-        }
-      }
+      field
+      params
+      generator
       order
       cofactor
       aliases
-      characteristics {
-        seed
-        j_invariant
-        anomalous
-        cm_disc
-        conductor
-        discriminant
-        embedding_degree
-        torsion_degrees {
-          full
-          least
-          r
-        }
-        supersingular
-        trace_of_frobenius
-      }
+      characteristics
     }
   }
 `;
@@ -200,27 +130,48 @@ function CurveTable(paramNames, paramTitles, params) {
   );
 }
 
-function formatPoly(poly, mult = false) {
+const VARS = ["u", "v", "w", "z", "s"];
+
+function formatPoly(poly, mult = false, depth = 0) {
+  function isOne(c) {
+  	return c === "0x01" || c === "(1)";
+  }
+  if (depth >= VARS.length) {
+    throw new Error("Polynomial depth too deep");
+  }
+
+  if (!Array.isArray(poly)) return "";
+
+  const v = VARS[depth];
+
   return poly
     .map(term => {
+      let coeff = term["coeff"];
+      if (Array.isArray(coeff)) {
+        coeff = `(${formatPoly(coeff, mult, depth + 1)})`;
+      }
+
       if (term["power"] === 0) {
-        if (term["coeff"] === "0x01") {
+        if (isOne(coeff)) {
           return "1";
         }
-        return term["coeff"];
+        return coeff;
       } else {
         return `${
-          term["coeff"] === "0x01" ? "" : term["coeff"] + (mult ? " *" : "")
-        } x^${term["power"]}`;
+          isOne(coeff) ? "" : coeff + (mult ? " *" : "")
+        } ${v}^${term["power"]}`;
       }
     })
-    .join(" + ");
+    .join(" + ").trim();
 }
 
 function formatElement(element) {
-  if (element["raw"] !== null) {
+  if (element === null || element === undefined) {
+    return "";
+  }
+  if (element["raw"] !== undefined && element["raw"] !== null) {
     return element["raw"];
-  } else if (element["poly"] !== null) {
+  } else if (element["poly"] !== undefined && element["poly"] !== null) {
     return formatPoly(element["poly"], true);
   } else {
     return "";
@@ -252,10 +203,34 @@ function Parameters(curve) {
   params = getParams(curve.params);
   if (curve.field.type === "Prime") {
     paramNames = ["p"];
-    paramTitles = ["field"];
+    paramTitles = ["field characteristic"];
     paramValues = [curve.field.p];
-  } else {
-    paramNames = ["m", "f(x)"];
+  } else if (curve.field.type === "Tower") {
+    paramNames = [];
+    paramTitles = [];
+    paramValues = [];
+    let field = curve.field;
+    let depth = 0;
+    let degree = 1;
+    while (field.type === "Tower") {
+      degree *= field.degree;
+      paramNames.push(`f(${VARS[depth]})`);
+      paramTitles.push(`tower level ${depth} generator polynomial`);
+      paramValues.push(formatPoly(field.poly, false, depth));
+      field = field.base;
+      depth++;
+    }
+    paramNames.reverse();
+    paramTitles.reverse();
+    paramValues.reverse();
+    paramNames.push("m");
+    paramTitles.push("extension degree");
+    paramValues.push(degree);
+    paramNames.push("p");
+    paramTitles.push("base field characteristic");
+    paramValues.push(field.p);
+  } else if (curve.field.type === "Binary" || curve.field.type === "Extension"){
+    paramNames = ["m", "f(u)"];
     paramTitles = ["field degree", "field generator polynomial"];
     paramValues = [curve.field.degree, formatPoly(curve.field.poly)];
   }
@@ -287,6 +262,29 @@ function Parameters(curve) {
   }
 
   return CurveTable(paramNames, paramTitles, paramValues);
+}
+
+function Description(curve) {
+  let bitDesc = null;
+  let fieldDesc = null;
+  if (curve.field.type === "Tower") {
+    let bits = 0;
+    let degree = 1;
+  	let field = curve.field;
+    while (field.type === "Tower") {
+      degree *= field.degree;
+      field = field.base;
+    }
+    bitDesc = `${field.bits}-bit`;
+    fieldDesc = `(degree ${degree}) ${curve.field.type.toLowerCase()}`;
+  } else {
+    bitDesc = `${curve.field.bits}-bit`;
+    fieldDesc = `${curve.field.type.toLowerCase()}`;
+  }
+
+  return (<span>
+    {bitDesc} {fieldDesc} field {curve.form} curve.
+    </span>)
 }
 
 function Characteristics(curve) {
@@ -438,6 +436,10 @@ function Equation(curve) {
     if (curve.form === "Weierstrass") {
       math = <BlockMath>y^2 \equiv x^3 + ax + b</BlockMath>;
     }
+  } else if (curve.field.type === "Tower") {
+    if (curve.form === "Weierstrass") {
+      math = <BlockMath>y^2 \equiv x^3 + ax + b</BlockMath>;
+    }
   }
   if (math !== null) {
     return (
@@ -586,6 +588,38 @@ function SageCode(curve) {
     } else {
       sageCode = null;
     }
+  } else if (curve.field.type === "Tower") {
+    function getSageTower(field, depth) {
+      if (field.type === "Prime") {
+        return `K${depth} = GF(${field.p})\n`;
+      }
+      let res = getSageTower(field.base, depth + 1);
+      const v = VARS[depth];
+      res += `_R.<${v}> = K${depth + 1}[]\n`;
+      res += `K${depth}.<${v}> = K${depth + 1}.extension(${formatPoly(
+        field.poly,
+        true,
+        depth
+      )})\n`;
+      return res;
+    }
+    sageCode += getSageTower(curve.field, 0);
+    sageCode += `K = K0\n`;
+    if (curve.form === "Weierstrass") {
+      sageCode += `a = K(${formatElement(curve.params.a)})\n`;
+      sageCode += `b = K(${formatElement(curve.params.b)})\n`;
+      sageCode += `E = EllipticCurve(K, (a, b))\n`;
+      sageCode += `E.set_order(${curve.order} * ${curve.cofactor})\n`;
+      if (curve.generator) {
+        sageCode += `G = E(K(${formatElement(
+          curve.generator.x
+        )}), K(${formatElement(curve.generator.y)}))`;
+      } else {
+        sageCode += `# No generator defined\n`;
+      }
+    } else {
+      sageCode = null;
+    }
   }
   return sageCode;
 }
@@ -635,6 +669,60 @@ function PariCode(curve) {
         pariCode += `G = [Mod(${formatElement(
           curve.generator.x
         )}, p), Mod(${formatElement(curve.generator.y)}, p)]`;
+      } else {
+        pariCode += `\\\\ No generator defined`;
+      }
+    } else {
+      pariCode = null;
+    }
+  } else if (curve.field.type === "Tower") {
+    function getPariTower(field, depth) {
+      if (field.type === "Prime") {
+        return {
+          code: `p = ${field.p};\nonep = Mod(1, p);\n`,
+          vars: []
+        };
+      }
+      let res = getPariTower(field.base, depth + 1);
+      const currentVar = VARS[depth];
+      const polyString = formatPoly(field.poly, true, depth);
+      const polyForPari = polyString.replace(
+        new RegExp(currentVar, "g"),
+        "x"
+      );
+
+      let code = res.code;
+      if (res.vars.length === 0) {
+        code += `\\\\ ${currentVar} extension\n`;
+        code += `${currentVar} = ffgen((${polyForPari}) * onep, '${currentVar});\n`;
+        //code += `if ((${polyString}) != 0, error("${currentVar} relation failed"));\n`;
+        return { code, vars: [currentVar] };
+      } else {
+        const prevVar = res.vars[0];
+        code += `\\\\ ${currentVar} extension\n`;
+        code += `e${currentVar} = ffextend(${prevVar}, (${polyForPari}), '${currentVar});\n`;
+        code += `${currentVar} = e${currentVar}[1];\n`;
+        code += `m${prevVar} = e${currentVar}[2];\n`;
+        res.vars.forEach(v => {
+          code += `${v} = ffmap(m${prevVar}, ${v});\n`;
+        });
+        //code += `if ((${polyString}) != 0, error("${currentVar} relation failed"));\n`;
+        return { code, vars: [currentVar, ...res.vars] };
+      }
+    }
+    const tower = getPariTower(curve.field, 0);
+    pariCode += tower.code;
+    const topVar = tower.vars[0];
+    if (curve.form === "Weierstrass") {
+      pariCode += `a = (${formatElement(curve.params.a)}) + 0*${topVar}\n`;
+      pariCode += `b = (${formatElement(curve.params.b)}) + 0*${topVar}\n`;
+      pariCode += `E = ellinit([a, b])\n`;
+      pariCode += `E[16][1] = ${curve.order} * ${curve.cofactor}\n`;
+      if (curve.generator) {
+        pariCode += `G = [(${formatElement(
+          curve.generator.x
+        )}), (${formatElement(curve.generator.y)})]\n`;
+        //pariCode += `if (!ellisoncurve(E, G), error("Generator not on curve"));\n`;
       } else {
         pariCode += `\\\\ No generator defined`;
       }
@@ -710,6 +798,7 @@ function JsonBox(curve) {
 
 export default ({ data, location, pageContext }) => {
   let dataTable = Parameters(data.curve);
+  let desc = Description(data.curve);
   let chars = Characteristics(data.curve);
   let equation = Equation(data.curve);
   let aliases = Aliases(data.curve);
@@ -719,8 +808,7 @@ export default ({ data, location, pageContext }) => {
   return (
     <Entry location={location} title={pageContext.name}>
       <h2>{pageContext.name}</h2>
-      {data.curve.field.bits}-bit {data.curve.field.type.toLowerCase()} field{" "}
-      {data.curve.form} curve.
+      {desc}
       <br />
       {is_nullundef(data.curve.desc) || data.curve.desc === "" ? null : (
         <div>
