@@ -13,11 +13,14 @@
 				"type": "object",
 				"properties": {
 					"power": {"type":  "integer"},
-					"coeff": {"$ref":  "#/definitions/Number"}
+					"coeff": {"oneOf": [
+						{"$ref":  "#/definitions/Number"},
+						{"$ref":  "#/definitions/Polynomial"}
+					]}
 				},
 				"required": ["power", "coeff"],
 				"title": "A polynomial.",
-				"description": "A polynomial over integers. Zeros are implicit and do not need to be specified."
+				"description": "A polynomial over coefficients. The coefficients are either numbers or polynomials. Zeros are implicit and do not need to be specified."
 			}
 		},
 		"Element": {
@@ -38,7 +41,7 @@
 				}
 			],
 			"title": "A field element.",
-			"description": "A field element is either a raw number or a polynomial."
+			"description": "A field element is either a raw number, Vector of Numbers, or a polynomial."
 		},
 		"Weierstrass": {
 			"type": "object",
@@ -123,6 +126,21 @@
 			"title": "A general extension field.",
 			"description": "A general extension field (of characteristic not equal to 2). The `poly` polynomial should have `degree` degree. The `bits` should specify in how many bits the field representation fits (generally `degree` * number of bits of the base field). The `base` is the characteristic of the field."
 		},
+		"TowerField": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "Tower"},
+				"base": {"oneOf": [
+					{"$ref": "#/definitions/PrimeField"},
+					{"$ref": "#/definitions/TowerField"}
+				]},
+				"degree": {"type": "integer"},
+				"poly": {"$ref": "#/definitions/Polynomial"}
+			},
+			"required": ["base", "degree", "poly"],
+			"title": "A field tower.",
+			"description": "A field tower is a nested sequence of field extensions. Each level extends its base field using an irreducible polynomial whose highest power is equal to the extension degree. The root base of the tower is always a PrimeField. Elements of a field tower are represented as (nested) polynomials whose power values range from 0 to degree-1."
+		},
 		"Point": {
 			"type": "object",
 			"properties": {
@@ -144,7 +162,8 @@
 					"oneOf": [
 						{"$ref": "#/definitions/PrimeField"},
 						{"$ref": "#/definitions/BinaryField"},
-						{"$ref": "#/definitions/ExtenstionField"}
+						{"$ref": "#/definitions/ExtenstionField"},
+						{"$ref": "#/definitions/TowerField"}
 					]
 				},
 				"form": {
