@@ -80,7 +80,6 @@ for directory in $(ls -d */); do
 		name=$(echo "$curve" | jq -r ".name")
 		form=$(echo "$curve" | jq -r ".form")
 
-
 		if [ -n "$1" ] && [ "$directory$name" != "$1" ]; then
 			continue
 		fi
@@ -161,7 +160,7 @@ for directory in $(ls -d */); do
 done
 
 echo "-----"
-if [ "$warns" != 0]; then
+if [ "$warns" != 0 ]; then
 	echo "There were $warns warnings"
 fi
 if [ "$errors" != 0 ]; then
