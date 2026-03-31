@@ -3,7 +3,7 @@
 	"definitions": {
 		"Number": {
 			"type": "string",
-			"pattern": "^(0x[0-9a-fA-F]+|[0-9]+)?$",
+			"pattern": "^-?(0x[0-9a-fA-F]+|[0-9]+)?$",
 			"title": "A number.",
 			"description": "A hexadecimal (0x prefix) or decimal number."
 		},
@@ -222,7 +222,7 @@
 					}
 				}
 			],
-			"required": ["name", "category", "desc", "field", "form", "generator", "order", "cofactor"],
+			"required": ["name", "category", "desc", "field", "form", "order", "cofactor"],
 			"title": "An elliptic curve.",
 			"description": "An elliptic curve in one of the four allowed forms, specified over some field."
 		},
