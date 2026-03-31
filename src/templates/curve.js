@@ -221,7 +221,7 @@ function Parameters(curve) {
       depth++;
     }
     paramNames.reverse();
-    paramTitles.reverse();
+    //paramTitles.reverse(); // Do not reverse the titles as the depths are the other way around to levels.
     paramValues.reverse();
     paramNames.push("m");
     paramTitles.push("extension degree");
