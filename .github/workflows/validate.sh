@@ -1,5 +1,9 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m'
 
 to_bc() {
 	local input
@@ -42,6 +46,7 @@ from_bc() {
 }
 
 errors=0
+warns=0
 for directory in $(ls -d */); do
 	curves="${directory}curves.json"
 	if [ ! -e "$curves" ]; then
@@ -80,10 +85,10 @@ for directory in $(ls -d */); do
 			# Reduce coefficients, some curves come not-reduced (BADA55...)
 			a_reduced=$(echo "ibase=16;obase=10; $(to_bc $a) % $(to_bc $p)" | bc | from_bc)
 			b_reduced=$(echo "ibase=16;obase=10; $(to_bc $b) % $(to_bc $p)" | bc | from_bc)
-			computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp $bits 2>/dev/null)
+			computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp --metadata $bits 2>/dev/null)
 			if [ "$?" -ne 0 ]; then
 				bits=$((bits+1))
-				computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp $bits 2>/dev/null)
+				computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp --metadata $bits 2>/dev/null)
 			fi
 			;;
 
@@ -97,11 +102,11 @@ for directory in $(ls -d */); do
 			e1=$(echo "$curve" | jq -r ".field.poly[0].power")
 			e2=$(echo "$curve" | jq -r ".field.poly[1].power")
 			e3=$(echo "$curve" | jq -r ".field.poly[2].power")
-			computed_curve=$(echo -e "$degree\n$e1\n$e2\n$e3\n$a\n$b\n" | ./ecgen-static --f2m $bits 2>/dev/null)
+			computed_curve=$(echo -e "$degree\n$e1\n$e2\n$e3\n$a\n$b\n" | ./ecgen-static --f2m --metadata $bits 2>/dev/null)
 			;;
 
 			*)
-			echo " ?? Unknown curve field: $field_type"
+			echo " -> Skipping, not Prime or Binary field"
 			continue
 			;;
 		esac
@@ -109,13 +114,38 @@ for directory in $(ls -d */); do
 		computed_full_order=$(echo "$computed_curve" | jq -r ".[0].order" | to_bc)
 		res=$(echo "ibase=16;obase=10; $full_order == $computed_full_order" | bc -q)
 		if [ "$res" != "1" ]; then
-			echo "Wrong curve order! $full_order vs $computed_full_order" >&2
+			echo -e "${RED}Wrong curve order! $full_order vs $computed_full_order${NC}" >&2
 			errors=$((errors+1))
+		fi
+
+		characteristics=$(echo "$curve" | jq -r ".characteristics")
+		declare -A var_map
+		var_map[j_inv]=inv
+		var_map[discriminant]=discriminant
+		var_map[embedding_degree]=embedding_degree
+		var_map[trace_of_frobenius]=frobenius
+		var_map[cm_disc]=cm_discriminant
+		var_map[conductor]=conductor
+		if [ -n "$characteristics" ]; then
+			for var in "${!var_map[@]}"; do
+				own=$(echo "$characteristics" | jq -r ".$var")
+				if [ -n "$own" -a "$own" != "null" ]; then
+					computed=$(echo "$computed_curve" | jq -r ".[0].meta.${var_map[$var]}")
+					res=$(echo "$own == $computed" | bc -q)
+					if [ "$res" != "1" ]; then
+						echo -e "${YELLOW}Bad $var! $own vs $computed${NC}" >&2
+						warns=$((warns+1))
+					fi
+				fi
+			done
 		fi
 	done
 done
 
 echo "-----"
+if [ "$warns" != 0]; then
+	echo "There were $warns warnings"
+fi
 if [ "$errors" != 0 ]; then
 	echo "Failing due to $errors failing tests"
     exit 1

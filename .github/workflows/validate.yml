@@ -1,4 +1,4 @@
-name: Order check
+name: Validate
 
 on:
   push:
@@ -15,6 +15,10 @@ jobs:
       run: |
         wget "https://github.com/J08nY/ecgen/releases/latest/download/ecgen-static"
         chmod +x ./ecgen-static
+    - name: Get check/jsonschema
+      run: pip install check-jsonschema
+    - name: Check JSON schema
+      run: check-jsonschema --schemafile schema.json */curves.json
     - name: Check the curves
       run: ./.github/workflows/validate.sh
         
