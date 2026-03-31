@@ -45,6 +45,27 @@ from_bc() {
 	fi | tr -d " \n\\\\" | tr '[:upper:]' '[:lower:]'
 }
 
+run_ecgen() {
+	local args
+	local bits
+	local input
+	local computed_curve
+
+	args="$1"
+	bits="$2"
+	input="$3"
+
+	computed_curve=$(echo -e "$input" | timeout 1m ./ecgen-static $args --metadata $bits 2>/dev/null)
+	if [ "$?" -ne 0 ]; then
+		bits=$((bits+1))
+		computed_curve=$(echo -e "$input" | timeout 1m ./ecgen-static $args --metadata $bits 2>/dev/null)
+	fi
+	if [ "$?" -ne 0 ]; then
+		computed_curve=$(echo -e "$input" | timeout 1m ./ecgen-static $args $bits 2>/dev/null)
+	fi
+	echo -e "$computed_curve"
+}
+
 errors=0
 warns=0
 for directory in $(ls -d */); do
@@ -85,11 +106,7 @@ for directory in $(ls -d */); do
 			# Reduce coefficients, some curves come not-reduced (BADA55...)
 			a_reduced=$(echo "ibase=16;obase=10; $(to_bc $a) % $(to_bc $p)" | bc | from_bc)
 			b_reduced=$(echo "ibase=16;obase=10; $(to_bc $b) % $(to_bc $p)" | bc | from_bc)
-			computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp --metadata $bits 2>/dev/null)
-			if [ "$?" -ne 0 ]; then
-				bits=$((bits+1))
-				computed_curve=$(echo -e "$p\n$a_reduced\n$b_reduced\n" | ./ecgen-static --fp --metadata $bits 2>/dev/null)
-			fi
+			computed_curve=$(run_ecgen --fp $bits "$p\n$a_reduced\n$b_reduced\n")
 			;;
 
 			Binary)
@@ -102,7 +119,7 @@ for directory in $(ls -d */); do
 			e1=$(echo "$curve" | jq -r ".field.poly[0].power")
 			e2=$(echo "$curve" | jq -r ".field.poly[1].power")
 			e3=$(echo "$curve" | jq -r ".field.poly[2].power")
-			computed_curve=$(echo -e "$degree\n$e1\n$e2\n$e3\n$a\n$b\n" | ./ecgen-static --f2m --metadata $bits 2>/dev/null)
+			computed_curve=$(run_ecgen --f2m $bits "$degree\n$e1\n$e2\n$e3\n$a\n$b\n")
 			;;
 
 			*)
@@ -129,7 +146,8 @@ for directory in $(ls -d */); do
 		if [ -n "$characteristics" ]; then
 			for var in "${!var_map[@]}"; do
 				own=$(echo "$characteristics" | jq -r ".$var")
-				if [ -n "$own" -a "$own" != "null" ]; then
+				computed=$(echo "$computed_curve" | jq -r ".[0].meta.${var_map[$var]}")
+				if [ -n "$own" -a "$computed" -a "$own" != "null" -a "$computed" != "null" ]; then
 					computed=$(echo "$computed_curve" | jq -r ".[0].meta.${var_map[$var]}")
 					res=$(echo "$own == $computed" | bc -q)
 					if [ "$res" != "1" ]; then
