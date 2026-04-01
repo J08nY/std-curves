@@ -38,49 +38,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "3635044015161711632310195875247341545243615496026401",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 4
-          },
-          {
-            "r": 7,
-            "least": 1,
-            "full": 3
-          },
-          {
-            "r": 11,
-            "least": 5,
-            "full": 10
-          },
-          {
-            "r": 13,
-            "least": 168,
-            "full": 168
-          },
-          {
-            "r": 17,
-            "least": 4,
-            "full": 8
-          },
-          {
-            "r": 19,
-            "least": 18,
-            "full": 342
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -119,49 +77,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "2078072640579877529546369501798744086521933464281",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 42
-          },
-          {
-            "r": 11,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 13,
-            "least": 4,
-            "full": 52
-          },
-          {
-            "r": 17,
-            "least": 288,
-            "full": 288
-          },
-          {
-            "r": 19,
-            "least": 2,
-            "full": 18
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -200,49 +116,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "2078072640579877529546369501798744086521933464281",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 42
-          },
-          {
-            "r": 11,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 13,
-            "least": 4,
-            "full": 52
-          },
-          {
-            "r": 17,
-            "least": 288,
-            "full": 288
-          },
-          {
-            "r": 19,
-            "least": 2,
-            "full": 18
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -281,44 +155,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "3174198868578054687708202708907759338352168921881",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 6
-          },
-          {
-            "r": 11,
-            "least": 5,
-            "full": 5
-          },
-          {
-            "r": 13,
-            "least": 6,
-            "full": 12
-          },
-          {
-            "r": 17,
-            "least": 18,
-            "full": 18
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -357,44 +194,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "3174198868578054687708202708907759338352168921881",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 6
-          },
-          {
-            "r": 11,
-            "least": 5,
-            "full": 5
-          },
-          {
-            "r": 13,
-            "least": 6,
-            "full": 12
-          },
-          {
-            "r": 17,
-            "least": 18,
-            "full": 18
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -433,44 +233,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "3174198868578054687708202708907759338352168921881",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 6
-          },
-          {
-            "r": 11,
-            "least": 5,
-            "full": 5
-          },
-          {
-            "r": 13,
-            "least": 6,
-            "full": 12
-          },
-          {
-            "r": 17,
-            "least": 18,
-            "full": 18
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -509,34 +272,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "4499938618107447589407460822204537016797125082753522493063484782009228089",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 24,
-            "full": 24
-          },
-          {
-            "r": 7,
-            "least": 16,
-            "full": 16
-          },
-          {
-            "r": 11,
-            "least": 120,
-            "full": 120
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -575,39 +311,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "5825073916691235836594933947761309058432873853684952014212489057419411481",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 11,
-            "least": 2,
-            "full": 10
-          },
-          {
-            "r": 13,
-            "least": 6,
-            "full": 12
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -646,39 +350,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "5825073916691235836594933947761309058432873853684952014212489057419411481",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 11,
-            "least": 2,
-            "full": 10
-          },
-          {
-            "r": 13,
-            "least": 6,
-            "full": 12
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -717,39 +389,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "5825073916691235836594933947761309058432873853684952014212489057419411481",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 7,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 11,
-            "least": 2,
-            "full": 10
-          },
-          {
-            "r": 13,
-            "least": 6,
-            "full": 12
-          }
-        ]
+        "conductor": "1"
       }
     }
   ]

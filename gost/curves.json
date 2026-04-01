@@ -38,49 +38,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-915",
-        "conductor": "5814239006315534931045933045806333847",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 10
-          },
-          {
-            "r": 7,
-            "least": 2,
-            "full": 6
-          },
-          {
-            "r": 11,
-            "least": 10,
-            "full": 10
-          },
-          {
-            "r": 13,
-            "least": 168,
-            "full": 168
-          },
-          {
-            "r": 17,
-            "least": 288,
-            "full": 288
-          },
-          {
-            "r": 19,
-            "least": 2,
-            "full": 18
-          }
-        ]
+        "conductor": "5814239006315534931045933045806333847"
       }
     },
     {

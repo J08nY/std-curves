@@ -38,29 +38,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "454233058418789397299203",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 6
-          },
-          {
-            "r": 5,
-            "least": 12,
-            "full": 12
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 6
-          }
-        ]
+        "conductor": "454233058418789397299203"
       }
     },
     {
@@ -99,49 +77,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "29710571568175225982381195267",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 6
-          },
-          {
-            "r": 5,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 7,
-            "least": 2,
-            "full": 6
-          },
-          {
-            "r": 11,
-            "least": 6,
-            "full": 6
-          },
-          {
-            "r": 13,
-            "least": 4,
-            "full": 12
-          },
-          {
-            "r": 17,
-            "least": 4,
-            "full": 4
-          },
-          {
-            "r": 19,
-            "least": 9,
-            "full": 18
-          }
-        ]
+        "conductor": "29710571568175225982381195267"
       }
     },
     {
@@ -219,29 +155,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "129607518034317099886745702645398241283",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 5,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 7,
-            "least": 6,
-            "full": 6
-          }
-        ]
+        "conductor": "129607518034317099886745702645398241283"
       },
       "aliases": [
         "other/Fp254BNb"
@@ -283,29 +197,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "8366863340207706741294993301075392630620163",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 5,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 7,
-            "least": 2,
-            "full": 6
-          }
-        ]
+        "conductor": "8366863340207706741294993301075392630620163"
       }
     },
     {
@@ -422,19 +314,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "2353932232174051770881173201697930752584630523839501041667",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 2
-          }
-        ]
+        "conductor": "2353932232174051770881173201697930752584630523839501041667"
       }
     },
     {
@@ -512,39 +392,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "10109980000181489923001201093401911741712157040574514822068840693771",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 6
-          },
-          {
-            "r": 5,
-            "least": 24,
-            "full": 24
-          },
-          {
-            "r": 7,
-            "least": 3,
-            "full": 6
-          },
-          {
-            "r": 11,
-            "least": 6,
-            "full": 6
-          },
-          {
-            "r": 13,
-            "least": 3,
-            "full": 12
-          }
-        ]
+        "conductor": "10109980000181489923001201093401911741712157040574514822068840693771"
       }
     },
     {
@@ -698,14 +546,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "-3",
-        "conductor": "186496302581962721809830439849867378820456242583880530431255347119471774686354153144323",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          }
-        ]
+        "conductor": "186496302581962721809830439849867378820456242583880530431255347119471774686354153144323"
       }
     },
     {

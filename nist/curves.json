@@ -44,39 +44,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "25108406941546723055343157692799058262018920874353817167917",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 8,
-            "full": 8
-          },
-          {
-            "r": 5,
-            "least": 4,
-            "full": 20
-          },
-          {
-            "r": 7,
-            "least": 48,
-            "full": 48
-          },
-          {
-            "r": 11,
-            "least": 5,
-            "full": 55
-          },
-          {
-            "r": 13,
-            "least": 4,
-            "full": 12
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -122,24 +90,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "107839786668602559178668060348078517961131556494503316152212921264703",
-        "conductor": "1",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 2
-          },
-          {
-            "r": 5,
-            "least": 6,
-            "full": 6
-          }
-        ]
+        "conductor": "1"
       }
     },
     {
@@ -184,29 +135,7 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "51463150760158332783421087533070032680028376163334078103224794776407756178469",
-        "conductor": "3",
-        "torsion_degrees": [
-          {
-            "r": 2,
-            "least": 3,
-            "full": 3
-          },
-          {
-            "r": 3,
-            "least": 2,
-            "full": 6
-          },
-          {
-            "r": 5,
-            "least": 2,
-            "full": 10
-          },
-          {
-            "r": 7,
-            "least": 16,
-            "full": 16
-          }
-        ]
+        "conductor": "3"
       }
     },
     {
