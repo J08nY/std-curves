@@ -134,7 +134,7 @@ for directory in $(ls -d */); do
 		esac
 		
 		if [ -z "$computed_curve" ]; then
-			echo -e "${YELLOW}Timed-out${NC}" >&2
+			echo -e "${YELLOW} -> Timed-out${NC}" >&2
 			continue
 		fi
 

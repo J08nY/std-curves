@@ -3,6 +3,8 @@ import glob
 import json
 import sys
 
+from cysignals.alarm import alarm, AlarmInterrupt
+
 
 VARS = ["u", "v", "w", "z", "s"]
 RED = '\033[0;31m'
@@ -96,8 +98,11 @@ def build_tower_field(field, depth=0):
 	# Get modulus polynomial
 	modulus = poly_to_sage(field["poly"], R, depth)
 
+	if modulus.degree() != field["degree"]:
+		raise ValueError("Bad extension degree")
+
 	# Create extension field using .extension(degree, ...)
-	K = base_field.extension(modulus.degree(), name=var_name, modulus=modulus)
+	K = base_field.extension(modulus, name=var_name)
 
 	return K
 
@@ -107,142 +112,147 @@ def construct_curve(curve):
 	E = None
 	G = None
 	K = None
-	
-	field_type = curve["field"]["type"]
-	curve_form = curve["form"]
-	
-	if field_type == "Prime":
-		p = Integer(curve["field"]["p"])
-		K = GF(p)
+
+	try:
+		alarm(60)
+		field_type = curve["field"]["type"]
+		curve_form = curve["form"]
 		
-		if curve_form == "Weierstrass":
-			a = element_to_sage(curve["params"]["a"], K)
-			b = element_to_sage(curve["params"]["b"], K)
-			E = EllipticCurve(K, (a, b))
+		if field_type == "Prime":
+			p = Integer(curve["field"]["p"])
+			K = GF(p)
 			
-			if "generator" in curve and curve["generator"]:
-				gx = element_to_sage(curve["generator"]["x"], K)
-				gy = element_to_sage(curve["generator"]["y"], K)
-				G = E(gx, gy)
-		
-		elif curve_form == "Edwards":
-			if int(curve["params"]["c"]["raw"], 16) == 1:
+			if curve_form == "Weierstrass":
+				a = element_to_sage(curve["params"]["a"], K)
+				b = element_to_sage(curve["params"]["b"], K)
+				E = EllipticCurve(K, (a, b))
+				
+				if "generator" in curve and curve["generator"]:
+					gx = element_to_sage(curve["generator"]["x"], K)
+					gy = element_to_sage(curve["generator"]["y"], K)
+					G = E(gx, gy)
+			
+			elif curve_form == "Edwards":
+				if int(curve["params"]["c"]["raw"], 16) == 1:
+					d = element_to_sage(curve["params"]["d"], K)
+					# Convert Edwards to Weierstrass form
+					E = EllipticCurve(K, (0, K(2 * (1 + d)/(1 - d)^2), 0, K(1/(1 - d)^2), 0))
+			
+			elif curve_form == "Montgomery":
+				A = element_to_sage(curve["params"]["a"], K)
+				B = element_to_sage(curve["params"]["b"], K)
+				# Convert Montgomery to Weierstrass form
+				E = EllipticCurve(K, ((3 - A^2)/(3 * B^2), (2 * A^3 - 9 * A)/(27 * B^3)))
+				
+				if "generator" in curve and curve["generator"]:
+					# Convert generator from Montgomery to Weierstrass coordinates
+					mx = element_to_sage(curve["generator"]["x"], K)
+					my = element_to_sage(curve["generator"]["y"], K)
+					wx = mx/B + A/(3*B)
+					wy = my/B
+					G = E(wx, wy)
+			
+			elif curve_form == "TwistedEdwards":
+				a = element_to_sage(curve["params"]["a"], K)
 				d = element_to_sage(curve["params"]["d"], K)
-				# Convert Edwards to Weierstrass form
-				E = EllipticCurve(K, (0, K(2 * (1 + d)/(1 - d)^2), 0, K(1/(1 - d)^2), 0))
-		
-		elif curve_form == "Montgomery":
-			A = element_to_sage(curve["params"]["a"], K)
-			B = element_to_sage(curve["params"]["b"], K)
-			# Convert Montgomery to Weierstrass form
-			E = EllipticCurve(K, ((3 - A^2)/(3 * B^2), (2 * A^3 - 9 * A)/(27 * B^3)))
-			
-			if "generator" in curve and curve["generator"]:
-				# Convert generator from Montgomery to Weierstrass coordinates
-				mx = element_to_sage(curve["generator"]["x"], K)
-				my = element_to_sage(curve["generator"]["y"], K)
-				wx = mx/B + A/(3*B)
-				wy = my/B
-				G = E(wx, wy)
-		
-		elif curve_form == "TwistedEdwards":
-			a = element_to_sage(curve["params"]["a"], K)
-			d = element_to_sage(curve["params"]["d"], K)
-			# Convert TwistedEdwards to Weierstrass form
-			E = EllipticCurve(K, (K(-1/48) * (a^2 + 14*a*d + d^2), K(1/864) * (a + d) * (-a^2 + 34*a*d - d^2)))
-			
-			if "generator" in curve and curve["generator"]:
-				# Convert generator from TwistedEdwards to Weierstrass coordinates
-				tx = element_to_sage(curve["generator"]["x"], K)
-				ty = element_to_sage(curve["generator"]["y"], K)
-				wx = (5*a + a*ty - 5*d*ty - d)/(12 - 12*ty)
-				wy = (a + a*ty - d*ty - d)/(4*tx - 4*tx*ty)
-				G = E(wx, wy)
-		
-		if E is not None:
-			order = Integer(curve["order"]) * Integer(curve["cofactor"])
-			E.set_order(order)
-	
-	elif field_type == "Binary":
-		if curve_form == "Weierstrass":
-			degree = curve["field"]["degree"]
-			R = PolynomialRing(GF(2), 'x')
-			modulus = poly_to_sage(curve["field"]["poly"], R)
-			K = GF(2^degree, name='x', modulus=modulus)
-			
-			if curve["field"]["basis"] == "poly":
-				a_val = Integer(curve["params"]["a"]["raw"])
-				b_val = Integer(curve["params"]["b"]["raw"])
-				# Binary field Weierstrass: y^2 + xy = x^3 + ax^2 + b
-				E = EllipticCurve(K, (1, K.from_integer(a_val), 0, 0, K.from_integer(b_val)))
+				# Convert TwistedEdwards to Weierstrass form
+				E = EllipticCurve(K, (K(-1/48) * (a^2 + 14*a*d + d^2), K(1/864) * (a + d) * (-a^2 + 34*a*d - d^2)))
 				
 				if "generator" in curve and curve["generator"]:
-					gx = K.from_integer(Integer(curve["generator"]["x"]["raw"]))
-					gy = K.from_integer(Integer(curve["generator"]["y"]["raw"]))
-					G = E(gx, gy)
-			
-			elif curve["field"]["basis"] == "normal":
-				z = K.gen()
-				a_val = Integer(curve["params"]["a"]["raw"])
-				b_val = Integer(curve["params"]["b"]["raw"])
-				
-				# Convert from normal basis representation
-				def from_normal_basis(val):
-					result = K(0)
-					for i, bit in enumerate(Integer(val).binary()):
-						result += Integer(bit) * z^(2^i)
-					return result
-				
-				a_k = from_normal_basis(a_val)
-				b_k = from_normal_basis(b_val)
-				E = EllipticCurve(K, (1, a_k, 0, 0, b_k))
-				
-				if "generator" in curve and curve["generator"]:
-					gx = from_normal_basis(Integer(curve["generator"]["x"]["raw"]))
-					gy = from_normal_basis(Integer(curve["generator"]["y"]["raw"]))
-					G = E(gx, gy)
+					# Convert generator from TwistedEdwards to Weierstrass coordinates
+					tx = element_to_sage(curve["generator"]["x"], K)
+					ty = element_to_sage(curve["generator"]["y"], K)
+					wx = (5*a + a*ty - 5*d*ty - d)/(12 - 12*ty)
+					wy = (a + a*ty - d*ty - d)/(4*tx - 4*tx*ty)
+					G = E(wx, wy)
 			
 			if E is not None:
 				order = Integer(curve["order"]) * Integer(curve["cofactor"])
 				E.set_order(order)
-	
-	elif field_type == "Extension":
-		if curve_form == "Weierstrass":
-			base = Integer(curve["field"]["base"])
-			degree = curve["field"]["degree"]
-			
-			R = PolynomialRing(GF(base), 'x')
-			modulus = poly_to_sage(curve["field"]["poly"], R)
-			K = GF(base^degree, name='x', modulus=modulus)
-			
-			a = element_to_sage(curve["params"]["a"], K)
-			b = element_to_sage(curve["params"]["b"], K)
-			E = EllipticCurve(K, (a, b))
-			
-			order = Integer(curve["order"]) * Integer(curve["cofactor"])
-			E.set_order(order)
-			
-			if "generator" in curve and curve["generator"]:
-				gx = element_to_sage(curve["generator"]["x"], K)
-				gy = element_to_sage(curve["generator"]["y"], K)
-				G = E(gx, gy)
-	
-	elif field_type == "Tower":
-		if curve_form == "Weierstrass":
-			K = build_tower_field(curve["field"], 0)
-			
-			a = element_to_sage(curve["params"]["a"], K)
-			b = element_to_sage(curve["params"]["b"], K)
-			E = EllipticCurve(K, (a, b))
-			
-			order = Integer(curve["order"]) * Integer(curve["cofactor"])
-			E.set_order(order)
-			
-			if "generator" in curve and curve["generator"]:
-				gx = element_to_sage(curve["generator"]["x"], K)
-				gy = element_to_sage(curve["generator"]["y"], K)
-				G = E(gx, gy)
-	
+		
+		elif field_type == "Binary":
+			if curve_form == "Weierstrass":
+				degree = curve["field"]["degree"]
+				R = PolynomialRing(GF(2), 'x')
+				modulus = poly_to_sage(curve["field"]["poly"], R)
+				K = GF(2^degree, name='x', modulus=modulus)
+				
+				if curve["field"]["basis"] == "poly":
+					a_val = Integer(curve["params"]["a"]["raw"])
+					b_val = Integer(curve["params"]["b"]["raw"])
+					# Binary field Weierstrass: y^2 + xy = x^3 + ax^2 + b
+					E = EllipticCurve(K, (1, K.from_integer(a_val), 0, 0, K.from_integer(b_val)))
+					
+					if "generator" in curve and curve["generator"]:
+						gx = K.from_integer(Integer(curve["generator"]["x"]["raw"]))
+						gy = K.from_integer(Integer(curve["generator"]["y"]["raw"]))
+						G = E(gx, gy)
+				
+				elif curve["field"]["basis"] == "normal":
+					z = K.gen()
+					a_val = Integer(curve["params"]["a"]["raw"])
+					b_val = Integer(curve["params"]["b"]["raw"])
+					
+					# Convert from normal basis representation
+					def from_normal_basis(val):
+						result = K(0)
+						for i, bit in enumerate(Integer(val).binary()):
+							result += Integer(bit) * z^(2^i)
+						return result
+					
+					a_k = from_normal_basis(a_val)
+					b_k = from_normal_basis(b_val)
+					E = EllipticCurve(K, (1, a_k, 0, 0, b_k))
+					
+					if "generator" in curve and curve["generator"]:
+						gx = from_normal_basis(Integer(curve["generator"]["x"]["raw"]))
+						gy = from_normal_basis(Integer(curve["generator"]["y"]["raw"]))
+						G = E(gx, gy)
+				
+				if E is not None:
+					order = Integer(curve["order"]) * Integer(curve["cofactor"])
+					E.set_order(order)
+		
+		elif field_type == "Extension":
+			if curve_form == "Weierstrass":
+				base = Integer(curve["field"]["base"])
+				degree = curve["field"]["degree"]
+				
+				R = PolynomialRing(GF(base), 'x')
+				modulus = poly_to_sage(curve["field"]["poly"], R)
+				K = GF(base^degree, name='x', modulus=modulus)
+				
+				a = element_to_sage(curve["params"]["a"], K)
+				b = element_to_sage(curve["params"]["b"], K)
+				E = EllipticCurve(K, (a, b))
+				
+				order = Integer(curve["order"]) * Integer(curve["cofactor"])
+				E.set_order(order)
+				
+				if "generator" in curve and curve["generator"]:
+					gx = element_to_sage(curve["generator"]["x"], K)
+					gy = element_to_sage(curve["generator"]["y"], K)
+					G = E(gx, gy)
+		
+		elif field_type == "Tower":
+			if curve_form == "Weierstrass":
+				K = build_tower_field(curve["field"], 0)
+				
+				a = element_to_sage(curve["params"]["a"], K)
+				b = element_to_sage(curve["params"]["b"], K)
+				E = EllipticCurve(K, (a, b))
+				
+				order = Integer(curve["order"]) * Integer(curve["cofactor"])
+				E.set_order(order)
+				
+				if "generator" in curve and curve["generator"]:
+					gx = element_to_sage(curve["generator"]["x"], K)
+					gy = element_to_sage(curve["generator"]["y"], K)
+					G = E(gx, gy)
+	except AlarmInterrupt:
+		print(YELLOW, "-> Timed out", NC, file=sys.stderr)
+	finally:
+		cancel_alarm()
 	return E, G
 
 
@@ -322,8 +332,8 @@ def verify_curves(json_path):
 	with open(json_path, 'r') as f:
 		data = json.load(f)
 	for c in data["curves"]:
-		E, G = construct_curve(c)
 		print(c["name"], file=sys.stderr)
+		E, G = construct_curve(c)		
 		errors += verify_curve(c, E, G)
 	return errors
 

@@ -197,8 +197,8 @@
       "order": "0x1cfb69d4ca675f520cce760202687600ff8f87007419047174fd06b52876e7e1",
       "cofactor": "0x04",
       "characteristics": {
-        "discriminant": "-0x08",
-        "j_invariant": "0x1f40"
+        "discriminant": "-8",
+        "j_invariant": "8000"
       }
     },
     {
