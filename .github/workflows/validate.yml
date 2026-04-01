@@ -39,4 +39,5 @@ jobs:
           sage
         cache-downloads: true
     - name: Check the curves
+      shell: bash -l {0}
       run: sage ./.github/workflows/validate.sage
