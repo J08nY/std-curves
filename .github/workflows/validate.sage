@@ -328,6 +328,9 @@ def verify_curves(json_path):
 	return errors
 
 
+print(__name__)
+from pathlib import Path
+print(Path.cwd())
 if __name__ == "sage.all":
 	errors = 0
 	if len(sys.argv) == 1:
