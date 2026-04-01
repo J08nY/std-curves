@@ -29,12 +29,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v6
-    - name: Get SageMath
-      run: |
-        conda config --add channels conda-forge
-        conda create -n sage sage python=3.11
+    - uses: mamba-org/setup-micromamba@v3
+      with:
+        micromamba-version: "latest"
+        environment-name: sage
+        create-args: >-
+          -c conda-forge
+          python=3.11
+          sagemath
+        cache-downloads: true
     - name: Check the curves
-      run: |
-        conda init
-        conda activate sage
-        sage ./.github/workflows/validate.sage
+      run: sage ./.github/workflows/validate.sage
