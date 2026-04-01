@@ -33,5 +33,5 @@ jobs:
       run: conda create -n sage sage python=3.11
     - name: Check the curves
       run: |
-      conda activate sage
-      sage ./.github/workflows/validate.sage
+        conda activate sage
+        sage ./.github/workflows/validate.sage
