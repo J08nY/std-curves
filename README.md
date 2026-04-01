@@ -1,6 +1,6 @@
 # std-curves
 
-See our [website](https://neuromancer.sk/std/).
+See our [website](https://std.neuromancer.sk/).
 
 **Standard curve database.** This repository contains a list of standardised elliptic curves, collected from many standards
 by the team at [Centre for Research on Cryptography and Security](https://crocs.fi.muni.cz). For our other
@@ -12,7 +12,7 @@ projects related to elliptic curve cryptography, see:
  - [ecgen](https://github.com/J08nY/ecgen): A tool for generating EC domain parameters
 
 The curve listing includes its parameters, computed characteristics such as number of points or j-invariant as
-well as SAGE code which can be used to instantiate the curve and a JSON export of all of the curve data.
+well as SageMath and PARI/GP code which can be used to instantiate the curve and a JSON export of all of the curve data.
 New curves are currently being added, the database is definitely not complete.
 
 The presence of a certain curve in this database does not mean that the curve is secure, only that it is notable
@@ -27,5 +27,5 @@ See `schema.json` for the JSON schema of the files.
 
 ## Website
 
-The website is hosted at <https://neuromancer.sk/std/>, its sources
+The website is hosted at <https://std.neuromancer.sk/>, its sources
 are available in the `page` branch.

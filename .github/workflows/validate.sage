@@ -5,6 +5,7 @@ import sys
 
 from cysignals.alarm import alarm, AlarmInterrupt
 
+proof.all(False)
 
 VARS = ["u", "v", "w", "z", "s"]
 RED = '\033[0;31m'
