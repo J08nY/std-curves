@@ -36,7 +36,7 @@ jobs:
         create-args: >-
           -c conda-forge
           python=3.11
-          sagemath
+          sage
         cache-downloads: true
     - name: Check the curves
       run: sage ./.github/workflows/validate.sage
