@@ -63,12 +63,13 @@ run_ecgen() {
 	fi
 	if [ "$?" -ne 0 ]; then
 		echo -n "." >&2
-		computed_curve=$(echo -e "$input" | timeout 2m ./ecgen-static $args $bits 2>/dev/null)
+		computed_curve=$(echo -e "$input" | timeout 3m ./ecgen-static $args $bits 2>/dev/null)
 	fi
 	if [ "$?" -ne 0 ]; then
 		echo -n "." >&2
+	else
+		echo -e "$computed_curve"
 	fi
-	echo -e "$computed_curve"
 }
 
 errors=0
@@ -131,16 +132,16 @@ for directory in $(ls -d */); do
 			continue
 			;;
 		esac
-
+		
 		if [ -z "$computed_curve" ]; then
-			echo -e "${YELLOW}Timed-out" >&2
+			echo -e "${YELLOW}Timed-out${NC}" >&2
 			continue
 		fi
 
 		computed_full_order=$(echo "$computed_curve" | jq -r ".[0].order" | to_bc)
 		res=$(echo "ibase=16;obase=10; $full_order == $computed_full_order" | bc -q)
 		if [ "$res" != "1" ]; then
-			echo -e "${RED}Wrong curve order! $full_order vs $computed_full_order${NC}" >&2
+			echo -e "${RED} -> Wrong curve order! $full_order vs $computed_full_order${NC}" >&2
 			errors=$((errors+1))
 		fi
 
@@ -160,7 +161,7 @@ for directory in $(ls -d */); do
 					computed=$(echo "$computed_curve" | jq -r ".[0].meta.${var_map[$var]}")
 					res=$(echo "$own == $computed" | bc -q)
 					if [ "$res" != "1" ]; then
-						echo -e "${YELLOW}Bad $var! $own vs $computed${NC}" >&2
+						echo -e "${YELLOW} -> Bad $var! $own vs $computed${NC}" >&2
 						warns=$((warns+1))
 					fi
 				fi
