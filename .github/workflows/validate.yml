@@ -7,7 +7,15 @@ on:
     branches: [ data ]
 
 jobs:
-  check:
+  check-schema:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: Get check/jsonschema
+      run: pip install check-jsonschema
+    - name: Check JSON schema
+      run: check-jsonschema --schemafile schema.json */curves.json
+  check-ecgen:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v6
@@ -15,10 +23,15 @@ jobs:
       run: |
         wget "https://github.com/J08nY/ecgen/releases/latest/download/ecgen-static"
         chmod +x ./ecgen-static
-    - name: Get check/jsonschema
-      run: pip install check-jsonschema
-    - name: Check JSON schema
-      run: check-jsonschema --schemafile schema.json */curves.json
     - name: Check the curves
       run: ./.github/workflows/validate.sh
-        
+  check-sagemath:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: Get SageMath
+      run: conda create -n sage sage python=3.11
+    - name: Check the curves
+      run: |
+      conda activate sage
+      sage ./.github/workflows/validate.sage
