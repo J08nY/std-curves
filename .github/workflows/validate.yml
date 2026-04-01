@@ -30,7 +30,9 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Get SageMath
-      run: conda create -n sage sage python=3.11
+      run: |
+        conda config --add channels conda-forge
+        conda create -n sage sage python=3.11
     - name: Check the curves
       run: |
         conda activate sage
