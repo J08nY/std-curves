@@ -328,10 +328,7 @@ def verify_curves(json_path):
 	return errors
 
 
-print(__name__)
-from pathlib import Path
-print(Path.cwd())
-if __name__ == "sage.all":
+if __name__ == "sage.all" or __name__ == "__main__":
 	errors = 0
 	if len(sys.argv) == 1:
 		for category in sorted(glob.glob("*/curves.json")):
