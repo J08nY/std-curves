@@ -3,7 +3,6 @@
   "desc": "Microsoft Nothing Up My Sleeve (NUMS) curves from: <https://eprint.iacr.org/2014/130> and <https://tools.ietf.org/html/draft-black-numscurves-02>",
   "curves": [
     {
-      "form": "Weierstrass",
       "name": "numsp256d1",
       "category": "nums",
       "desc": "",
@@ -12,6 +11,7 @@
         "p": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff43",
         "bits": 256
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff40"
@@ -20,8 +20,6 @@
           "raw": "0x25581"
         }
       },
-      "order": "0xffffffffffffffffffffffffffffffffe43c8275ea265c6020ab20294751a825",
-      "cofactor": "0x01",
       "generator": {
         "x": {
           "raw": "0x01"
@@ -30,6 +28,8 @@
           "raw": "0x696f1853c1e466d7fc82c96cceeedd6bd02c2f9375894ec10bf46306c2b56c77"
         }
       },
+      "order": "0xffffffffffffffffffffffffffffffffe43c8275ea265c6020ab20294751a825",
+      "cofactor": "0x01",
       "characteristics": {
         "cm_disc": "-461806436970513507795776071208962019617834464011805499237102336028251098834763",
         "conductor": "1",
@@ -40,7 +40,6 @@
       }
     },
     {
-      "form": "TwistedEdwards",
       "name": "numsp256t1",
       "category": "nums",
       "desc": "",
@@ -49,6 +48,7 @@
         "p": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff43",
         "bits": 256
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff42"
@@ -57,8 +57,6 @@
           "raw": "0x3bee"
         }
       },
-      "order": "0x3fffffffffffffffffffffffffffffffbe6aa55ad0a6bc64e5b84e6f1122b4ad",
-      "cofactor": "0x04",
       "generator": {
         "x": {
           "raw": "0x0d"
@@ -66,10 +64,11 @@
         "y": {
           "raw": "0x7d0ab41e2a1276dba3d330b39fa046bfbe2a6d63824d303f707f6fb5331cadba"
         }
-      }
+      },
+      "order": "0x3fffffffffffffffffffffffffffffffbe6aa55ad0a6bc64e5b84e6f1122b4ad",
+      "cofactor": "0x04"
     },
     {
-      "form": "Weierstrass",
       "name": "numsp384d1",
       "category": "nums",
       "desc": "",
@@ -78,6 +77,7 @@
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec3",
         "bits": 384
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec0"
@@ -86,8 +86,6 @@
           "raw": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff77bb"
         }
       },
-      "order": "0xffffffffffffffffffffffffffffffffffffffffffffffffd61eaf1eeb5d6881beda9d3d4c37e27a604d81f67b0e61b9",
-      "cofactor": "0x01",
       "generator": {
         "x": {
           "raw": "0x02"
@@ -95,10 +93,11 @@
         "y": {
           "raw": "0x3c9f82cb4b87b4dc71e763e0663e5dbd8034ed422f04f82673330dc58d15ffa2b4a3d0bad5d30f865bcbbf503ea66f43"
         }
-      }
+      },
+      "order": "0xffffffffffffffffffffffffffffffffffffffffffffffffd61eaf1eeb5d6881beda9d3d4c37e27a604d81f67b0e61b9",
+      "cofactor": "0x01"
     },
     {
-      "form": "TwistedEdwards",
       "name": "numsp384t1",
       "category": "nums",
       "desc": "",
@@ -107,6 +106,7 @@
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec3",
         "bits": 384
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec2"
@@ -115,8 +115,6 @@
           "raw": "0x5158a"
         }
       },
-      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffecd7d11ed5a259a25a13a0458e39f4e451d6d71f70426e25",
-      "cofactor": "0x04",
       "generator": {
         "x": {
           "raw": "0x08"
@@ -124,10 +122,11 @@
         "y": {
           "raw": "0x749cdaba136ce9b65bd4471794aa619daa5c7b4c930bff8ebd798a8ae753c6d72f003860febabad534a4acf5fa7f5bee"
         }
-      }
+      },
+      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffecd7d11ed5a259a25a13a0458e39f4e451d6d71f70426e25",
+      "cofactor": "0x04"
     },
     {
-      "form": "Weierstrass",
       "name": "numsp512d1",
       "category": "nums",
       "desc": "",
@@ -136,6 +135,7 @@
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc7",
         "bits": 512
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc4"
@@ -144,8 +144,6 @@
           "raw": "0x1d99b"
         }
       },
-      "order": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5b3ca4fb94e7831b4fc258ed97d0bdc63b568b36607cd243ce153f390433555d",
-      "cofactor": "0x01",
       "generator": {
         "x": {
           "raw": "0x02"
@@ -153,10 +151,11 @@
         "y": {
           "raw": "0x1c282eb23327f9711952c250ea61ad53fcc13031cf6dd336e0b9328433afbdd8cc5a1c1f0c716fdc724dde537c2b0adb00bb3d08dc83755b205cc30d7f83cf28"
         }
-      }
+      },
+      "order": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5b3ca4fb94e7831b4fc258ed97d0bdc63b568b36607cd243ce153f390433555d",
+      "cofactor": "0x01"
     },
     {
-      "form": "TwistedEdwards",
       "name": "numsp512t1",
       "category": "nums",
       "desc": "",
@@ -165,6 +164,7 @@
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc7",
         "bits": 512
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc6"
@@ -173,8 +173,6 @@
           "raw": "0x9baa8"
         }
       },
-      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa7e50809efdabbb9a624784f449545f0dcea5ff0cb800f894e78d1cb0b5f0189",
-      "cofactor": "0x04",
       "generator": {
         "x": {
           "raw": "0x20"
@@ -182,10 +180,11 @@
         "y": {
           "raw": "0x7d67e841dc4c467b605091d80869212f9ceb124bf726973f9ff048779e1d614e62ae2ece5057b5dad96b7a897c1d72799261134638750f4f0cb91027543b1c5e"
         }
-      }
+      },
+      "order": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa7e50809efdabbb9a624784f449545f0dcea5ff0cb800f894e78d1cb0b5f0189",
+      "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-256-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -194,6 +193,7 @@
         "p": "0xffa7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 256
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0xffa7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
@@ -206,7 +206,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-254-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -215,6 +214,7 @@
         "p": "0x3f80ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 254
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x3f80fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
@@ -227,7 +227,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-255-mers",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -236,6 +235,7 @@
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd03",
         "bits": 255
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd02"
@@ -248,7 +248,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-384-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -257,6 +256,7 @@
         "p": "0xb0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 384
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0xb0fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
@@ -269,7 +269,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-382-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -278,6 +277,7 @@
         "p": "0x3ffaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 382
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x3ffafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
@@ -290,7 +290,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-383-mers",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -299,6 +298,7 @@
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5b",
         "bits": 383
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5a"
@@ -311,7 +311,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-512-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -320,6 +319,7 @@
         "p": "0xfe14ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 512
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0xfe14fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
@@ -332,7 +332,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-510-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -341,6 +340,7 @@
         "p": "0x3eddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 510
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x3eddfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
@@ -353,7 +353,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "TwistedEdwards",
       "name": "ed-511-mers",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -362,6 +361,7 @@
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1f",
         "bits": 511
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1e"
@@ -374,7 +374,6 @@
       "cofactor": "0x04"
     },
     {
-      "form": "Weierstrass",
       "name": "w-256-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -383,6 +382,7 @@
         "p": "0xffa7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 256
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xffa7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc"
@@ -403,7 +403,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "w-254-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -412,6 +411,7 @@
         "p": "0x3f80ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 254
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x3f80fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc"
@@ -432,7 +432,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "w-255-mers",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -441,6 +440,7 @@
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd03",
         "bits": 255
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd00"
@@ -461,7 +461,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "w-384-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -470,6 +469,7 @@
         "p": "0xb0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 384
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xb0fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc"
@@ -482,7 +482,6 @@
       "cofactor": "0x01"
     },
     {
-      "form": "Weierstrass",
       "name": "w-382-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -491,6 +490,7 @@
         "p": "0x3ffaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 382
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x3ffafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc"
@@ -511,7 +511,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "w-383-mers",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -520,6 +519,7 @@
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe5b",
         "bits": 383
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe58"
@@ -540,7 +540,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "w-512-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -549,6 +548,7 @@
         "p": "0xfe14ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 512
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xfe14fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc"
@@ -561,7 +561,6 @@
       "cofactor": "0x01"
     },
     {
-      "form": "Weierstrass",
       "name": "w-510-mont",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -570,6 +569,7 @@
         "p": "0x3eddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
         "bits": 510
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x3eddfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc"
@@ -582,7 +582,6 @@
       "cofactor": "0x01"
     },
     {
-      "form": "Weierstrass",
       "name": "w-511-mers",
       "category": "nums",
       "desc": "Curve from https://eprint.iacr.org/2014/130.pdf. No generator present.",
@@ -591,6 +590,7 @@
         "p": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1f",
         "bits": 511
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1c"

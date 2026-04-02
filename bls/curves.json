@@ -107,8 +107,8 @@
     },
     {
       "name": "BLS12-455",
-      "desc": "Curve from https://github.com/relic-toolkit/relic.",
       "category": "bls",
+      "desc": "Curve from https://github.com/relic-toolkit/relic.",
       "field": {
         "type": "Prime",
         "p": "0x55555955557955572aa00e0f95b49203003f665e3a5b1d56234bd93954fcb314b8b3db9994ace86d1ba6c589556b2aa956aaa00001800002ab",

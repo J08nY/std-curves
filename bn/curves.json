@@ -147,6 +147,9 @@
       },
       "order": "0x2523648240000001BA344D8000000007FF9F800000000010A10000000000000D",
       "cofactor": "0x01",
+      "aliases": [
+        "other/Fp254BNb"
+      ],
       "characteristics": {
         "discriminant": "16798108731015832284940804142231733909889187121439069848933715426072753862995",
         "j_invariant": "0",
@@ -156,10 +159,7 @@
         "supersingular": false,
         "cm_disc": "-3",
         "conductor": "129607518034317099886745702645398241283"
-      },
-      "aliases": [
-        "other/Fp254BNb"
-      ]
+      }
     },
     {
       "name": "bn286",

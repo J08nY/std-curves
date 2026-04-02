@@ -381,8 +381,8 @@
       "cofactor": "0x04"
     },
     {
+      "name": "Curve383187",
       "category": "other",
-      "cofactor": "0x8",
       "desc": "",
       "field": {
         "bits": 283,
@@ -390,6 +390,14 @@
         "type": "Prime"
       },
       "form": "Montgomery",
+      "params": {
+        "a": {
+          "raw": "0x38251"
+        },
+        "b": {
+          "raw": "0x01"
+        }
+      },
       "generator": {
         "x": {
           "raw": "0x5"
@@ -398,16 +406,8 @@
           "raw": "0x1eebe07dc1871896732b12d5504a32370471965c7a11f2c89865f855ab3cbd7c224e3620c31af3370788457dd5ce46df"
         }
       },
-      "name": "Curve383187",
       "order": "0x1000000000000000000000000000000000000000000000000e85a85287a1488acd41ae84b2b7030446f72088b00a0e21",
-      "params": {
-        "a": {
-          "raw": "0x38251"
-        },
-        "b": {
-          "raw": "0x01"
-        }
-      }
+      "cofactor": "0x8"
     },
     {
       "name": "Ed25519",
@@ -665,6 +665,9 @@
       },
       "order": "0x2523648240000001ba344d8000000007ff9f800000000010a10000000000000d",
       "cofactor": "0x01",
+      "aliases": [
+        "bn/bn254"
+      ],
       "characteristics": {
         "discriminant": "16798108731015832284940804142231733909889187121439069848933715426072753862995",
         "j_invariant": "0",
@@ -674,10 +677,7 @@
         "supersingular": false,
         "cm_disc": "-3",
         "conductor": "129607518034317099886745702645398241283"
-      },
-      "aliases": [
-        "bn/bn254"
-      ]
+      }
     },
     {
       "name": "Fp224BN",
@@ -834,7 +834,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-160",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -843,6 +842,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1f",
         "bits": 160
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1c"
@@ -863,7 +863,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-192",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -872,6 +871,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cd13",
         "bits": 192
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cd10"
@@ -892,7 +892,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-224",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -901,6 +900,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedf",
         "bits": 224
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedc"
@@ -921,7 +921,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-256",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -930,6 +929,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c0b",
         "bits": 256
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c08"
@@ -950,7 +950,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-288",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -959,6 +958,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a098b",
         "bits": 288
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a0988"
@@ -979,7 +979,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-320",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -988,6 +987,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b3",
         "bits": 320
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b0"
@@ -1008,7 +1008,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-384",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -1017,6 +1016,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a437b",
         "bits": 384
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a4378"
@@ -1037,7 +1037,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "ssc-512",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
@@ -1046,6 +1045,7 @@
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ef",
         "bits": 512
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ec"
@@ -1058,7 +1058,6 @@
       "cofactor": "0x01"
     },
     {
-      "form": "Weierstrass",
       "name": "Tweedledum",
       "category": "other",
       "desc": "Tweedledum pairing friendly curve from <https://github.com/daira/tweedle>.",
@@ -1067,6 +1066,7 @@
         "p": "0x40000000000000000000000000000000038aa1276c3f59b9a14064e200000001",
         "bits": 255
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x00"
@@ -1095,7 +1095,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "Tweedledee",
       "category": "other",
       "desc": "Tweedledee pairing friendly curve from <https://github.com/daira/tweedle>.",
@@ -1104,6 +1103,7 @@
         "p": "0x40000000000000000000000000000000038aa127696286c9842cafd400000001",
         "bits": 255
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x00"
@@ -1132,7 +1132,6 @@
       }
     },
     {
-      "form": "TwistedEdwards",
       "name": "JubJub",
       "category": "other",
       "desc": "JubJub curve from <https://z.cash/technology/jubjub/>.",
@@ -1141,6 +1140,7 @@
         "p": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
         "bits": 255
       },
+      "form": "TwistedEdwards",
       "params": {
         "a": {
           "raw": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000000"
@@ -1161,7 +1161,6 @@
       "cofactor": "0x08"
     },
     {
-      "form": "Weierstrass",
       "name": "Pallas",
       "category": "other",
       "desc": "Pallas curve from the [Pasta curves](https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/).",
@@ -1170,6 +1169,7 @@
         "p": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
         "bits": 255
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x00"
@@ -1198,7 +1198,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "Vesta",
       "category": "other",
       "desc": "Vesta curve from the [Pasta curves](https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/).",
@@ -1207,6 +1206,7 @@
         "p": "0x40000000000000000000000000000000224698fc0994a8dd8c46eb2100000001",
         "bits": 255
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x00"
@@ -1270,7 +1270,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "BADA55-R-256",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
@@ -1279,6 +1278,7 @@
         "p": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c03",
         "bits": 256
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c00"
@@ -1299,7 +1299,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "BADA55-VR-224",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
@@ -1308,6 +1307,7 @@
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
         "bits": 224
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xfffffffffffffffffffffffffffffffefffffffffffffffffffffffe"
@@ -1329,7 +1329,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "BADA55-VR-256",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
@@ -1338,6 +1337,7 @@
         "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
         "bits": 256
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xffffffff00000001000000000000000000000000fffffffffffffffffffffffc"
@@ -1359,7 +1359,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "BADA55-VR-384",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
@@ -1368,6 +1367,7 @@
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff",
         "bits": 384
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000fffffffc"
@@ -1383,7 +1383,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "BADA55-VPR-224",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
@@ -1392,6 +1391,7 @@
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
         "bits": 224
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x7144ba12ce8a0c3befa053edbada555a42391fc64f052376e041c7d4af23195ebd8d83625321d452e8a0c3bb0a048a26115704e45dceb346a9f4bd9741d14d49"
@@ -1412,7 +1412,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "BADA55-VPR2-224",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
@@ -1421,6 +1420,7 @@
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
         "bits": 224
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x8f0ff20e1e3cf4905d492e04110683948bfc236790bbb59e6e6b33f24f348ed2e16c64ee79f9fd27e9a367ff6415b41189e4fb6bada555455dc44c4f87011eef"
@@ -1487,7 +1487,6 @@
       "cofactor": "0x188"
     },
     {
-      "form": "Weierstrass",
       "name": "Tom-256",
       "category": "other",
       "desc": "Tom-256 curve from https://eprint.iacr.org/2021/1183.pdf",
@@ -1496,6 +1495,7 @@
         "p": "0xffffffff0000000100000000000000017e72b42b30e7317793135661b1c4b117",
         "bits": 256
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xffffffff0000000100000000000000017e72b42b30e7317793135661b1c4b114"
@@ -1504,8 +1504,6 @@
           "raw": "0xb441071b12f4a0366fb552f8e21ed4ac36b06aceeb354224863e60f20219fc56"
         }
       },
-      "order": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
-      "cofactor": "0x01",
       "generator": {
         "x": {
           "raw": "0x03"
@@ -1514,6 +1512,8 @@
           "raw": "0x5a6dd32df58708e64e97345cbe66600decd9d538a351bb3c30b4954925b1f02d"
         }
       },
+      "order": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
+      "cofactor": "0x01",
       "characteristics": {
         "cm_disc": "-4155",
         "conductor": "7019618127640898221939468283479924503",
@@ -1524,7 +1524,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "Tom-384",
       "category": "other",
       "desc": "Tom-384 curve from https://eprint.iacr.org/2021/1183.pdf",
@@ -1533,6 +1532,7 @@
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffeaf5f689f8669fb41b08d5f5edffd26599c434bbd978917c5",
         "bits": 384
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0x821dfdc940e7f074ac481f8b2870c48962cce56abd72dfc42813a944cea15df78dc0a2d97fbf031ed26c9076826940ba"
@@ -1553,7 +1553,6 @@
       }
     },
     {
-      "form": "Weierstrass",
       "name": "Tom-521",
       "category": "other",
       "desc": "Tom-521 curve from https://eprint.iacr.org/2021/1183.pdf",
@@ -1562,6 +1561,7 @@
         "p": "0x200000000000000000000000000000000000000000000000000000000000000002c54be78524c33584f734a266748b2063accf5028e6778dc5056476d0690853249",
         "bits": 521
       },
+      "form": "Weierstrass",
       "params": {
         "a": {
           "raw": "0xef6432c21701cc48c63fb9263e14ba76d4a94ba14d173b134e3032b0e2e543180eb6725125992a7d00162a5f57d21918b0766364eeb53c53bb12f405dac1d527e2"
