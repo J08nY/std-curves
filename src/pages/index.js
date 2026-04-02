@@ -78,7 +78,7 @@ export default ({ data, location }) => {
       </ul>
       <Styled.p>
         The curve listing includes its parameters, computed characteristics such
-        as number of points or j-invariant as well as SAGE code which can be
+        as number of points or j-invariant as well as SageMath and PARI/GP code which can be
         used to instantiate the curve and a JSON export of all of the curve
         data. New curves are currently being added, the database is definitely
         not complete. This site also contains{" "}

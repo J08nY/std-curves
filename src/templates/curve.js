@@ -60,13 +60,16 @@ function CurveTable(paramNames, paramTitles, params) {
       "
         }
       </style>
-      <table id="curveTable" sx={{ borderCollapse: "collapse" }}>
+      <table id="curveTable" sx={{ borderCollapse: "collapse", width: "100%" }}>
         <thead>
           <tr>
             <th
               sx={{
                 borderBottom: "1px solid",
-                borderColor: alpha("text", 0.25)
+                borderColor: alpha("text", 0.25),
+                textAlign: "left",
+                padding: "8px",
+                minWidth: "80px"
               }}
             >
               Name
@@ -74,7 +77,9 @@ function CurveTable(paramNames, paramTitles, params) {
             <th
               sx={{
                 borderBottom: "1px solid",
-                borderColor: alpha("text", 0.25)
+                borderColor: alpha("text", 0.25),
+                textAlign: "left",
+                padding: "8px"
               }}
             >
               Value
@@ -84,40 +89,52 @@ function CurveTable(paramNames, paramTitles, params) {
         <tbody>
           {paramNames.map((name, i) => {
             return (
-              <tr key={i} title={paramTitles[i]} sx={{ overflow: "scroll" }}>
+              <tr key={i} title={paramTitles[i]}>
                 <td
                   sx={{
                     borderBottom: "1px solid",
-                    borderColor: alpha("text", 0.25)
+                    borderColor: alpha("text", 0.25),
+                    padding: "8px",
+                    whiteSpace: "nowrap"
                   }}
                 >
-                  {name}
-                  <Styled.a
-                    href="#"
-                    title="Copy value"
-                    onClick={copyChild}
-                    sx={{ float: "right" }}
+                  <div
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between"
+                    }}
                   >
-                    <textarea
-                      type="text"
-                      sx={{ position: "absolute", left: "-1000px" }}
-                      readOnly
-                      value={params[i]}
-                    />
-                    <span className="fa-layers fa-fw">
-                      <FontAwesomeIcon icon={faSquare} color="text" />
-                      <FontAwesomeIcon
-                        icon={faCopy}
-                        inverse
-                        transform="shrink-6"
+                    <span>{name}</span>
+                    <Styled.a
+                      href="#"
+                      title="Copy value"
+                      onClick={copyChild}
+                      sx={{ ml: 2, flexShrink: 0 }}
+                    >
+                      <textarea
+                        type="text"
+                        sx={{ position: "absolute", left: "-1000px" }}
+                        readOnly
+                        value={params[i]}
                       />
-                    </span>
-                  </Styled.a>
+                      <span className="fa-layers fa-fw">
+                        <FontAwesomeIcon icon={faSquare} color="text" />
+                        <FontAwesomeIcon
+                          icon={faCopy}
+                          inverse
+                          transform="shrink-6"
+                        />
+                      </span>
+                    </Styled.a>
+                  </div>
                 </td>
                 <td
                   sx={{
                     borderBottom: "1px solid",
-                    borderColor: alpha("text", 0.25)
+                    borderColor: alpha("text", 0.25),
+                    padding: "8px",
+                    wordBreak: "break-all"
                   }}
                 >
                   <code>{params[i]}</code>
