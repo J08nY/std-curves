@@ -151,6 +151,53 @@
 			"title": "An affine point.",
 			"description": "An affine point with `x` and `y` coordinates."
 		},
+		"Characteristics": {
+			"type": "object",
+			"properties": {
+				"discriminant": {
+					"$ref": "#/definitions/Number",
+					"title": "The discriminant.",
+					"description": "The discriminant of the curve."
+				},
+				"j_invariant": {
+					"$ref": "#/definitions/Number",
+					"title": "The j-invariant.",
+					"description": "The j-invariant of the curve."
+				},
+				"trace_of_frobenius": {
+					"$ref": "#/definitions/Number",
+					"title": "The trace of Frobenius.",
+					"description": "The trace of Frobenius of the curve."
+				},
+				"embedding_degree": {
+					"$ref": "#/definitions/Number",
+					"title": "The embedding degree.",
+					"description": "The embedding degree of the curve with respect to its order."
+				},
+				"anomalous": {
+					"type": "boolean",
+					"title": "Anomalousness.",
+					"description": "Whether the curve is anomalous or not."
+				},
+				"supersingular": {
+					"type": "boolean",
+					"title": "Supersingularity.",
+					"description": "Whether the curve is supersingular or not."
+				},
+				"cm_disc": {
+					"$ref": "#/definitions/Number",
+					"title": "The fundamental discriminant.",
+					"description": "The fundamental discriminant of the curve's CM order."
+				},
+				"conductor": {
+					"$ref": "#/definitions/Number",
+					"title": "The conductor.",
+					"description": "The conductor of the curve's CM order."
+				}
+			},
+			"title": "Curve characteristics.",
+			"description": "Some miscellaneous characteristics of the curve."
+		},
 		"Curve": {
 			"type": "object",
 			"properties": {
@@ -178,7 +225,8 @@
 					"items": {
 						"type": "string"
 					}
-				}
+				},
+				"characteristics": {"$ref": "#/definitions/Characteristics"}
 			},
 			"allOf": [
 				{
