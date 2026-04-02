@@ -6,6 +6,12 @@
       "name": "M-221",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD",
@@ -35,6 +41,12 @@
       "name": "M-383",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
@@ -64,6 +76,12 @@
       "name": "M-511",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF45",
@@ -93,6 +111,12 @@
       "name": "E-222",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffff8b",
@@ -122,6 +146,12 @@
       "name": "E-382",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff97",
@@ -151,6 +181,12 @@
       "name": "E-521",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/647.pdf",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -180,6 +216,12 @@
       "name": "Curve25519",
       "category": "other",
       "desc": "Curve from https://cr.yp.to/ecdh.html",
+      "sources": [
+        {
+          "name": "Curve25519: new Diffie-Hellman speed records",
+          "url": "https://cr.yp.to/ecdh.html"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed",
@@ -214,6 +256,12 @@
       "name": "Curve448",
       "category": "other",
       "desc": "Curve from https://datatracker.ietf.org/doc/html/rfc7748",
+      "sources": [
+        {
+          "name": "RFC 7748: Elliptic Curves for Security",
+          "url": "https://datatracker.ietf.org/doc/html/rfc7748"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -244,6 +292,12 @@
       "name": "Curve22103",
       "category": "other",
       "desc": "Curve from https://github.com/relic-toolkit/relic",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
@@ -281,6 +335,12 @@
       "name": "Curve4417",
       "category": "other",
       "desc": "Curve from https://github.com/relic-toolkit/relic",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffb",
@@ -318,6 +378,12 @@
       "name": "Curve1174",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2013/325.pdf",
+      "sources": [
+        {
+          "name": "Elligator: Elliptic-curve points indistinguishable from uniform random strings",
+          "url": "https://eprint.iacr.org/2013/325"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7",
@@ -355,6 +421,12 @@
       "name": "Curve67254",
       "category": "other",
       "desc": "Curve from https://github.com/relic-toolkit/relic",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff97",
@@ -384,6 +456,12 @@
       "name": "Curve383187",
       "category": "other",
       "desc": "",
+      "sources": [
+        {
+          "name": "A note on high-security general-purpose elliptic curves",
+          "url": "https://eprint.iacr.org/2013/647"
+        }
+      ],
       "field": {
         "bits": 283,
         "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff45",
@@ -413,6 +491,12 @@
       "name": "Ed25519",
       "category": "other",
       "desc": "Curve from https://ed25519.cr.yp.to",
+      "sources": [
+        {
+          "name": "Ed25519: high-speed high-security signatures",
+          "url": "https://ed25519.cr.yp.to"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed",
@@ -447,6 +531,12 @@
       "name": "Ed448",
       "category": "other",
       "desc": "Curve from https://datatracker.ietf.org/doc/html/draft-ietf-lwig-curve-representations-23",
+      "sources": [
+        {
+          "name": "Alternative Elliptic Curve Representations",
+          "url": "https://datatracker.ietf.org/doc/html/draft-ietf-lwig-curve-representations-23"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -476,6 +566,12 @@
       "name": "Ed448-Goldilocks",
       "category": "other",
       "desc": "Curve from https://eprint.iacr.org/2015/625.pdf",
+      "sources": [
+        {
+          "name": "Ed448-Goldilocks, a new elliptic curve",
+          "url": "https://eprint.iacr.org/2015/625"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -505,6 +601,16 @@
       "name": "Curve41417",
       "category": "other",
       "desc": "Curve from https://cr.yp.to/talks/2013.09.16/slides-djb-20130916-a4.pdf",
+      "sources": [
+        {
+          "name": "Security dangers of the NIST curves",
+          "url": "https://cr.yp.to/talks/2013.09.16/slides-djb-20130916-a4.pdf"
+        },
+        {
+          "name": "Curve41417: Karatsuba revisiteds",
+          "url": "https://eprint.iacr.org/2014/526"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef",
@@ -534,6 +640,12 @@
       "name": "Fp254BNa",
       "category": "other",
       "desc": "Curve used in: https://eprint.iacr.org/2010/354.pdf",
+      "sources": [
+        {
+          "name": "High-Speed Software Implementation of the Optimal Ate Pairing over Barreto–Naehrig Curves",
+          "url": "https://eprint.iacr.org/2010/354"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000001",
@@ -573,6 +685,12 @@
       "name": "Fp254n2BNa",
       "category": "other",
       "desc": "Curve used in: https://eprint.iacr.org/2010/354.pdf",
+      "sources": [
+        {
+          "name": "High-Speed Software Implementation of the Optimal Ate Pairing over Barreto–Naehrig Curves",
+          "url": "https://eprint.iacr.org/2010/354"
+        }
+      ],
       "field": {
         "type": "Extension",
         "base": "0x2370fb049d410fbe4e761a9886e502417d023f40180000017e80600000000001",
@@ -641,6 +759,12 @@
       "name": "Fp254BNb",
       "category": "other",
       "desc": "Curve used in https://www.iacr.org/archive/eurocrypt2011/66320047/66320047.pdf",
+      "sources": [
+        {
+          "name": "Faster Explicit Formulas for Computing Pairings over Ordinary Curves",
+          "url": "https://www.iacr.org/archive/eurocrypt2011/66320047/66320047.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2523648240000001ba344d80000000086121000000000013a700000000000013",
@@ -683,6 +807,12 @@
       "name": "Fp224BN",
       "category": "other",
       "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "sources": [
+        {
+          "name": "ISO/IEC 15946-5:2013 - Information technology — Security techniques — Cryptographic techniques based on elliptic curves — Part 5: Elliptic curve generation",
+          "url": "https://www.iso.org/standard/80241.html"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffff107288ec29e602c4520db42180823bb907d1287127833",
@@ -722,6 +852,12 @@
       "name": "Fp256BN",
       "category": "other",
       "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "sources": [
+        {
+          "name": "ISO/IEC 15946-5:2013 - Information technology — Security techniques — Cryptographic techniques based on elliptic curves — Part 5: Elliptic curve generation",
+          "url": "https://www.iso.org/standard/80241.html"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffcf0cd46e5f25eee71a49f0cdc65fb12980a82d3292ddbaed33013",
@@ -761,6 +897,12 @@
       "name": "Fp384BN",
       "category": "other",
       "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "sources": [
+        {
+          "name": "ISO/IEC 15946-5:2013 - Information technology — Security techniques — Cryptographic techniques based on elliptic curves — Part 5: Elliptic curve generation",
+          "url": "https://www.iso.org/standard/80241.html"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffff2a96823d5920d2a127e3f6fbca024c8fbe29531892c79534f9d306328261550a7cabd7cccd10b",
@@ -800,6 +942,12 @@
       "name": "Fp512BN",
       "category": "other",
       "desc": "Curve described in https://www.iso.org/standard/80241.html",
+      "sources": [
+        {
+          "name": "ISO/IEC 15946-5:2013 - Information technology — Security techniques — Cryptographic techniques based on elliptic curves — Part 5: Elliptic curve generation",
+          "url": "https://www.iso.org/standard/80241.html"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffff9ec7f01c60ba1d8cb5307c0bbe3c111b0ef455146cf1eacbe98b8e48c65deab236fe1916a55ce5f4c6467b4eb280922adef33",
@@ -837,6 +985,12 @@
       "name": "ssc-160",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e1f",
@@ -866,6 +1020,12 @@
       "name": "ssc-192",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cd13",
@@ -895,6 +1055,12 @@
       "name": "ssc-224",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbedf",
@@ -924,6 +1090,12 @@
       "name": "ssc-256",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139c0b",
@@ -953,6 +1125,12 @@
       "name": "ssc-288",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a098b",
@@ -982,6 +1160,12 @@
       "name": "ssc-320",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3408b3",
@@ -1011,6 +1195,12 @@
       "name": "ssc-384",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a437b",
@@ -1040,6 +1230,12 @@
       "name": "ssc-512",
       "category": "other",
       "desc": "A prime order curve from MIRACL: https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md. Has no generator specified.",
+      "sources": [
+        {
+          "name": "MIRACL Standard Curves",
+          "url": "https://github.com/miracl/MIRACL/blob/master/docs/miracl-explained/miracl-standard-curves.md"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c5ef",
@@ -1061,6 +1257,12 @@
       "name": "Tweedledum",
       "category": "other",
       "desc": "Tweedledum pairing friendly curve from <https://github.com/daira/tweedle>.",
+      "sources": [
+        {
+          "name": "Tweedledum/Tweedledee supporting evidence",
+          "url": "https://github.com/daira/tweedle"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x40000000000000000000000000000000038aa1276c3f59b9a14064e200000001",
@@ -1098,6 +1300,12 @@
       "name": "Tweedledee",
       "category": "other",
       "desc": "Tweedledee pairing friendly curve from <https://github.com/daira/tweedle>.",
+      "sources": [
+        {
+          "name": "Tweedledum/Tweedledee supporting evidence",
+          "url": "https://github.com/daira/tweedle"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x40000000000000000000000000000000038aa127696286c9842cafd400000001",
@@ -1135,6 +1343,12 @@
       "name": "JubJub",
       "category": "other",
       "desc": "JubJub curve from <https://z.cash/technology/jubjub/>.",
+      "sources": [
+        {
+          "name": "Zcash",
+          "url": "https://z.cash/technology/jubjub/"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
@@ -1164,6 +1378,12 @@
       "name": "Pallas",
       "category": "other",
       "desc": "Pallas curve from the [Pasta curves](https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/).",
+      "sources": [
+        {
+          "name": "The Pasta Curves for Halo 2 and Beyond",
+          "url": "https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x40000000000000000000000000000000224698fc094cf91b992d30ed00000001",
@@ -1201,6 +1421,12 @@
       "name": "Vesta",
       "category": "other",
       "desc": "Vesta curve from the [Pasta curves](https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/).",
+      "sources": [
+        {
+          "name": "The Pasta Curves for Halo 2 and Beyond",
+          "url": "https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x40000000000000000000000000000000224698fc0994a8dd8c46eb2100000001",
@@ -1238,6 +1464,12 @@
       "name": "MDC201601",
       "category": "other",
       "desc": "The Million Dollar Curve",
+      "sources": [
+        {
+          "name": "Trap Me If You Can: Million Dollar Curve",
+          "url": "https://cryptoexperts.github.io/million-dollar-curve/specifications/2016-02-01_trap-me-if-you-can.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xf13b68b9d456afb4532f92fdd7a5fd4f086a9037ef07af9ec13710405779ec13",
@@ -1273,6 +1505,12 @@
       "name": "BADA55-R-256",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "sources": [
+        {
+          "name": "How to manipulate curve standards: a white paper for the black hat",
+          "url": "https://bada55.cr.yp.to/bada55-20150927.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c03",
@@ -1302,6 +1540,12 @@
       "name": "BADA55-VR-224",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "sources": [
+        {
+          "name": "How to manipulate curve standards: a white paper for the black hat",
+          "url": "https://bada55.cr.yp.to/bada55-20150927.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
@@ -1332,6 +1576,12 @@
       "name": "BADA55-VR-256",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "sources": [
+        {
+          "name": "How to manipulate curve standards: a white paper for the black hat",
+          "url": "https://bada55.cr.yp.to/bada55-20150927.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff",
@@ -1362,6 +1612,12 @@
       "name": "BADA55-VR-384",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "sources": [
+        {
+          "name": "How to manipulate curve standards: a white paper for the black hat",
+          "url": "https://bada55.cr.yp.to/bada55-20150927.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffff0000000000000000ffffffff",
@@ -1386,6 +1642,12 @@
       "name": "BADA55-VPR-224",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "sources": [
+        {
+          "name": "How to manipulate curve standards: a white paper for the black hat",
+          "url": "https://bada55.cr.yp.to/bada55-20150927.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
@@ -1415,6 +1677,12 @@
       "name": "BADA55-VPR2-224",
       "category": "other",
       "desc": "BADA55 curve from the https://bada55.cr.yp.to/bada55-20150927.pdf",
+      "sources": [
+        {
+          "name": "How to manipulate curve standards: a white paper for the black hat",
+          "url": "https://bada55.cr.yp.to/bada55-20150927.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",
@@ -1444,6 +1712,12 @@
       "name": "FourQ",
       "category": "other",
       "desc": "Curve used in https://eprint.iacr.org/2015/565.pdf",
+      "sources": [
+        {
+          "name": "FourQ: four-dimensional decompositions on a Q-curve over the Mersenne prime",
+          "url": "https://eprint.iacr.org/2015/565"
+        }
+      ],
       "field": {
         "type": "Extension",
         "base": "0x7fffffffffffffffffffffffffffffff",
@@ -1490,6 +1764,12 @@
       "name": "Tom-256",
       "category": "other",
       "desc": "Tom-256 curve from https://eprint.iacr.org/2021/1183.pdf",
+      "sources": [
+        {
+          "name": "ZKAttest: Ring and Group Signatures for existing ECDSA keys",
+          "url": "https://eprint.iacr.org/2021/1183"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xffffffff0000000100000000000000017e72b42b30e7317793135661b1c4b117",
@@ -1527,6 +1807,12 @@
       "name": "Tom-384",
       "category": "other",
       "desc": "Tom-384 curve from https://eprint.iacr.org/2021/1183.pdf",
+      "sources": [
+        {
+          "name": "ZKAttest: Ring and Group Signatures for existing ECDSA keys",
+          "url": "https://eprint.iacr.org/2021/1183"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffffffffffffffffffffffffffffffffffffffffffeaf5f689f8669fb41b08d5f5edffd26599c434bbd978917c5",
@@ -1556,6 +1842,12 @@
       "name": "Tom-521",
       "category": "other",
       "desc": "Tom-521 curve from https://eprint.iacr.org/2021/1183.pdf",
+      "sources": [
+        {
+          "name": "ZKAttest: Ring and Group Signatures for existing ECDSA keys",
+          "url": "https://eprint.iacr.org/2021/1183"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x200000000000000000000000000000000000000000000000000000000000000002c54be78524c33584f734a266748b2063accf5028e6778dc5056476d0690853249",

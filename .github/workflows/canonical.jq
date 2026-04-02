@@ -1,4 +1,4 @@
-def curve_order: ["name","category","desc","oid","field","form","params","generator","order","cofactor","aliases","characteristics"];
+def curve_order: ["name","category","desc","oid","sources","field","form","params","generator","order","cofactor","aliases","characteristics"];
 def category_order: ["name","desc","curves"];
 
 def reorder_obj($order):

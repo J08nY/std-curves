@@ -5,7 +5,7 @@
     {
       "name": "secp112r1",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 from the seed'.",
       "oid": "1.3.132.0.6",
       "field": {
         "type": "Prime",
@@ -49,7 +49,7 @@
     {
       "name": "secp112r2",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.3.132.0.7",
       "field": {
         "type": "Prime",
@@ -90,7 +90,7 @@
     {
       "name": "secp128r1",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.3.132.0.28",
       "field": {
         "type": "Prime",
@@ -131,7 +131,7 @@
     {
       "name": "secp128r2",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.3.132.0.29",
       "field": {
         "type": "Prime",
@@ -215,7 +215,7 @@
     {
       "name": "secp160r1",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.3.132.0.8",
       "field": {
         "type": "Prime",
@@ -260,7 +260,7 @@
     {
       "name": "secp160r2",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.3.132.0.30",
       "field": {
         "type": "Prime",
@@ -347,7 +347,7 @@
     {
       "name": "secp192r1",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.2.840.10045.3.1.1",
       "field": {
         "type": "Prime",
@@ -435,7 +435,7 @@
     {
       "name": "secp224r1",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.3.132.0.33",
       "field": {
         "type": "Prime",
@@ -524,7 +524,7 @@
     {
       "name": "secp256r1",
       "category": "secg",
-      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62 [1] from the seed'.",
+      "desc": "A randomly generated curve. [SEC2v1](https://www.secg.org/SEC2-Ver-1.0.pdf) states 'E was chosen verifiably at random as specified in ANSI X9.62  from the seed'.",
       "oid": "1.2.840.10045.3.1.7",
       "field": {
         "type": "Prime",

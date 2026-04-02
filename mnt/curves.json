@@ -6,6 +6,12 @@
       "name": "mnt1",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x26dccacc5041939206cf2b7dec50950e3c9fa4827af",
@@ -45,6 +51,12 @@
       "name": "mnt2/1",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x5affffffffffff4b46081000000059bb1bf600b7",
@@ -84,6 +96,12 @@
       "name": "mnt2/2",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x5affffffffffff4b46081000000059bb1bf600b7",
@@ -123,6 +141,12 @@
       "name": "mnt3/1",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x8afffffffffffeeb0fa77000000089f0dd49fac7",
@@ -162,6 +186,12 @@
       "name": "mnt3/2",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x8afffffffffffeeb0fa77000000089f0dd49fac7",
@@ -201,6 +231,12 @@
       "name": "mnt3/3",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x8afffffffffffeeb0fa77000000089f0dd49fac7",
@@ -240,6 +276,12 @@
       "name": "mnt4",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xa2ffffffffffffffffffffffffc298b00000000000000000000005c866cf",
@@ -279,6 +321,12 @@
       "name": "mnt5/1",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xd2fffffffffffffffffffffffe9058d000000000000000000000a0271007",
@@ -318,6 +366,12 @@
       "name": "mnt5/2",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xd2fffffffffffffffffffffffe9058d000000000000000000000a0271007",
@@ -357,6 +411,12 @@
       "name": "mnt5/3",
       "category": "mnt",
       "desc": "",
+      "sources": [
+        {
+          "name": "New explicit conditions of elliptic curve traces for FR-reduction",
+          "url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4432/1/73-48.pdf"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xd2fffffffffffffffffffffffe9058d000000000000000000000a0271007",

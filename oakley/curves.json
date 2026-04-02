@@ -6,6 +6,12 @@
       "name": "Oakley Group 3",
       "category": "oakley",
       "desc": "Defined in IETF in RFC2409, no generator present.",
+      "sources": [
+        {
+          "name": "RFC2409",
+          "url": "https://tools.ietf.org/html/rfc2409"
+        }
+      ],
       "field": {
         "type": "Binary",
         "poly": [
@@ -47,6 +53,12 @@
       "name": "Oakley Group 4",
       "category": "oakley",
       "desc": "Defined in IETF in RFC2409, no generator present.",
+      "sources": [
+        {
+          "name": "RFC2409",
+          "url": "https://tools.ietf.org/html/rfc2409"
+        }
+      ],
       "field": {
         "type": "Binary",
         "poly": [
@@ -88,6 +100,12 @@
       "name": "192-bit Random ECP Group",
       "category": "oakley",
       "desc": "Defined in IETF in RFC5114",
+      "sources": [
+        {
+          "name": "RFC5114",
+          "url": "https://tools.ietf.org/html/rfc5114"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFFFFFFFFFF",
@@ -125,6 +143,12 @@
       "name": "224-bit Random ECP Group",
       "category": "oakley",
       "desc": "Defined in IETF in RFC5114",
+      "sources": [
+        {
+          "name": "RFC5114",
+          "url": "https://tools.ietf.org/html/rfc5114"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000001",
@@ -162,6 +186,12 @@
       "name": "256-bit Random ECP Group",
       "category": "oakley",
       "desc": "Defined in IETF in RFC5114",
+      "sources": [
+        {
+          "name": "RFC5114",
+          "url": "https://tools.ietf.org/html/rfc5114"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF",
@@ -199,6 +229,12 @@
       "name": "384-bit Random ECP Group",
       "category": "oakley",
       "desc": "Defined in IETF in RFC5114",
+      "sources": [
+        {
+          "name": "RFC5114",
+          "url": "https://tools.ietf.org/html/rfc5114"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFF0000000000000000FFFFFFFF",
@@ -228,6 +264,12 @@
       "name": "521-bit Random ECP Group",
       "category": "oakley",
       "desc": "Defined in IETF in RFC5114",
+      "sources": [
+        {
+          "name": "RFC5114",
+          "url": "https://tools.ietf.org/html/rfc5114"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x000001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",

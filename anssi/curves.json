@@ -7,6 +7,16 @@
       "category": "anssi",
       "desc": "",
       "oid": "1.2.250.1.223.101.256.1",
+      "sources": [
+        {
+          "name": "Avis relatif aux paramètres de courbes elliptiques définis par l'Etat français",
+          "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000024668816"
+        },
+        {
+          "name": "DiSSECT",
+          "url": "https://dissect.crocs.fi.muni.cz/curve/FRP256v1"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xf1fd178c0b3ad58f10126de8ce42435b3961adbcabc8ca6de8fcf353d86e9c03",

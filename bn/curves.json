@@ -6,6 +6,12 @@
       "name": "bn158",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x24240D8241D5445106C8442084001384E0000013",
@@ -45,6 +51,12 @@
       "name": "bn190",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x240001B0000948001E60004134005F10005DC0003A800013",
@@ -84,6 +96,12 @@
       "name": "bn222",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x23DC0D7DC02402CDE486F4C00015B5215C0000004C6CE00000000067",
@@ -123,6 +141,12 @@
       "name": "bn254",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2523648240000001BA344D80000000086121000000000013A700000000000013",
@@ -165,6 +189,12 @@
       "name": "bn286",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x240900D8991B25B0E2CB51DDA534A205391892080A008108000853813800138000000013",
@@ -204,6 +234,12 @@
       "name": "bn318",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x24009000D800900024075015F015F0075000008F411E808F4000000004E484E4800000000000101B",
@@ -243,6 +279,12 @@
       "name": "bn350",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x23FFB80035FFEE24020A01CAFD738EC3F24B475EBC0AD0F6A0530FD78443FDF01A3FF64084000004E0000013",
@@ -282,6 +324,12 @@
       "name": "bn382",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x240026400F3D82B2E42DE125B00158405B710818AC00000840046200950400000000001380052E000000000000000013",
@@ -321,6 +369,12 @@
       "name": "bn414",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x240024000D7EE23F2823CA035D31B144364C75E59AEFFF60544845142000765EFFF7C0000021138004DFFFFFD900000000000013",
@@ -360,6 +414,12 @@
       "name": "bn446",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2400000000000000002400000002D00000000D800000021C0000001800000000870000000B0400000057C00000015C000000132000000067",
@@ -399,6 +459,12 @@
       "name": "bn478",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x23FFFFFFFFFFFFFEDFFFFFFFEE0001B3600000006BFFF5DB835FFF5D28085442328002888F96F2944D7DED781430FFD780065FFF010020FFFD900013",
@@ -438,6 +504,12 @@
       "name": "bn510",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2400000000000000003F000000000001B0002958000000000237000C0F0000084000F8100151A400073800242D00001380019440000000000888000000000013",
@@ -477,6 +549,12 @@
       "name": "bn542",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2400090000D80009000024000090001B01B1B051090510001B00D8001B0510D8A2084511080008D000090510005110800108138025380001B00000084000001380000013",
@@ -516,6 +594,12 @@
       "name": "bn574",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x2400023FFFFB7FFF4C00002400167FFFEE01AEE014423FAEFFFB5C000A200050FFFF2808400041FFFE73FFF7C000210000000000001380004DFFFD90000000000000000000000013",
@@ -555,6 +639,12 @@
       "name": "bn606",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x23FFFFFFFFFFFEE00000000000036000000241AFFB7FFFFFF275E0024000001B1440000D94482DF27FFFC9AEDF0000000036512100245142137FFFFFB75D7BD900000000000000246C844E13",
@@ -592,6 +682,12 @@
       "name": "bn638",
       "category": "bn",
       "desc": "",
+      "sources": [
+        {
+          "name": "A Family of Implementation-Friendly BN Elliptic Curves",
+          "url": "https://eprint.iacr.org/2010/429"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x23FFFFFDC000000D7FFFFFB8000001D3FFFFF942D000165E3FFF94870000D52FFFFDD0E00008DE55C00086520021E55BFFFFF51FFFF4EB800000004C80015ACDFFFFFFFFFFFFECE00000000000000067",

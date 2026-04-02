@@ -6,6 +6,16 @@
       "name": "BLS12-377",
       "category": "bls",
       "desc": "Curve from Zexe paper: https://eprint.iacr.org/2018/962, params taken from: https://eips.ethereum.org/EIPS/eip-2539 where they are explicitly listed.",
+      "sources": [
+        {
+          "name": "Zexe: Enabling Decentralized Private Computation",
+          "url": "https://eprint.iacr.org/2018/962"
+        },
+        {
+          "name": "EIP-2539",
+          "url": "https://eips.ethereum.org/EIPS/eip-2539"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x01ae3a4617c510eac63b05c06ca1493b1a22d9f300f5138f1ef3622fba094800170b5d44300000008508c00000000001",
@@ -42,7 +52,21 @@
     {
       "name": "BLS12-381",
       "category": "bls",
-      "desc": "Curve from https://electriccoin.co/blog/new-snark-curve/. As used in ZCash.",
+      "desc": "Curve from https://electriccoin.co/blog/new-snark-curve/. As used in ZCash Sapling.",
+      "sources": [
+        {
+          "name": "New zk-SNARK Curve",
+          "url": "https://electriccoin.co/blog/new-snark-curve/"
+        },
+        {
+          "name": "ZCash Protocol Specification",
+          "url": "https://zips.z.cash/protocol/protocol.pdf"
+        },
+        {
+          "name": "EIP-2537",
+          "url": "https://eips.ethereum.org/EIPS/eip-2537"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab",
@@ -80,6 +104,12 @@
       "name": "BLS12-446",
       "category": "bls",
       "desc": "Curve from https://github.com/relic-toolkit/relic.",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3cdee0fb28c5e535200fc34965aad6400095a4b78a02fe320f75a64bbac71602824e6dc3e23acdee56ee4528c573b5cc311c0026aab0aaab",
@@ -109,6 +139,12 @@
       "name": "BLS12-455",
       "category": "bls",
       "desc": "Curve from https://github.com/relic-toolkit/relic.",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x55555955557955572aa00e0f95b49203003f665e3a5b1d56234bd93954fcb314b8b3db9994ace86d1ba6c589556b2aa956aaa00001800002ab",
@@ -146,6 +182,16 @@
       "name": "BLS12-638",
       "category": "bls",
       "desc": "Curve from https://github.com/relic-toolkit/relic. Also in https://eprint.iacr.org/2012/232.pdf.",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        },
+        {
+          "name": "Implementing Pairings at the 192-bit Security Level",
+          "url": "https://eprint.iacr.org/2012/232"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x3cb868653d300b3fe80015554dd25db0fc01dcde95d4000000631bbd421715013955555555529c005c75d6c2ab00000000000ac79600d2abaaaaaaaaaaaaaa93eaf3ff000aaaaaaaaaaaaaaabeab000b",
@@ -183,6 +229,16 @@
       "name": "BLS24-477",
       "category": "bls",
       "desc": "Curve from https://github.com/relic-toolkit/relic. Also in https://eprint.iacr.org/2012/232.pdf.",
+      "sources": [
+        {
+          "name": "RELIC: Efficient LIbrary for Cryptography",
+          "url": "https://github.com/relic-toolkit/relic"
+        },
+        {
+          "name": "Implementing Pairings at the 192-bit Security Level",
+          "url": "https://eprint.iacr.org/2012/232"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x167278fac63bd5b007ebb8f693a2ab3dbd9f92cf437c399d928e94bfe9a04a009fda9e8cf9226901de62aea9dcea48bf1a0ebbf8860a5e7ad000152b",
@@ -220,6 +276,12 @@
       "name": "Bandersnatch",
       "category": "bls",
       "desc": "Curve from https://ethresear.ch/t/introducing-bandersnatch-a-fast-elliptic-curve-built-over-the-bls12-381-scalar-field/9957",
+      "sources": [
+        {
+          "name": "Introducing Bandersnatch, a fast elliptic curve built over the BLS12-381 scalar field",
+          "url": "https://ethresear.ch/t/introducing-bandersnatch-a-fast-elliptic-curve-built-over-the-bls12-381-scalar-field/9957"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
@@ -245,6 +307,16 @@
       "name": "BLS48-581-G1",
       "category": "bls",
       "desc": "Curve (G1) from https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/ in section 4.3 and https://doi.org/10.1007/978-3-319-61204-1_4",
+      "sources": [
+        {
+          "name": "Pairing-Friendly Curves",
+          "url": "https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/"
+        },
+        {
+          "name": "Secure and Efficient Pairing at 256-Bit Security Level",
+          "url": "https://doi.org/10.1007/978-3-319-61204-1_4"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0x1280f73ff3476f313824e31d47012a0056e84f8d122131bb3be6c0f1f3975444a48ae43af6e082acd9cd30394f4736daf68367a5513170ee0a578fdf721a4a48ac3edc154e6565912b",
@@ -282,6 +354,16 @@
       "name": "BLS48-581-G2",
       "category": "bls",
       "desc": "Curve (G2) from https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/ in section 4.3 and https://doi.org/10.1007/978-3-319-61204-1_4",
+      "sources": [
+        {
+          "name": "Pairing-Friendly Curves",
+          "url": "https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/"
+        },
+        {
+          "name": "Secure and Efficient Pairing at 256-Bit Security Level",
+          "url": "https://doi.org/10.1007/978-3-319-61204-1_4"
+        }
+      ],
       "field": {
         "type": "Tower",
         "degree": 2,

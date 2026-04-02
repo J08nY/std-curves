@@ -10,6 +10,7 @@ projects related to elliptic curve cryptography, see:
  - [pyecsca](https://github.com/J08nY/pyecsca): A Python Elliptic Curve Side-Channel Analysis toolkit, focusing on
  reverse-engineering ECC implementations from devices
  - [ecgen](https://github.com/J08nY/ecgen): A tool for generating EC domain parameters
+ - [DiSSECT](https://dissect.crocs.fi.muni.cz/): Distinguisher of Standard & Simulated Elliptic Curves via Traits
 
 The curve listing includes its parameters, computed characteristics such as number of points or j-invariant as
 well as SageMath and PARI/GP code which can be used to instantiate the curve and a JSON export of all of the curve data.
@@ -23,7 +24,7 @@ double-checking with the source document is recommended.
 ## Format
 
 The curves are stored in JSON files, grouped by category/source in directories.
-See `schema.json` for the JSON schema of the files.
+See [`schema.json`](schema.json) for the JSON schema of the files.
 
 ## Website
 

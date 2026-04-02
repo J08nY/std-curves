@@ -45,7 +45,13 @@
         "supersingular": false,
         "cm_disc": "-24109379060336110122544161233113975664949272517896865359515",
         "conductor": "1"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "P-224",
@@ -91,7 +97,13 @@
         "supersingular": false,
         "cm_disc": "-9493061114565352281698673660738078664961855212656825491744070162387",
         "conductor": "3"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "P-256",
@@ -136,7 +148,13 @@
         "supersingular": false,
         "cm_disc": "-455213823400003756884736869668539463648899917731097708475249543966132856781915",
         "conductor": "1"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "P-384",
@@ -176,7 +194,13 @@
         "discriminant": "38275261264050278989862136034342276004573039492779555073863190029182890449044186682105480613137214197175883602718257",
         "j_invariant": "12550029517991417762405079599420518784762671286028430215113399824456742172589190955698027499893480133182923443701083",
         "trace_of_frobenius": "1388124618062372383606759648309780106643088307173319169677"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "P-521",
@@ -216,7 +240,13 @@
         "discriminant": "2687853087729004331535582886185403114835754464152651523509230634031161977750238608042000458607319784141115468556368066113806987449553072575343372028907331922",
         "j_invariant": "3619090631887053412807272747807643016060282478111249168973675223587770705025281286979867546071268566958111997954788345609183745222693618155278831649044785613",
         "trace_of_frobenius": "657877501894328237357444332315020117536923257219387276263472201219398408051703"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "K-163",
@@ -283,7 +313,13 @@
         "supersingular": false,
         "cm_disc": "46768052394588893382517919492387689168400618179549",
         "conductor": "1"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "B-163",
@@ -350,7 +386,13 @@
         "supersingular": false,
         "cm_disc": "46768052394588893382517920870943573850256067434597",
         "conductor": "1"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "K-233",
@@ -408,7 +450,13 @@
         "anomalous": false,
         "supersingular": false,
         "cm_disc": "6134885641591612255497560766468467084110046420941258648476388160195683"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "B-233",
@@ -468,7 +516,13 @@
         "supersingular": false,
         "cm_disc": "6134885641591612255497560766468467091820697700856927382414879179085189",
         "conductor": "3"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "K-283",
@@ -534,7 +588,13 @@
         "supersingular": false,
         "cm_disc": "62165404551223330269422781018352605012557011072423593807226997823852966163742694371715",
         "conductor": "1"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "B-283",
@@ -601,7 +661,13 @@
         "supersingular": false,
         "cm_disc": "62165404551223330269422781018352605012557015986005158288261890887273791400499761341965",
         "conductor": "1"
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "K-409",
@@ -657,7 +723,13 @@
         "trace_of_frobenius": "10457288737315625927447685387048320737638796957687575791173829",
         "anomalous": false,
         "supersingular": false
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "B-409",
@@ -714,7 +786,13 @@
         "trace_of_frobenius": "-6059503967182126918765909026644927652236777310526686418445029",
         "anomalous": false,
         "supersingular": false
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "K-571",
@@ -778,7 +856,13 @@
         "trace_of_frobenius": "-148380926981691413899619140297051490364542574180493936232912339534208516828973111459843",
         "anomalous": false,
         "supersingular": false
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     },
     {
       "name": "B-571",
@@ -843,7 +927,13 @@
         "trace_of_frobenius": "99534385013609758659469819150465382236412396452349171016760770327496674607579419075443",
         "anomalous": false,
         "supersingular": false
-      }
+      },
+      "source": [
+        {
+          "name": "RECOMMENDED ELLIPTIC CURVES FOR FEDERAL GOVERNMENT USE  July 1999",
+          "url": "https://csrc.nist.rip/groups/ST/toolkit/documents/dss/NISTReCur.pdf"
+        }
+      ]
     }
   ]
 }

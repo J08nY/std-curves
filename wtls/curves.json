@@ -7,6 +7,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.1",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 113,
         "degree": 113,
@@ -57,6 +63,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.3",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "type": "Binary",
         "poly": [
@@ -115,6 +127,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.4",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 113,
         "degree": 113,
@@ -168,6 +186,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.5",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "type": "Binary",
         "bits": 163,
@@ -224,6 +248,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.6",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 112,
         "p": "0xdb7c2abf62e35e668076bead208b",
@@ -265,6 +295,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.7",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 160,
         "p": "0xffffffffffffffffffffffffffffffff7fffffff",
@@ -307,6 +343,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.8",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 112,
         "p": "0xfffffffffffffffffffffffffde7",
@@ -345,6 +387,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.9",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 160,
         "p": "0xfffffffffffffffffffffffffffffffffffc808f",
@@ -383,6 +431,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.10",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "type": "Binary",
         "poly": [
@@ -438,6 +492,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.11",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "type": "Binary",
         "poly": [
@@ -493,6 +553,12 @@
       "category": "WTLS",
       "desc": "",
       "oid": "2.23.43.1.4.12",
+      "sources": [
+        {
+          "name": "Wireless Application Protocol Wireless Transport Layer Security Specification",
+          "url": "https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf"
+        }
+      ],
       "field": {
         "bits": 224,
         "p": "0xffffffffffffffffffffffffffffffff000000000000000000000001",

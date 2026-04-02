@@ -7,6 +7,12 @@
       "category": "oscaa",
       "desc": "",
       "oid": "1.2.156.10197.1.301",
+      "sources": [
+        {
+          "name": "SM2 Digital Signature Algorithm",
+          "url": "https://datatracker.ietf.org/doc/html/draft-shen-sm2-ecdsa-02"
+        }
+      ],
       "field": {
         "type": "Prime",
         "p": "0xfffffffeffffffffffffffffffffffffffffffff00000000ffffffffffffffff",

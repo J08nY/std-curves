@@ -205,6 +205,23 @@
 				"category": {"type": "string"},
 				"desc": {"type": "string"},
 				"oid": {"type": "string"},
+				"sources": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {"type": "string"},
+							"url": {
+								"type": "string",
+								"format": "uri",
+								"pattern": "^(https?|wss?|ftp)://"
+							}
+						},
+						"required": ["name", "url"],
+						"title": "A source.",
+						"description": "A source of information about the curve."
+					}
+				},
 				"field": {
 					"oneOf": [
 						{"$ref": "#/definitions/PrimeField"},
