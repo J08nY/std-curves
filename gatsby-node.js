@@ -9,11 +9,12 @@ exports.sourceNodes = ({ actions }) => {
       Edwards
       TwistedEdwards
     }
-    type Curve implements Node @dontInfer {
+    type Curve implements Node @dontInfer @childOf(types: ["Category"]) {
       name: String!
       category: String!
       desc: String
       oid: String
+      sources: JSON
       field: JSON
       form: Form
       params: JSON

@@ -25,6 +25,7 @@ export const query = graphql`
       name
       desc
       oid
+      sources
       form
       field
       params
@@ -287,6 +288,29 @@ function Description(curve) {
     </span>)
 }
 
+function Sources(curve) {
+  if (curve.sources !== null && curve.sources.length > 0) {
+    return (
+      <div>
+        <h3>Sources</h3>
+        <ul>  
+          {curve.sources.map(source => {
+            return (
+              <li>
+                <Styled.a
+                  href={source.url}
+                  target="_blank">{source.name}</Styled.a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  } else {
+    return <div />;
+  }
+}
+
 function Characteristics(curve) {
   let anyChars = !is_nullundef(curve.characteristics);
   let anyValues = curve.oid !== null || anyChars;
@@ -300,14 +324,14 @@ function Characteristics(curve) {
             <li>
               <b>OID</b>:<br />
               <Styled.a
-                href={`http://oid-info.com/get/${curve.oid}`}
+                href={`https://oid-base.com/get/${curve.oid}`}
                 target="_blank"
               >
                 {curve.oid}
               </Styled.a>
             </li>
           )}
-          {anyChars && curve.characteristics.seed !== null && (
+          {anyChars && curve.characteristics.seed !== undefined && (
             <li>
               <b>Seed</b>:<br />
               <span
@@ -317,7 +341,7 @@ function Characteristics(curve) {
               </span>
             </li>
           )}
-          {anyChars && curve.characteristics.j_invariant !== null && (
+          {anyChars && curve.characteristics.j_invariant !== undefined && (
             <li>
               <b>j-invariant</b>:<br />
               <span
@@ -327,7 +351,7 @@ function Characteristics(curve) {
               </span>
             </li>
           )}
-          {anyChars && curve.characteristics.trace_of_frobenius !== null && (
+          {anyChars && curve.characteristics.trace_of_frobenius !== undefined && (
             <li>
               <b>Trace of Frobenius</b>:<br />
               <span
@@ -337,7 +361,7 @@ function Characteristics(curve) {
               </span>
             </li>
           )}
-          {anyChars && curve.characteristics.discriminant !== null && (
+          {anyChars && curve.characteristics.discriminant !== undefined && (
             <li>
               <b>Discriminant</b>:<br />
               <span
@@ -347,19 +371,19 @@ function Characteristics(curve) {
               </span>
             </li>
           )}
-          {anyChars && curve.characteristics.anomalous !== null && (
+          {anyChars && curve.characteristics.anomalous !== undefined && (
             <li>
               <b>Anomalous</b>:<br />
               {curve.characteristics.anomalous ? "true" : "false"}
             </li>
           )}
-          {anyChars && curve.characteristics.supersingular !== null && (
+          {anyChars && curve.characteristics.supersingular !== undefined && (
             <li>
               <b>Supersingular</b>:<br />
               {curve.characteristics.supersingular ? "true" : "false"}
             </li>
           )}
-          {anyChars && curve.characteristics.embedding_degree !== null && (
+          {anyChars && curve.characteristics.embedding_degree !== undefined && (
             <li>
               <b>Embedding degree</b>:<br />
               <span
@@ -369,7 +393,7 @@ function Characteristics(curve) {
               </span>
             </li>
           )}
-          {anyChars && curve.characteristics.cm_disc !== null && (
+          {anyChars && curve.characteristics.cm_disc !== undefined && (
             <li>
               <b>CM-discriminant</b>:<br />
               <span
@@ -379,7 +403,7 @@ function Characteristics(curve) {
               </span>
             </li>
           )}
-          {anyChars && curve.characteristics.conductor !== null && (
+          {anyChars && curve.characteristics.conductor !== undefined && (
             <li>
               <b>Conductor</b>:<br />
               <span
@@ -799,6 +823,7 @@ function JsonBox(curve) {
 export default ({ data, location, pageContext }) => {
   let dataTable = Parameters(data.curve);
   let desc = Description(data.curve);
+  let sources = Sources(data.curve);
   let chars = Characteristics(data.curve);
   let equation = Equation(data.curve);
   let aliases = Aliases(data.curve);
@@ -819,6 +844,8 @@ export default ({ data, location, pageContext }) => {
       {aliases}
       {equation}
       {dataTable}
+      <br />
+      {sources}
       <br />
       {chars}
       <br />
