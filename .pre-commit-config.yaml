@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: canonicalize-curves-json
+        name: Canonicalize curves.json files
+        entry: bash -c 'for f in "$@"; do jq -f .github/workflows/canonical.jq "$f" | sponge "$f" || exit 1; done' --
+        language: unsupported
+        files: ^[^/]+/curves\.json$
+        types: [json]
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.37.1
+    hooks:
+      - id: check-jsonschema
+        files: ^[^/]+/curves\.json$
+        types: [json]
+        args: [ "--schemafile", "schema.json"]
