@@ -279,52 +279,57 @@ def verify_curve(curve, E, G):
 	errors = 0
 	if "characteristics" in curve:
 		chars = curve["characteristics"]
+		try:
+			alarm(60)
+			disc = E.discriminant()
+			j_inv = E.j_invariant()
+			t = E.trace_of_frobenius()
+			p = E.base_field().characteristic()
+			q = E.base_field().order()
+			r = int(curve["order"], 16)
+			anomalous = E.order() == q
+			supersingular = E.is_supersingular()
+			cm_disc = ZZ(t^2 - 4*q)
+			fundamental_disc = ZZ(QuadraticField(cm_disc).discriminant())
+			conductor = (cm_disc // fundamental_disc).isqrt()
 		
-		disc = E.discriminant()
-		j_inv = E.j_invariant()
-		t = E.trace_of_frobenius()
-		p = E.base_field().characteristic()
-		q = E.base_field().order()
-		r = int(curve["order"], 16)
-		anomalous = E.order() == q
-		supersingular = E.is_supersingular()
-		cm_disc = ZZ(t^2 - 4*q)
-		fundamental_disc = ZZ(QuadraticField(cm_disc).discriminant())
-		conductor = (cm_disc // fundamental_disc).isqrt()
-   
-		if "discriminant" in chars:
-			if int(chars["discriminant"]) != disc:
-				errors += 1
-				print(YELLOW, "-> Bad disc", chars["discriminant"], disc, NC, file=sys.stderr)
-		if "anomalous" in chars:
-			if chars["anomalous"] != anomalous:
-				errors += 1
-				print(YELLOW, "-> Bad anomalous", chars["anomalous"], anomalous, NC, file=sys.stderr)
-		if "supersingular" in chars:
-			if chars["supersingular"] != supersingular:
-				errors += 1
-				print(YELLOW, "-> Bad supersingular", chars["supersingular"], supersingular, NC, file=sys.stderr)
-		if "j_invariant" in chars:
-			if int(chars["j_invariant"]) != j_inv:
-				errors += 1
-				print(YELLOW, "-> Bad j-invariant", chars["j_invariant"], j_inv, NC, file=sys.stderr)
-		if "trace_of_frobenius" in chars:
-			if int(chars["trace_of_frobenius"]) != t:
-				errors += 1
-				print("-> Bad trace of frobenius", chars["trace_of_frobenius"], t, NC, file=sys.stderr)
-		if "cm_disc" in chars:
-			if int(chars["cm_disc"]) != fundamental_disc:
-				errors += 1
-				print(YELLOW, "-> Bad cm_disc", chars["cm_disc"], fundamental_disc, NC, file=sys.stderr)
-		if "conductor" in chars:
-			if int(chars["conductor"]) != conductor:
-				errors += 1
-				print(YELLOW, "-> Bad conductor", chars["conductor"], conductor, NC, file=sys.stderr)
-		if "embedding_degree" in chars:
-			k = int(chars["embedding_degree"])
-			if not (all(Mod(q, r)^d != 1 for d in divisors(k)[:-1]) and Mod(q, r)^k == 1):
-				errors += 1
-				print(YELLOW, "-> Bad embedding degree", NC, file=sys.stderr)
+			if "discriminant" in chars:
+				if int(chars["discriminant"]) != disc:
+					errors += 1
+					print(YELLOW, "-> Bad disc", chars["discriminant"], disc, NC, file=sys.stderr)
+			if "anomalous" in chars:
+				if chars["anomalous"] != anomalous:
+					errors += 1
+					print(YELLOW, "-> Bad anomalous", chars["anomalous"], anomalous, NC, file=sys.stderr)
+			if "supersingular" in chars:
+				if chars["supersingular"] != supersingular:
+					errors += 1
+					print(YELLOW, "-> Bad supersingular", chars["supersingular"], supersingular, NC, file=sys.stderr)
+			if "j_invariant" in chars:
+				if int(chars["j_invariant"]) != j_inv:
+					errors += 1
+					print(YELLOW, "-> Bad j-invariant", chars["j_invariant"], j_inv, NC, file=sys.stderr)
+			if "trace_of_frobenius" in chars:
+				if int(chars["trace_of_frobenius"]) != t:
+					errors += 1
+					print("-> Bad trace of frobenius", chars["trace_of_frobenius"], t, NC, file=sys.stderr)
+			if "cm_disc" in chars:
+				if int(chars["cm_disc"]) != fundamental_disc:
+					errors += 1
+					print(YELLOW, "-> Bad cm_disc", chars["cm_disc"], fundamental_disc, NC, file=sys.stderr)
+			if "conductor" in chars:
+				if int(chars["conductor"]) != conductor:
+					errors += 1
+					print(YELLOW, "-> Bad conductor", chars["conductor"], conductor, NC, file=sys.stderr)
+			if "embedding_degree" in chars:
+				k = int(chars["embedding_degree"])
+				if not (all(Mod(q, r)^d != 1 for d in divisors(k)[:-1]) and Mod(q, r)^k == 1):
+					errors += 1
+					print(YELLOW, "-> Bad embedding degree", NC, file=sys.stderr)
+		except AlarmInterrupt:
+			print(YELLOW, "-> Timed out", NC, file=sys.stderr)
+		finally:
+			cancel_alarm()
 	return errors
 
 

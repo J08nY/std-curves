@@ -468,7 +468,9 @@
         "trace_of_frobenius": "43422033463993573283847164979847511362503473044959842495500254821277109321735",
         "embedding_degree": "12",
         "anomalous": false,
-        "supersingular": false
+        "supersingular": false,
+        "cm_disc": "-3",
+        "conductor": "43422033463993573283847164979847511362163190678038904032036848688647949516803"
       }
     },
     {

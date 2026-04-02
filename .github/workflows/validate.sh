@@ -147,25 +147,40 @@ for directory in $(ls -d */); do
 
 		characteristics=$(echo "$curve" | jq -r ".characteristics")
 		declare -A var_map
-		var_map[j_inv]=inv
+		var_map[j_invariant]=j
 		var_map[discriminant]=discriminant
 		var_map[embedding_degree]=embedding_degree
 		var_map[trace_of_frobenius]=frobenius
 		var_map[cm_disc]=cm_discriminant
 		var_map[conductor]=conductor
+		change=false
 		if [ -n "$characteristics" ]; then
 			for var in "${!var_map[@]}"; do
 				own=$(echo "$characteristics" | jq -r ".$var")
 				computed=$(echo "$computed_curve" | jq -r ".[0].meta.${var_map[$var]}")
-				if [ -n "$own" -a "$computed" -a "$own" != "null" -a "$computed" != "null" ]; then
+				if [ "$computed" == "null" ]; then
+					continue
+				fi
+				curve=$(echo "$curve" | jq ".characteristics.$var = \"$computed\"")
+				if [ "$own" == "null" -a "$computed" != "null" ]; then
+					echo -e "${YELLOW} -> Missing $var: $computed${NC}" >&2
+					change=true
+					warns=$((warns+1))
+					continue
+				fi
+				if [ "$own" != "$computed" ]; then
 					computed=$(echo "$computed_curve" | jq -r ".[0].meta.${var_map[$var]}")
 					res=$(echo "$own == $computed" | bc -q)
 					if [ "$res" != "1" ]; then
-						echo -e "${YELLOW} -> Bad $var! $own vs $computed${NC}" >&2
-						warns=$((warns+1))
+						echo -e "${RED} -> Bad $var! $own vs $computed${NC}" >&2
+						change=true
+						errors=$((errors+1))
 					fi
 				fi
 			done
+		fi
+		if $change; then
+			echo $curve | jq
 		fi
 	done
 done

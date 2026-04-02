@@ -1,8 +1,9 @@
 {
   "curves": [
     {
+      "name": "wap-wsg-idm-ecid-wtls1",
+      "oid": "2.23.43.1.4.1",
       "category": "WTLS",
-      "cofactor": "0x2",
       "desc": "",
       "field": {
         "bits": 113,
@@ -33,9 +34,8 @@
           "raw": "0x00f44b4af1ecc2630e08785cebcc15"
         }
       },
-      "name": "wap-wsg-idm-ecid-wtls1",
-      "oid": "2.23.43.1.4.1",
       "order": "0x00fffffffffffffffdbf91af6dea73",
+      "cofactor": "0x2",
       "params": {
         "a": {
           "raw": "0x1"
@@ -43,6 +43,11 @@
         "b": {
           "raw": "0x1"
         }
+      },
+      "characteristics": {
+        "discriminant": "1",
+        "j_invariant": "1",
+        "trace_of_frobenius": "1267584991505179"
       }
     },
     {
@@ -149,7 +154,12 @@
       },
       "aliases": [
         "secg/sect113r1"
-      ]
+      ],
+      "characteristics": {
+        "discriminant": "4720643197658441292834747278018339",
+        "j_invariant": "2134952494010276499078092765136077",
+        "trace_of_frobenius": "-122610772499221213"
+      }
     },
     {
       "form": "Weierstrass",
@@ -238,7 +248,15 @@
       },
       "aliases": [
         "secg/secp112r1"
-      ]
+      ],
+      "characteristics": {
+        "cm_disc": "-17787316666415881930611191403938683",
+        "conductor": "1",
+        "discriminant": "431641039663814096123514803737201",
+        "j_invariant": "3522606870331875081851146801233610",
+        "embedding_degree": "4451685225093714776491891542548932",
+        "trace_of_frobenius": "-4407293269000505"
+      }
     },
     {
       "category": "WTLS",
@@ -272,7 +290,15 @@
       "aliases": [
         "secg/secp160r1",
         "x963/ansip160r1"
-      ]
+      ],
+      "characteristics": {
+        "cm_disc": "-253299265357051288026316368812641220149079098987",
+        "conductor": "1",
+        "discriminant": "1027266213310721979572908445837817790068480350785",
+        "j_invariant": "1443800352525525475817269232308576710441299733598",
+        "embedding_degree": "1461501637330902918203687197606826779884643492438",
+        "trace_of_frobenius": "-2364890543760230858433111"
+      }
     },
     {
       "category": "WTLS",
@@ -302,6 +328,14 @@
         "b": {
           "raw": "0x3"
         }
+      },
+      "characteristics": {
+        "cm_disc": "-3",
+        "conductor": "22505355654482883",
+        "discriminant": "5192296858534827628530496329215671",
+        "j_invariant": "0",
+        "embedding_degree": "865382809755804627878972685726716",
+        "trace_of_frobenius": "-138743339785140737"
       }
     },
     {
@@ -332,6 +366,14 @@
         "b": {
           "raw": "0x3"
         }
+      },
+      "characteristics": {
+        "cm_disc": "-3",
+        "conductor": "602889891024722752429129",
+        "discriminant": "1461501637330902918203684832716283019655932309855",
+        "j_invariant": "0",
+        "embedding_degree": "243583606221817153033947835574172404865764717875",
+        "trace_of_frobenius": "-2180728751409538655993507"
       }
     },
     {
@@ -382,7 +424,12 @@
         "secg/sect233k1",
         "nist/K-233",
         "x963/ansit233k1"
-      ]
+      ],
+      "characteristics": {
+        "discriminant": "1",
+        "j_invariant": "1",
+        "trace_of_frobenius": "-137381546011108235394987299651366779"
+      }
     },
     {
       "category": "WTLS",
@@ -432,7 +479,12 @@
         "secg/sect233r1",
         "nist/B-233",
         "x963/ansit233r1"
-      ]
+      ],
+      "characteristics": {
+        "discriminant": "2760497980029204187078845502377898520307707256259003964398570147123373",
+        "j_invariant": "4307676474001897771242333711874131057278497100044075715856582737706846",
+        "trace_of_frobenius": "-206777407530349254000433718821372333"
+      }
     },
     {
       "category": "WTLS",
@@ -467,7 +519,15 @@
         "secg/secp224r1",
         "nist/P-224",
         "x963/ansip224r1"
-      ]
+      ],
+      "characteristics": {
+        "cm_disc": "-9493061114565352281698673660738078664961855212656825491744070162387",
+        "conductor": "3",
+        "discriminant": "8133954887115844930654026312464158747844254983800706208418026371607",
+        "j_invariant": "20781977079628996477063007379734849057519732242287194936686605794677",
+        "embedding_degree": "8986648889050213264889005029006541980152602571474797240560907456020",
+        "trace_of_frobenius": "4733100108545601916421827343930821"
+      }
     }
   ],
   "desc": "Wireless Application Protocol - Wireless Transport Layer Security (WAP-WTLS) curves: <https://www.wapforum.org/tech/documents/WAP-199-WTLS-20000218-a.pdf>",
